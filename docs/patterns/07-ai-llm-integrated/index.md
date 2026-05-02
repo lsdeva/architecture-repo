@@ -12,12 +12,12 @@ Systems whose primary value comes from a Large Language Model or other foundatio
 
 | Pattern | Status | Best for |
 |---|---|---|
-| RAG (Retrieval-Augmented Generation) (TODO) | Adopt | Q&A over a private corpus, knowledge assistants |
-| Conversational Assistant / Chatbot (TODO) | Adopt | Customer support, internal help desk |
-| Agentic Workflow (TODO) | Trial | Multi-step tasks where the model uses tools |
-| Document Processing / Extraction (TODO) | Adopt | Invoices, contracts, forms; replaces traditional OCR + rules |
-| Copilot / In-app Assistant (TODO) | Trial | Embedded assistance within an existing product |
-| Fine-tuned Domain Model (TODO) | Assess | High-volume narrow tasks where prompt engineering plateaus |
+| [RAG (Retrieval-Augmented Generation)](rag.md) | Adopt | Q&A over a private corpus, knowledge assistants |
+| [Conversational Assistant / Chatbot](conversational-assistant.md) | Adopt | Customer support, internal help desk |
+| [Agentic Workflow](agentic-workflow.md) | Trial | Multi-step tasks where the model uses tools |
+| [Document Processing / Extraction](document-processing.md) | Adopt | Invoices, contracts, forms; replaces traditional OCR + rules |
+| [Copilot / In-app Assistant](copilot-in-app.md) | Trial | Embedded assistance within an existing product |
+| [Fine-tuned Domain Model](fine-tuned-model.md) | Assess | High-volume narrow tasks where prompt engineering plateaus |
 
 ## Default tech stack
 

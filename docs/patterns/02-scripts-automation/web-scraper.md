@@ -124,6 +124,7 @@ Indicative monthly USD cost. Proxy costs dominate at scale; compute is cheap.
 ## 8. Reference implementations
 
 - **Public reference:** [scrapy/quotesbot](https://github.com/scrapy/quotesbot) — canonical Scrapy tutorial spider, good starting structure
+- **Public reference:** [scrapy/scrapy](https://github.com/scrapy/scrapy) — the Scrapy framework itself; `examples/` and `tests/` show real spider architectures including pagination, item pipelines, and middleware (200 OK ✓)
 - **Public reference:** [microsoft/playwright-python — examples](https://github.com/microsoft/playwright-python/tree/main/examples) — official Playwright Python examples including async patterns
 - **Public reference:** [lorien/awesome-web-scraping](https://github.com/lorien/awesome-web-scraping) — curated list of Python scraping libraries with descriptions
 - **Internal case study:** _Add your anonymised internal example here_

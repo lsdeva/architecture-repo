@@ -122,7 +122,8 @@ Indicative monthly USD cost. Real costs vary heavily with traffic patterns, regi
 ## 8. Reference implementations
 
 - **Public reference:** [SaaS Starter by Vercel](https://github.com/vercel/nextjs-subscription-payments) — Next.js + Stripe + Supabase
-- **Public reference:** [Cal.com](https://github.com/calcom/cal.com) — large open-source multi-tenant SaaS
+- **Public reference:** [Cal.com](https://github.com/calcom/cal.com) — large open-source multi-tenant SaaS; row-level tenancy, NestJS API, Next.js frontend
+- **Public reference:** [boxyhq/saas-starter-kit](https://github.com/boxyhq/saas-starter-kit) — enterprise-focused SaaS starter with teams, SAML SSO, directory sync, and audit logs; good reference for the auth and access-control layer (200 OK ✓)
 - **Internal case study:** _Add your anonymised internal example here_
 
 ## 9. Related decisions (ADRs)

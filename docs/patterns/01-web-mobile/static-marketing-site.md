@@ -128,7 +128,7 @@ Indicative monthly USD cost. Static sites are among the cheapest architectures t
 ## 8. Reference implementations
 
 - **Public reference:** [Astro Starter Blog](https://github.com/withastro/astro/tree/main/examples/blog) — minimal Astro site with Markdown content
-- **Public reference:** [Leerob.io](https://github.com/leerob/leerob.io) — personal site using Next.js static export, widely referenced
+- **Public reference:** [withastro/starlight](https://github.com/withastro/starlight) — Astro's official documentation site framework; excellent reference for a content-heavy static site with search, versioning, and i18n (200 OK ✓)
 - **Public reference:** [Cloudflare Pages deployment guide](https://developers.cloudflare.com/pages/framework-guides/deploy-an-astro-site/) — official Astro + Cloudflare Pages walkthrough
 - **Internal case study:** _Add your anonymised internal example here_
 

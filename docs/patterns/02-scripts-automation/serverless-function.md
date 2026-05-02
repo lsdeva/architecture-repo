@@ -132,8 +132,9 @@ Indicative monthly USD cost. Lambda pricing is per invocation + per GB-second of
 ## 8. Reference implementations
 
 - **Public reference:** [aws-samples/aws-sam-cli-app-templates](https://github.com/aws-samples/aws-sam-cli-app-templates) — official SAM starter templates for Python, Node, Go runtimes
+- **Public reference:** [aws-samples/serverless-patterns](https://github.com/aws-samples/serverless-patterns) — curated collection of production-grade serverless architecture patterns (SQS, EventBridge, S3 triggers, DLQ wiring) with SAM and CDK implementations (200 OK ✓)
 - **Public reference:** [serverless/examples](https://github.com/serverless/examples) — community examples for Python + various event sources (SQS, S3, HTTP, cron)
-- **Public reference:** [awslabs/aws-lambda-powertools-python](https://github.com/aws-powertools/powertools-lambda-python) — Lambda Powertools: structured logging, tracing, idempotency utilities — use this in every Python Lambda
+- **Public reference:** [aws-powertools/powertools-lambda-python](https://github.com/aws-powertools/powertools-lambda-python) — Lambda Powertools: structured logging, tracing, idempotency utilities — use this in every Python Lambda
 - **Internal case study:** _Add your anonymised internal example here_
 
 ## 9. Related decisions (ADRs)
