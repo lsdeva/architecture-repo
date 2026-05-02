@@ -12,11 +12,11 @@ Short-lived or recurring code that transforms data, glues systems together, or a
 
 | Pattern | Status | Best for |
 |---|---|---|
-| ETL/ELT Job (TODO) | Adopt | Moving data between systems on a schedule |
-| Web Scraper (TODO) | Adopt | Pulling structured data from public web sources |
-| CLI Tool (TODO) | Adopt | Internal developer tooling, ops automation |
-| Serverless Function (TODO) | Adopt | Event-driven glue (webhook handlers, file processors) |
-| CI/CD Pipeline (TODO) | Adopt | Build, test, deploy automation |
+| [ETL/ELT Job](etl-elt-job.md) | Adopt | Moving data between systems on a schedule |
+| [Web Scraper](web-scraper.md) | Adopt | Pulling structured data from public web sources |
+| [CLI Tool](cli-tool.md) | Adopt | Internal developer tooling, ops automation |
+| [Serverless Function](serverless-function.md) | Adopt | Event-driven glue (webhook handlers, file processors) |
+| [CI/CD Pipeline](cicd-pipeline.md) | Adopt | Build, test, deploy automation |
 
 ## Default tech stack
 
