@@ -25,6 +25,14 @@
          <lastmod>2026-05-02</lastmod>
     </url>
     <url>
+         <loc>https://your-org.github.io/architecture-repo/decisions/0002-default-scripting-language/</loc>
+         <lastmod>2026-05-02</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/decisions/0003-etl-orchestrator/</loc>
+         <lastmod>2026-05-02</lastmod>
+    </url>
+    <url>
          <loc>https://your-org.github.io/architecture-repo/patterns/</loc>
          <lastmod>2026-05-02</lastmod>
     </url>
@@ -42,6 +50,26 @@
     </url>
     <url>
          <loc>https://your-org.github.io/architecture-repo/patterns/02-scripts-automation/</loc>
+         <lastmod>2026-05-02</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/patterns/02-scripts-automation/cicd-pipeline/</loc>
+         <lastmod>2026-05-02</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/patterns/02-scripts-automation/cli-tool/</loc>
+         <lastmod>2026-05-02</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/patterns/02-scripts-automation/etl-elt-job/</loc>
+         <lastmod>2026-05-02</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/patterns/02-scripts-automation/serverless-function/</loc>
+         <lastmod>2026-05-02</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/patterns/02-scripts-automation/web-scraper/</loc>
          <lastmod>2026-05-02</lastmod>
     </url>
     <url>

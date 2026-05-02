@@ -12,13 +12,9 @@
         <meta name="author" content="deva@soa.team">
       
       
-        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/02-scripts-automation/">
+        <link rel="canonical" href="https://your-org.github.io/architecture-repo/decisions/0002-default-scripting-language/">
       
       
-        <link rel="prev" href="../01-web-mobile/">
-      
-      
-        <link rel="next" href="../03-data-analytics/">
       
       
         
@@ -29,7 +25,7 @@
     
     
       
-        <title>Scripts & Automation - Architecture Pattern Catalog</title>
+        <title>ADR-0002: Python as the default scripting language - Architecture Pattern Catalog</title>
       
     
     
@@ -80,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#scripts-automation" class="md-skip">
+        <a href="#adr-0002-python-as-the-default-scripting-language" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Scripts & Automation
+              ADR-0002: Python as the default scripting language
             
           </span>
         </div>
@@ -263,13 +259,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../patterns/" class="md-tabs__link">
           
   
   
@@ -289,7 +283,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../decisions/" class="md-tabs__link">
+      <a href="../" class="md-tabs__link">
         
   
   
@@ -427,8 +421,6 @@
       
   
   
-    
-  
   
   
     
@@ -458,23 +450,22 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../patterns/" class="md-nav__link ">
               
   
   
@@ -492,13 +483,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -518,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-web-mobile/" class="md-nav__link">
+      <a href="../../patterns/01-web-mobile/" class="md-nav__link">
         
   
   
@@ -543,37 +534,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Scripts & Automation
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../patterns/02-scripts-automation/" class="md-nav__link">
         
   
   
@@ -589,70 +553,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        When to look here
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Patterns in this category
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Default tech stack
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#llm-development-sweet-spot" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        LLM-development sweet spot
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -665,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-data-analytics/" class="md-nav__link">
+      <a href="../../patterns/03-data-analytics/" class="md-nav__link">
         
   
   
@@ -693,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04-backend-distributed/" class="md-nav__link">
+      <a href="../../patterns/04-backend-distributed/" class="md-nav__link">
         
   
   
@@ -721,7 +621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../05-systems-infra/" class="md-nav__link">
+      <a href="../../patterns/05-systems-infra/" class="md-nav__link">
         
   
   
@@ -749,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../06-safety-critical/" class="md-nav__link">
+      <a href="../../patterns/06-safety-critical/" class="md-nav__link">
         
   
   
@@ -777,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../07-ai-llm-integrated/" class="md-nav__link">
+      <a href="../../patterns/07-ai-llm-integrated/" class="md-nav__link">
         
   
   
@@ -805,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../08-games-graphics/" class="md-nav__link">
+      <a href="../../patterns/08-games-graphics/" class="md-nav__link">
         
   
   
@@ -840,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../decisions/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -1010,10 +910,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
+  <a href="#context" class="md-nav__link">
     <span class="md-ellipsis">
       
-        When to look here
+        Context
       
     </span>
   </a>
@@ -1021,10 +921,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
+  <a href="#decision" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Patterns in this category
+        Decision
       
     </span>
   </a>
@@ -1032,21 +932,71 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
+  <a href="#alternatives-considered" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Default tech stack
+        Alternatives considered
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Alternatives considered">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-a-python-chosen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option A: Python (chosen)
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#llm-development-sweet-spot" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#option-b-go" class="md-nav__link">
     <span class="md-ellipsis">
       
-        LLM-development sweet spot
+        Option B: Go
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-c-bash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option C: Bash
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-d-nodejs-typescript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option D: Node.js / TypeScript
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consequences
       
     </span>
   </a>
@@ -1073,60 +1023,59 @@
   
 
 
-<h1 id="scripts-automation">Scripts &amp; Automation<a class="headerlink" href="#scripts-automation" title="Permanent link">&para;</a></h1>
-<p>Short-lived or recurring code that transforms data, glues systems together, or automates tasks. Often single-author, often single-file.</p>
-<h2 id="when-to-look-here">When to look here<a class="headerlink" href="#when-to-look-here" title="Permanent link">&para;</a></h2>
+<h1 id="adr-0002-python-as-the-default-scripting-language">ADR-0002: Python as the default scripting language<a class="headerlink" href="#adr-0002-python-as-the-default-scripting-language" title="Permanent link">&para;</a></h1>
 <ul>
-<li>The deliverable is a script or job, not a long-running service</li>
-<li>It runs on a schedule, on demand, or as part of a CI/CD pipeline</li>
-<li>It is acceptable for the script to be re-run if it fails</li>
+<li><strong>Status:</strong> Accepted</li>
+<li><strong>Date:</strong> 2026-05-02</li>
+<li><strong>Deciders:</strong> Architecture Team</li>
+<li><strong>Tags:</strong> language, scripts, automation, cli, etl</li>
 </ul>
-<h2 id="patterns-in-this-category">Patterns in this category<a class="headerlink" href="#patterns-in-this-category" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Pattern</th>
-<th>Status</th>
-<th>Best for</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="etl-elt-job/">ETL/ELT Job</a></td>
-<td>Adopt</td>
-<td>Moving data between systems on a schedule</td>
-</tr>
-<tr>
-<td><a href="web-scraper/">Web Scraper</a></td>
-<td>Adopt</td>
-<td>Pulling structured data from public web sources</td>
-</tr>
-<tr>
-<td><a href="cli-tool/">CLI Tool</a></td>
-<td>Adopt</td>
-<td>Internal developer tooling, ops automation</td>
-</tr>
-<tr>
-<td><a href="serverless-function/">Serverless Function</a></td>
-<td>Adopt</td>
-<td>Event-driven glue (webhook handlers, file processors)</td>
-</tr>
-<tr>
-<td><a href="cicd-pipeline/">CI/CD Pipeline</a></td>
-<td>Adopt</td>
-<td>Build, test, deploy automation</td>
-</tr>
-</tbody>
-</table>
-<h2 id="default-tech-stack">Default tech stack<a class="headerlink" href="#default-tech-stack" title="Permanent link">&para;</a></h2>
+<h2 id="context">Context<a class="headerlink" href="#context" title="Permanent link">&para;</a></h2>
+<p>The Scripts &amp; Automation category covers ETL jobs, web scrapers, CLI tools, and serverless functions. All of these need a default language recommendation so that teams can share libraries, review conventions, and hire for one skill set rather than four. The realistic candidates are Python, Go, Bash, Node.js, and Ruby. The choice is non-obvious because Go has real advantages for CLI distribution and cold-start performance, and Bash is already present on every machine.</p>
+<h2 id="decision">Decision<a class="headerlink" href="#decision" title="Permanent link">&para;</a></h2>
+<p>We will use <strong>Python 3.12+ with <code>uv</code></strong> as the default language for all scripts and automation workloads.</p>
+<p>Go is explicitly recommended as the alternative when producing a distributable single binary for machines that may not have Python installed. Bash is acceptable for scripts under 50 lines with no error handling requirements.</p>
+<h2 id="alternatives-considered">Alternatives considered<a class="headerlink" href="#alternatives-considered" title="Permanent link">&para;</a></h2>
+<h3 id="option-a-python-chosen">Option A: Python (chosen)<a class="headerlink" href="#option-a-python-chosen" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Language:</strong> Python (default), Go (for distribution as a single binary), Bash (under 50 lines only)</li>
-<li><strong>Scheduling:</strong> GitHub Actions cron, AWS EventBridge, Temporal (for complex workflows)</li>
-<li><strong>Packaging:</strong> <code>uv</code> for Python projects, single static binary for Go</li>
-<li><strong>Storage:</strong> SQLite for local state, Postgres for shared state, S3 for blob output</li>
+<li><strong>Pros:</strong> Richest data, HTTP, cloud, and ML library ecosystem. LLM code generation quality is highest. The widest pool of engineers on the team can read and modify it. <code>uv</code> solves the historical packaging pain with near-instant installs and lock files. First-class support in AWS Lambda, GCP Cloud Functions, Prefect, dbt, and Scrapy.</li>
+<li><strong>Cons:</strong> Slower cold starts than Go (~300ms vs ~30ms for Lambda). Requires Python to be installed on the target machine for CLI tools. The GIL limits CPU parallelism within a single process (largely mitigated by async I/O for network-bound work).</li>
 </ul>
-<h2 id="llm-development-sweet-spot">LLM-development sweet spot<a class="headerlink" href="#llm-development-sweet-spot" title="Permanent link">&para;</a></h2>
-<p>Highest-leverage category for AI-assisted development. Self-contained, easy to test by running, low blast radius for mistakes.</p>
+<h3 id="option-b-go">Option B: Go<a class="headerlink" href="#option-b-go" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Pros:</strong> Single static binary with zero runtime dependency — ideal for CLI tools distributed to machines not running Python. Cold starts are 10× faster than Python on Lambda. Excellent concurrency model (goroutines) for I/O-bound scrapers and parallel ETL.</li>
+<li><strong>Cons:</strong> Smaller data ecosystem (no pandas, no boto3 equivalents that match the Python versions in maturity). Longer initial development time for engineers not familiar with Go. LLM code generation quality is lower for domain-specific libraries. Generics arrived late (1.18, 2022) — some idioms are still verbose.</li>
+</ul>
+<h3 id="option-c-bash">Option C: Bash<a class="headerlink" href="#option-c-bash" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Pros:</strong> Zero dependencies, present on every Linux/macOS machine, excellent for gluing existing CLIs together.</li>
+<li><strong>Cons:</strong> Error handling is notoriously fragile (<code>set -euo pipefail</code> helps but does not fix the fundamental model). No type system, no unit testing framework, poor readability beyond ~50 lines. POSIX portability problems on macOS vs Linux. Not viable for ETL, scraping, or anything with structured data.</li>
+</ul>
+<h3 id="option-d-nodejs-typescript">Option D: Node.js / TypeScript<a class="headerlink" href="#option-d-nodejs-typescript" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Pros:</strong> Strong async model, large npm ecosystem, natural choice if the team is frontend-heavy.</li>
+<li><strong>Cons:</strong> npm dependency trees are famously large and fragile. No advantage over Python for data/cloud tasks. Adds a second runtime dependency alongside Python, which most backend teams already have.</li>
+</ul>
+<h2 id="consequences">Consequences<a class="headerlink" href="#consequences" title="Permanent link">&para;</a></h2>
+<p><strong>Positive</strong></p>
+<ul>
+<li>One language for all scripts — engineers can review each other's automation code without context switching</li>
+<li><code>uv</code> produces a deterministic lock file; environments are reproducible across dev, CI, and Lambda</li>
+<li>AWS Lambda Powertools, dbt, Prefect, httpx, Playwright, and Typer are all Python-first libraries</li>
+<li>LLM-assisted development is most effective in Python; boilerplate generation is high quality</li>
+</ul>
+<p><strong>Negative / trade-offs</strong></p>
+<ul>
+<li>Python Lambda cold starts require Provisioned Concurrency for latency-sensitive paths</li>
+<li>CLI tools built in Python require Python on the target machine; document this requirement or provide a <code>pipx install</code> one-liner</li>
+<li>CPU-bound parallel work within a single process requires <code>multiprocessing</code> or sub-processes (not threads) due to the GIL</li>
+</ul>
+<p><strong>Follow-up actions</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Add <code>uv</code> to the standard Docker base image for CI runners</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Document the <code>pipx install &lt;tool&gt;</code> pattern for distributing internal CLI tools</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Define the Go exception criteria: when a tool is distributed to &gt; 10 non-Python machines, use Go</li>
+</ul>
 
 
 

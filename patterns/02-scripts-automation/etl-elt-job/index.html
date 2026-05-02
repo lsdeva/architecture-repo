@@ -12,31 +12,27 @@
         <meta name="author" content="deva@soa.team">
       
       
-        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/02-scripts-automation/">
+        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/02-scripts-automation/etl-elt-job/">
       
       
-        <link rel="prev" href="../01-web-mobile/">
-      
-      
-        <link rel="next" href="../03-data-analytics/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Scripts & Automation - Architecture Pattern Catalog</title>
+        <title>Pattern: ETL/ELT Job - Architecture Pattern Catalog</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#scripts-automation" class="md-skip">
+        <a href="#pattern-etlelt-job" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +90,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Architecture Pattern Catalog" class="md-header__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
+    <a href="../../.." title="Architecture Pattern Catalog" class="md-header__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Scripts & Automation
+              Pattern: ETL/ELT Job
             
           </span>
         </div>
@@ -227,7 +223,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -246,7 +242,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../about/how-to-use/" class="md-tabs__link">
+      <a href="../../../about/how-to-use/" class="md-tabs__link">
         
   
   
@@ -263,13 +259,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../" class="md-tabs__link">
           
   
   
@@ -289,7 +283,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../decisions/" class="md-tabs__link">
+      <a href="../../../decisions/" class="md-tabs__link">
         
   
   
@@ -310,7 +304,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../about/methodology/" class="md-tabs__link">
+        <a href="../../../about/methodology/" class="md-tabs__link">
           
   
   
@@ -346,7 +340,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Architecture Pattern Catalog" class="md-nav__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
+    <a href="../../.." title="Architecture Pattern Catalog" class="md-nav__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -376,7 +370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -403,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/how-to-use/" class="md-nav__link">
+      <a href="../../../about/how-to-use/" class="md-nav__link">
         
   
   
@@ -427,8 +421,6 @@
       
   
   
-    
-  
   
   
     
@@ -458,23 +450,22 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
@@ -492,13 +483,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -518,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-web-mobile/" class="md-nav__link">
+      <a href="../../01-web-mobile/" class="md-nav__link">
         
   
   
@@ -543,37 +534,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Scripts & Automation
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -589,70 +553,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        When to look here
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Patterns in this category
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Default tech stack
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#llm-development-sweet-spot" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        LLM-development sweet spot
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -665,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-data-analytics/" class="md-nav__link">
+      <a href="../../03-data-analytics/" class="md-nav__link">
         
   
   
@@ -693,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04-backend-distributed/" class="md-nav__link">
+      <a href="../../04-backend-distributed/" class="md-nav__link">
         
   
   
@@ -721,7 +621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../05-systems-infra/" class="md-nav__link">
+      <a href="../../05-systems-infra/" class="md-nav__link">
         
   
   
@@ -749,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../06-safety-critical/" class="md-nav__link">
+      <a href="../../06-safety-critical/" class="md-nav__link">
         
   
   
@@ -777,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../07-ai-llm-integrated/" class="md-nav__link">
+      <a href="../../07-ai-llm-integrated/" class="md-nav__link">
         
   
   
@@ -805,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../08-games-graphics/" class="md-nav__link">
+      <a href="../../08-games-graphics/" class="md-nav__link">
         
   
   
@@ -840,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../decisions/" class="md-nav__link">
+      <a href="../../../decisions/" class="md-nav__link">
         
   
   
@@ -927,7 +827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/methodology/" class="md-nav__link">
+      <a href="../../../about/methodology/" class="md-nav__link">
         
   
   
@@ -955,7 +855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/contributing/" class="md-nav__link">
+      <a href="../../../about/contributing/" class="md-nav__link">
         
   
   
@@ -1010,10 +910,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
+  <a href="#1-context" class="md-nav__link">
     <span class="md-ellipsis">
       
-        When to look here
+        1. Context
       
     </span>
   </a>
@@ -1021,10 +921,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
+  <a href="#2-problem-it-solves" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Patterns in this category
+        2. Problem it solves
       
     </span>
   </a>
@@ -1032,10 +932,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
+  <a href="#3-solution-overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Default tech stack
+        3. Solution overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Solution overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-context-c4-level-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System context (C4 Level 1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container-view-c4-level-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Container view (C4 Level 2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-technology-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Technology stack
       
     </span>
   </a>
@@ -1043,10 +982,65 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#llm-development-sweet-spot" class="md-nav__link">
+  <a href="#5-non-functional-characteristics" class="md-nav__link">
     <span class="md-ellipsis">
       
-        LLM-development sweet spot
+        5. Non-functional characteristics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-cost-ballpark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Cost ballpark
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-llm-assisted-development-fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. LLM-assisted development fit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-reference-implementations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Reference implementations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-related-decisions-adrs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Related decisions (ADRs)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-known-risks-gotchas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Known risks &amp; gotchas
       
     </span>
   </a>
@@ -1073,60 +1067,269 @@
   
 
 
-<h1 id="scripts-automation">Scripts &amp; Automation<a class="headerlink" href="#scripts-automation" title="Permanent link">&para;</a></h1>
-<p>Short-lived or recurring code that transforms data, glues systems together, or automates tasks. Often single-author, often single-file.</p>
-<h2 id="when-to-look-here">When to look here<a class="headerlink" href="#when-to-look-here" title="Permanent link">&para;</a></h2>
+<h1 id="pattern-etlelt-job">Pattern: ETL/ELT Job<a class="headerlink" href="#pattern-etlelt-job" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Quick facts</p>
 <ul>
-<li>The deliverable is a script or job, not a long-running service</li>
-<li>It runs on a schedule, on demand, or as part of a CI/CD pipeline</li>
-<li>It is acceptable for the script to be re-run if it fails</li>
+<li><strong>Category:</strong> Scripts &amp; Automation</li>
+<li><strong>Maturity:</strong> Adopt</li>
+<li><strong>Typical team size:</strong> 1-3 engineers</li>
+<li><strong>Typical timeline to MVP:</strong> 2-4 weeks</li>
+<li><strong>Last reviewed:</strong> 2026-05-02 by Architecture Team</li>
 </ul>
-<h2 id="patterns-in-this-category">Patterns in this category<a class="headerlink" href="#patterns-in-this-category" title="Permanent link">&para;</a></h2>
+</div>
+<h2 id="1-context">1. Context<a class="headerlink" href="#1-context" title="Permanent link">&para;</a></h2>
+<p><strong>Use this pattern when:</strong></p>
+<ul>
+<li>Moving data from one or more source systems into a target store on a schedule or event trigger</li>
+<li>The data transformation can tolerate minutes to hours of latency (batch, not streaming)</li>
+<li>You need a repeatable, observable, and re-runnable data movement process</li>
+<li>Sources include databases, REST APIs, flat files, or cloud storage buckets</li>
+</ul>
+<p><strong>Do NOT use this pattern when:</strong></p>
+<ul>
+<li>End-to-end latency must be under a few seconds — use a stream-processing pattern (Kafka + Flink/Spark Streaming) instead</li>
+<li>The "transformation" is actually a complex business workflow with human approval steps — use an orchestrated workflow pattern with Temporal</li>
+<li>The source system offers a native CDC (Change Data Capture) stream that you can consume directly without polling</li>
+</ul>
+<h2 id="2-problem-it-solves">2. Problem it solves<a class="headerlink" href="#2-problem-it-solves" title="Permanent link">&para;</a></h2>
+<p>Operational data lives in transactional systems optimised for writes, not analysis. Analytical queries on a live OLTP database degrade user-facing performance, and joining data across multiple source systems in application code is brittle and slow. This pattern moves a reliable, schema-stable copy of the data into a system built for reads — letting analysts query freely without touching production, and letting engineers define transformations in one auditable place.</p>
+<h2 id="3-solution-overview">3. Solution overview<a class="headerlink" href="#3-solution-overview" title="Permanent link">&para;</a></h2>
+<h3 id="system-context-c4-level-1">System context (C4 Level 1)<a class="headerlink" href="#system-context-c4-level-1" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart LR
+    SrcDB[(Source Database)]
+    SrcAPI[Source API]
+    SrcFile[Flat Files / S3]
+
+    SrcDB --&gt; Job[ETL / ELT Job]
+    SrcAPI --&gt; Job
+    SrcFile --&gt; Job
+
+    Job --&gt; Target[(Target Store\nDW / Postgres)]
+    Job --&gt; Alerts[Alerting\nSlack / PagerDuty]
+    Orch[Orchestrator\nPrefect] --&gt;|schedules &amp; monitors| Job</code></pre>
+<h3 id="container-view-c4-level-2">Container view (C4 Level 2)<a class="headerlink" href="#container-view-c4-level-2" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TB
+    subgraph Orchestration
+        Orch[Prefect Server / Cloud]
+        Schedule[Cron Schedule\nor Event Trigger]
+    end
+    subgraph Job Containers
+        Extract[Extractor\nhttpx / SQLAlchemy]
+        Stage[(Staging\nAWS S3 raw zone)]
+        Transform[Transformer\ndbt Core or Polars]
+        Load[Loader\nSQLAlchemy / COPY]
+        Audit[Audit Log\nrun metadata table]
+    end
+    subgraph Targets
+        DW[(Data Warehouse\nPostgres / Snowflake)]
+    end
+    subgraph Ops
+        DLQ[Dead-letter store\nfailed-records S3 prefix]
+        Alert[Slack / PagerDuty\nwebhook]
+    end
+
+    Schedule --&gt; Orch
+    Orch --&gt; Extract
+    Extract --&gt; Stage
+    Stage --&gt; Transform
+    Transform --&gt; Load
+    Load --&gt; DW
+    Load --&gt; Audit
+    Extract --&gt;|on error| DLQ
+    Orch --&gt;|on failure| Alert</code></pre>
+<h2 id="4-technology-stack">4. Technology stack<a class="headerlink" href="#4-technology-stack" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Pattern</th>
-<th>Status</th>
-<th>Best for</th>
+<th>Layer</th>
+<th>Primary choice</th>
+<th>Alternatives</th>
+<th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="etl-elt-job/">ETL/ELT Job</a></td>
-<td>Adopt</td>
-<td>Moving data between systems on a schedule</td>
+<td>Language</td>
+<td>Python 3.12+ with uv</td>
+<td>Go, Scala (Spark)</td>
+<td>Python has the richest data ecosystem; see <a href="../../../decisions/0002-default-scripting-language/">ADR-0002</a></td>
 </tr>
 <tr>
-<td><a href="web-scraper/">Web Scraper</a></td>
-<td>Adopt</td>
-<td>Pulling structured data from public web sources</td>
+<td>Orchestration</td>
+<td>Prefect</td>
+<td>Apache Airflow, Dagster, cron + systemd</td>
+<td>See <a href="../../../decisions/0003-etl-orchestrator/">ADR-0003</a> for the full trade-off</td>
 </tr>
 <tr>
-<td><a href="cli-tool/">CLI Tool</a></td>
-<td>Adopt</td>
-<td>Internal developer tooling, ops automation</td>
+<td>Extraction</td>
+<td>httpx + SQLAlchemy</td>
+<td>Airbyte (managed), Singer/Meltano</td>
+<td>Use Airbyte for commodity connectors (Salesforce, Stripe); write custom extractors for bespoke internal APIs</td>
 </tr>
 <tr>
-<td><a href="serverless-function/">Serverless Function</a></td>
-<td>Adopt</td>
-<td>Event-driven glue (webhook handlers, file processors)</td>
+<td>Transformation</td>
+<td>dbt Core</td>
+<td>Polars, pandas, Spark</td>
+<td>dbt for SQL-native warehouse transforms; Polars if you need large in-memory transforms before loading</td>
 </tr>
 <tr>
-<td><a href="cicd-pipeline/">CI/CD Pipeline</a></td>
-<td>Adopt</td>
-<td>Build, test, deploy automation</td>
+<td>Staging</td>
+<td>AWS S3 (raw zone)</td>
+<td>Azure Blob, GCS, local filesystem</td>
+<td>Always stage raw data before transforming — enables re-processing without re-fetching</td>
+</tr>
+<tr>
+<td>Target</td>
+<td>PostgreSQL</td>
+<td>Snowflake, BigQuery, DuckDB</td>
+<td>Postgres for operational targets (&lt; 100 GB); Snowflake / BigQuery for analytical warehouses</td>
+</tr>
+<tr>
+<td>Packaging</td>
+<td>Docker + uv</td>
+<td>Poetry + pip, conda</td>
+<td>Package each job as a container for environment reproducibility; uv lock file pins all transitive deps</td>
+</tr>
+<tr>
+<td>Alerting</td>
+<td>Slack webhook (Prefect block)</td>
+<td>PagerDuty, email</td>
+<td>Page on every failure in prod; Slack notification only in staging</td>
+</tr>
+<tr>
+<td>CI/CD</td>
+<td>GitHub Actions</td>
+<td>GitLab CI</td>
+<td>Lint, type-check, run unit tests, build and push Docker image on merge</td>
 </tr>
 </tbody>
 </table>
-<h2 id="default-tech-stack">Default tech stack<a class="headerlink" href="#default-tech-stack" title="Permanent link">&para;</a></h2>
+<h2 id="5-non-functional-characteristics">5. Non-functional characteristics<a class="headerlink" href="#5-non-functional-characteristics" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Concern</th>
+<th>Profile</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Scalability</strong></td>
+<td>Vertical scaling on the extract/transform container handles most batch jobs. Parallelise across partitions (date ranges, entity shards) for large data volumes. dbt runs multiple models in parallel by default.</td>
+</tr>
+<tr>
+<td><strong>Availability target</strong></td>
+<td>The job itself is not a long-running service. Availability is measured as "pipeline completes within SLA window". Target: 99.5% of scheduled runs complete within their SLA (allows ~3.6 failed runs/month per pipeline).</td>
+</tr>
+<tr>
+<td><strong>Latency target</strong></td>
+<td>Not applicable for sub-second latency. Define an SLA window instead (e.g., "data in warehouse within 4 hours of source write"). Alert when a run exceeds 2× its historical average duration.</td>
+</tr>
+<tr>
+<td><strong>Security posture</strong></td>
+<td>Source credentials in AWS Secrets Manager, never in code or environment files checked into git. Network access to source DBs via VPC peering or private endpoints only. Audit table records every run's row counts and checksums.</td>
+</tr>
+<tr>
+<td><strong>Data residency</strong></td>
+<td>Data moves between systems — ensure source and target reside in the same region unless cross-region transfer is explicitly approved. Tag S3 objects with data classification.</td>
+</tr>
+<tr>
+<td><strong>Compliance fit</strong></td>
+<td>GDPR ✓ with PII masking in the transform layer; document which fields are masked in dbt schema.yml. SOC 2 ✓ (audit log + access controls). HIPAA ✓ with encrypted S3 and Postgres + BAA on AWS.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-cost-ballpark">6. Cost ballpark<a class="headerlink" href="#6-cost-ballpark" title="Permanent link">&para;</a></h2>
+<p>Indicative monthly USD cost. Costs scale primarily with compute runtime and data volume, not number of pipelines.</p>
+<table>
+<thead>
+<tr>
+<th>Scale</th>
+<th>Jobs / day</th>
+<th>Monthly cost</th>
+<th>Cost drivers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Small</td>
+<td>&lt; 20</td>
+<td>$30 - $150</td>
+<td>Prefect Cloud free tier (3 workspaces), t3.small ECS task, small RDS Postgres</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>20 - 200</td>
+<td>$300 - $1,500</td>
+<td>Prefect Cloud Team plan, right-sized ECS tasks, Snowflake on-demand compute</td>
+</tr>
+<tr>
+<td>Large</td>
+<td>200+</td>
+<td>$2,000 - $10,000</td>
+<td>Dedicated Prefect agent fleet, Snowflake reserved compute, multi-region S3, full observability</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-llm-assisted-development-fit">7. LLM-assisted development fit<a class="headerlink" href="#7-llm-assisted-development-fit" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Rating</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Extractor boilerplate (pagination, retries, auth)</td>
+<td>★★★★★</td>
+<td>Excellent — REST pagination patterns are well-represented; always add exponential backoff.</td>
+</tr>
+<tr>
+<td>dbt model and test scaffolding</td>
+<td>★★★★</td>
+<td>Generates correct SQL and schema.yml tests; verify grain and join keys manually.</td>
+</tr>
+<tr>
+<td>Idempotency and incremental logic</td>
+<td>★★★</td>
+<td>Gets the concept right but often misses edge cases (late-arriving data, deletes). Review watermark logic by hand.</td>
+</tr>
+<tr>
+<td>Orchestration DAG topology</td>
+<td>★★</td>
+<td>Correct for simple linear flows; makes subtle mistakes with fan-out/fan-in and cross-pipeline dependencies. Sketch the DAG yourself first.</td>
+</tr>
+<tr>
+<td>Architecture decisions</td>
+<td>★</td>
+<td>Don't outsource. Use ADRs.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recommended workflow:</strong> Generate extractor classes and dbt models with the LLM, then hand-write the idempotency key logic and incremental watermark. Run <code>dbt test</code> in CI on every PR.</p>
+<h2 id="8-reference-implementations">8. Reference implementations<a class="headerlink" href="#8-reference-implementations" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Language:</strong> Python (default), Go (for distribution as a single binary), Bash (under 50 lines only)</li>
-<li><strong>Scheduling:</strong> GitHub Actions cron, AWS EventBridge, Temporal (for complex workflows)</li>
-<li><strong>Packaging:</strong> <code>uv</code> for Python projects, single static binary for Go</li>
-<li><strong>Storage:</strong> SQLite for local state, Postgres for shared state, S3 for blob output</li>
+<li><strong>Public reference:</strong> <a href="https://github.com/dbt-labs/jaffle_shop">dbt-labs/jaffle_shop</a> — canonical dbt project showing model structure, tests, and documentation</li>
+<li><strong>Public reference:</strong> <a href="https://github.com/PrefectHQ/prefect/tree/main/docs/recipes">PrefectHQ/prefect — recipes</a> — official Prefect flow examples including ETL patterns</li>
+<li><strong>Public reference:</strong> <a href="https://github.com/dagster-io/dagster/tree/master/examples">dagster-io/dagster — examples</a> — alternative orchestrator with asset-oriented ETL examples</li>
+<li><strong>Internal case study:</strong> <em>Add your anonymised internal example here</em></li>
 </ul>
-<h2 id="llm-development-sweet-spot">LLM-development sweet spot<a class="headerlink" href="#llm-development-sweet-spot" title="Permanent link">&para;</a></h2>
-<p>Highest-leverage category for AI-assisted development. Self-contained, easy to test by running, low blast radius for mistakes.</p>
+<h2 id="9-related-decisions-adrs">9. Related decisions (ADRs)<a class="headerlink" href="#9-related-decisions-adrs" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../../../decisions/0002-default-scripting-language/">ADR-0002: Python as the default scripting language</a></li>
+<li><a href="../../../decisions/0003-etl-orchestrator/">ADR-0003: Prefect as the default ETL/ELT orchestrator</a></li>
+</ul>
+<h2 id="10-known-risks-gotchas">10. Known risks &amp; gotchas<a class="headerlink" href="#10-known-risks-gotchas" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Non-idempotent loads corrupt data on re-run</strong> — Every job must be safe to re-run for the same time window. Mitigation: use <code>INSERT ... ON CONFLICT DO UPDATE</code> (upsert) or truncate-and-reload partition strategies; never plain <code>INSERT</code> without deduplication.</li>
+<li><strong>Schema drift in the source silently breaks downstream models</strong> — A column rename or type change in the source cascades through your transforms. Mitigation: add a schema-assertion step at the start of each extract run (e.g., <code>pandera</code> for DataFrames, a <code>SELECT</code> count + type check against the staging table); fail loudly before touching the target.</li>
+<li><strong>Clock skew causes records to fall between incremental windows</strong> — If source timestamps have millisecond drift or the source DB is in a different timezone, records near the watermark boundary are silently missed. Mitigation: always subtract a small overlap window (e.g., 5 minutes) from your lower-bound watermark and deduplicate on load.</li>
+<li><strong>Long-running extract locks the source database</strong> — A <code>SELECT *</code> on a large table during business hours is a production incident. Mitigation: use read replicas for extraction, add <code>statement_timeout</code>, and schedule heavy extracts in off-peak hours.</li>
+<li><strong>Sensitive data in the staging bucket</strong> — S3 raw zone contains unmasked PII. Mitigation: encrypt with SSE-KMS, apply a lifecycle rule to expire raw files after 30 days, restrict bucket access to the ETL IAM role only.</li>
+</ul>
 
 
 
@@ -1188,10 +1391,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

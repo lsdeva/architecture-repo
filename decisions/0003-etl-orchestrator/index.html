@@ -12,13 +12,9 @@
         <meta name="author" content="deva@soa.team">
       
       
-        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/02-scripts-automation/">
+        <link rel="canonical" href="https://your-org.github.io/architecture-repo/decisions/0003-etl-orchestrator/">
       
       
-        <link rel="prev" href="../01-web-mobile/">
-      
-      
-        <link rel="next" href="../03-data-analytics/">
       
       
         
@@ -29,7 +25,7 @@
     
     
       
-        <title>Scripts & Automation - Architecture Pattern Catalog</title>
+        <title>ADR-0003: Prefect as the default ETL/ELT orchestrator - Architecture Pattern Catalog</title>
       
     
     
@@ -80,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#scripts-automation" class="md-skip">
+        <a href="#adr-0003-prefect-as-the-default-etlelt-orchestrator" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Scripts & Automation
+              ADR-0003: Prefect as the default ETL/ELT orchestrator
             
           </span>
         </div>
@@ -263,13 +259,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../patterns/" class="md-tabs__link">
           
   
   
@@ -289,7 +283,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../decisions/" class="md-tabs__link">
+      <a href="../" class="md-tabs__link">
         
   
   
@@ -427,8 +421,6 @@
       
   
   
-    
-  
   
   
     
@@ -458,23 +450,22 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../patterns/" class="md-nav__link ">
               
   
   
@@ -492,13 +483,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -518,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-web-mobile/" class="md-nav__link">
+      <a href="../../patterns/01-web-mobile/" class="md-nav__link">
         
   
   
@@ -543,37 +534,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Scripts & Automation
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../patterns/02-scripts-automation/" class="md-nav__link">
         
   
   
@@ -589,70 +553,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        When to look here
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Patterns in this category
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Default tech stack
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#llm-development-sweet-spot" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        LLM-development sweet spot
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -665,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-data-analytics/" class="md-nav__link">
+      <a href="../../patterns/03-data-analytics/" class="md-nav__link">
         
   
   
@@ -693,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04-backend-distributed/" class="md-nav__link">
+      <a href="../../patterns/04-backend-distributed/" class="md-nav__link">
         
   
   
@@ -721,7 +621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../05-systems-infra/" class="md-nav__link">
+      <a href="../../patterns/05-systems-infra/" class="md-nav__link">
         
   
   
@@ -749,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../06-safety-critical/" class="md-nav__link">
+      <a href="../../patterns/06-safety-critical/" class="md-nav__link">
         
   
   
@@ -777,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../07-ai-llm-integrated/" class="md-nav__link">
+      <a href="../../patterns/07-ai-llm-integrated/" class="md-nav__link">
         
   
   
@@ -805,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../08-games-graphics/" class="md-nav__link">
+      <a href="../../patterns/08-games-graphics/" class="md-nav__link">
         
   
   
@@ -840,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../decisions/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -1010,10 +910,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
+  <a href="#context" class="md-nav__link">
     <span class="md-ellipsis">
       
-        When to look here
+        Context
       
     </span>
   </a>
@@ -1021,10 +921,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
+  <a href="#decision" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Patterns in this category
+        Decision
       
     </span>
   </a>
@@ -1032,21 +932,71 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
+  <a href="#alternatives-considered" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Default tech stack
+        Alternatives considered
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Alternatives considered">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-a-apache-airflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option A: Apache Airflow
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#llm-development-sweet-spot" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#option-b-prefect-chosen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        LLM-development sweet spot
+        Option B: Prefect (chosen)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-c-dagster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option C: Dagster
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-d-plain-cron-github-actions-or-eventbridge" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option D: Plain cron (GitHub Actions or EventBridge)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consequences
       
     </span>
   </a>
@@ -1073,60 +1023,61 @@
   
 
 
-<h1 id="scripts-automation">Scripts &amp; Automation<a class="headerlink" href="#scripts-automation" title="Permanent link">&para;</a></h1>
-<p>Short-lived or recurring code that transforms data, glues systems together, or automates tasks. Often single-author, often single-file.</p>
-<h2 id="when-to-look-here">When to look here<a class="headerlink" href="#when-to-look-here" title="Permanent link">&para;</a></h2>
+<h1 id="adr-0003-prefect-as-the-default-etlelt-orchestrator">ADR-0003: Prefect as the default ETL/ELT orchestrator<a class="headerlink" href="#adr-0003-prefect-as-the-default-etlelt-orchestrator" title="Permanent link">&para;</a></h1>
 <ul>
-<li>The deliverable is a script or job, not a long-running service</li>
-<li>It runs on a schedule, on demand, or as part of a CI/CD pipeline</li>
-<li>It is acceptable for the script to be re-run if it fails</li>
+<li><strong>Status:</strong> Accepted</li>
+<li><strong>Date:</strong> 2026-05-02</li>
+<li><strong>Deciders:</strong> Architecture Team</li>
+<li><strong>Tags:</strong> etl, orchestration, data, scheduling</li>
 </ul>
-<h2 id="patterns-in-this-category">Patterns in this category<a class="headerlink" href="#patterns-in-this-category" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Pattern</th>
-<th>Status</th>
-<th>Best for</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="etl-elt-job/">ETL/ELT Job</a></td>
-<td>Adopt</td>
-<td>Moving data between systems on a schedule</td>
-</tr>
-<tr>
-<td><a href="web-scraper/">Web Scraper</a></td>
-<td>Adopt</td>
-<td>Pulling structured data from public web sources</td>
-</tr>
-<tr>
-<td><a href="cli-tool/">CLI Tool</a></td>
-<td>Adopt</td>
-<td>Internal developer tooling, ops automation</td>
-</tr>
-<tr>
-<td><a href="serverless-function/">Serverless Function</a></td>
-<td>Adopt</td>
-<td>Event-driven glue (webhook handlers, file processors)</td>
-</tr>
-<tr>
-<td><a href="cicd-pipeline/">CI/CD Pipeline</a></td>
-<td>Adopt</td>
-<td>Build, test, deploy automation</td>
-</tr>
-</tbody>
-</table>
-<h2 id="default-tech-stack">Default tech stack<a class="headerlink" href="#default-tech-stack" title="Permanent link">&para;</a></h2>
+<h2 id="context">Context<a class="headerlink" href="#context" title="Permanent link">&para;</a></h2>
+<p>The ETL/ELT job pattern needs a default orchestrator recommendation. The choice determines: how pipelines are defined (code vs YAML/DAG), how they are monitored, how failures are retried, and how much infrastructure the data team must operate. The options range from "nothing" (plain cron) to full-featured platforms (Airflow, Prefect, Dagster). This choice is expensive to reverse because pipelines accumulate and migration is manual.</p>
+<p>The realistic candidates for a team starting a new data platform in 2026 are Apache Airflow (the incumbent), Prefect (Python-native, cloud-hosted control plane), Dagster (asset-oriented), and plain cron + systemd (no framework). Spark and Luigi are excluded as they address different scales or are effectively deprecated.</p>
+<h2 id="decision">Decision<a class="headerlink" href="#decision" title="Permanent link">&para;</a></h2>
+<p>We will use <strong>Prefect</strong> as the default orchestrator for ETL/ELT jobs.</p>
+<p>Plain <code>cron</code> (via GitHub Actions scheduled runs or AWS EventBridge) remains acceptable for single-step jobs that do not need retry logic, dependency chaining, or a UI.</p>
+<h2 id="alternatives-considered">Alternatives considered<a class="headerlink" href="#alternatives-considered" title="Permanent link">&para;</a></h2>
+<h3 id="option-a-apache-airflow">Option A: Apache Airflow<a class="headerlink" href="#option-a-apache-airflow" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Language:</strong> Python (default), Go (for distribution as a single binary), Bash (under 50 lines only)</li>
-<li><strong>Scheduling:</strong> GitHub Actions cron, AWS EventBridge, Temporal (for complex workflows)</li>
-<li><strong>Packaging:</strong> <code>uv</code> for Python projects, single static binary for Go</li>
-<li><strong>Storage:</strong> SQLite for local state, Postgres for shared state, S3 for blob output</li>
+<li><strong>Pros:</strong> Industry standard — the largest community, most connectors, and broadest employer recognition. Rich plugin ecosystem. Kubernetes Executor scales workers horizontally.</li>
+<li><strong>Cons:</strong> Operationally heavy even on managed offerings (MWAA costs ~$300/month minimum; Astronomer is more). DAGs are defined as Python but in a constrained execution model (no local state, no direct function calls in task bodies) that surprises engineers. Scheduler and webserver are separate processes requiring high availability configuration. Backfill and dependency semantics are complex to learn. Poor local development experience.</li>
 </ul>
-<h2 id="llm-development-sweet-spot">LLM-development sweet spot<a class="headerlink" href="#llm-development-sweet-spot" title="Permanent link">&para;</a></h2>
-<p>Highest-leverage category for AI-assisted development. Self-contained, easy to test by running, low blast radius for mistakes.</p>
+<h3 id="option-b-prefect-chosen">Option B: Prefect (chosen)<a class="headerlink" href="#option-b-prefect-chosen" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Pros:</strong> Pure Python — a flow is a regular Python function decorated with <code>@flow</code>; no DAG construction boilerplate. Excellent local development story (<code>prefect server start</code> runs the full UI locally in one command). Prefect Cloud free tier (3 workspaces, unlimited runs) covers small-to-medium data teams at zero cost. Automatic retry, caching, and logging with minimal configuration. Workers can run as Docker containers, ECS tasks, or local processes with no config change. <code>prefect.yaml</code> deployment config is version-controllable.</li>
+<li><strong>Cons:</strong> Smaller community than Airflow. The Prefect 2.x → 3.x migration broke some APIs — verify the version before starting. Fewer pre-built integrations than Airflow's provider packages (though most are one <code>pip install prefect-aws</code> away). No built-in dbt-native DAG dependency graph (Dagster has this).</li>
+</ul>
+<h3 id="option-c-dagster">Option C: Dagster<a class="headerlink" href="#option-c-dagster" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Pros:</strong> Asset-oriented model (Software-Defined Assets) is an excellent fit for ELT patterns where the output is a table or dataset, not a task completion. First-class dbt integration. Built-in data quality checks via asset checks. Partitions and backfills are first-class concepts.</li>
+<li><strong>Cons:</strong> Steeper learning curve than Prefect — the asset/job/op distinction takes time to internalise. Dagster Cloud (managed) is more expensive than Prefect Cloud. Smaller community than Airflow. The asset model is genuinely better for large data platforms but adds unnecessary complexity for simple ETL jobs.</li>
+</ul>
+<h3 id="option-d-plain-cron-github-actions-or-eventbridge">Option D: Plain cron (GitHub Actions or EventBridge)<a class="headerlink" href="#option-d-plain-cron-github-actions-or-eventbridge" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Pros:</strong> Zero new infrastructure. Every engineer already understands cron syntax. GitHub Actions scheduled workflows are free up to the minute budget and require no extra deployment.</li>
+<li><strong>Cons:</strong> No retry logic without writing it yourself. No cross-job dependency management. No centralised monitoring UI. Failures surface only as GitHub notification emails unless you wire up alerting explicitly. Does not scale gracefully beyond ~5 independent jobs before operational visibility degrades.</li>
+</ul>
+<h2 id="consequences">Consequences<a class="headerlink" href="#consequences" title="Permanent link">&para;</a></h2>
+<p><strong>Positive</strong></p>
+<ul>
+<li>Python-native flows are readable by any Python engineer on the team, not just data engineers</li>
+<li>Prefect Cloud free tier eliminates infrastructure cost for small-to-medium data teams</li>
+<li>Local development is fast: run the same flow locally or in production without code changes</li>
+<li>Built-in retry, timeout, and notification blocks reduce boilerplate in every job</li>
+</ul>
+<p><strong>Negative / trade-offs</strong></p>
+<ul>
+<li>Committing to Prefect means all flows use its <code>@flow</code> / <code>@task</code> decorators — migration to another orchestrator means rewriting every pipeline entry point</li>
+<li>Prefect's API has had breaking changes between major versions; pin the version in <code>pyproject.toml</code> and allocate time to upgrade</li>
+<li>For large data platforms (&gt; 50 pipelines, asset lineage requirements), Dagster's asset model becomes more valuable and the switch becomes worth the migration cost</li>
+</ul>
+<p><strong>Follow-up actions</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Add <code>prefect-aws</code> to the standard ETL Docker base image</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Create a shared <code>prefect.yaml</code> deployment template in the internal tooling repo</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Define the threshold for switching to Dagster (proposed: &gt; 50 active pipelines or when dbt asset lineage visibility becomes a requirement)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Configure Prefect Cloud workspace and document the on-call alert webhook setup</li>
+</ul>
 
 
 

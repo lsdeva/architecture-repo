@@ -12,31 +12,27 @@
         <meta name="author" content="deva@soa.team">
       
       
-        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/02-scripts-automation/">
+        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/02-scripts-automation/serverless-function/">
       
       
-        <link rel="prev" href="../01-web-mobile/">
-      
-      
-        <link rel="next" href="../03-data-analytics/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Scripts & Automation - Architecture Pattern Catalog</title>
+        <title>Pattern: Serverless Function - Architecture Pattern Catalog</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#scripts-automation" class="md-skip">
+        <a href="#pattern-serverless-function" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +90,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Architecture Pattern Catalog" class="md-header__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
+    <a href="../../.." title="Architecture Pattern Catalog" class="md-header__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Scripts & Automation
+              Pattern: Serverless Function
             
           </span>
         </div>
@@ -227,7 +223,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -246,7 +242,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../about/how-to-use/" class="md-tabs__link">
+      <a href="../../../about/how-to-use/" class="md-tabs__link">
         
   
   
@@ -263,13 +259,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../" class="md-tabs__link">
           
   
   
@@ -289,7 +283,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../decisions/" class="md-tabs__link">
+      <a href="../../../decisions/" class="md-tabs__link">
         
   
   
@@ -310,7 +304,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../about/methodology/" class="md-tabs__link">
+        <a href="../../../about/methodology/" class="md-tabs__link">
           
   
   
@@ -346,7 +340,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Architecture Pattern Catalog" class="md-nav__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
+    <a href="../../.." title="Architecture Pattern Catalog" class="md-nav__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -376,7 +370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -403,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/how-to-use/" class="md-nav__link">
+      <a href="../../../about/how-to-use/" class="md-nav__link">
         
   
   
@@ -427,8 +421,6 @@
       
   
   
-    
-  
   
   
     
@@ -458,23 +450,22 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
@@ -492,13 +483,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -518,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-web-mobile/" class="md-nav__link">
+      <a href="../../01-web-mobile/" class="md-nav__link">
         
   
   
@@ -543,37 +534,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Scripts & Automation
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -589,70 +553,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        When to look here
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Patterns in this category
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Default tech stack
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#llm-development-sweet-spot" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        LLM-development sweet spot
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -665,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-data-analytics/" class="md-nav__link">
+      <a href="../../03-data-analytics/" class="md-nav__link">
         
   
   
@@ -693,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04-backend-distributed/" class="md-nav__link">
+      <a href="../../04-backend-distributed/" class="md-nav__link">
         
   
   
@@ -721,7 +621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../05-systems-infra/" class="md-nav__link">
+      <a href="../../05-systems-infra/" class="md-nav__link">
         
   
   
@@ -749,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../06-safety-critical/" class="md-nav__link">
+      <a href="../../06-safety-critical/" class="md-nav__link">
         
   
   
@@ -777,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../07-ai-llm-integrated/" class="md-nav__link">
+      <a href="../../07-ai-llm-integrated/" class="md-nav__link">
         
   
   
@@ -805,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../08-games-graphics/" class="md-nav__link">
+      <a href="../../08-games-graphics/" class="md-nav__link">
         
   
   
@@ -840,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../decisions/" class="md-nav__link">
+      <a href="../../../decisions/" class="md-nav__link">
         
   
   
@@ -927,7 +827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/methodology/" class="md-nav__link">
+      <a href="../../../about/methodology/" class="md-nav__link">
         
   
   
@@ -955,7 +855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/contributing/" class="md-nav__link">
+      <a href="../../../about/contributing/" class="md-nav__link">
         
   
   
@@ -1010,10 +910,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
+  <a href="#1-context" class="md-nav__link">
     <span class="md-ellipsis">
       
-        When to look here
+        1. Context
       
     </span>
   </a>
@@ -1021,10 +921,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
+  <a href="#2-problem-it-solves" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Patterns in this category
+        2. Problem it solves
       
     </span>
   </a>
@@ -1032,10 +932,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
+  <a href="#3-solution-overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Default tech stack
+        3. Solution overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Solution overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-context-c4-level-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System context (C4 Level 1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container-view-c4-level-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Container view (C4 Level 2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-technology-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Technology stack
       
     </span>
   </a>
@@ -1043,10 +982,65 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#llm-development-sweet-spot" class="md-nav__link">
+  <a href="#5-non-functional-characteristics" class="md-nav__link">
     <span class="md-ellipsis">
       
-        LLM-development sweet spot
+        5. Non-functional characteristics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-cost-ballpark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Cost ballpark
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-llm-assisted-development-fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. LLM-assisted development fit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-reference-implementations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Reference implementations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-related-decisions-adrs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Related decisions (ADRs)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-known-risks-gotchas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Known risks &amp; gotchas
       
     </span>
   </a>
@@ -1073,60 +1067,266 @@
   
 
 
-<h1 id="scripts-automation">Scripts &amp; Automation<a class="headerlink" href="#scripts-automation" title="Permanent link">&para;</a></h1>
-<p>Short-lived or recurring code that transforms data, glues systems together, or automates tasks. Often single-author, often single-file.</p>
-<h2 id="when-to-look-here">When to look here<a class="headerlink" href="#when-to-look-here" title="Permanent link">&para;</a></h2>
+<h1 id="pattern-serverless-function">Pattern: Serverless Function<a class="headerlink" href="#pattern-serverless-function" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Quick facts</p>
 <ul>
-<li>The deliverable is a script or job, not a long-running service</li>
-<li>It runs on a schedule, on demand, or as part of a CI/CD pipeline</li>
-<li>It is acceptable for the script to be re-run if it fails</li>
+<li><strong>Category:</strong> Scripts &amp; Automation</li>
+<li><strong>Maturity:</strong> Adopt</li>
+<li><strong>Typical team size:</strong> 1-3 engineers</li>
+<li><strong>Typical timeline to MVP:</strong> 1-2 weeks</li>
+<li><strong>Last reviewed:</strong> 2026-05-02 by Architecture Team</li>
 </ul>
-<h2 id="patterns-in-this-category">Patterns in this category<a class="headerlink" href="#patterns-in-this-category" title="Permanent link">&para;</a></h2>
+</div>
+<h2 id="1-context">1. Context<a class="headerlink" href="#1-context" title="Permanent link">&para;</a></h2>
+<p><strong>Use this pattern when:</strong></p>
+<ul>
+<li>Responding to events: an HTTP webhook, a file landing in S3, a message on a queue, or a scheduled cron trigger</li>
+<li>Invocation frequency is irregular — idle for hours, then bursting — and you do not want to pay for idle compute</li>
+<li>Each invocation is independent and stateless (or state lives in an external store)</li>
+<li>Execution time is under 15 minutes per invocation</li>
+</ul>
+<p><strong>Do NOT use this pattern when:</strong></p>
+<ul>
+<li>The function runs for more than 15 minutes — use an ECS/Fargate task or a background job instead</li>
+<li>You need persistent in-process state between invocations (connection pools, warmed caches) and cold starts are unacceptable — consider a long-running container service</li>
+<li>Sustained throughput exceeds ~1,000 requests/second continuously — at that point a provisioned container service often costs less than Lambda</li>
+<li>The workload has complex step-by-step business logic with retries and compensation — use a workflow engine like Temporal instead</li>
+</ul>
+<h2 id="2-problem-it-solves">2. Problem it solves<a class="headerlink" href="#2-problem-it-solves" title="Permanent link">&para;</a></h2>
+<p>Glue code — webhook handlers, file processors, notification dispatchers, scheduled reports — does not warrant the overhead of a full service: a Dockerfile, a cluster, health-check endpoints, and 24/7 compute costs. This pattern provides event-driven execution with no infrastructure to manage, automatic scaling to zero, and a billing model that charges only for actual runtime.</p>
+<h2 id="3-solution-overview">3. Solution overview<a class="headerlink" href="#3-solution-overview" title="Permanent link">&para;</a></h2>
+<h3 id="system-context-c4-level-1">System context (C4 Level 1)<a class="headerlink" href="#system-context-c4-level-1" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart LR
+    EventSrc[Event Source\nAPI GW / SQS / S3 / EventBridge / Scheduler] --&gt; Fn[Serverless Function\nAWS Lambda]
+    Fn --&gt; Downstream[Downstream Systems\nDB / API / Queue / Storage]
+    Fn --&gt; DLQ[Dead Letter Queue\nSQS DLQ]
+    Fn --&gt; Observability[Observability\nCloudWatch + X-Ray]</code></pre>
+<h3 id="container-view-c4-level-2">Container view (C4 Level 2)<a class="headerlink" href="#container-view-c4-level-2" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TB
+    subgraph Triggers
+        APIGW[API Gateway\nHTTP webhook]
+        SQS[SQS Queue\nasync messages]
+        S3Evt[S3 Event\nfile processor]
+        Bridge[EventBridge\nscheduled or bus event]
+    end
+    subgraph Lambda Execution Environment
+        Handler[Handler Function\npython handler.py]
+        DepLayer[Dependencies Layer\nor bundled zip]
+        EnvCfg[Environment Config\nSSM / Secrets Manager]
+    end
+    subgraph Downstream
+        RDSProxy[RDS Proxy\nPostgreSQL]
+        ExtAPI[External API]
+        OutQueue[Output Queue\nSQS / SNS]
+        S3Out[(S3 Output Bucket)]
+    end
+    subgraph Ops
+        DLQ[(SQS Dead Letter Queue)]
+        CWLogs[CloudWatch Logs]
+        XRay[X-Ray Traces]
+        Alarm[CloudWatch Alarm\n→ Slack / PagerDuty]
+    end
+
+    APIGW --&gt; Handler
+    SQS --&gt; Handler
+    S3Evt --&gt; Handler
+    Bridge --&gt; Handler
+    Handler --&gt; DepLayer
+    Handler --&gt; EnvCfg
+    Handler --&gt; RDSProxy
+    Handler --&gt; ExtAPI
+    Handler --&gt; OutQueue
+    Handler --&gt; S3Out
+    Handler --&gt;|on unhandled exception| DLQ
+    Handler --&gt; CWLogs
+    Handler --&gt; XRay
+    DLQ --&gt; Alarm</code></pre>
+<h2 id="4-technology-stack">4. Technology stack<a class="headerlink" href="#4-technology-stack" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Pattern</th>
-<th>Status</th>
-<th>Best for</th>
+<th>Layer</th>
+<th>Primary choice</th>
+<th>Alternatives</th>
+<th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="etl-elt-job/">ETL/ELT Job</a></td>
-<td>Adopt</td>
-<td>Moving data between systems on a schedule</td>
+<td>Platform</td>
+<td>AWS Lambda</td>
+<td>Google Cloud Functions, Azure Functions, Cloudflare Workers</td>
+<td>Lambda has the widest ecosystem and longest track record; Cloudflare Workers for sub-millisecond edge latency (no VPC access); GCF/AzFunc if already on that cloud</td>
 </tr>
 <tr>
-<td><a href="web-scraper/">Web Scraper</a></td>
-<td>Adopt</td>
-<td>Pulling structured data from public web sources</td>
+<td>Runtime</td>
+<td>Python 3.12</td>
+<td>Node.js 22, Go 1.x, Java 21 (SnapStart)</td>
+<td>Python for data-heavy functions; Go for cold-start-sensitive paths (Go cold starts are ~10× faster than Python); Java 21 with SnapStart nearly matches Go</td>
 </tr>
 <tr>
-<td><a href="cli-tool/">CLI Tool</a></td>
-<td>Adopt</td>
-<td>Internal developer tooling, ops automation</td>
+<td>IaC / deployment</td>
+<td>AWS SAM</td>
+<td>Serverless Framework, SST, Terraform</td>
+<td>SAM is AWS-native, free, and requires no extra dependencies; SST for TypeScript-first teams with a frontend; Terraform if the broader stack is already managed there</td>
 </tr>
 <tr>
-<td><a href="serverless-function/">Serverless Function</a></td>
-<td>Adopt</td>
-<td>Event-driven glue (webhook handlers, file processors)</td>
+<td>Event routing</td>
+<td>Amazon EventBridge</td>
+<td>SQS trigger, SNS, API Gateway</td>
+<td>EventBridge for event-bus patterns with content-based routing; SQS for reliable queue-pull with back-pressure control</td>
 </tr>
 <tr>
-<td><a href="cicd-pipeline/">CI/CD Pipeline</a></td>
-<td>Adopt</td>
-<td>Build, test, deploy automation</td>
+<td>Dead letter handling</td>
+<td>SQS DLQ</td>
+<td>SNS DLQ</td>
+<td>Always configure a DLQ — Lambda silently drops failures on async invocations without one</td>
+</tr>
+<tr>
+<td>Database access</td>
+<td>RDS Proxy (Postgres)</td>
+<td>DynamoDB, Aurora Serverless v2</td>
+<td>RDS Proxy prevents connection pool exhaustion (Lambda can spawn hundreds of instances simultaneously); DynamoDB for serverless-native key-value access</td>
+</tr>
+<tr>
+<td>Secrets</td>
+<td>AWS Secrets Manager</td>
+<td>SSM Parameter Store (SecureString)</td>
+<td>Secrets Manager for rotating credentials; SSM Parameter Store is ~3× cheaper for non-rotating config values</td>
+</tr>
+<tr>
+<td>Observability</td>
+<td>AWS X-Ray + CloudWatch Logs</td>
+<td>Datadog Lambda extension, Lumigo</td>
+<td>X-Ray for distributed traces across Lambda → RDS/SQS; add Datadog if the rest of the organisation is already instrumented there</td>
 </tr>
 </tbody>
 </table>
-<h2 id="default-tech-stack">Default tech stack<a class="headerlink" href="#default-tech-stack" title="Permanent link">&para;</a></h2>
+<h2 id="5-non-functional-characteristics">5. Non-functional characteristics<a class="headerlink" href="#5-non-functional-characteristics" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Concern</th>
+<th>Profile</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Scalability</strong></td>
+<td>Scales to zero and to 1,000 concurrent executions by default (soft limit; request increase for higher). No action required for burst traffic — Lambda handles it automatically. Account-level concurrency limit applies across all functions; set per-function reserved concurrency to protect critical functions.</td>
+</tr>
+<tr>
+<td><strong>Availability target</strong></td>
+<td>AWS Lambda SLA is 99.95%. The function itself must be idempotent — SQS and EventBridge guarantee at-least-once delivery, so duplicate invocations must produce the same result.</td>
+</tr>
+<tr>
+<td><strong>Latency target</strong></td>
+<td>Warm invocations: p95 &lt; 100ms for lightweight functions. Cold starts: Python 3.12 is typically 200–600ms; mitigate with Provisioned Concurrency for latency-critical paths. API Gateway adds ~10ms overhead.</td>
+</tr>
+<tr>
+<td><strong>Security posture</strong></td>
+<td>Least-privilege IAM role per function — never share roles between functions. No inbound network access; all communication is outbound from within a VPC. Inject secrets at runtime from Secrets Manager, never in environment variables checked into source control. Enable Lambda function URL auth or API Gateway authoriser — never expose a public unauthenticated endpoint.</td>
+</tr>
+<tr>
+<td><strong>Data residency</strong></td>
+<td>Function executes in the AWS region you deploy to. Ensure downstream stores (RDS, S3) are in the same region to avoid cross-region data transfer and residency violations.</td>
+</tr>
+<tr>
+<td><strong>Compliance fit</strong></td>
+<td>GDPR ✓ with correct region selection and data minimisation in logs. SOC 2 ✓ — CloudTrail records all Lambda API calls. HIPAA ✓ with encrypted environment variables + BAA on AWS. PCI-DSS: do not process raw card data in Lambda; use Stripe-hosted pages instead.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-cost-ballpark">6. Cost ballpark<a class="headerlink" href="#6-cost-ballpark" title="Permanent link">&para;</a></h2>
+<p>Indicative monthly USD cost. Lambda pricing is per invocation + per GB-second of compute; the free tier covers 1M invocations/month.</p>
+<table>
+<thead>
+<tr>
+<th>Scale</th>
+<th>Invocations / month</th>
+<th>Monthly cost</th>
+<th>Cost drivers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Small</td>
+<td>&lt; 1M</td>
+<td>$0 - $5</td>
+<td>AWS free tier covers 1M invocations + 400,000 GB-seconds; cost is effectively zero for low-volume webhooks</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>1M - 100M</td>
+<td>$20 - $200</td>
+<td>Lambda compute + API Gateway request charges; RDS Proxy if DB-connected</td>
+</tr>
+<tr>
+<td>Large</td>
+<td>100M+</td>
+<td>$300 - $3,000</td>
+<td>Lambda at scale, Provisioned Concurrency for latency-sensitive paths, data transfer, X-Ray tracing volume</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-llm-assisted-development-fit">7. LLM-assisted development fit<a class="headerlink" href="#7-llm-assisted-development-fit" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Rating</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Handler boilerplate and event parsing</td>
+<td>★★★★★</td>
+<td>Excellent — Lambda event schemas (SQS, S3, API GW) are well-represented; generate the handler skeleton from a spec.</td>
+</tr>
+<tr>
+<td>SAM / IaC template scaffolding</td>
+<td>★★★★</td>
+<td>Generates correct SAM YAML for most use cases; always review IAM policy statements — LLMs often over-provision permissions.</td>
+</tr>
+<tr>
+<td>Idempotency and deduplication logic</td>
+<td>★★★</td>
+<td>Understands the concept but misses edge cases (e.g., partial writes before a crash). Review DLQ re-drive logic manually.</td>
+</tr>
+<tr>
+<td>Cold start optimisation</td>
+<td>★★★</td>
+<td>Knows the common techniques (lazy imports, Lambda Layers, Provisioned Concurrency); recommendations are correct but sometimes outdated on runtime-specific details.</td>
+</tr>
+<tr>
+<td>Architecture decisions</td>
+<td>★</td>
+<td>Don't outsource — specifically the runtime choice and IaC tooling have long-term consequences. Use ADRs.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recommended workflow:</strong> Generate the handler and SAM template, then manually tighten the IAM policy using the AWS IAM Policy Simulator. Add a DLQ and CloudWatch alarm before deploying to production — not as a follow-up.</p>
+<h2 id="8-reference-implementations">8. Reference implementations<a class="headerlink" href="#8-reference-implementations" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Language:</strong> Python (default), Go (for distribution as a single binary), Bash (under 50 lines only)</li>
-<li><strong>Scheduling:</strong> GitHub Actions cron, AWS EventBridge, Temporal (for complex workflows)</li>
-<li><strong>Packaging:</strong> <code>uv</code> for Python projects, single static binary for Go</li>
-<li><strong>Storage:</strong> SQLite for local state, Postgres for shared state, S3 for blob output</li>
+<li><strong>Public reference:</strong> <a href="https://github.com/aws-samples/aws-sam-cli-app-templates">aws-samples/aws-sam-cli-app-templates</a> — official SAM starter templates for Python, Node, Go runtimes</li>
+<li><strong>Public reference:</strong> <a href="https://github.com/serverless/examples">serverless/examples</a> — community examples for Python + various event sources (SQS, S3, HTTP, cron)</li>
+<li><strong>Public reference:</strong> <a href="https://github.com/aws-powertools/powertools-lambda-python">awslabs/aws-lambda-powertools-python</a> — Lambda Powertools: structured logging, tracing, idempotency utilities — use this in every Python Lambda</li>
+<li><strong>Internal case study:</strong> <em>Add your anonymised internal example here</em></li>
 </ul>
-<h2 id="llm-development-sweet-spot">LLM-development sweet spot<a class="headerlink" href="#llm-development-sweet-spot" title="Permanent link">&para;</a></h2>
-<p>Highest-leverage category for AI-assisted development. Self-contained, easy to test by running, low blast radius for mistakes.</p>
+<h2 id="9-related-decisions-adrs">9. Related decisions (ADRs)<a class="headerlink" href="#9-related-decisions-adrs" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../../../decisions/0002-default-scripting-language/">ADR-0002: Python as the default scripting language</a></li>
+</ul>
+<h2 id="10-known-risks-gotchas">10. Known risks &amp; gotchas<a class="headerlink" href="#10-known-risks-gotchas" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Silent failures on async invocations without a DLQ</strong> — When Lambda is invoked asynchronously (EventBridge, S3 events), a function failure is retried twice then silently discarded unless a DLQ or on-failure destination is configured. Mitigation: always configure an SQS DLQ and a CloudWatch alarm on its <code>ApproximateNumberOfMessagesVisible</code> metric before going live.</li>
+<li><strong>Connection pool exhaustion against RDS</strong> — Each Lambda instance opens its own database connection. At 500 concurrent Lambdas, you exceed Postgres's default <code>max_connections</code>. Mitigation: always sit behind RDS Proxy; it multiplexes Lambda connections into a fixed pool and manages keep-alive.</li>
+<li><strong>Cold starts degrade user-facing APIs</strong> — A Python Lambda behind API Gateway adds 300–600ms on a cold start, which is perceptible. Mitigation: use Provisioned Concurrency for latency-sensitive endpoints; keep the deployment package small (&lt; 10 MB unzipped); avoid VPC attachment unless the function needs private network access (VPC cold starts add ~300ms themselves).</li>
+<li><strong>Over-privileged IAM roles become a blast radius</strong> — Sharing one IAM role across multiple functions, or using <code>*</code> resource ARNs, means a compromised function can access every resource in the account. Mitigation: one IAM role per function, scoped to the exact ARNs it accesses; use <code>sam policy-templates</code> or the Condition block to restrict to specific resource patterns.</li>
+<li><strong>Log volume cost surprises</strong> — A high-throughput Lambda logging every event at INFO level can generate gigabytes of CloudWatch Logs per day. Mitigation: set log level to WARN in production via an environment variable; use Lambda Powertools' <code>Logger</code> which respects the <code>LOG_LEVEL</code> env var and samples debug logs at a configurable rate.</li>
+</ul>
 
 
 
@@ -1188,10 +1388,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

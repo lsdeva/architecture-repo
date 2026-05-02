@@ -12,31 +12,27 @@
         <meta name="author" content="deva@soa.team">
       
       
-        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/02-scripts-automation/">
+        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/02-scripts-automation/web-scraper/">
       
       
-        <link rel="prev" href="../01-web-mobile/">
-      
-      
-        <link rel="next" href="../03-data-analytics/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Scripts & Automation - Architecture Pattern Catalog</title>
+        <title>Pattern: Web Scraper - Architecture Pattern Catalog</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#scripts-automation" class="md-skip">
+        <a href="#pattern-web-scraper" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +90,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Architecture Pattern Catalog" class="md-header__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
+    <a href="../../.." title="Architecture Pattern Catalog" class="md-header__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Scripts & Automation
+              Pattern: Web Scraper
             
           </span>
         </div>
@@ -227,7 +223,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -246,7 +242,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../about/how-to-use/" class="md-tabs__link">
+      <a href="../../../about/how-to-use/" class="md-tabs__link">
         
   
   
@@ -263,13 +259,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../" class="md-tabs__link">
           
   
   
@@ -289,7 +283,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../decisions/" class="md-tabs__link">
+      <a href="../../../decisions/" class="md-tabs__link">
         
   
   
@@ -310,7 +304,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../about/methodology/" class="md-tabs__link">
+        <a href="../../../about/methodology/" class="md-tabs__link">
           
   
   
@@ -346,7 +340,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Architecture Pattern Catalog" class="md-nav__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
+    <a href="../../.." title="Architecture Pattern Catalog" class="md-nav__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -376,7 +370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -403,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/how-to-use/" class="md-nav__link">
+      <a href="../../../about/how-to-use/" class="md-nav__link">
         
   
   
@@ -427,8 +421,6 @@
       
   
   
-    
-  
   
   
     
@@ -458,23 +450,22 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
@@ -492,13 +483,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -518,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-web-mobile/" class="md-nav__link">
+      <a href="../../01-web-mobile/" class="md-nav__link">
         
   
   
@@ -543,37 +534,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Scripts & Automation
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -589,70 +553,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        When to look here
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Patterns in this category
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Default tech stack
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#llm-development-sweet-spot" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        LLM-development sweet spot
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -665,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-data-analytics/" class="md-nav__link">
+      <a href="../../03-data-analytics/" class="md-nav__link">
         
   
   
@@ -693,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04-backend-distributed/" class="md-nav__link">
+      <a href="../../04-backend-distributed/" class="md-nav__link">
         
   
   
@@ -721,7 +621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../05-systems-infra/" class="md-nav__link">
+      <a href="../../05-systems-infra/" class="md-nav__link">
         
   
   
@@ -749,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../06-safety-critical/" class="md-nav__link">
+      <a href="../../06-safety-critical/" class="md-nav__link">
         
   
   
@@ -777,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../07-ai-llm-integrated/" class="md-nav__link">
+      <a href="../../07-ai-llm-integrated/" class="md-nav__link">
         
   
   
@@ -805,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../08-games-graphics/" class="md-nav__link">
+      <a href="../../08-games-graphics/" class="md-nav__link">
         
   
   
@@ -840,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../decisions/" class="md-nav__link">
+      <a href="../../../decisions/" class="md-nav__link">
         
   
   
@@ -927,7 +827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/methodology/" class="md-nav__link">
+      <a href="../../../about/methodology/" class="md-nav__link">
         
   
   
@@ -955,7 +855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/contributing/" class="md-nav__link">
+      <a href="../../../about/contributing/" class="md-nav__link">
         
   
   
@@ -1010,10 +910,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
+  <a href="#1-context" class="md-nav__link">
     <span class="md-ellipsis">
       
-        When to look here
+        1. Context
       
     </span>
   </a>
@@ -1021,10 +921,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
+  <a href="#2-problem-it-solves" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Patterns in this category
+        2. Problem it solves
       
     </span>
   </a>
@@ -1032,10 +932,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
+  <a href="#3-solution-overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Default tech stack
+        3. Solution overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Solution overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-context-c4-level-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System context (C4 Level 1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container-view-c4-level-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Container view (C4 Level 2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-technology-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Technology stack
       
     </span>
   </a>
@@ -1043,10 +982,65 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#llm-development-sweet-spot" class="md-nav__link">
+  <a href="#5-non-functional-characteristics" class="md-nav__link">
     <span class="md-ellipsis">
       
-        LLM-development sweet spot
+        5. Non-functional characteristics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-cost-ballpark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Cost ballpark
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-llm-assisted-development-fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. LLM-assisted development fit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-reference-implementations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Reference implementations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-related-decisions-adrs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Related decisions (ADRs)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-known-risks-gotchas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Known risks &amp; gotchas
       
     </span>
   </a>
@@ -1073,60 +1067,263 @@
   
 
 
-<h1 id="scripts-automation">Scripts &amp; Automation<a class="headerlink" href="#scripts-automation" title="Permanent link">&para;</a></h1>
-<p>Short-lived or recurring code that transforms data, glues systems together, or automates tasks. Often single-author, often single-file.</p>
-<h2 id="when-to-look-here">When to look here<a class="headerlink" href="#when-to-look-here" title="Permanent link">&para;</a></h2>
+<h1 id="pattern-web-scraper">Pattern: Web Scraper<a class="headerlink" href="#pattern-web-scraper" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Quick facts</p>
 <ul>
-<li>The deliverable is a script or job, not a long-running service</li>
-<li>It runs on a schedule, on demand, or as part of a CI/CD pipeline</li>
-<li>It is acceptable for the script to be re-run if it fails</li>
+<li><strong>Category:</strong> Scripts &amp; Automation</li>
+<li><strong>Maturity:</strong> Adopt</li>
+<li><strong>Typical team size:</strong> 1-2 engineers</li>
+<li><strong>Typical timeline to MVP:</strong> 1-2 weeks</li>
+<li><strong>Last reviewed:</strong> 2026-05-02 by Architecture Team</li>
 </ul>
-<h2 id="patterns-in-this-category">Patterns in this category<a class="headerlink" href="#patterns-in-this-category" title="Permanent link">&para;</a></h2>
+</div>
+<h2 id="1-context">1. Context<a class="headerlink" href="#1-context" title="Permanent link">&para;</a></h2>
+<p><strong>Use this pattern when:</strong></p>
+<ul>
+<li>You need structured data from a public website and no official API or data export exists</li>
+<li>The data changes on a schedule (prices, listings, public records) and you need to track it over time</li>
+<li>Volume is thousands to millions of pages per day — not a one-off manual copy-paste</li>
+</ul>
+<p><strong>Do NOT use this pattern when:</strong></p>
+<ul>
+<li>An official API exists — use it; scraping is always more brittle than an API</li>
+<li>The site's Terms of Service explicitly prohibit automated access to the data you need — review ToS and <code>robots.txt</code> first</li>
+<li>The data is behind authentication and belongs to a third party — this pattern does not cover authenticated scraping of private user data</li>
+<li>You need sub-second freshness — scraping is not a streaming data source</li>
+</ul>
+<h2 id="2-problem-it-solves">2. Problem it solves<a class="headerlink" href="#2-problem-it-solves" title="Permanent link">&para;</a></h2>
+<p>Valuable information is published on the web in HTML meant for human reading, not machine consumption. Converting that into queryable, structured data requires reliably fetching pages, extracting the right fields, handling rendering inconsistencies and anti-bot measures, storing raw copies for reprocessing, and scheduling repeated runs as the source changes. Doing this correctly is more work than it looks — this pattern captures the recurring decisions so you do not start from scratch each time.</p>
+<h2 id="3-solution-overview">3. Solution overview<a class="headerlink" href="#3-solution-overview" title="Permanent link">&para;</a></h2>
+<h3 id="system-context-c4-level-1">System context (C4 Level 1)<a class="headerlink" href="#system-context-c4-level-1" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart LR
+    Sched[Scheduler\nGitHub Actions / Prefect] --&gt;|triggers| Scraper[Web Scraper]
+    Scraper --&gt;|HTTP requests| Web[Target Websites]
+    Web --&gt;|HTML / JSON responses| Scraper
+    Scraper --&gt; Raw[(Raw Store\nS3 HTML archive)]
+    Scraper --&gt; Structured[(Structured Store\nPostgreSQL)]
+    Scraper --&gt; Alerts[Alerting\nSlack / PagerDuty]</code></pre>
+<h3 id="container-view-c4-level-2">Container view (C4 Level 2)<a class="headerlink" href="#container-view-c4-level-2" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TB
+    subgraph Scheduling
+        Cron[GitHub Actions Cron\nor Prefect Flow]
+    end
+    subgraph Scraper Process
+        URLQueue[URL Queue / Seed List]
+        Fetcher[HTTP Fetcher\nhttpx async or Playwright]
+        RateLimiter[Rate Limiter\npoliteness delay + robots.txt]
+        Parser[HTML Parser\nBeautifulSoup4 + lxml]
+        Dedup[Deduplication\nhash of raw content]
+    end
+    subgraph Storage
+        RawS3[(S3 raw zone\nHTML per URL + timestamp)]
+        StructuredDB[(PostgreSQL\nstructured records)]
+    end
+    subgraph Ops
+        DLQ[Failed URLs log\nS3 or DB table]
+        Alert[Slack alert\non error rate threshold]
+    end
+
+    Cron --&gt; URLQueue
+    URLQueue --&gt; RateLimiter
+    RateLimiter --&gt; Fetcher
+    Fetcher --&gt;|raw HTML| RawS3
+    Fetcher --&gt;|raw HTML| Parser
+    Fetcher --&gt;|4xx / 5xx| DLQ
+    Parser --&gt; Dedup
+    Dedup --&gt; StructuredDB
+    DLQ --&gt; Alert</code></pre>
+<h2 id="4-technology-stack">4. Technology stack<a class="headerlink" href="#4-technology-stack" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Pattern</th>
-<th>Status</th>
-<th>Best for</th>
+<th>Layer</th>
+<th>Primary choice</th>
+<th>Alternatives</th>
+<th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="etl-elt-job/">ETL/ELT Job</a></td>
-<td>Adopt</td>
-<td>Moving data between systems on a schedule</td>
+<td>Language</td>
+<td>Python 3.12+ with uv</td>
+<td>Node.js (Puppeteer/Crawlee), Go (Colly)</td>
+<td>Python has the richest scraping ecosystem; see <a href="../../../decisions/0002-default-scripting-language/">ADR-0002</a></td>
 </tr>
 <tr>
-<td><a href="web-scraper/">Web Scraper</a></td>
-<td>Adopt</td>
-<td>Pulling structured data from public web sources</td>
+<td>HTTP client</td>
+<td>httpx (async)</td>
+<td>requests (sync), aiohttp</td>
+<td>httpx supports async, HTTP/2, and connection pooling natively; use for static HTML sites</td>
 </tr>
 <tr>
-<td><a href="cli-tool/">CLI Tool</a></td>
-<td>Adopt</td>
-<td>Internal developer tooling, ops automation</td>
+<td>JavaScript rendering</td>
+<td>Playwright</td>
+<td>Selenium, Puppeteer, Splash</td>
+<td>Playwright is faster and more reliable than Selenium; required when the target page uses client-side rendering</td>
 </tr>
 <tr>
-<td><a href="serverless-function/">Serverless Function</a></td>
-<td>Adopt</td>
-<td>Event-driven glue (webhook handlers, file processors)</td>
+<td>HTML parsing</td>
+<td>BeautifulSoup4 + lxml backend</td>
+<td>lxml direct, cssselect, parsel (Scrapy's parser)</td>
+<td>lxml backend makes BS4 ~10× faster than the html.parser default; parsel if you prefer XPath</td>
 </tr>
 <tr>
-<td><a href="cicd-pipeline/">CI/CD Pipeline</a></td>
-<td>Adopt</td>
-<td>Build, test, deploy automation</td>
+<td>Crawl framework</td>
+<td>Scrapy</td>
+<td>crawlee (Node.js)</td>
+<td>Scrapy for large-scale multi-page crawls with link following; skip for simple single-page jobs</td>
+</tr>
+<tr>
+<td>Scheduling</td>
+<td>GitHub Actions cron</td>
+<td>Prefect, APScheduler</td>
+<td>GitHub Actions is simplest for infrequent scrapes (hourly or slower); Prefect for complex dependency chains</td>
+</tr>
+<tr>
+<td>Proxy rotation</td>
+<td>Bright Data</td>
+<td>Oxylabs, Smartproxy</td>
+<td>Required for large-scale scraping where IP bans are likely; overkill for occasional small jobs</td>
+</tr>
+<tr>
+<td>Raw storage</td>
+<td>AWS S3</td>
+<td>Cloudflare R2, local filesystem</td>
+<td>Always store the raw HTML before parsing — enables schema evolution and re-parsing without re-fetching</td>
+</tr>
+<tr>
+<td>Structured storage</td>
+<td>PostgreSQL</td>
+<td>DuckDB, SQLite, MongoDB</td>
+<td>Postgres for shared queryable output; DuckDB for local analytical workloads; SQLite for single-machine jobs</td>
 </tr>
 </tbody>
 </table>
-<h2 id="default-tech-stack">Default tech stack<a class="headerlink" href="#default-tech-stack" title="Permanent link">&para;</a></h2>
+<h2 id="5-non-functional-characteristics">5. Non-functional characteristics<a class="headerlink" href="#5-non-functional-characteristics" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Concern</th>
+<th>Profile</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Scalability</strong></td>
+<td>Single-process async (httpx) handles ~100 concurrent requests comfortably. Scrapy scales to millions of pages/day with its built-in downloader middleware. Beyond that, parallelise across multiple worker containers partitioned by domain or URL range.</td>
+</tr>
+<tr>
+<td><strong>Availability target</strong></td>
+<td>Not a long-running service. Availability = "scheduled run completes and new records appear in the structured store within the SLA window". A 10% transient HTTP error rate from the target is normal and must not fail the whole run.</td>
+</tr>
+<tr>
+<td><strong>Latency target</strong></td>
+<td>Not latency-sensitive. Optimise for throughput (pages/hour) and politeness (requests/second per domain), not p95 response time.</td>
+</tr>
+<tr>
+<td><strong>Security posture</strong></td>
+<td>Outbound HTTP only — the scraper has no inbound surface. Risks: credentials for storage in environment (use Secrets Manager), accidental exfiltration of authenticated sessions, and legal risk from scraping prohibited data. Rotate proxy credentials on a schedule.</td>
+</tr>
+<tr>
+<td><strong>Data residency</strong></td>
+<td>Raw HTML is stored in S3; choose a region that matches your data classification requirements. Do not store PII from scraped pages without a legal basis.</td>
+</tr>
+<tr>
+<td><strong>Compliance fit</strong></td>
+<td>Legal basis for scraping varies by jurisdiction and site ToS. GDPR: do not store scraped personal data without a lawful basis. CFAA (US): do not scrape after receiving a cease-and-desist. Always check <code>robots.txt</code> and respect <code>Crawl-delay</code> directives.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-cost-ballpark">6. Cost ballpark<a class="headerlink" href="#6-cost-ballpark" title="Permanent link">&para;</a></h2>
+<p>Indicative monthly USD cost. Proxy costs dominate at scale; compute is cheap.</p>
+<table>
+<thead>
+<tr>
+<th>Scale</th>
+<th>Pages / day</th>
+<th>Monthly cost</th>
+<th>Cost drivers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Small</td>
+<td>&lt; 10,000</td>
+<td>$5 - $50</td>
+<td>GitHub Actions free tier, S3 storage, no proxies needed</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>10k - 1M</td>
+<td>$100 - $600</td>
+<td>Proxy bandwidth, ECS compute, S3 + Postgres storage and transfer</td>
+</tr>
+<tr>
+<td>Large</td>
+<td>1M+</td>
+<td>$800 - $5,000</td>
+<td>Dedicated proxy plan (Bright Data ~$500/TB), large ECS fleet, significant S3 storage</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-llm-assisted-development-fit">7. LLM-assisted development fit<a class="headerlink" href="#7-llm-assisted-development-fit" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Rating</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Initial scraper scaffolding</td>
+<td>★★★★★</td>
+<td>Excellent — CSS/XPath selectors, pagination loops, and retry logic are generated well.</td>
+</tr>
+<tr>
+<td>CSS and XPath selector writing</td>
+<td>★★★★</td>
+<td>Good; verify against the actual rendered DOM with DevTools. Selectors break on site redesigns regardless of how they were written.</td>
+</tr>
+<tr>
+<td>Playwright async scripts</td>
+<td>★★★★</td>
+<td>Solid for standard navigation and form interaction; struggles with non-standard UI patterns (canvas, shadow DOM).</td>
+</tr>
+<tr>
+<td>Anti-bot evasion logic</td>
+<td>★★</td>
+<td>Suggests plausible but brittle tricks (user-agent rotation, fake mouse moves). These require constant maintenance and are an arms race. Invest in legitimate proxy infrastructure instead.</td>
+</tr>
+<tr>
+<td>Legal / ethical review</td>
+<td>★</td>
+<td>Never outsource ToS interpretation or data privacy decisions to an LLM.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recommended workflow:</strong> Generate the fetcher and parser skeleton, then write the deduplication and re-parse-from-raw logic by hand. Store raw HTML from day one — you will need to re-parse.</p>
+<h2 id="8-reference-implementations">8. Reference implementations<a class="headerlink" href="#8-reference-implementations" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Language:</strong> Python (default), Go (for distribution as a single binary), Bash (under 50 lines only)</li>
-<li><strong>Scheduling:</strong> GitHub Actions cron, AWS EventBridge, Temporal (for complex workflows)</li>
-<li><strong>Packaging:</strong> <code>uv</code> for Python projects, single static binary for Go</li>
-<li><strong>Storage:</strong> SQLite for local state, Postgres for shared state, S3 for blob output</li>
+<li><strong>Public reference:</strong> <a href="https://github.com/scrapy/quotesbot">scrapy/quotesbot</a> — canonical Scrapy tutorial spider, good starting structure</li>
+<li><strong>Public reference:</strong> <a href="https://github.com/microsoft/playwright-python/tree/main/examples">microsoft/playwright-python — examples</a> — official Playwright Python examples including async patterns</li>
+<li><strong>Public reference:</strong> <a href="https://github.com/lorien/awesome-web-scraping">lorien/awesome-web-scraping</a> — curated list of Python scraping libraries with descriptions</li>
+<li><strong>Internal case study:</strong> <em>Add your anonymised internal example here</em></li>
 </ul>
-<h2 id="llm-development-sweet-spot">LLM-development sweet spot<a class="headerlink" href="#llm-development-sweet-spot" title="Permanent link">&para;</a></h2>
-<p>Highest-leverage category for AI-assisted development. Self-contained, easy to test by running, low blast radius for mistakes.</p>
+<h2 id="9-related-decisions-adrs">9. Related decisions (ADRs)<a class="headerlink" href="#9-related-decisions-adrs" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../../../decisions/0002-default-scripting-language/">ADR-0002: Python as the default scripting language</a></li>
+</ul>
+<h2 id="10-known-risks-gotchas">10. Known risks &amp; gotchas<a class="headerlink" href="#10-known-risks-gotchas" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Selectors break silently on site redesigns</strong> — The target website changes its HTML structure; your parser returns empty results or wrong data with no error. Mitigation: assert that key fields are non-null after each parse; alert on a sudden drop in extracted-record count; store raw HTML so you can re-parse when you fix the selector.</li>
+<li><strong>Politeness violations trigger IP bans</strong> — Sending requests too fast gets your IP blocked and may constitute a DoS. Mitigation: respect <code>robots.txt</code> crawl-delay, add a random jitter between requests (0.5–3 s per domain), never paralllelise more than 2–3 concurrent requests to the same host.</li>
+<li><strong>JavaScript-rendered content silently missing</strong> — You scrape the HTML but the data you need is loaded by a subsequent XHR. Mitigation: run the first request without Playwright; if the target field is missing, switch to Playwright and add a <code>wait_for_selector</code> on the element before extracting.</li>
+<li><strong>Memory leak in long-running async loops</strong> — An async httpx/Playwright process that never exits accumulates sessions and DOM objects. Mitigation: process URLs in bounded batches (e.g., 1,000 URLs per process invocation), then exit cleanly; do not run as a single infinite loop.</li>
+<li><strong>Re-scraping rate after schema change is expensive</strong> — If you did not store raw HTML, a parser bug or schema change means re-fetching everything. Mitigation: always write raw HTML to S3 before parsing. Storage is cheap; bandwidth and proxy costs are not.</li>
+</ul>
 
 
 
@@ -1188,10 +1385,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
