@@ -33,6 +33,18 @@
          <lastmod>2026-05-02</lastmod>
     </url>
     <url>
+         <loc>https://your-org.github.io/architecture-repo/decisions/0004-vector-store/</loc>
+         <lastmod>2026-05-02</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/decisions/0005-llm-orchestration/</loc>
+         <lastmod>2026-05-02</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/decisions/0006-llm-provider/</loc>
+         <lastmod>2026-05-02</lastmod>
+    </url>
+    <url>
          <loc>https://your-org.github.io/architecture-repo/patterns/</loc>
          <lastmod>2026-05-02</lastmod>
     </url>
@@ -90,6 +102,30 @@
     </url>
     <url>
          <loc>https://your-org.github.io/architecture-repo/patterns/07-ai-llm-integrated/</loc>
+         <lastmod>2026-05-02</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/patterns/07-ai-llm-integrated/agentic-workflow/</loc>
+         <lastmod>2026-05-02</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/patterns/07-ai-llm-integrated/conversational-assistant/</loc>
+         <lastmod>2026-05-02</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/patterns/07-ai-llm-integrated/copilot-in-app/</loc>
+         <lastmod>2026-05-02</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/patterns/07-ai-llm-integrated/document-processing/</loc>
+         <lastmod>2026-05-02</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/patterns/07-ai-llm-integrated/fine-tuned-model/</loc>
+         <lastmod>2026-05-02</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/patterns/07-ai-llm-integrated/rag/</loc>
          <lastmod>2026-05-02</lastmod>
     </url>
     <url>

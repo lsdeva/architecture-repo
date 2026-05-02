@@ -12,7 +12,7 @@
         <meta name="author" content="deva@soa.team">
       
       
-        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/01-web-mobile/static-marketing-site/">
+        <link rel="canonical" href="https://your-org.github.io/architecture-repo/decisions/0006-llm-provider/">
       
       
       
@@ -20,19 +20,19 @@
         
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Pattern: Static Marketing Site - Architecture Pattern Catalog</title>
+        <title>ADR-0006: Anthropic Claude as the default LLM provider - Architecture Pattern Catalog</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -51,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pattern-static-marketing-site" class="md-skip">
+        <a href="#adr-0006-anthropic-claude-as-the-default-llm-provider" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +90,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="Architecture Pattern Catalog" class="md-header__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
+    <a href="../.." title="Architecture Pattern Catalog" class="md-header__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pattern: Static Marketing Site
+              ADR-0006: Anthropic Claude as the default LLM provider
             
           </span>
         </div>
@@ -223,7 +223,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -242,7 +242,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../about/how-to-use/" class="md-tabs__link">
+      <a href="../../about/how-to-use/" class="md-tabs__link">
         
   
   
@@ -263,7 +263,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../" class="md-tabs__link">
+        <a href="../../patterns/" class="md-tabs__link">
           
   
   
@@ -283,7 +283,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../decisions/" class="md-tabs__link">
+      <a href="../" class="md-tabs__link">
         
   
   
@@ -304,7 +304,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../about/methodology/" class="md-tabs__link">
+        <a href="../../about/methodology/" class="md-tabs__link">
           
   
   
@@ -340,7 +340,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Architecture Pattern Catalog" class="md-nav__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
+    <a href="../.." title="Architecture Pattern Catalog" class="md-nav__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -370,7 +370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -397,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../about/how-to-use/" class="md-nav__link">
+      <a href="../../about/how-to-use/" class="md-nav__link">
         
   
   
@@ -465,7 +465,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../../patterns/" class="md-nav__link ">
               
   
   
@@ -509,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../patterns/01-web-mobile/" class="md-nav__link">
         
   
   
@@ -537,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../02-scripts-automation/" class="md-nav__link">
+      <a href="../../patterns/02-scripts-automation/" class="md-nav__link">
         
   
   
@@ -565,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../03-data-analytics/" class="md-nav__link">
+      <a href="../../patterns/03-data-analytics/" class="md-nav__link">
         
   
   
@@ -593,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../04-backend-distributed/" class="md-nav__link">
+      <a href="../../patterns/04-backend-distributed/" class="md-nav__link">
         
   
   
@@ -621,7 +621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../05-systems-infra/" class="md-nav__link">
+      <a href="../../patterns/05-systems-infra/" class="md-nav__link">
         
   
   
@@ -649,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../06-safety-critical/" class="md-nav__link">
+      <a href="../../patterns/06-safety-critical/" class="md-nav__link">
         
   
   
@@ -677,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../07-ai-llm-integrated/" class="md-nav__link">
+      <a href="../../patterns/07-ai-llm-integrated/" class="md-nav__link">
         
   
   
@@ -705,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../08-games-graphics/" class="md-nav__link">
+      <a href="../../patterns/08-games-graphics/" class="md-nav__link">
         
   
   
@@ -740,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../decisions/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -827,7 +827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../about/methodology/" class="md-nav__link">
+      <a href="../../about/methodology/" class="md-nav__link">
         
   
   
@@ -855,7 +855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../about/contributing/" class="md-nav__link">
+      <a href="../../about/contributing/" class="md-nav__link">
         
   
   
@@ -910,10 +910,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-context" class="md-nav__link">
+  <a href="#context" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Context
+        Context
       
     </span>
   </a>
@@ -921,10 +921,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-problem-it-solves" class="md-nav__link">
+  <a href="#decision" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Problem it solves
+        Decision
       
     </span>
   </a>
@@ -932,22 +932,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-solution-overview" class="md-nav__link">
+  <a href="#alternatives-considered" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Solution overview
+        Alternatives considered
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="3. Solution overview">
+    <nav class="md-nav" aria-label="Alternatives considered">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#system-context-c4-level-1" class="md-nav__link">
+  <a href="#option-a-anthropic-claude-chosen" class="md-nav__link">
     <span class="md-ellipsis">
       
-        System context (C4 Level 1)
+        Option A: Anthropic Claude (chosen)
       
     </span>
   </a>
@@ -955,10 +955,32 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#container-view-c4-level-2" class="md-nav__link">
+  <a href="#option-b-openai-gpt-4o-family" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Container view (C4 Level 2)
+        Option B: OpenAI (GPT-4o family)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-c-google-gemini-15-20-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option C: Google Gemini (1.5 / 2.0 family)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-d-aws-bedrock-multi-vendor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option D: AWS Bedrock (multi-vendor)
       
     </span>
   </a>
@@ -971,76 +993,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-technology-stack" class="md-nav__link">
+  <a href="#consequences" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4. Technology stack
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-non-functional-characteristics" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. Non-functional characteristics
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-cost-ballpark" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. Cost ballpark
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7-llm-assisted-development-fit" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        7. LLM-assisted development fit
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#8-reference-implementations" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        8. Reference implementations
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#9-related-decisions-adrs" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        9. Related decisions (ADRs)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#10-known-risks-gotchas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        10. Known risks &amp; gotchas
+        Consequences
       
     </span>
   </a>
@@ -1067,286 +1023,91 @@
   
 
 
-<h1 id="pattern-static-marketing-site">Pattern: Static Marketing Site<a class="headerlink" href="#pattern-static-marketing-site" title="Permanent link">&para;</a></h1>
-<div class="admonition info">
-<p class="admonition-title">Quick facts</p>
+<h1 id="adr-0006-anthropic-claude-as-the-default-llm-provider">ADR-0006: Anthropic Claude as the default LLM provider<a class="headerlink" href="#adr-0006-anthropic-claude-as-the-default-llm-provider" title="Permanent link">&para;</a></h1>
 <ul>
-<li><strong>Category:</strong> Web &amp; Mobile Applications</li>
-<li><strong>Maturity:</strong> Adopt</li>
-<li><strong>Typical team size:</strong> 1-3 engineers</li>
-<li><strong>Typical timeline to MVP:</strong> 2-4 weeks</li>
-<li><strong>Last reviewed:</strong> 2026-05-02 by Architecture Team</li>
+<li><strong>Status:</strong> Accepted</li>
+<li><strong>Date:</strong> 2026-05-02</li>
+<li><strong>Deciders:</strong> Architecture Team</li>
+<li><strong>Tags:</strong> ai, llm, provider, anthropic, openai</li>
 </ul>
-</div>
-<h2 id="1-context">1. Context<a class="headerlink" href="#1-context" title="Permanent link">&para;</a></h2>
-<p><strong>Use this pattern when:</strong></p>
-<ul>
-<li>Building a brochure site, product landing page, or documentation portal where content changes infrequently (hours to days, not seconds)</li>
-<li>The primary goal is conversion, trust-building, or information delivery — not application behaviour</li>
-<li>Performance and SEO rank are first-class requirements</li>
-<li>The team is small or front-end-only, and you want to avoid owning a database and API surface</li>
-</ul>
-<p><strong>Do NOT use this pattern when:</strong></p>
-<ul>
-<li>Pages are personalised per authenticated user (use the SaaS Multi-Tenant or Internal Admin pattern instead)</li>
-<li>Prices, availability, or inventory must reflect real-time state (the CDN cache makes this impractical)</li>
-<li>The site has heavy user-generated content that needs moderation workflows</li>
-<li>You are building a documentation site that ships with a complex product and must version tightly with it (consider docs-as-code inside a monorepo with dedicated tooling like Docusaurus or MkDocs)</li>
-</ul>
-<h2 id="2-problem-it-solves">2. Problem it solves<a class="headerlink" href="#2-problem-it-solves" title="Permanent link">&para;</a></h2>
-<p>Marketing and content teams need to publish pages quickly, keep costs near zero, and rank well on search engines — without waiting for backend engineers to provision databases or manage servers. Meanwhile the engineering team wants the site to be fast globally, trivially scalable to any traffic spike (a viral moment, a Product Hunt launch), and cheap to operate. A static site built once at deploy time and served entirely from a CDN edge resolves all of these goals simultaneously.</p>
-<h2 id="3-solution-overview">3. Solution overview<a class="headerlink" href="#3-solution-overview" title="Permanent link">&para;</a></h2>
-<h3 id="system-context-c4-level-1">System context (C4 Level 1)<a class="headerlink" href="#system-context-c4-level-1" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>flowchart LR
-    Visitor((Visitor)) --&gt; Site[Static Marketing Site]
-    Editor((Content Editor)) --&gt; CMS[Headless CMS]
-    CMS --&gt;|webhook on publish| CI[Build Pipeline]
-    CI --&gt;|deploy| Site
-    Site --&gt; Analytics[Analytics Provider]
-    Site --&gt; Forms[Form / Lead Provider]</code></pre>
-<h3 id="container-view-c4-level-2">Container view (C4 Level 2)<a class="headerlink" href="#container-view-c4-level-2" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>flowchart TB
-    subgraph Authoring
-        CMS[Headless CMS\ne.g. Contentful / Sanity]
-        Git[Git Repository\nsource of truth for code &amp; MDX]
-    end
-    subgraph Build
-        CI[CI Runner\nGitHub Actions]
-        SSG[Static Site Generator\nAstro / Next.js static export]
-    end
-    subgraph Serving
-        CDN[CDN Edge Network\nCloudflare Pages / Vercel]
-        Assets[(Object Store\nimages, fonts, videos)]
-    end
-    subgraph Integrations
-        Forms[Form Backend\ne.g. Netlify Forms / Formspree]
-        Analytics[Web Analytics\ne.g. Plausible / GA4]
-        Search[Site Search\ne.g. Pagefind / Algolia DocSearch]
-    end
-
-    CMS --&gt;|webhook| CI
-    Git --&gt;|push| CI
-    CI --&gt; SSG
-    SSG --&gt;|upload static files| CDN
-    SSG --&gt;|upload media| Assets
-    CDN --&gt; Assets
-    CDN --&gt; Forms
-    CDN --&gt; Analytics
-    CDN --&gt; Search</code></pre>
-<h2 id="4-technology-stack">4. Technology stack<a class="headerlink" href="#4-technology-stack" title="Permanent link">&para;</a></h2>
+<h2 id="context">Context<a class="headerlink" href="#context" title="Permanent link">&para;</a></h2>
+<p>Every LLM-integrated pattern in this catalog requires choosing a model provider. The choice affects: output quality on different task types, cost per token, latency, data retention and compliance posture, API ergonomics, and model availability under load. Changing providers after a product ships requires rewriting prompts (prompt sensitivity differs across models), re-evaluating outputs, and potentially re-embedding corpora.</p>
+<p>The realistic candidates for a production system in 2026 are Anthropic (Claude family), OpenAI (GPT-4o family), Google (Gemini family), and AWS Bedrock (multi-vendor managed). Self-hosted open weights (Llama, Mistral) are covered by the Fine-tuned Domain Model pattern.</p>
+<h2 id="decision">Decision<a class="headerlink" href="#decision" title="Permanent link">&para;</a></h2>
+<p>We will use <strong>Anthropic Claude</strong> as the default provider, with the following model tier policy:</p>
 <table>
 <thead>
 <tr>
-<th>Layer</th>
-<th>Primary choice</th>
-<th>Alternatives</th>
+<th>Use case</th>
+<th>Default model</th>
 <th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Static site generator</td>
-<td>Astro</td>
-<td>Next.js (static export), SvelteKit, Eleventy, Hugo</td>
-<td>Astro ships zero JS by default, ideal for content-heavy pages; Next.js if you already use it for a product</td>
+<td>Complex reasoning, agentic tasks</td>
+<td>Claude Sonnet 4.6</td>
+<td>Best tool-use accuracy and extended thinking</td>
 </tr>
 <tr>
-<td>Styling</td>
-<td>Tailwind CSS</td>
-<td>CSS Modules, vanilla CSS</td>
-<td>Tailwind is the boring-but-safe choice in 2026; pairs well with component libraries</td>
+<td>Interactive generation (chatbot, copilot)</td>
+<td>Claude Haiku 4.5</td>
+<td>Fastest and cheapest; sufficient for most chat</td>
 </tr>
 <tr>
-<td>Component library</td>
-<td>shadcn/ui</td>
-<td>Radix UI, Headless UI, Flowbite</td>
-<td>shadcn/ui gives you owned, editable components rather than a locked-in dependency</td>
+<td>Document extraction (vision)</td>
+<td>Claude Sonnet 4.6</td>
+<td>Multimodal accuracy justifies the cost</td>
 </tr>
 <tr>
-<td>Headless CMS</td>
-<td>Contentful</td>
-<td>Sanity, Storyblok, Prismic, Tina CMS</td>
-<td>Contentful is the most mature; Sanity if you want real-time collab and a custom studio; skip entirely for pure-code sites</td>
-</tr>
-<tr>
-<td>Hosting / CDN</td>
-<td>Cloudflare Pages</td>
-<td>Vercel, Netlify, AWS S3 + CloudFront</td>
-<td>Cloudflare Pages has no bandwidth fees and free analytics; Vercel if the rest of the stack is already there</td>
-</tr>
-<tr>
-<td>Forms</td>
-<td>Formspree</td>
-<td>Netlify Forms, Basin, custom API route</td>
-<td>No backend needed; Netlify Forms only if you are also hosting on Netlify</td>
-</tr>
-<tr>
-<td>Web analytics</td>
-<td>Plausible</td>
-<td>Fathom, Posthog, Google Analytics 4</td>
-<td>Plausible is GDPR-compliant out of the box; no cookie banner required</td>
-</tr>
-<tr>
-<td>Site search</td>
-<td>Pagefind</td>
-<td>Algolia DocSearch (docs only), Orama</td>
-<td>Pagefind runs entirely at build time — zero runtime cost, zero backend</td>
-</tr>
-<tr>
-<td>Image optimisation</td>
-<td>Astro Image / <code>&lt;Image&gt;</code></td>
-<td>Cloudflare Images, Imgix</td>
-<td>Built-in to Astro; externalise only if media library is very large</td>
-</tr>
-<tr>
-<td>CI/CD</td>
-<td>GitHub Actions</td>
-<td>GitLab CI, Cloudflare Pages built-in</td>
-<td>Built-in Cloudflare/Vercel CI is fine for simple sites; GitHub Actions gives more control</td>
-</tr>
-<tr>
-<td>Error tracking</td>
-<td>Sentry (browser)</td>
-<td>Highlight.io</td>
-<td>Optional for pure static sites; add if you have interactive JS islands</td>
-</tr>
-<tr>
-<td>A/B testing</td>
-<td>Cloudflare Zaraz + Edge config</td>
-<td>Vercel Edge Config, Optimizely</td>
-<td>Keep experiments at the edge to avoid layout shift; avoid client-side flicker</td>
+<td>Batch / offline processing</td>
+<td>Claude Haiku 4.5 via Batch API</td>
+<td>50% cost reduction vs synchronous API</td>
 </tr>
 </tbody>
 </table>
-<h2 id="5-non-functional-characteristics">5. Non-functional characteristics<a class="headerlink" href="#5-non-functional-characteristics" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Concern</th>
-<th>Profile</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Scalability</strong></td>
-<td>Effectively infinite at the CDN layer — no origin server to saturate. A Product Hunt or Hacker News spike costs nothing extra on Cloudflare Pages.</td>
-</tr>
-<tr>
-<td><strong>Availability target</strong></td>
-<td>99.99%+ passively, because there is no stateful origin to go down. All availability risk shifts to the CDN provider and the build pipeline.</td>
-</tr>
-<tr>
-<td><strong>Latency target</strong></td>
-<td>p95 &lt; 50ms TTFB globally from CDN edge. First Contentful Paint &lt; 1.2s on a 4G mobile connection is achievable with Astro defaults.</td>
-</tr>
-<tr>
-<td><strong>Security posture</strong></td>
-<td>No server-side attack surface by definition. Risks shift to: supply-chain (npm), form endpoints (spam, injection), and CMS credentials. Apply CSP headers, Subresource Integrity on third-party scripts, and bot protection on forms.</td>
-</tr>
-<tr>
-<td><strong>Data residency</strong></td>
-<td>Content is replicated globally to CDN edges by design. If content is sensitive enough to restrict by geography, this pattern is the wrong choice.</td>
-</tr>
-<tr>
-<td><strong>Compliance fit</strong></td>
-<td>GDPR ✓ (Plausible avoids cookie consent entirely), CCPA ✓, SOC 2 N/A (no data processed), PCI-DSS N/A (no payment data on the static layer — use a Stripe-hosted checkout link instead).</td>
-</tr>
-</tbody>
-</table>
-<h2 id="6-cost-ballpark">6. Cost ballpark<a class="headerlink" href="#6-cost-ballpark" title="Permanent link">&para;</a></h2>
-<p>Indicative monthly USD cost. Static sites are among the cheapest architectures to run; the floor is essentially zero.</p>
-<table>
-<thead>
-<tr>
-<th>Scale</th>
-<th>Monthly visitors</th>
-<th>Monthly cost</th>
-<th>Cost drivers</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Small</td>
-<td>&lt; 50k</td>
-<td>$0 - $20</td>
-<td>Cloudflare Pages free tier covers most small sites; cost only from paid CMS or analytics plan</td>
-</tr>
-<tr>
-<td>Medium</td>
-<td>50k - 1M</td>
-<td>$20 - $150</td>
-<td>CMS content seats, analytics data retention, image optimisation volume</td>
-</tr>
-<tr>
-<td>Large</td>
-<td>1M - 10M</td>
-<td>$100 - $500</td>
-<td>CMS API call volume, media egress if not on Cloudflare, A/B testing platform</td>
-</tr>
-</tbody>
-</table>
-<h2 id="7-llm-assisted-development-fit">7. LLM-assisted development fit<a class="headerlink" href="#7-llm-assisted-development-fit" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Aspect</th>
-<th>Rating</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Page and component scaffolding</td>
-<td>★★★★★</td>
-<td>Excellent. Astro and Tailwind are heavily represented in training data; generate full page layouts confidently.</td>
-</tr>
-<tr>
-<td>MDX / content authoring</td>
-<td>★★★★★</td>
-<td>LLMs are excellent at writing and reformatting Markdown-heavy content pages.</td>
-</tr>
-<tr>
-<td>CMS schema design</td>
-<td>★★★</td>
-<td>Good starting point; review field types and validation rules manually — CMS schemas are hard to migrate after content is in.</td>
-</tr>
-<tr>
-<td>Accessibility (WCAG)</td>
-<td>★★★</td>
-<td>Generates correct semantic HTML and ARIA attributes most of the time; always audit with axe or Lighthouse.</td>
-</tr>
-<tr>
-<td>Performance optimisation</td>
-<td>★★★</td>
-<td>Knows Core Web Vitals principles well; recommendations are correct but sometimes outdated on framework-specific APIs.</td>
-</tr>
-<tr>
-<td>Architecture decisions</td>
-<td>★</td>
-<td>Don't outsource. Use ADRs.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Recommended workflow:</strong> Scaffold pages and components with the LLM, then run Lighthouse CI in the build pipeline to catch regressions automatically. Write CMS content models by hand after sketching them with the LLM.</p>
-<h2 id="8-reference-implementations">8. Reference implementations<a class="headerlink" href="#8-reference-implementations" title="Permanent link">&para;</a></h2>
+<p>Teams may use OpenAI or Google models for specific features where evaluation demonstrates a material quality advantage on that task. AWS Bedrock is recommended as the access layer for multi-provider strategies or when cloud-consolidated billing is required.</p>
+<h2 id="alternatives-considered">Alternatives considered<a class="headerlink" href="#alternatives-considered" title="Permanent link">&para;</a></h2>
+<h3 id="option-a-anthropic-claude-chosen">Option A: Anthropic Claude (chosen)<a class="headerlink" href="#option-a-anthropic-claude-chosen" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Public reference:</strong> <a href="https://github.com/withastro/astro/tree/main/examples/blog">Astro Starter Blog</a> — minimal Astro site with Markdown content</li>
-<li><strong>Public reference:</strong> <a href="https://github.com/withastro/starlight">withastro/starlight</a> — Astro's official documentation site framework; excellent reference for a content-heavy static site with search, versioning, and i18n (200 OK ✓)</li>
-<li><strong>Public reference:</strong> <a href="https://developers.cloudflare.com/pages/framework-guides/deploy-an-astro-site/">Cloudflare Pages deployment guide</a> — official Astro + Cloudflare Pages walkthrough</li>
-<li><strong>Internal case study:</strong> <em>Add your anonymised internal example here</em></li>
+<li><strong>Pros:</strong> Strongest instruction-following on complex, multi-constraint prompts. Industry-leading tool use accuracy (critical for agentic workflows). Extended thinking (Claude 3.5+ Sonnet) for tasks requiring step-by-step reasoning. Prompt caching with <code>cache_control</code> blocks reduces cost by up to 90% and latency by ~30% on repeat-context patterns (chatbots, copilots). Business Associate Agreements (BAA) available for HIPAA. EU data residency via Bedrock. Context window up to 200k tokens. Native <code>instructor</code>-compatible structured output via tool use.</li>
+<li><strong>Cons:</strong> No image generation capability (no equivalent to DALL-E). OpenAI's embedding models (<code>text-embedding-3-small</code>) are better-established for RAG pipelines — we use them for embeddings regardless of this decision. Slightly higher cost than GPT-4o-mini for equivalent quality tasks.</li>
 </ul>
-<h2 id="9-related-decisions-adrs">9. Related decisions (ADRs)<a class="headerlink" href="#9-related-decisions-adrs" title="Permanent link">&para;</a></h2>
+<h3 id="option-b-openai-gpt-4o-family">Option B: OpenAI (GPT-4o family)<a class="headerlink" href="#option-b-openai-gpt-4o-family" title="Permanent link">&para;</a></h3>
 <ul>
-<li><em>No ADRs recorded yet. Candidates: choice of SSG framework, CMS vendor selection, CDN provider.</em></li>
+<li><strong>Pros:</strong> Largest installed base — most third-party tooling targets OpenAI first. Best-in-class embedding models (<code>text-embedding-3-small</code>, <code>text-embedding-3-large</code>). Strong multimodal (image + text) performance. JSON mode and structured output via <code>response_format</code>. DALL-E for image generation. The OpenAI API is the de-facto standard interface that vLLM, LiteLLM, and local inference servers emulate.</li>
+<li><strong>Cons:</strong> Data retention policy has historically been less transparent than Anthropic's; enterprise tier required for zero-retention guarantees. No equivalent to Anthropic's prompt caching for reducing repeat-context costs. GPT-4o instruction-following on complex, multi-constraint prompts is measurably weaker than Claude Sonnet on internal evaluations. Rate limits on shared tier are less predictable.</li>
 </ul>
-<h2 id="10-known-risks-gotchas">10. Known risks &amp; gotchas<a class="headerlink" href="#10-known-risks-gotchas" title="Permanent link">&para;</a></h2>
+<h3 id="option-c-google-gemini-15-20-family">Option C: Google Gemini (1.5 / 2.0 family)<a class="headerlink" href="#option-c-google-gemini-15-20-family" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Build time explodes as content grows</strong> — At tens of thousands of pages, full rebuilds become slow (minutes, not seconds). Mitigation: enable incremental/on-demand builds (Astro's <code>output: 'hybrid'</code>, Next.js ISR) so only changed pages are rebuilt on a CMS publish event.</li>
-<li><strong>Cache invalidation on urgent content changes</strong> — A retraction or correction may take minutes to propagate to all CDN edge nodes. Mitigation: use Cloudflare's Cache Purge API or Vercel's on-demand ISR in your CMS webhook, and document the SLA for editors.</li>
-<li><strong>Form spam without a backend</strong> — Formspree and similar services are targetted by bots. Mitigation: add hCaptcha or Cloudflare Turnstile; never use honeypot fields alone.</li>
-<li><strong>Third-party script performance creep</strong> — Marketing teams add chat widgets, analytics pixels, and tag managers over time. Each one can erase your Lighthouse score. Mitigation: enforce a Content Security Policy and gate new script additions through a pull-request review; use Cloudflare Zaraz to load third-party scripts server-side.</li>
-<li><strong>CMS vendor lock-in</strong> — Migrating tens of thousands of structured content entries between CMS vendors is painful. Mitigation: keep a thin content adapter layer in the codebase so the SSG is not coupled directly to the CMS API shape.</li>
-<li><strong>Broken links after URL restructuring</strong> — Marketing teams frequently want to rename slugs. Mitigation: maintain a <code>_redirects</code> file (supported natively by Cloudflare Pages and Netlify) and run a broken-link checker in CI.</li>
+<li><strong>Pros:</strong> Largest context window (1M tokens for Gemini 1.5 Pro) is useful for whole-codebase or whole-document tasks. Native Google Workspace integration. Competitive pricing. Gemini 2.0 Flash is the fastest model in its class.</li>
+<li><strong>Cons:</strong> Gemini API stability has been less consistent than Anthropic or OpenAI in our experience. Tool use accuracy lags Claude Sonnet on complex agentic benchmarks. Weaker European data residency story compared to Anthropic/Bedrock. Less mature third-party ecosystem.</li>
+</ul>
+<h3 id="option-d-aws-bedrock-multi-vendor">Option D: AWS Bedrock (multi-vendor)<a class="headerlink" href="#option-d-aws-bedrock-multi-vendor" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Pros:</strong> Single AWS billing and IAM integration across Claude, Titan, Mistral, and Llama models. No direct internet call to provider APIs — traffic stays within AWS VPC. Useful for organisations with AWS-consolidated compliance requirements. Guardrails feature (content filtering) at the infrastructure layer.</li>
+<li><strong>Cons:</strong> Adds latency vs direct API calls (~20–50 ms). Model availability on Bedrock lags direct provider availability (new Claude models appear on Bedrock weeks after the direct API). Harder to test locally — requires AWS credentials even for development.</li>
+</ul>
+<h2 id="consequences">Consequences<a class="headerlink" href="#consequences" title="Permanent link">&para;</a></h2>
+<p><strong>Positive</strong></p>
+<ul>
+<li>Single provider for most patterns reduces the cognitive overhead of maintaining multiple API keys, rate limit quotas, and billing relationships</li>
+<li>Prompt caching materially reduces cost and latency for chatbot and copilot patterns — not available from all providers</li>
+<li>BAA availability makes Anthropic viable for HIPAA use cases without switching providers per use case</li>
+<li>Extended thinking enables complex reasoning in agentic workflows without prompt-engineering workarounds</li>
+</ul>
+<p><strong>Negative / trade-offs</strong></p>
+<ul>
+<li>OpenAI embedding models (<code>text-embedding-3-small</code>) remain the default for RAG pipelines — this means two provider relationships when RAG is involved</li>
+<li>Prompt sensitivity differs between Claude and GPT — prompts written for one model require testing when migrated to the other; never assume portability</li>
+<li>Vendor dependency: if Anthropic degrades service or changes pricing significantly, migrating all prompts is a multi-week engineering effort</li>
+</ul>
+<p><strong>Follow-up actions</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Abstract the LLM client behind a thin interface (<code>LLMClient</code> with <code>complete()</code> and <code>stream()</code>) so provider swaps require a one-file change</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Establish a Bedrock account as a fallback access path for Claude models (maintains provider choice while gaining AWS billing integration)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Re-evaluate this decision annually: the LLM provider landscape changes faster than any other technology in this catalog</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Document the BAA process with Anthropic for any new project handling HIPAA-regulated data</li>
 </ul>
 
 
@@ -1409,10 +1170,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

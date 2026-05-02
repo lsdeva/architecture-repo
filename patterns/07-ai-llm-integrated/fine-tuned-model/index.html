@@ -12,7 +12,7 @@
         <meta name="author" content="deva@soa.team">
       
       
-        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/01-web-mobile/static-marketing-site/">
+        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/07-ai-llm-integrated/fine-tuned-model/">
       
       
       
@@ -25,7 +25,7 @@
     
     
       
-        <title>Pattern: Static Marketing Site - Architecture Pattern Catalog</title>
+        <title>Pattern: Fine-tuned Domain Model - Architecture Pattern Catalog</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pattern-static-marketing-site" class="md-skip">
+        <a href="#pattern-fine-tuned-domain-model" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pattern: Static Marketing Site
+              Pattern: Fine-tuned Domain Model
             
           </span>
         </div>
@@ -509,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../01-web-mobile/" class="md-nav__link">
         
   
   
@@ -677,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../07-ai-llm-integrated/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -1067,72 +1067,73 @@
   
 
 
-<h1 id="pattern-static-marketing-site">Pattern: Static Marketing Site<a class="headerlink" href="#pattern-static-marketing-site" title="Permanent link">&para;</a></h1>
+<h1 id="pattern-fine-tuned-domain-model">Pattern: Fine-tuned Domain Model<a class="headerlink" href="#pattern-fine-tuned-domain-model" title="Permanent link">&para;</a></h1>
 <div class="admonition info">
 <p class="admonition-title">Quick facts</p>
 <ul>
-<li><strong>Category:</strong> Web &amp; Mobile Applications</li>
-<li><strong>Maturity:</strong> Adopt</li>
-<li><strong>Typical team size:</strong> 1-3 engineers</li>
-<li><strong>Typical timeline to MVP:</strong> 2-4 weeks</li>
+<li><strong>Category:</strong> AI / LLM-Integrated Systems</li>
+<li><strong>Maturity:</strong> Assess</li>
+<li><strong>Typical team size:</strong> 3-6 engineers (requires ML engineering expertise)</li>
+<li><strong>Typical timeline to MVP:</strong> 8-16 weeks for first model; ongoing to maintain</li>
 <li><strong>Last reviewed:</strong> 2026-05-02 by Architecture Team</li>
 </ul>
 </div>
 <h2 id="1-context">1. Context<a class="headerlink" href="#1-context" title="Permanent link">&para;</a></h2>
 <p><strong>Use this pattern when:</strong></p>
 <ul>
-<li>Building a brochure site, product landing page, or documentation portal where content changes infrequently (hours to days, not seconds)</li>
-<li>The primary goal is conversion, trust-building, or information delivery — not application behaviour</li>
-<li>Performance and SEO rank are first-class requirements</li>
-<li>The team is small or front-end-only, and you want to avoid owning a database and API surface</li>
+<li>A specific, narrow, high-volume task has reached the ceiling of what prompt engineering and RAG can achieve, and quality still falls short of the business requirement</li>
+<li>Inference latency or cost at scale makes cloud API calls impractical: a high-volume task calling Sonnet or GPT-4o may cost 10–100× more than a self-hosted fine-tuned 7B model</li>
+<li>The task requires a domain vocabulary, output format, or reasoning style so specific to your organisation that a general model cannot reliably produce it via prompting alone</li>
+<li>You have ≥ 1,000 high-quality, human-verified training examples per task, and a team member who can own the training pipeline and model operations</li>
 </ul>
 <p><strong>Do NOT use this pattern when:</strong></p>
 <ul>
-<li>Pages are personalised per authenticated user (use the SaaS Multi-Tenant or Internal Admin pattern instead)</li>
-<li>Prices, availability, or inventory must reflect real-time state (the CDN cache makes this impractical)</li>
-<li>The site has heavy user-generated content that needs moderation workflows</li>
-<li>You are building a documentation site that ships with a complex product and must version tightly with it (consider docs-as-code inside a monorepo with dedicated tooling like Docusaurus or MkDocs)</li>
+<li>Prompt engineering has not been exhausted — advanced prompting (few-shot, chain-of-thought, system prompt tuning) solves most problems and is 100× cheaper and faster</li>
+<li>Training data is fewer than 500 labelled examples — fine-tuning on a tiny dataset produces an overfit model that performs worse than the base model on realistic inputs</li>
+<li>Task variety is high — fine-tuning optimises for a specific distribution and degrades generalisation; use a general model with RAG instead</li>
+<li>The team has no prior experience training or operating ML models — the operational overhead (GPU infra, CUDA dependencies, model versioning, drift monitoring) is substantial</li>
 </ul>
 <h2 id="2-problem-it-solves">2. Problem it solves<a class="headerlink" href="#2-problem-it-solves" title="Permanent link">&para;</a></h2>
-<p>Marketing and content teams need to publish pages quickly, keep costs near zero, and rank well on search engines — without waiting for backend engineers to provision databases or manage servers. Meanwhile the engineering team wants the site to be fast globally, trivially scalable to any traffic spike (a viral moment, a Product Hunt launch), and cheap to operate. A static site built once at deploy time and served entirely from a CDN edge resolves all of these goals simultaneously.</p>
+<p>Foundation models are trained on broad internet data and optimised for generality. For a specific, high-volume, predictable task — classifying support tickets into one of 40 internal categories, generating structured extraction output in a proprietary JSON schema, writing product descriptions in an exact brand voice — a smaller, specialised model can match or exceed a large general model's quality at a fraction of the per-inference cost and latency. This pattern captures the pipeline to get there safely.</p>
 <h2 id="3-solution-overview">3. Solution overview<a class="headerlink" href="#3-solution-overview" title="Permanent link">&para;</a></h2>
 <h3 id="system-context-c4-level-1">System context (C4 Level 1)<a class="headerlink" href="#system-context-c4-level-1" title="Permanent link">&para;</a></h3>
 <pre class="mermaid"><code>flowchart LR
-    Visitor((Visitor)) --&gt; Site[Static Marketing Site]
-    Editor((Content Editor)) --&gt; CMS[Headless CMS]
-    CMS --&gt;|webhook on publish| CI[Build Pipeline]
-    CI --&gt;|deploy| Site
-    Site --&gt; Analytics[Analytics Provider]
-    Site --&gt; Forms[Form / Lead Provider]</code></pre>
+    DataSource[(Curated Dataset\nHugging Face Hub / S3)] --&gt; TrainPipeline[Training Pipeline]
+    TrainPipeline --&gt; Registry[(Model Registry\nHugging Face Hub private)]
+    Registry --&gt; Serving[Inference Service\nvLLM]
+    User((Application)) --&gt; Serving
+    Serving --&gt; Obs[Monitoring\ndrift + accuracy]
+    Obs --&gt;|triggers| TrainPipeline</code></pre>
 <h3 id="container-view-c4-level-2">Container view (C4 Level 2)<a class="headerlink" href="#container-view-c4-level-2" title="Permanent link">&para;</a></h3>
 <pre class="mermaid"><code>flowchart TB
-    subgraph Authoring
-        CMS[Headless CMS\ne.g. Contentful / Sanity]
-        Git[Git Repository\nsource of truth for code &amp; MDX]
-    end
-    subgraph Build
-        CI[CI Runner\nGitHub Actions]
-        SSG[Static Site Generator\nAstro / Next.js static export]
+    subgraph Training Pipeline
+        RawData[(Raw Labels\nLabel Studio / Argilla)]
+        DataPrep[Data Preprocessor\ntokenisation, dedup, quality filter]
+        FTJob[Fine-tuning Job\nQLoRA on GPU — SageMaker / Modal]
+        Eval[Evaluation\nautomated metrics + human golden set]
+        Registry[(Model Registry\nHugging Face Hub private)]
     end
     subgraph Serving
-        CDN[CDN Edge Network\nCloudflare Pages / Vercel]
-        Assets[(Object Store\nimages, fonts, videos)]
+        InferAPI[Inference API\nvLLM server — OpenAI-compatible]
+        ResultCache[(Result Cache\nRedis — identical-input dedup)]
     end
-    subgraph Integrations
-        Forms[Form Backend\ne.g. Netlify Forms / Formspree]
-        Analytics[Web Analytics\ne.g. Plausible / GA4]
-        Search[Site Search\ne.g. Pagefind / Algolia DocSearch]
+    subgraph Monitoring
+        CanaryEval[Canary Evaluator\nweekly golden-set score]
+        DriftAlert[Drift Alert\naccuracy drop &gt; 5%]
+        RetrainTrigger[Retrain Trigger\nmanual or automated]
+    end
+    subgraph CI/CD
+        GHActions[GitHub Actions\ntrain on push to main/data branch]
+        ModelTest[Model Smoke Test\ntop-10 golden examples before deploy]
     end
 
-    CMS --&gt;|webhook| CI
-    Git --&gt;|push| CI
-    CI --&gt; SSG
-    SSG --&gt;|upload static files| CDN
-    SSG --&gt;|upload media| Assets
-    CDN --&gt; Assets
-    CDN --&gt; Forms
-    CDN --&gt; Analytics
-    CDN --&gt; Search</code></pre>
+    RawData --&gt; DataPrep --&gt; FTJob --&gt; Eval
+    Eval --&gt;|passes threshold| Registry
+    Registry --&gt; InferAPI
+    InferAPI --&gt; ResultCache
+    InferAPI --&gt; CanaryEval --&gt; DriftAlert --&gt; RetrainTrigger
+    GHActions --&gt; FTJob
+    Registry --&gt; ModelTest --&gt; InferAPI</code></pre>
 <h2 id="4-technology-stack">4. Technology stack<a class="headerlink" href="#4-technology-stack" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -1145,76 +1146,58 @@
 </thead>
 <tbody>
 <tr>
-<td>Static site generator</td>
-<td>Astro</td>
-<td>Next.js (static export), SvelteKit, Eleventy, Hugo</td>
-<td>Astro ships zero JS by default, ideal for content-heavy pages; Next.js if you already use it for a product</td>
+<td>Base model</td>
+<td>Llama 3.1 8B or Mistral 7B v0.3</td>
+<td>Phi-3-mini (3.8B), Gemma 2 9B, Qwen 2.5 7B</td>
+<td>7–8B parameter models fine-tune on a single A100 (80 GB) and serve fast; move up to 13B–34B only if 8B quality is insufficient</td>
 </tr>
 <tr>
-<td>Styling</td>
-<td>Tailwind CSS</td>
-<td>CSS Modules, vanilla CSS</td>
-<td>Tailwind is the boring-but-safe choice in 2026; pairs well with component libraries</td>
+<td>Fine-tuning method</td>
+<td>QLoRA (4-bit quantised LoRA)</td>
+<td>LoRA (16-bit), full fine-tuning</td>
+<td>QLoRA trains a 7B model in &lt; 12 hours on an A100 with a fraction of the VRAM; full fine-tuning only if QLoRA accuracy is insufficient on your eval set</td>
 </tr>
 <tr>
-<td>Component library</td>
-<td>shadcn/ui</td>
-<td>Radix UI, Headless UI, Flowbite</td>
-<td>shadcn/ui gives you owned, editable components rather than a locked-in dependency</td>
+<td>Fine-tuning library</td>
+<td>Hugging Face TRL + PEFT</td>
+<td>Axolotl, LLaMA-Factory, Unsloth</td>
+<td>TRL + PEFT is the most actively maintained combination; Axolotl for YAML-config-driven training; Unsloth for 2× faster training on NVIDIA GPUs</td>
 </tr>
 <tr>
-<td>Headless CMS</td>
-<td>Contentful</td>
-<td>Sanity, Storyblok, Prismic, Tina CMS</td>
-<td>Contentful is the most mature; Sanity if you want real-time collab and a custom studio; skip entirely for pure-code sites</td>
+<td>Training infrastructure</td>
+<td>AWS SageMaker Training Jobs</td>
+<td>Modal, RunPod, Lambda Labs</td>
+<td>SageMaker for teams on AWS — managed, auditable, no GPU instance management; Modal for pay-per-second GPU with simpler Python SDK</td>
 </tr>
 <tr>
-<td>Hosting / CDN</td>
-<td>Cloudflare Pages</td>
-<td>Vercel, Netlify, AWS S3 + CloudFront</td>
-<td>Cloudflare Pages has no bandwidth fees and free analytics; Vercel if the rest of the stack is already there</td>
+<td>Dataset management</td>
+<td>Hugging Face Datasets + Hub</td>
+<td>Label Studio + S3, Argilla</td>
+<td>Hugging Face Hub for version-controlled, shareable datasets; Label Studio for annotation workflows; Argilla for LLM-specific feedback collection</td>
 </tr>
 <tr>
-<td>Forms</td>
-<td>Formspree</td>
-<td>Netlify Forms, Basin, custom API route</td>
-<td>No backend needed; Netlify Forms only if you are also hosting on Netlify</td>
+<td>Evaluation</td>
+<td>Custom pytest golden-set harness</td>
+<td>Eleuther LM Eval Harness, RAGAS</td>
+<td>Maintain a human-verified golden set of 200–500 examples; automated metrics (accuracy, F1, ROUGE) are necessary but not sufficient — sample human review weekly</td>
 </tr>
 <tr>
-<td>Web analytics</td>
-<td>Plausible</td>
-<td>Fathom, Posthog, Google Analytics 4</td>
-<td>Plausible is GDPR-compliant out of the box; no cookie banner required</td>
+<td>Inference server</td>
+<td>vLLM</td>
+<td>HuggingFace TGI, llama.cpp, Ollama</td>
+<td>vLLM for production: continuous batching delivers 10–20× throughput vs naïve inference; Ollama for local development only</td>
 </tr>
 <tr>
-<td>Site search</td>
-<td>Pagefind</td>
-<td>Algolia DocSearch (docs only), Orama</td>
-<td>Pagefind runs entirely at build time — zero runtime cost, zero backend</td>
+<td>Model registry</td>
+<td>Hugging Face Hub (private repo)</td>
+<td>MLflow Model Registry, W&amp;B Artifacts</td>
+<td>Hugging Face Hub integrates natively with training libraries; MLflow if the organisation already uses it for other models</td>
 </tr>
 <tr>
-<td>Image optimisation</td>
-<td>Astro Image / <code>&lt;Image&gt;</code></td>
-<td>Cloudflare Images, Imgix</td>
-<td>Built-in to Astro; externalise only if media library is very large</td>
-</tr>
-<tr>
-<td>CI/CD</td>
-<td>GitHub Actions</td>
-<td>GitLab CI, Cloudflare Pages built-in</td>
-<td>Built-in Cloudflare/Vercel CI is fine for simple sites; GitHub Actions gives more control</td>
-</tr>
-<tr>
-<td>Error tracking</td>
-<td>Sentry (browser)</td>
-<td>Highlight.io</td>
-<td>Optional for pure static sites; add if you have interactive JS islands</td>
-</tr>
-<tr>
-<td>A/B testing</td>
-<td>Cloudflare Zaraz + Edge config</td>
-<td>Vercel Edge Config, Optimizely</td>
-<td>Keep experiments at the edge to avoid layout shift; avoid client-side flicker</td>
+<td>Monitoring</td>
+<td>Custom accuracy canary on weekly cron</td>
+<td>Arize, WhyLabs, Evidently</td>
+<td>Run the golden eval set on a weekly schedule; alert immediately on &gt; 5% accuracy drop — this is the primary signal for retraining</td>
 </tr>
 </tbody>
 </table>
@@ -1229,37 +1212,37 @@
 <tbody>
 <tr>
 <td><strong>Scalability</strong></td>
-<td>Effectively infinite at the CDN layer — no origin server to saturate. A Product Hunt or Hacker News spike costs nothing extra on Cloudflare Pages.</td>
+<td>vLLM's continuous batching serves a 7B model at 500–2,000 tokens/second on an A10G GPU, handling burst traffic efficiently. Scale horizontally by adding GPU replicas behind a load balancer. Response caching (Redis) handles identical repeated inputs with zero model compute.</td>
 </tr>
 <tr>
 <td><strong>Availability target</strong></td>
-<td>99.99%+ passively, because there is no stateful origin to go down. All availability risk shifts to the CDN provider and the build pipeline.</td>
+<td>99.5% on self-hosted GPU infrastructure — GPU hardware fails more frequently than managed cloud services. Always run a minimum of 2 GPU replicas in production with health-check-based routing; single-GPU deployments are too fragile.</td>
 </tr>
 <tr>
 <td><strong>Latency target</strong></td>
-<td>p95 &lt; 50ms TTFB globally from CDN edge. First Contentful Paint &lt; 1.2s on a 4G mobile connection is achievable with Astro defaults.</td>
+<td>A 7B model on an A10G GPU: p95 &lt; 400 ms for typical prompts (&lt; 256 output tokens). This is 3–5× faster than calling Claude Haiku and 8–12× faster than Sonnet, which is the primary latency motivation for fine-tuning.</td>
 </tr>
 <tr>
 <td><strong>Security posture</strong></td>
-<td>No server-side attack surface by definition. Risks shift to: supply-chain (npm), form endpoints (spam, injection), and CMS credentials. Apply CSP headers, Subresource Integrity on third-party scripts, and bot protection on forms.</td>
+<td>Model weights are proprietary IP — treat them with the same access controls as source code. Restrict access to the model registry and inference endpoint. Fine-tuning data may contain sensitive training examples; apply the same data classification controls as production data. Audit every access to the training dataset.</td>
 </tr>
 <tr>
 <td><strong>Data residency</strong></td>
-<td>Content is replicated globally to CDN edges by design. If content is sensitive enough to restrict by geography, this pattern is the wrong choice.</td>
+<td>Inference is entirely within your own cloud account or on-premises — no data leaves your environment. This is the strongest data residency posture of all LLM patterns and is often the primary compliance motivation for fine-tuning over cloud APIs.</td>
 </tr>
 <tr>
 <td><strong>Compliance fit</strong></td>
-<td>GDPR ✓ (Plausible avoids cookie consent entirely), CCPA ✓, SOC 2 N/A (no data processed), PCI-DSS N/A (no payment data on the static layer — use a Stripe-hosted checkout link instead).</td>
+<td>GDPR ✓ — data stays in your infrastructure; no third-party data processor for inference. HIPAA ✓ — no BAA required for inference (no PHI leaves your network); BAA may still be required for training data sourced from third-party annotators. SOC 2 ✓ with model access audit log and training data lineage.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="6-cost-ballpark">6. Cost ballpark<a class="headerlink" href="#6-cost-ballpark" title="Permanent link">&para;</a></h2>
-<p>Indicative monthly USD cost. Static sites are among the cheapest architectures to run; the floor is essentially zero.</p>
+<p>Indicative monthly USD cost. GPU compute dominates; fine-tuning is a one-time cost per training run.</p>
 <table>
 <thead>
 <tr>
 <th>Scale</th>
-<th>Monthly visitors</th>
+<th>Inference requests / month</th>
 <th>Monthly cost</th>
 <th>Cost drivers</th>
 </tr>
@@ -1267,21 +1250,21 @@
 <tbody>
 <tr>
 <td>Small</td>
-<td>&lt; 50k</td>
-<td>$0 - $20</td>
-<td>Cloudflare Pages free tier covers most small sites; cost only from paid CMS or analytics plan</td>
+<td>&lt; 100,000</td>
+<td>$500 - $2,000</td>
+<td>1× A10G GPU instance (~$750/month on AWS), one-time training run cost ($50–200)</td>
 </tr>
 <tr>
 <td>Medium</td>
-<td>50k - 1M</td>
-<td>$20 - $150</td>
-<td>CMS content seats, analytics data retention, image optimisation volume</td>
+<td>100k - 10M</td>
+<td>$1,500 - $8,000</td>
+<td>2–4 GPU instances for redundancy, storage, MLflow/W&amp;B, occasional retraining</td>
 </tr>
 <tr>
 <td>Large</td>
-<td>1M - 10M</td>
-<td>$100 - $500</td>
-<td>CMS API call volume, media egress if not on Cloudflare, A/B testing platform</td>
+<td>10M+</td>
+<td>$5,000 - $30,000</td>
+<td>GPU fleet, autoscaling, full MLOps tooling, dedicated ML engineering time for model maintenance</td>
 </tr>
 </tbody>
 </table>
@@ -1296,57 +1279,51 @@
 </thead>
 <tbody>
 <tr>
-<td>Page and component scaffolding</td>
-<td>★★★★★</td>
-<td>Excellent. Astro and Tailwind are heavily represented in training data; generate full page layouts confidently.</td>
+<td>Training script scaffolding (TRL + PEFT)</td>
+<td>★★★★</td>
+<td>Good — QLoRA training scripts are well-represented; verify LoRA rank, alpha, and target modules against your specific base model.</td>
 </tr>
 <tr>
-<td>MDX / content authoring</td>
-<td>★★★★★</td>
-<td>LLMs are excellent at writing and reformatting Markdown-heavy content pages.</td>
+<td>Dataset formatting and tokenisation</td>
+<td>★★★★</td>
+<td>Generates correct chat-template formatting for Llama/Mistral; verify the EOS token handling, which varies by model family.</td>
 </tr>
 <tr>
-<td>CMS schema design</td>
+<td>vLLM serving configuration</td>
 <td>★★★</td>
-<td>Good starting point; review field types and validation rules manually — CMS schemas are hard to migrate after content is in.</td>
+<td>Produces working vLLM launch commands and OpenAI-compatible API wrapper; GPU memory fraction and quantisation settings need tuning on actual hardware.</td>
 </tr>
 <tr>
-<td>Accessibility (WCAG)</td>
+<td>Evaluation harness</td>
 <td>★★★</td>
-<td>Generates correct semantic HTML and ARIA attributes most of the time; always audit with axe or Lighthouse.</td>
-</tr>
-<tr>
-<td>Performance optimisation</td>
-<td>★★★</td>
-<td>Knows Core Web Vitals principles well; recommendations are correct but sometimes outdated on framework-specific APIs.</td>
+<td>Scaffolds pytest-based eval runners correctly; defining the right metrics for your task requires domain expertise, not code generation.</td>
 </tr>
 <tr>
 <td>Architecture decisions</td>
 <td>★</td>
-<td>Don't outsource. Use ADRs.</td>
+<td>Don't outsource — specifically the base model selection and fine-tuning method have compounding consequences on quality, cost, and maintenance.</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Recommended workflow:</strong> Scaffold pages and components with the LLM, then run Lighthouse CI in the build pipeline to catch regressions automatically. Write CMS content models by hand after sketching them with the LLM.</p>
+<p><strong>Recommended workflow:</strong> Before any training, establish a baseline by measuring a general model (Claude Haiku, GPT-4o-mini) on your eval set with a well-engineered prompt. If the gap between the baseline and your quality target is &lt; 10%, solve it with prompt engineering first. Only fine-tune when the gap is large and the task volume justifies the operational overhead.</p>
 <h2 id="8-reference-implementations">8. Reference implementations<a class="headerlink" href="#8-reference-implementations" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Public reference:</strong> <a href="https://github.com/withastro/astro/tree/main/examples/blog">Astro Starter Blog</a> — minimal Astro site with Markdown content</li>
-<li><strong>Public reference:</strong> <a href="https://github.com/withastro/starlight">withastro/starlight</a> — Astro's official documentation site framework; excellent reference for a content-heavy static site with search, versioning, and i18n (200 OK ✓)</li>
-<li><strong>Public reference:</strong> <a href="https://developers.cloudflare.com/pages/framework-guides/deploy-an-astro-site/">Cloudflare Pages deployment guide</a> — official Astro + Cloudflare Pages walkthrough</li>
+<li><strong>Public reference:</strong> <a href="https://github.com/huggingface/trl">huggingface/trl</a> — Transformer Reinforcement Learning library; the primary fine-tuning library; <code>examples/</code> contains SFT, DPO, and QLoRA training scripts for Llama, Mistral, and Gemma (200 OK ✓)</li>
+<li><strong>Public reference:</strong> <a href="https://github.com/huggingface/peft">huggingface/peft</a> — Parameter-Efficient Fine-Tuning library implementing LoRA, QLoRA, and adapter methods; the foundation all QLoRA training builds on (200 OK ✓)</li>
+<li><strong>Public reference:</strong> <a href="https://github.com/vllm-project/vllm">vllm-project/vllm</a> — high-throughput inference server with continuous batching; <code>examples/</code> covers OpenAI-compatible API, multi-GPU tensor parallelism, and quantisation (200 OK ✓)</li>
 <li><strong>Internal case study:</strong> <em>Add your anonymised internal example here</em></li>
 </ul>
 <h2 id="9-related-decisions-adrs">9. Related decisions (ADRs)<a class="headerlink" href="#9-related-decisions-adrs" title="Permanent link">&para;</a></h2>
 <ul>
-<li><em>No ADRs recorded yet. Candidates: choice of SSG framework, CMS vendor selection, CDN provider.</em></li>
+<li><em>No ADRs recorded yet. Candidates: base model selection (Llama vs Mistral vs Phi), training infrastructure (SageMaker vs Modal vs RunPod), evaluation framework.</em></li>
 </ul>
 <h2 id="10-known-risks-gotchas">10. Known risks &amp; gotchas<a class="headerlink" href="#10-known-risks-gotchas" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Build time explodes as content grows</strong> — At tens of thousands of pages, full rebuilds become slow (minutes, not seconds). Mitigation: enable incremental/on-demand builds (Astro's <code>output: 'hybrid'</code>, Next.js ISR) so only changed pages are rebuilt on a CMS publish event.</li>
-<li><strong>Cache invalidation on urgent content changes</strong> — A retraction or correction may take minutes to propagate to all CDN edge nodes. Mitigation: use Cloudflare's Cache Purge API or Vercel's on-demand ISR in your CMS webhook, and document the SLA for editors.</li>
-<li><strong>Form spam without a backend</strong> — Formspree and similar services are targetted by bots. Mitigation: add hCaptcha or Cloudflare Turnstile; never use honeypot fields alone.</li>
-<li><strong>Third-party script performance creep</strong> — Marketing teams add chat widgets, analytics pixels, and tag managers over time. Each one can erase your Lighthouse score. Mitigation: enforce a Content Security Policy and gate new script additions through a pull-request review; use Cloudflare Zaraz to load third-party scripts server-side.</li>
-<li><strong>CMS vendor lock-in</strong> — Migrating tens of thousands of structured content entries between CMS vendors is painful. Mitigation: keep a thin content adapter layer in the codebase so the SSG is not coupled directly to the CMS API shape.</li>
-<li><strong>Broken links after URL restructuring</strong> — Marketing teams frequently want to rename slugs. Mitigation: maintain a <code>_redirects</code> file (supported natively by Cloudflare Pages and Netlify) and run a broken-link checker in CI.</li>
+<li><strong>Training data quality determines model quality — at 7B scale there is no safety net</strong> — A general 70B model tolerates noisy training signals through scale; a 7B model does not. Garbage-in produces a confidently wrong model. Mitigation: invest in data quality before investing in training compute; human-verify a random sample of every training batch before the first training run.</li>
+<li><strong>Catastrophic forgetting degrades general capability</strong> — Fine-tuning on a narrow task removes the model's ability to handle anything outside that distribution. Mitigation: include a small proportion of general instruction-following examples in the training mix (5–10%); measure performance on a general benchmark (MMLU subset) alongside your task-specific eval.</li>
+<li><strong>Distribution shift silently degrades production accuracy</strong> — Production inputs drift from training distribution over months; accuracy drops gradually below the detection threshold. Mitigation: run the golden-set eval on a weekly automated schedule and alert on any 5% accuracy regression; do not rely on user complaints as your primary signal.</li>
+<li><strong>GPU infrastructure is high-ops</strong> — Hardware failures, CUDA version conflicts, out-of-memory errors during training, and driver incompatibilities are routine. Mitigation: use managed training (SageMaker) rather than self-managed GPU instances; containerise training scripts with pinned CUDA/torch versions; document the exact environment that produced the current production model.</li>
+<li><strong>Model rollback must be under 5 minutes</strong> — A bad model deployed to production needs to revert faster than a bad code deployment. Mitigation: keep the previous model version warm in the registry and scripted for fast swap; test the rollback procedure before it is needed, not during an incident.</li>
 </ul>
 
 

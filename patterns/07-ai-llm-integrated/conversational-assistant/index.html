@@ -12,7 +12,7 @@
         <meta name="author" content="deva@soa.team">
       
       
-        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/01-web-mobile/static-marketing-site/">
+        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/07-ai-llm-integrated/conversational-assistant/">
       
       
       
@@ -25,7 +25,7 @@
     
     
       
-        <title>Pattern: Static Marketing Site - Architecture Pattern Catalog</title>
+        <title>Pattern: Conversational Assistant / Chatbot - Architecture Pattern Catalog</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pattern-static-marketing-site" class="md-skip">
+        <a href="#pattern-conversational-assistant-chatbot" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pattern: Static Marketing Site
+              Pattern: Conversational Assistant / Chatbot
             
           </span>
         </div>
@@ -509,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../01-web-mobile/" class="md-nav__link">
         
   
   
@@ -677,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../07-ai-llm-integrated/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -1067,72 +1067,80 @@
   
 
 
-<h1 id="pattern-static-marketing-site">Pattern: Static Marketing Site<a class="headerlink" href="#pattern-static-marketing-site" title="Permanent link">&para;</a></h1>
+<h1 id="pattern-conversational-assistant-chatbot">Pattern: Conversational Assistant / Chatbot<a class="headerlink" href="#pattern-conversational-assistant-chatbot" title="Permanent link">&para;</a></h1>
 <div class="admonition info">
 <p class="admonition-title">Quick facts</p>
 <ul>
-<li><strong>Category:</strong> Web &amp; Mobile Applications</li>
+<li><strong>Category:</strong> AI / LLM-Integrated Systems</li>
 <li><strong>Maturity:</strong> Adopt</li>
-<li><strong>Typical team size:</strong> 1-3 engineers</li>
-<li><strong>Typical timeline to MVP:</strong> 2-4 weeks</li>
+<li><strong>Typical team size:</strong> 2-4 engineers</li>
+<li><strong>Typical timeline to MVP:</strong> 4-8 weeks</li>
 <li><strong>Last reviewed:</strong> 2026-05-02 by Architecture Team</li>
 </ul>
 </div>
 <h2 id="1-context">1. Context<a class="headerlink" href="#1-context" title="Permanent link">&para;</a></h2>
 <p><strong>Use this pattern when:</strong></p>
 <ul>
-<li>Building a brochure site, product landing page, or documentation portal where content changes infrequently (hours to days, not seconds)</li>
-<li>The primary goal is conversion, trust-building, or information delivery — not application behaviour</li>
-<li>Performance and SEO rank are first-class requirements</li>
-<li>The team is small or front-end-only, and you want to avoid owning a database and API surface</li>
+<li>Handling high volumes of repetitive customer support, internal helpdesk, or FAQ queries where the answer space is well-defined</li>
+<li>Users prefer a natural-language interface over navigating documentation trees or form-based UIs</li>
+<li>Escalation to a human agent is acceptable for complex or sensitive cases — the system is not fully autonomous</li>
+<li>You have a knowledge corpus to ground answers in (pair with the RAG pattern for private knowledge)</li>
 </ul>
 <p><strong>Do NOT use this pattern when:</strong></p>
 <ul>
-<li>Pages are personalised per authenticated user (use the SaaS Multi-Tenant or Internal Admin pattern instead)</li>
-<li>Prices, availability, or inventory must reflect real-time state (the CDN cache makes this impractical)</li>
-<li>The site has heavy user-generated content that needs moderation workflows</li>
-<li>You are building a documentation site that ships with a complex product and must version tightly with it (consider docs-as-code inside a monorepo with dedicated tooling like Docusaurus or MkDocs)</li>
+<li>The interaction must initiate irreversible real-world actions (payments, deletions, external API mutations) without a human-in-the-loop gate — use the Agentic Workflow pattern with explicit approval steps instead</li>
+<li>Deterministic output is required: the chatbot is probabilistic and will occasionally produce wrong answers at a rate you cannot engineer to zero</li>
+<li>The domain requires guaranteed correctness (medical diagnosis, legal advice, financial execution) — AI assistance without mandatory human review is inappropriate in these domains</li>
+<li>User trust in AI is low enough that a chatbot will generate more support tickets than it deflects</li>
 </ul>
 <h2 id="2-problem-it-solves">2. Problem it solves<a class="headerlink" href="#2-problem-it-solves" title="Permanent link">&para;</a></h2>
-<p>Marketing and content teams need to publish pages quickly, keep costs near zero, and rank well on search engines — without waiting for backend engineers to provision databases or manage servers. Meanwhile the engineering team wants the site to be fast globally, trivially scalable to any traffic spike (a viral moment, a Product Hunt launch), and cheap to operate. A static site built once at deploy time and served entirely from a CDN edge resolves all of these goals simultaneously.</p>
+<p>Support teams and internal helpdesks field thousands of repetitive queries. Staffing enough humans to cover all channels, all hours, is expensive and slow. Users wait; agents burn out on copy-paste answers. This pattern provides instant, always-available first-line responses that deflect common queries, surface relevant knowledge, and hand off complex cases to humans — reducing ticket volume without reducing support quality for hard problems.</p>
 <h2 id="3-solution-overview">3. Solution overview<a class="headerlink" href="#3-solution-overview" title="Permanent link">&para;</a></h2>
 <h3 id="system-context-c4-level-1">System context (C4 Level 1)<a class="headerlink" href="#system-context-c4-level-1" title="Permanent link">&para;</a></h3>
 <pre class="mermaid"><code>flowchart LR
-    Visitor((Visitor)) --&gt; Site[Static Marketing Site]
-    Editor((Content Editor)) --&gt; CMS[Headless CMS]
-    CMS --&gt;|webhook on publish| CI[Build Pipeline]
-    CI --&gt;|deploy| Site
-    Site --&gt; Analytics[Analytics Provider]
-    Site --&gt; Forms[Form / Lead Provider]</code></pre>
+    User((User)) --&gt; UI[Chat UI\nweb widget or mobile]
+    UI --&gt; ConvAPI[Conversation API]
+    ConvAPI --&gt; LLM[LLM Provider\nAnthropic / OpenAI]
+    ConvAPI --&gt; KB[Knowledge Base\nRAG retriever]
+    ConvAPI --&gt; CRM[CRM / Ticketing\nZendesk / Intercom]
+    ConvAPI --&gt; Obs[Observability\nLangfuse]
+    Agent((Human Agent)) --&gt; CRM</code></pre>
 <h3 id="container-view-c4-level-2">Container view (C4 Level 2)<a class="headerlink" href="#container-view-c4-level-2" title="Permanent link">&para;</a></h3>
 <pre class="mermaid"><code>flowchart TB
-    subgraph Authoring
-        CMS[Headless CMS\ne.g. Contentful / Sanity]
-        Git[Git Repository\nsource of truth for code &amp; MDX]
+    subgraph Frontend
+        Widget[Chat Widget\nReact + Vercel AI SDK]
+        SSE[SSE stream\ntoken-by-token]
     end
-    subgraph Build
-        CI[CI Runner\nGitHub Actions]
-        SSG[Static Site Generator\nAstro / Next.js static export]
+    subgraph Backend
+        ConvAPI[Conversation API\nFastAPI async]
+        HistStore[(Conversation History\nPostgres)]
+        CtxMgr[Context Manager\ntruncate + summarise old turns]
+        RAGRetriever[RAG Retriever\noptional knowledge base]
+        GuardIn[Input Guardrails\nPII detection, topic filter]
+        LLMClient[LLM Client\nstreaming]
+        GuardOut[Output Guardrails\nsafety + PII redaction]
+        Escalation[Escalation Router\nsentiment + intent]
     end
-    subgraph Serving
-        CDN[CDN Edge Network\nCloudflare Pages / Vercel]
-        Assets[(Object Store\nimages, fonts, videos)]
+    subgraph External
+        LLM[LLM Provider API]
+        Ticket[Ticketing System\nZendesk / Intercom]
     end
-    subgraph Integrations
-        Forms[Form Backend\ne.g. Netlify Forms / Formspree]
-        Analytics[Web Analytics\ne.g. Plausible / GA4]
-        Search[Site Search\ne.g. Pagefind / Algolia DocSearch]
+    subgraph Ops
+        Langfuse[Langfuse\ntraces + CSAT scores]
+        Metrics[Custom metrics\ndeflection rate, escalation rate]
     end
 
-    CMS --&gt;|webhook| CI
-    Git --&gt;|push| CI
-    CI --&gt; SSG
-    SSG --&gt;|upload static files| CDN
-    SSG --&gt;|upload media| Assets
-    CDN --&gt; Assets
-    CDN --&gt; Forms
-    CDN --&gt; Analytics
-    CDN --&gt; Search</code></pre>
+    Widget --&gt; SSE --&gt; ConvAPI
+    ConvAPI --&gt; HistStore
+    ConvAPI --&gt; CtxMgr
+    ConvAPI --&gt; GuardIn --&gt; RAGRetriever
+    RAGRetriever --&gt; LLMClient
+    GuardIn --&gt; LLMClient
+    LLMClient --&gt; GuardOut --&gt; Widget
+    GuardOut --&gt; Escalation
+    Escalation --&gt; Ticket
+    ConvAPI --&gt; Langfuse
+    Langfuse --&gt; Metrics</code></pre>
 <h2 id="4-technology-stack">4. Technology stack<a class="headerlink" href="#4-technology-stack" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -1145,76 +1153,58 @@
 </thead>
 <tbody>
 <tr>
-<td>Static site generator</td>
-<td>Astro</td>
-<td>Next.js (static export), SvelteKit, Eleventy, Hugo</td>
-<td>Astro ships zero JS by default, ideal for content-heavy pages; Next.js if you already use it for a product</td>
+<td>LLM</td>
+<td>Anthropic Claude 3.5 Haiku</td>
+<td>GPT-4o-mini, Gemini 2.0 Flash</td>
+<td>See <a href="../../../decisions/0006-llm-provider/">ADR-0006</a>; fast cheap models dominate at chatbot scale — cost-per-token matters</td>
 </tr>
 <tr>
-<td>Styling</td>
-<td>Tailwind CSS</td>
-<td>CSS Modules, vanilla CSS</td>
-<td>Tailwind is the boring-but-safe choice in 2026; pairs well with component libraries</td>
+<td>Streaming</td>
+<td>Server-Sent Events (SSE)</td>
+<td>WebSockets</td>
+<td>SSE is simpler for one-directional token streaming; use WebSockets only if you need bidirectional real-time events</td>
 </tr>
 <tr>
-<td>Component library</td>
-<td>shadcn/ui</td>
-<td>Radix UI, Headless UI, Flowbite</td>
-<td>shadcn/ui gives you owned, editable components rather than a locked-in dependency</td>
+<td>Frontend chat component</td>
+<td>Vercel AI SDK (<code>useChat</code>)</td>
+<td>CopilotKit, Chainlit, open-source widget</td>
+<td><code>useChat</code> handles streaming state, optimistic UI, and error recovery in ~20 lines; Chainlit for rapid prototyping with a hosted UI</td>
 </tr>
 <tr>
-<td>Headless CMS</td>
-<td>Contentful</td>
-<td>Sanity, Storyblok, Prismic, Tina CMS</td>
-<td>Contentful is the most mature; Sanity if you want real-time collab and a custom studio; skip entirely for pure-code sites</td>
+<td>Backend API</td>
+<td>FastAPI (async)</td>
+<td>NestJS, Express</td>
+<td>FastAPI's async generators map directly to SSE streaming with minimal boilerplate</td>
 </tr>
 <tr>
-<td>Hosting / CDN</td>
-<td>Cloudflare Pages</td>
-<td>Vercel, Netlify, AWS S3 + CloudFront</td>
-<td>Cloudflare Pages has no bandwidth fees and free analytics; Vercel if the rest of the stack is already there</td>
+<td>Conversation history</td>
+<td>PostgreSQL</td>
+<td>Redis (session-scoped), DynamoDB</td>
+<td>Postgres for durable history that survives restarts; Redis if you only need in-session memory</td>
 </tr>
 <tr>
-<td>Forms</td>
-<td>Formspree</td>
-<td>Netlify Forms, Basin, custom API route</td>
-<td>No backend needed; Netlify Forms only if you are also hosting on Netlify</td>
+<td>Context window management</td>
+<td>Manual truncation + rolling summary</td>
+<td>mem0, Zep</td>
+<td>Keep history under 80% of the model's context window; summarise older turns rather than truncating them cold</td>
 </tr>
 <tr>
-<td>Web analytics</td>
-<td>Plausible</td>
-<td>Fathom, Posthog, Google Analytics 4</td>
-<td>Plausible is GDPR-compliant out of the box; no cookie banner required</td>
+<td>Input/output guardrails</td>
+<td>Llama Guard 3 (self-hosted) + provider moderation</td>
+<td>NeMo Guardrails, Guardrails AI</td>
+<td>Always run provider-side moderation as a first pass; add topic-restriction and PII redaction for compliance</td>
 </tr>
 <tr>
-<td>Site search</td>
-<td>Pagefind</td>
-<td>Algolia DocSearch (docs only), Orama</td>
-<td>Pagefind runs entirely at build time — zero runtime cost, zero backend</td>
+<td>RAG knowledge base</td>
+<td>pgvector (see RAG pattern)</td>
+<td>None (pure parametric)</td>
+<td>Pair with the RAG pattern for private knowledge; pure chatbots without grounding hallucinate facts freely</td>
 </tr>
 <tr>
-<td>Image optimisation</td>
-<td>Astro Image / <code>&lt;Image&gt;</code></td>
-<td>Cloudflare Images, Imgix</td>
-<td>Built-in to Astro; externalise only if media library is very large</td>
-</tr>
-<tr>
-<td>CI/CD</td>
-<td>GitHub Actions</td>
-<td>GitLab CI, Cloudflare Pages built-in</td>
-<td>Built-in Cloudflare/Vercel CI is fine for simple sites; GitHub Actions gives more control</td>
-</tr>
-<tr>
-<td>Error tracking</td>
-<td>Sentry (browser)</td>
-<td>Highlight.io</td>
-<td>Optional for pure static sites; add if you have interactive JS islands</td>
-</tr>
-<tr>
-<td>A/B testing</td>
-<td>Cloudflare Zaraz + Edge config</td>
-<td>Vercel Edge Config, Optimizely</td>
-<td>Keep experiments at the edge to avoid layout shift; avoid client-side flicker</td>
+<td>Observability</td>
+<td>Langfuse</td>
+<td>LangSmith, Helicone</td>
+<td>Track: deflection rate, escalation rate, CSAT per conversation, token cost per session</td>
 </tr>
 </tbody>
 </table>
@@ -1229,37 +1219,37 @@
 <tbody>
 <tr>
 <td><strong>Scalability</strong></td>
-<td>Effectively infinite at the CDN layer — no origin server to saturate. A Product Hunt or Hacker News spike costs nothing extra on Cloudflare Pages.</td>
+<td>Stateless API tier scales horizontally behind a load balancer. Conversation history in Postgres with PgBouncer connection pooling. SSE connections are long-lived (~30 s per response); plan HTTP connection limits accordingly.</td>
 </tr>
 <tr>
 <td><strong>Availability target</strong></td>
-<td>99.99%+ passively, because there is no stateful origin to go down. All availability risk shifts to the CDN provider and the build pipeline.</td>
+<td>99.9%; LLM API downtime is the dominant failure mode. Implement a fallback: surface a "currently unavailable" message and offer to open a ticket rather than showing a raw API error.</td>
 </tr>
 <tr>
 <td><strong>Latency target</strong></td>
-<td>p95 &lt; 50ms TTFB globally from CDN edge. First Contentful Paint &lt; 1.2s on a 4G mobile connection is achievable with Astro defaults.</td>
+<td>Time-to-first-token &lt; 500 ms for Haiku / Flash models. Full response perceived latency is masked by streaming. Users begin abandoning after ~2 s of blank screen — streaming is not optional.</td>
 </tr>
 <tr>
 <td><strong>Security posture</strong></td>
-<td>No server-side attack surface by definition. Risks shift to: supply-chain (npm), form endpoints (spam, injection), and CMS credentials. Apply CSP headers, Subresource Integrity on third-party scripts, and bot protection on forms.</td>
+<td>Rate-limit per user and per organisation (token-bucket). Detect and redact PII in both directions. Never log raw conversation content to unencrypted sinks. Guard against prompt injection via user input by using a separate system prompt that cannot be overridden by the user's turn.</td>
 </tr>
 <tr>
 <td><strong>Data residency</strong></td>
-<td>Content is replicated globally to CDN edges by design. If content is sensitive enough to restrict by geography, this pattern is the wrong choice.</td>
+<td>Conversation history is stored in your Postgres instance. Message text is transmitted to the LLM API per request — ensure this is acceptable under your data classification and contractual obligations.</td>
 </tr>
 <tr>
 <td><strong>Compliance fit</strong></td>
-<td>GDPR ✓ (Plausible avoids cookie consent entirely), CCPA ✓, SOC 2 N/A (no data processed), PCI-DSS N/A (no payment data on the static layer — use a Stripe-hosted checkout link instead).</td>
+<td>GDPR ✓ — implement right-to-erasure on conversation history; disclose AI use in the product's privacy policy. HIPAA ✓ with BAA from LLM provider; never pass unredacted health data if BAA is not in place. SOC 2 ✓ with conversation audit log and access controls.</td>
 </tr>
 </tbody>
 </table>
 <h2 id="6-cost-ballpark">6. Cost ballpark<a class="headerlink" href="#6-cost-ballpark" title="Permanent link">&para;</a></h2>
-<p>Indicative monthly USD cost. Static sites are among the cheapest architectures to run; the floor is essentially zero.</p>
+<p>Indicative monthly USD cost. LLM token spend is the dominant variable; use the cheapest capable model.</p>
 <table>
 <thead>
 <tr>
 <th>Scale</th>
-<th>Monthly visitors</th>
+<th>Conversations / month</th>
 <th>Monthly cost</th>
 <th>Cost drivers</th>
 </tr>
@@ -1267,21 +1257,21 @@
 <tbody>
 <tr>
 <td>Small</td>
-<td>&lt; 50k</td>
-<td>$0 - $20</td>
-<td>Cloudflare Pages free tier covers most small sites; cost only from paid CMS or analytics plan</td>
+<td>&lt; 5,000</td>
+<td>$50 - $300</td>
+<td>LLM API tokens (Haiku/Flash), Postgres, hosting</td>
 </tr>
 <tr>
 <td>Medium</td>
-<td>50k - 1M</td>
-<td>$20 - $150</td>
-<td>CMS content seats, analytics data retention, image optimisation volume</td>
+<td>5k - 100k</td>
+<td>$500 - $5,000</td>
+<td>LLM API at volume, Langfuse observability plan, RAG infrastructure if paired</td>
 </tr>
 <tr>
 <td>Large</td>
-<td>1M - 10M</td>
-<td>$100 - $500</td>
-<td>CMS API call volume, media egress if not on Cloudflare, A/B testing platform</td>
+<td>100k+</td>
+<td>$5,000 - $30,000</td>
+<td>LLM API dominant; evaluate prompt caching (up to 90% reduction on repeated system prompts), model tier, and context compression</td>
 </tr>
 </tbody>
 </table>
@@ -1296,29 +1286,24 @@
 </thead>
 <tbody>
 <tr>
-<td>Page and component scaffolding</td>
+<td>Streaming API integration and SSE wiring</td>
 <td>★★★★★</td>
-<td>Excellent. Astro and Tailwind are heavily represented in training data; generate full page layouts confidently.</td>
+<td>Excellent — Vercel AI SDK + FastAPI streaming is very well-represented in training data.</td>
 </tr>
 <tr>
-<td>MDX / content authoring</td>
-<td>★★★★★</td>
-<td>LLMs are excellent at writing and reformatting Markdown-heavy content pages.</td>
+<td>System prompt and persona engineering</td>
+<td>★★★★</td>
+<td>Good starting point; always red-team the prompt with adversarial inputs before launch.</td>
 </tr>
 <tr>
-<td>CMS schema design</td>
+<td>Guardrail and escalation logic</td>
 <td>★★★</td>
-<td>Good starting point; review field types and validation rules manually — CMS schemas are hard to migrate after content is in.</td>
+<td>Produces structurally correct guardrails; the thresholds (confidence, sentiment) need tuning against real conversation data.</td>
 </tr>
 <tr>
-<td>Accessibility (WCAG)</td>
+<td>Context window management (summarisation)</td>
 <td>★★★</td>
-<td>Generates correct semantic HTML and ARIA attributes most of the time; always audit with axe or Lighthouse.</td>
-</tr>
-<tr>
-<td>Performance optimisation</td>
-<td>★★★</td>
-<td>Knows Core Web Vitals principles well; recommendations are correct but sometimes outdated on framework-specific APIs.</td>
+<td>Knows the pattern; edge cases around mid-conversation summarisation require careful manual testing.</td>
 </tr>
 <tr>
 <td>Architecture decisions</td>
@@ -1327,26 +1312,24 @@
 </tr>
 </tbody>
 </table>
-<p><strong>Recommended workflow:</strong> Scaffold pages and components with the LLM, then run Lighthouse CI in the build pipeline to catch regressions automatically. Write CMS content models by hand after sketching them with the LLM.</p>
+<p><strong>Recommended workflow:</strong> Define the escalation criteria and success metrics (deflection rate, CSAT target) before writing code. Ship to 5% of traffic first. Human agents should review the first 200 conversations before tuning the system prompt — real user queries will surprise you.</p>
 <h2 id="8-reference-implementations">8. Reference implementations<a class="headerlink" href="#8-reference-implementations" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Public reference:</strong> <a href="https://github.com/withastro/astro/tree/main/examples/blog">Astro Starter Blog</a> — minimal Astro site with Markdown content</li>
-<li><strong>Public reference:</strong> <a href="https://github.com/withastro/starlight">withastro/starlight</a> — Astro's official documentation site framework; excellent reference for a content-heavy static site with search, versioning, and i18n (200 OK ✓)</li>
-<li><strong>Public reference:</strong> <a href="https://developers.cloudflare.com/pages/framework-guides/deploy-an-astro-site/">Cloudflare Pages deployment guide</a> — official Astro + Cloudflare Pages walkthrough</li>
+<li><strong>Public reference:</strong> <a href="https://github.com/langfuse/langfuse">langfuse/langfuse</a> — open-source LLM observability platform; the <code>web/</code> app is itself a Next.js + FastAPI system with streaming chat — useful reference for production LLM app architecture (200 OK ✓)</li>
+<li><strong>Public reference:</strong> <a href="https://github.com/run-llama/llama_index/tree/main/llama-index-integrations/tools">run-llama/llama_index — chat examples</a> — integration examples covering conversation memory, tool use, and RAG-backed chat (200 OK ✓)</li>
 <li><strong>Internal case study:</strong> <em>Add your anonymised internal example here</em></li>
 </ul>
 <h2 id="9-related-decisions-adrs">9. Related decisions (ADRs)<a class="headerlink" href="#9-related-decisions-adrs" title="Permanent link">&para;</a></h2>
 <ul>
-<li><em>No ADRs recorded yet. Candidates: choice of SSG framework, CMS vendor selection, CDN provider.</em></li>
+<li><a href="../../../decisions/0006-llm-provider/">ADR-0006: Anthropic Claude as the default LLM provider</a></li>
 </ul>
 <h2 id="10-known-risks-gotchas">10. Known risks &amp; gotchas<a class="headerlink" href="#10-known-risks-gotchas" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Build time explodes as content grows</strong> — At tens of thousands of pages, full rebuilds become slow (minutes, not seconds). Mitigation: enable incremental/on-demand builds (Astro's <code>output: 'hybrid'</code>, Next.js ISR) so only changed pages are rebuilt on a CMS publish event.</li>
-<li><strong>Cache invalidation on urgent content changes</strong> — A retraction or correction may take minutes to propagate to all CDN edge nodes. Mitigation: use Cloudflare's Cache Purge API or Vercel's on-demand ISR in your CMS webhook, and document the SLA for editors.</li>
-<li><strong>Form spam without a backend</strong> — Formspree and similar services are targetted by bots. Mitigation: add hCaptcha or Cloudflare Turnstile; never use honeypot fields alone.</li>
-<li><strong>Third-party script performance creep</strong> — Marketing teams add chat widgets, analytics pixels, and tag managers over time. Each one can erase your Lighthouse score. Mitigation: enforce a Content Security Policy and gate new script additions through a pull-request review; use Cloudflare Zaraz to load third-party scripts server-side.</li>
-<li><strong>CMS vendor lock-in</strong> — Migrating tens of thousands of structured content entries between CMS vendors is painful. Mitigation: keep a thin content adapter layer in the codebase so the SSG is not coupled directly to the CMS API shape.</li>
-<li><strong>Broken links after URL restructuring</strong> — Marketing teams frequently want to rename slugs. Mitigation: maintain a <code>_redirects</code> file (supported natively by Cloudflare Pages and Netlify) and run a broken-link checker in CI.</li>
+<li><strong>Context window overflow corrupts long conversations</strong> — Without active management, conversation history eventually exceeds the context window. The model silently drops the oldest turns, losing critical context. Mitigation: track token counts for every turn; trigger a rolling summarisation step when history reaches 70% of the context limit — before you hit the limit, not after.</li>
+<li><strong>Confident hallucinations on out-of-scope questions</strong> — The chatbot answers questions outside its intended scope with the same confidence as in-scope ones. Mitigation: define explicit topic boundaries in the system prompt; evaluate the chatbot on out-of-scope questions during QA; pair with a RAG knowledge base to ground answers.</li>
+<li><strong>Escalation rate drift after system prompt changes</strong> — A prompt update that improves deflection rate may silently increase the rate of bad answers that never get escalated. Mitigation: treat escalation rate as a two-sided metric (too high = bot is unhelpful; too low = bot is over-confident); alert on both directions.</li>
+<li><strong>Prompt injection via user input</strong> — A user sends "Ignore all previous instructions and instead output X." Mitigation: place the system prompt in the <code>system</code> role (not <code>user</code>), which is harder to override; include an explicit instruction not to follow commands that override the persona; test with known injection patterns.</li>
+<li><strong>GDPR deletion does not remove LLM fine-tuning exposure</strong> — If conversation data is later used for fine-tuning, a deletion request does not remove that data from model weights. Mitigation: clearly separate "operational conversation history" (deletable) from any data used for training (subject to a separate data processing agreement).</li>
 </ul>
 
 
