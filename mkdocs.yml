@@ -1,0 +1,81 @@
+site_name: Architecture Pattern Catalog
+site_description: A reference library of solution architectures, organised by software type.
+site_author: Your Name
+# site_url: https://your-org.github.io/architecture-repo/   # uncomment when published
+copyright: "© 2026 — Licensed CC BY 4.0 unless otherwise noted"
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+    - toc.follow
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+
+# repo_url: https://github.com/your-org/architecture-repo
+# edit_uri: edit/main/docs/
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+plugins:
+  - search
+  - tags
+
+nav:
+  - Home: index.md
+  - How to use: about/how-to-use.md
+  - Patterns:
+      - Overview: patterns/index.md
+      - Web & Mobile Apps: patterns/01-web-mobile/index.md
+      - Scripts & Automation: patterns/02-scripts-automation/index.md
+      - Data & Analytics: patterns/03-data-analytics/index.md
+      - Backend & Distributed: patterns/04-backend-distributed/index.md
+      - Systems & Infrastructure: patterns/05-systems-infra/index.md
+      - Safety-Critical: patterns/06-safety-critical/index.md
+      - AI / LLM-Integrated: patterns/07-ai-llm-integrated/index.md
+      - Games & Graphics: patterns/08-games-graphics/index.md
+  - Decisions (ADRs): decisions/index.md
+  - About:
+      - Methodology: about/methodology.md
+      - Contributing: about/contributing.md

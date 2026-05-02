@@ -1,0 +1,46 @@
+# Python virtual environment
+.venv/
+venv/
+env/
+ENV/
+
+# MkDocs build output
+site/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
+# Distribution / packaging
+*.egg-info/
+dist/
+build/
+*.egg
+MANIFEST
+
+# Pip logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Environment variable files
+.env
+.env.local
+.env.*.local
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS-specific
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Claude Code
+.claude/
