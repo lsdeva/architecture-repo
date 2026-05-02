@@ -1,8 +1,8 @@
 site_name: Architecture Pattern Catalog
 site_description: A reference library of solution architectures, organised by software type.
-site_author: Your Name
-# site_url: https://your-org.github.io/architecture-repo/   # uncomment when published
-copyright: "© 2026 — Licensed CC BY 4.0 unless otherwise noted"
+site_author: deva@soa.team
+site_url: https://your-org.github.io/architecture-repo/   # uncomment when published
+copyright: "© 2026  "
 
 theme:
   name: material
@@ -33,8 +33,8 @@ theme:
   icon:
     repo: fontawesome/brands/github
 
-# repo_url: https://github.com/your-org/architecture-repo
-# edit_uri: edit/main/docs/
+repo_url: https://github.com/your-org/architecture-repo
+edit_uri: edit/main/docs/
 
 markdown_extensions:
   - admonition
