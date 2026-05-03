@@ -12,10 +12,10 @@ Low-level software where performance, memory, and hardware proximity matter. Inc
 
 | Pattern | Status | Best for |
 |---|---|---|
-| High-performance Network Service (TODO) | Trial | Proxies, load balancers, custom protocols |
-| Embedded Firmware (TODO) | Adopt | IoT devices, hardware controllers |
-| Database Engine / Storage Layer (TODO) | Assess | Specialised data stores; rare to build from scratch |
-| Custom OS Component / Kernel Module (TODO) | Hold | Almost never the right answer; consider eBPF first |
+| [High-performance Network Service](high-performance-network-service.md) | Trial | Proxies, load balancers, custom protocols |
+| [Embedded Firmware](embedded-firmware.md) | Adopt | IoT devices, hardware controllers |
+| [Database Engine / Storage Layer](database-engine.md) | Assess | Specialised data stores; rare to build from scratch |
+| [Custom OS Component / Kernel Module](custom-os-component.md) | Hold | Almost never the right answer; consider eBPF first |
 
 ## Default tech stack
 

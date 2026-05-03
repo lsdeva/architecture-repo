@@ -14,10 +14,10 @@ User-facing applications delivered through browsers or mobile app stores. The la
 |---|---|---|
 | [SaaS Multi-Tenant Web App](saas-multi-tenant.md) | Adopt | B2B subscription products, internal platforms with multiple customers |
 | [Static Marketing Site](static-marketing-site.md) | Adopt | Brochure sites, landing pages, documentation portals |
-| E-commerce Storefront (TODO) | Adopt | Online retail, marketplaces |
-| Internal Admin / Back-office Tool (TODO) | Adopt | CRMs, dashboards, ops consoles |
-| Cross-platform Mobile App (TODO) | Trial | Apps needing iOS + Android with shared codebase |
-| Progressive Web App (PWA) (TODO) | Trial | Installable web apps with offline support |
+| [E-commerce Storefront](ecommerce-storefront.md) | Adopt | Online retail, marketplaces |
+| [Internal Admin / Back-office Tool](internal-admin-tool.md) | Adopt | CRMs, dashboards, ops consoles |
+| [Cross-platform Mobile App](cross-platform-mobile-app.md) | Trial | Apps needing iOS + Android with shared codebase |
+| [Progressive Web App (PWA)](progressive-web-app.md) | Trial | Installable web apps with offline support |
 
 ## LLM-development sweet spot
 

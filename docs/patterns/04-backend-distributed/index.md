@@ -12,11 +12,11 @@ Long-running services with no primary UI of their own. They expose APIs, process
 
 | Pattern | Status | Best for |
 |---|---|---|
-| Modular Monolith (TODO) | Adopt | Default starting point; most "microservices" projects should be this |
-| Microservices (TODO) | Trial | Large engineering organisations with proven need to scale teams |
-| Event-Driven Architecture (TODO) | Trial | Asynchronous workflows, decoupling producers from consumers |
-| API Gateway + BFF (TODO) | Adopt | Many client types (web, mobile, partners) sharing backend services |
-| Workflow Orchestration (TODO) | Trial | Long-running, human-in-the-loop, or failure-prone processes |
+| [Modular Monolith](modular-monolith.md) | Adopt | Default starting point; most "microservices" projects should be this |
+| [Microservices](microservices.md) | Trial | Large engineering organisations with proven need to scale teams |
+| [Event-Driven Architecture](event-driven-architecture.md) | Trial | Asynchronous workflows, decoupling producers from consumers |
+| [API Gateway + BFF](api-gateway-bff.md) | Adopt | Many client types (web, mobile, partners) sharing backend services |
+| [Workflow Orchestration](workflow-orchestration.md) | Trial | Long-running, human-in-the-loop, or failure-prone processes |
 
 ## Default tech stack
 

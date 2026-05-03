@@ -15,9 +15,9 @@ Software where failure can cause loss of life, serious injury, environmental dam
 
 | Pattern | Status | Best for |
 |---|---|---|
-| Medical Device Software (TODO) | Adopt | IEC 62304 Class A/B/C software |
-| Automotive ECU Software (TODO) | Adopt | ISO 26262 ASIL-rated components |
-| Industrial Control System (TODO) | Adopt | IEC 61508 SIL-rated controllers |
+| [Medical Device Software](medical-device-software.md) | Adopt | IEC 62304 Class A/B/C software |
+| [Automotive ECU Software](automotive-ecu-software.md) | Adopt | ISO 26262 ASIL-rated components |
+| [Industrial Control System](industrial-control-system.md) | Adopt | IEC 61508 SIL-rated controllers |
 
 ## Default tech stack
 

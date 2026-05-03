@@ -12,11 +12,11 @@ Interactive entertainment, real-time 3D, simulations, and rendering systems. Per
 
 | Pattern | Status | Best for |
 |---|---|---|
-| Cross-platform Game (Unity / Unreal / Godot) (TODO) | Adopt | Most commercial game projects |
-| Web-based Game (WebGL/WebGPU) (TODO) | Trial | Browser-distributable games, marketing experiences |
-| Multiplayer Game Backend (TODO) | Trial | Real-time multiplayer with authoritative server |
-| Scientific / Engineering Simulation (TODO) | Adopt | Physics, fluid dynamics, training simulators |
-| Data Visualisation / 3D Viewer (TODO) | Adopt | CAD viewers, geospatial, medical imaging |
+| [Cross-platform Game (Unity / Unreal / Godot)](cross-platform-game.md) | Adopt | Most commercial game projects |
+| [Web-based Game (WebGL/WebGPU)](web-based-game.md) | Trial | Browser-distributable games, marketing experiences |
+| [Multiplayer Game Backend](multiplayer-game-backend.md) | Trial | Real-time multiplayer with authoritative server |
+| [Scientific / Engineering Simulation](scientific-simulation.md) | Adopt | Physics, fluid dynamics, training simulators |
+| [Data Visualisation / 3D Viewer](data-visualisation-3d-viewer.md) | Adopt | CAD viewers, geospatial, medical imaging |
 
 ## Default tech stack
 
