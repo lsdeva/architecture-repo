@@ -12,11 +12,11 @@ Systems whose primary purpose is to store, transform, analyse, or visualise data
 
 | Pattern | Status | Best for |
 |---|---|---|
-| Modern Data Stack (Warehouse + dbt + BI) (TODO) | Adopt | Standard analytics needs; most companies under 1k employees |
-| Lakehouse (TODO) | Trial | Mixed BI + ML workloads at scale |
-| Real-time Streaming Analytics (TODO) | Trial | Sub-minute latency dashboards, fraud detection |
-| ML Training Pipeline (TODO) | Trial | Recurring model retraining with versioned data and experiments |
-| Embedded Analytics (TODO) | Adopt | Showing dashboards inside a SaaS product |
+| [Modern Data Stack (Warehouse + dbt + BI)](modern-data-stack.md) | Adopt | Standard analytics needs; most companies under 1k employees |
+| [Lakehouse](lakehouse.md) | Trial | Mixed BI + ML workloads at scale |
+| [Real-time Streaming Analytics](real-time-streaming-analytics.md) | Trial | Sub-minute latency dashboards, fraud detection |
+| [ML Training Pipeline](ml-training-pipeline.md) | Trial | Recurring model retraining with versioned data and experiments |
+| [Embedded Analytics](embedded-analytics.md) | Adopt | Showing dashboards inside a SaaS product |
 
 ## Default tech stack
 
