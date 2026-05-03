@@ -12,31 +12,27 @@
         <meta name="author" content="deva@soa.team">
       
       
-        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/05-systems-infra/">
+        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/04-backend-distributed/microservices/">
       
       
-        <link rel="prev" href="../04-backend-distributed/">
-      
-      
-        <link rel="next" href="../06-safety-critical/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Systems & Infrastructure - Architecture Pattern Catalog</title>
+        <title>Pattern: Microservices - Architecture Pattern Catalog</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#systems-infrastructure" class="md-skip">
+        <a href="#pattern-microservices" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +90,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Architecture Pattern Catalog" class="md-header__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
+    <a href="../../.." title="Architecture Pattern Catalog" class="md-header__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Systems & Infrastructure
+              Pattern: Microservices
             
           </span>
         </div>
@@ -227,7 +223,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -246,7 +242,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../about/how-to-use/" class="md-tabs__link">
+      <a href="../../../about/how-to-use/" class="md-tabs__link">
         
   
   
@@ -263,13 +259,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../" class="md-tabs__link">
           
   
   
@@ -289,7 +283,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../decisions/" class="md-tabs__link">
+      <a href="../../../decisions/" class="md-tabs__link">
         
   
   
@@ -310,7 +304,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../about/methodology/" class="md-tabs__link">
+        <a href="../../../about/methodology/" class="md-tabs__link">
           
   
   
@@ -346,7 +340,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Architecture Pattern Catalog" class="md-nav__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
+    <a href="../../.." title="Architecture Pattern Catalog" class="md-nav__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -376,7 +370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -403,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/how-to-use/" class="md-nav__link">
+      <a href="../../../about/how-to-use/" class="md-nav__link">
         
   
   
@@ -427,8 +421,6 @@
       
   
   
-    
-  
   
   
     
@@ -458,23 +450,22 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
@@ -492,13 +483,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -518,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-web-mobile/" class="md-nav__link">
+      <a href="../../01-web-mobile/" class="md-nav__link">
         
   
   
@@ -546,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-scripts-automation/" class="md-nav__link">
+      <a href="../../02-scripts-automation/" class="md-nav__link">
         
   
   
@@ -574,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-data-analytics/" class="md-nav__link">
+      <a href="../../03-data-analytics/" class="md-nav__link">
         
   
   
@@ -602,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04-backend-distributed/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -627,37 +618,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Systems & Infrastructure
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../05-systems-infra/" class="md-nav__link">
         
   
   
@@ -673,70 +637,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        When to look here
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Patterns in this category
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Default tech stack
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#llm-development-fit" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        LLM-development fit
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -749,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../06-safety-critical/" class="md-nav__link">
+      <a href="../../06-safety-critical/" class="md-nav__link">
         
   
   
@@ -777,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../07-ai-llm-integrated/" class="md-nav__link">
+      <a href="../../07-ai-llm-integrated/" class="md-nav__link">
         
   
   
@@ -805,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../08-games-graphics/" class="md-nav__link">
+      <a href="../../08-games-graphics/" class="md-nav__link">
         
   
   
@@ -840,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../decisions/" class="md-nav__link">
+      <a href="../../../decisions/" class="md-nav__link">
         
   
   
@@ -927,7 +827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/methodology/" class="md-nav__link">
+      <a href="../../../about/methodology/" class="md-nav__link">
         
   
   
@@ -955,7 +855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/contributing/" class="md-nav__link">
+      <a href="../../../about/contributing/" class="md-nav__link">
         
   
   
@@ -1010,10 +910,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
+  <a href="#1-context" class="md-nav__link">
     <span class="md-ellipsis">
       
-        When to look here
+        1. Context
       
     </span>
   </a>
@@ -1021,10 +921,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
+  <a href="#2-problem-it-solves" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Patterns in this category
+        2. Problem it solves
       
     </span>
   </a>
@@ -1032,10 +932,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
+  <a href="#3-solution-overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Default tech stack
+        3. Solution overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Solution overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-context-c4-level-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System context (C4 Level 1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container-view-c4-level-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Container view (C4 Level 2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-technology-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Technology stack
       
     </span>
   </a>
@@ -1043,10 +982,65 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#llm-development-fit" class="md-nav__link">
+  <a href="#5-non-functional-characteristics" class="md-nav__link">
     <span class="md-ellipsis">
       
-        LLM-development fit
+        5. Non-functional characteristics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-cost-ballpark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Cost ballpark
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-llm-assisted-development-fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. LLM-assisted development fit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-reference-implementations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Reference implementations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-related-decisions-adrs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Related decisions (ADRs)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-known-risks-gotchas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Known risks &amp; gotchas
       
     </span>
   </a>
@@ -1073,54 +1067,269 @@
   
 
 
-<h1 id="systems-infrastructure">Systems &amp; Infrastructure<a class="headerlink" href="#systems-infrastructure" title="Permanent link">&para;</a></h1>
-<p>Low-level software where performance, memory, and hardware proximity matter. Includes operating system components, drivers, databases, compilers, network stacks, and embedded firmware.</p>
-<h2 id="when-to-look-here">When to look here<a class="headerlink" href="#when-to-look-here" title="Permanent link">&para;</a></h2>
+<h1 id="pattern-microservices">Pattern: Microservices<a class="headerlink" href="#pattern-microservices" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Quick facts</p>
 <ul>
-<li>The constraint is hardware (memory, latency, power, real-time deadlines)</li>
-<li>You are building infrastructure that other software runs on</li>
-<li>Garbage collection or interpreter overhead is unacceptable</li>
+<li><strong>Category:</strong> Backend &amp; Distributed Systems</li>
+<li><strong>Maturity:</strong> Trial</li>
+<li><strong>Typical team size:</strong> 8+ engineers across multiple teams</li>
+<li><strong>Typical timeline to MVP:</strong> 12-20 weeks for the first set of services</li>
+<li><strong>Last reviewed:</strong> 2026-05-03 by Architecture Team</li>
 </ul>
-<h2 id="patterns-in-this-category">Patterns in this category<a class="headerlink" href="#patterns-in-this-category" title="Permanent link">&para;</a></h2>
+</div>
+<h2 id="1-context">1. Context<a class="headerlink" href="#1-context" title="Permanent link">&para;</a></h2>
+<p><strong>Use this pattern when:</strong></p>
+<ul>
+<li>The organisation has 8+ independent product teams who genuinely need to deploy to production without coordinating with each other</li>
+<li>Domain boundaries are well-understood — ideally because you have already run a modular monolith for a year and the natural service cuts have revealed themselves</li>
+<li>Specific services have measured, proven scaling requirements that differ materially from the rest of the system</li>
+<li>Different parts of the system need different release cadences, technology choices, or compliance boundaries</li>
+</ul>
+<p><strong>Do NOT use this pattern when:</strong></p>
+<ul>
+<li>Starting a new system — begin with a Modular Monolith and extract services only when a genuine operational need is proven (see <a href="../../../decisions/0008-modular-monolith-default/">ADR-0008</a>)</li>
+<li>The team is fewer than 8 engineers — the operational overhead of a microservices platform (K8s, service mesh, distributed tracing, multiple CI pipelines) will consume the majority of the team's capacity</li>
+<li>Domain boundaries are still unclear — premature decomposition means rewriting services and all their consumers when you discover the wrong boundary</li>
+</ul>
+<h2 id="2-problem-it-solves">2. Problem it solves<a class="headerlink" href="#2-problem-it-solves" title="Permanent link">&para;</a></h2>
+<p>At large engineering scale, a single deployable unit becomes a bottleneck: the payments team cannot deploy without coordinating with the billing team; the notifications service must scale up with the order service even though it handles 10× less traffic; a single slow test suite blocks all releases. Microservices give each team a deployable unit they own end-to-end, letting them release, scale, and evolve independently — at the cost of distributed systems complexity that requires mature platform engineering to manage.</p>
+<h2 id="3-solution-overview">3. Solution overview<a class="headerlink" href="#3-solution-overview" title="Permanent link">&para;</a></h2>
+<h3 id="system-context-c4-level-1">System context (C4 Level 1)<a class="headerlink" href="#system-context-c4-level-1" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart LR
+    WebClient((Web Client)) --&gt; GW[API Gateway\nKong]
+    MobileClient((Mobile Client)) --&gt; GW
+    Partners((Partners)) --&gt; GW
+    GW --&gt; OrderSvc[Order Service]
+    GW --&gt; UserSvc[User Service]
+    GW --&gt; BillingSvc[Billing Service]
+    OrderSvc --&gt;|event| Kafka[Kafka\nEvent Bus]
+    Kafka --&gt; BillingSvc
+    Kafka --&gt; NotifSvc[Notification Service]</code></pre>
+<h3 id="container-view-c4-level-2">Container view (C4 Level 2)<a class="headerlink" href="#container-view-c4-level-2" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TB
+    subgraph Edge
+        Kong[Kong API Gateway\nauth, rate limiting, routing]
+    end
+    subgraph Services
+        OrderSvc[Order Service\nGo — owns orders DB]
+        UserSvc[User Service\nGo — owns users DB]
+        BillingSvc[Billing Service\nGo — owns billing DB]
+        NotifSvc[Notification Service\nNode.js]
+    end
+    subgraph Databases
+        OrderDB[(Orders DB\nPostgres)]
+        UserDB[(Users DB\nPostgres)]
+        BillingDB[(Billing DB\nPostgres)]
+    end
+    subgraph Messaging
+        Kafka[Apache Kafka\nasync events]
+    end
+    subgraph Platform
+        K8s[Kubernetes\ncontainer orchestration]
+        OTel[OpenTelemetry\n→ Datadog]
+        Istio[Istio service mesh\nwhen &gt; 20 services]
+    end
+
+    Kong --&gt; OrderSvc
+    Kong --&gt; UserSvc
+    Kong --&gt; BillingSvc
+    OrderSvc --&gt; OrderDB
+    UserSvc --&gt; UserDB
+    BillingSvc --&gt; BillingDB
+    OrderSvc --&gt;|order.created| Kafka
+    Kafka --&gt; BillingSvc
+    Kafka --&gt; NotifSvc
+    K8s -.-&gt; OrderSvc
+    K8s -.-&gt; UserSvc
+    K8s -.-&gt; BillingSvc
+    OTel -.-&gt; OrderSvc
+    OTel -.-&gt; BillingSvc</code></pre>
+<h2 id="4-technology-stack">4. Technology stack<a class="headerlink" href="#4-technology-stack" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Pattern</th>
-<th>Status</th>
-<th>Best for</th>
+<th>Layer</th>
+<th>Primary choice</th>
+<th>Alternatives</th>
+<th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="high-performance-network-service/">High-performance Network Service</a></td>
-<td>Trial</td>
-<td>Proxies, load balancers, custom protocols</td>
+<td>Language</td>
+<td>Go</td>
+<td>Java (Spring Boot), Node.js (NestJS), .NET</td>
+<td>Go for new services: small binaries, low memory, excellent concurrency, fast cold starts; Java if the team has deep Spring expertise</td>
 </tr>
 <tr>
-<td><a href="embedded-firmware/">Embedded Firmware</a></td>
-<td>Adopt</td>
-<td>IoT devices, hardware controllers</td>
+<td>Sync communication</td>
+<td>gRPC (internal) + REST (external)</td>
+<td>REST only, GraphQL Federation</td>
+<td>gRPC for internal service-to-service calls (typed, efficient); REST + OpenAPI for external-facing endpoints</td>
 </tr>
 <tr>
-<td><a href="database-engine/">Database Engine / Storage Layer</a></td>
-<td>Assess</td>
-<td>Specialised data stores; rare to build from scratch</td>
+<td>Async communication</td>
+<td>Apache Kafka</td>
+<td>AWS SQS/SNS, NATS</td>
+<td>Kafka for durable event streaming and replay; SQS for simpler task queues with no replay requirement</td>
 </tr>
 <tr>
-<td><a href="custom-os-component/">Custom OS Component / Kernel Module</a></td>
-<td>Hold</td>
-<td>Almost never the right answer; consider eBPF first</td>
+<td>API gateway</td>
+<td>Kong</td>
+<td>AWS API Gateway, nginx</td>
+<td>Kong for cloud-agnostic; AWS API Gateway for Lambda-heavy AWS-native deployments</td>
+</tr>
+<tr>
+<td>Container orchestration</td>
+<td>Kubernetes (EKS / GKE)</td>
+<td>AWS ECS, Nomad</td>
+<td>K8s is the standard; ECS for teams wanting managed control plane without K8s operational depth</td>
+</tr>
+<tr>
+<td>Service mesh</td>
+<td>None (&lt; 20 services); Istio (&gt; 20 services)</td>
+<td>Linkerd</td>
+<td>Avoid the complexity until the service count justifies it; Linkerd is simpler than Istio for mTLS + observability</td>
+</tr>
+<tr>
+<td>Observability</td>
+<td>OpenTelemetry → Datadog</td>
+<td>Grafana + Tempo + Prometheus</td>
+<td>OpenTelemetry as the vendor-neutral instrumentation standard; every service must emit traces from day one</td>
+</tr>
+<tr>
+<td>Container registry</td>
+<td>AWS ECR</td>
+<td>GHCR, Docker Hub</td>
+<td>ECR integrates with EKS IAM; Docker Hub rate-limits unauthenticated pulls</td>
 </tr>
 </tbody>
 </table>
-<h2 id="default-tech-stack">Default tech stack<a class="headerlink" href="#default-tech-stack" title="Permanent link">&para;</a></h2>
+<h2 id="5-non-functional-characteristics">5. Non-functional characteristics<a class="headerlink" href="#5-non-functional-characteristics" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Concern</th>
+<th>Profile</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Scalability</strong></td>
+<td>Each service scales independently based on its own metrics. Design: measure before scaling; never pre-emptively over-provision based on assumptions about which service is the bottleneck.</td>
+</tr>
+<tr>
+<td><strong>Availability target</strong></td>
+<td>99.9% per service; 99.5% for the system as a whole (failure modes multiply across services). Implement circuit breakers at service boundaries; a downstream outage must not cascade into an upstream outage.</td>
+</tr>
+<tr>
+<td><strong>Latency target</strong></td>
+<td>p95 &lt; 50 ms for internal gRPC calls; p95 &lt; 300 ms for external API responses including gateway overhead. Set explicit timeout budgets on every outbound call; never rely on a downstream service's default timeout.</td>
+</tr>
+<tr>
+<td><strong>Security posture</strong></td>
+<td>mTLS between all services (enforced by Istio when deployed). Zero-trust network policy — services communicate only with explicitly allowed peers. Separate IAM role and Kubernetes ServiceAccount per service.</td>
+</tr>
+<tr>
+<td><strong>Data residency</strong></td>
+<td>Each service owns its own database; cross-service data is accessible only via the owning service's API — never via direct DB access from another service.</td>
+</tr>
+<tr>
+<td><strong>Compliance fit</strong></td>
+<td>SOC 2 ✓ — distributed tracing provides full request lineage. GDPR: right-to-erasure requires coordinated deletion across every service that stores user data; design a <code>user.deletion_requested</code> event and implement a subscriber in each service before going live with personal data.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-cost-ballpark">6. Cost ballpark<a class="headerlink" href="#6-cost-ballpark" title="Permanent link">&para;</a></h2>
+<p>Indicative monthly USD cost. Significantly higher than a modular monolith for the same functional scope due to platform overhead.</p>
+<table>
+<thead>
+<tr>
+<th>Scale</th>
+<th>Number of services</th>
+<th>Monthly cost</th>
+<th>Cost drivers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Small</td>
+<td>5 - 10</td>
+<td>$600 - $3,000</td>
+<td>K8s cluster, per-service Postgres, API gateway, Datadog</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>10 - 30</td>
+<td>$3,000 - $15,000</td>
+<td>Larger K8s fleet, Datadog ($1,000–3,000/month), Kafka, Istio, dedicated platform SRE time</td>
+</tr>
+<tr>
+<td>Large</td>
+<td>30+</td>
+<td>$15,000 - $60,000+</td>
+<td>Full platform engineering team, multi-region K8s, security scanning tooling, self-service developer portal</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-llm-assisted-development-fit">7. LLM-assisted development fit<a class="headerlink" href="#7-llm-assisted-development-fit" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Rating</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Individual service CRUD boilerplate (Go, NestJS)</td>
+<td>★★★★★</td>
+<td>Excellent — per-service code is self-contained and well-represented in training data.</td>
+</tr>
+<tr>
+<td>gRPC <code>.proto</code> definition and stub generation</td>
+<td>★★★★</td>
+<td>Good; verify field numbering, backwards-compatibility rules, and API versioning strategy.</td>
+</tr>
+<tr>
+<td>Kubernetes manifests and Helm charts</td>
+<td>★★★★</td>
+<td>Good; always review RBAC permissions and resource limits — generated limits are often wrong for production.</td>
+</tr>
+<tr>
+<td>Distributed saga and compensating transaction design</td>
+<td>★★</td>
+<td>Understands the concept; the correctness of compensating transactions requires careful human design and explicit testing.</td>
+</tr>
+<tr>
+<td>Architecture decisions</td>
+<td>★</td>
+<td>Don't outsource — particularly the "should we use microservices at all?" question. Use ADRs.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recommended workflow:</strong> Extract one service at a time from a working modular monolith using the Strangler Fig pattern. Never start with microservices. Validate that the extracted service can operate, deploy, and recover independently before extracting the next one.</p>
+<h2 id="8-reference-implementations">8. Reference implementations<a class="headerlink" href="#8-reference-implementations" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Languages:</strong> Rust (modern default), C, C++, Zig (assess), Go (for network services that don't need C-level perf)</li>
-<li><strong>Build:</strong> CMake, Cargo, Bazel</li>
-<li><strong>Testing:</strong> Property-based testing (proptest, QuickCheck), fuzzing (AFL, libFuzzer), formal methods for critical sections</li>
+<li><strong>Public reference:</strong> <a href="https://github.com/GoogleCloudPlatform/microservices-demo">GoogleCloudPlatform/microservices-demo</a> — Online Boutique: 11-service e-commerce application in Go, Python, and Node; shows gRPC internal communication, Kubernetes deployment, and distributed tracing (200 OK ✓)</li>
+<li><strong>Public reference:</strong> <a href="https://github.com/dotnet/eShop">dotnet/eShop</a> — Microsoft's reference microservices architecture in .NET; covers event-driven patterns, API gateway, and service-to-service communication (200 OK ✓)</li>
+<li><strong>Public reference:</strong> <a href="https://github.com/open-telemetry/opentelemetry-collector">open-telemetry/opentelemetry-collector</a> — the OTel Collector used to ship traces and metrics from every service to any backend (200 OK ✓)</li>
+<li><strong>Internal case study:</strong> <em>Add your anonymised internal example here</em></li>
 </ul>
-<h2 id="llm-development-fit">LLM-development fit<a class="headerlink" href="#llm-development-fit" title="Permanent link">&para;</a></h2>
-<p>Lower than other categories. Less training data, mistakes are expensive, concurrency bugs are hard to catch by inspection. Useful for boilerplate (parsers, serialisation), but architectural decisions still need an experienced human.</p>
+<h2 id="9-related-decisions-adrs">9. Related decisions (ADRs)<a class="headerlink" href="#9-related-decisions-adrs" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../../../decisions/0008-modular-monolith-default/">ADR-0008: Modular Monolith as the default starting architecture</a></li>
+</ul>
+<h2 id="10-known-risks-gotchas">10. Known risks &amp; gotchas<a class="headerlink" href="#10-known-risks-gotchas" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>"Distributed monolith" anti-pattern</strong> — services are technically separate deployables but share a database and make synchronous call chains 5 services deep. You get all the operational cost with none of the team autonomy benefits. Mitigation: enforce "database per service" as a hard rule; use asynchronous events for non-critical coupling; keep synchronous call depth to ≤ 2.</li>
+<li><strong>GDPR right-to-erasure is harder than it looks</strong> — user data is scattered across 15 services; a deletion request requires coordinating 15 independent delete operations. Mitigation: design a <code>user.deletion_requested</code> event on day one; every service implements a deletion subscriber; test the full flow annually.</li>
+<li><strong>Observability is non-negotiable</strong> — a 500 error in the gateway originates in the 4th service in a call chain; without distributed tracing you cannot debug it. Mitigation: OpenTelemetry instrumentation is a launch prerequisite, not a nice-to-have; never deploy a new service to production without verifying traces propagate correctly.</li>
+<li><strong>Service boundary drawn too fine</strong> — a "nano-service" does one thing and requires 5 synchronous calls to serve a single user request; latency adds up and the call graph becomes unmaintainable. Mitigation: a service should be ownable by a single team end-to-end; if it is too small for one team, it is too small to exist as a service.</li>
+<li><strong>Kubernetes operational overhead is substantial</strong> — pods get evicted, nodes run out of memory, ingress controllers need upgrades, certificates expire. Mitigation: use a managed K8s offering (EKS, GKE); invest in a dedicated platform SRE before reaching 10 services; if the team does not have this capacity, stay on ECS or a managed PaaS.</li>
+</ul>
 
 
 
@@ -1182,10 +1391,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

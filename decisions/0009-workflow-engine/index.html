@@ -12,13 +12,9 @@
         <meta name="author" content="deva@soa.team">
       
       
-        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/05-systems-infra/">
+        <link rel="canonical" href="https://your-org.github.io/architecture-repo/decisions/0009-workflow-engine/">
       
       
-        <link rel="prev" href="../04-backend-distributed/">
-      
-      
-        <link rel="next" href="../06-safety-critical/">
       
       
         
@@ -29,7 +25,7 @@
     
     
       
-        <title>Systems & Infrastructure - Architecture Pattern Catalog</title>
+        <title>ADR-0009: Temporal as the default workflow orchestration engine - Architecture Pattern Catalog</title>
       
     
     
@@ -80,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#systems-infrastructure" class="md-skip">
+        <a href="#adr-0009-temporal-as-the-default-workflow-orchestration-engine" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Systems & Infrastructure
+              ADR-0009: Temporal as the default workflow orchestration engine
             
           </span>
         </div>
@@ -263,13 +259,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../patterns/" class="md-tabs__link">
           
   
   
@@ -289,7 +283,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../decisions/" class="md-tabs__link">
+      <a href="../" class="md-tabs__link">
         
   
   
@@ -427,8 +421,6 @@
       
   
   
-    
-  
   
   
     
@@ -458,23 +450,22 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../patterns/" class="md-nav__link ">
               
   
   
@@ -492,13 +483,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -518,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-web-mobile/" class="md-nav__link">
+      <a href="../../patterns/01-web-mobile/" class="md-nav__link">
         
   
   
@@ -546,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-scripts-automation/" class="md-nav__link">
+      <a href="../../patterns/02-scripts-automation/" class="md-nav__link">
         
   
   
@@ -574,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-data-analytics/" class="md-nav__link">
+      <a href="../../patterns/03-data-analytics/" class="md-nav__link">
         
   
   
@@ -602,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04-backend-distributed/" class="md-nav__link">
+      <a href="../../patterns/04-backend-distributed/" class="md-nav__link">
         
   
   
@@ -627,37 +618,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Systems & Infrastructure
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../patterns/05-systems-infra/" class="md-nav__link">
         
   
   
@@ -673,70 +637,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        When to look here
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Patterns in this category
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Default tech stack
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#llm-development-fit" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        LLM-development fit
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -749,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../06-safety-critical/" class="md-nav__link">
+      <a href="../../patterns/06-safety-critical/" class="md-nav__link">
         
   
   
@@ -777,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../07-ai-llm-integrated/" class="md-nav__link">
+      <a href="../../patterns/07-ai-llm-integrated/" class="md-nav__link">
         
   
   
@@ -805,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../08-games-graphics/" class="md-nav__link">
+      <a href="../../patterns/08-games-graphics/" class="md-nav__link">
         
   
   
@@ -840,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../decisions/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -1010,10 +910,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
+  <a href="#context" class="md-nav__link">
     <span class="md-ellipsis">
       
-        When to look here
+        Context
       
     </span>
   </a>
@@ -1021,10 +921,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
+  <a href="#decision" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Patterns in this category
+        Decision
       
     </span>
   </a>
@@ -1032,21 +932,71 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
+  <a href="#alternatives-considered" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Default tech stack
+        Alternatives considered
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Alternatives considered">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-a-temporal-chosen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option A: Temporal (chosen)
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#llm-development-fit" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#option-b-aws-step-functions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        LLM-development fit
+        Option B: AWS Step Functions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-c-apache-airflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option C: Apache Airflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-d-netflix-conductor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option D: Netflix Conductor
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consequences
       
     </span>
   </a>
@@ -1073,54 +1023,63 @@
   
 
 
-<h1 id="systems-infrastructure">Systems &amp; Infrastructure<a class="headerlink" href="#systems-infrastructure" title="Permanent link">&para;</a></h1>
-<p>Low-level software where performance, memory, and hardware proximity matter. Includes operating system components, drivers, databases, compilers, network stacks, and embedded firmware.</p>
-<h2 id="when-to-look-here">When to look here<a class="headerlink" href="#when-to-look-here" title="Permanent link">&para;</a></h2>
+<h1 id="adr-0009-temporal-as-the-default-workflow-orchestration-engine">ADR-0009: Temporal as the default workflow orchestration engine<a class="headerlink" href="#adr-0009-temporal-as-the-default-workflow-orchestration-engine" title="Permanent link">&para;</a></h1>
 <ul>
-<li>The constraint is hardware (memory, latency, power, real-time deadlines)</li>
-<li>You are building infrastructure that other software runs on</li>
-<li>Garbage collection or interpreter overhead is unacceptable</li>
+<li><strong>Status:</strong> Accepted</li>
+<li><strong>Date:</strong> 2026-05-03</li>
+<li><strong>Deciders:</strong> Architecture Team</li>
+<li><strong>Tags:</strong> backend, workflow, orchestration, temporal</li>
 </ul>
-<h2 id="patterns-in-this-category">Patterns in this category<a class="headerlink" href="#patterns-in-this-category" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Pattern</th>
-<th>Status</th>
-<th>Best for</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="high-performance-network-service/">High-performance Network Service</a></td>
-<td>Trial</td>
-<td>Proxies, load balancers, custom protocols</td>
-</tr>
-<tr>
-<td><a href="embedded-firmware/">Embedded Firmware</a></td>
-<td>Adopt</td>
-<td>IoT devices, hardware controllers</td>
-</tr>
-<tr>
-<td><a href="database-engine/">Database Engine / Storage Layer</a></td>
-<td>Assess</td>
-<td>Specialised data stores; rare to build from scratch</td>
-</tr>
-<tr>
-<td><a href="custom-os-component/">Custom OS Component / Kernel Module</a></td>
-<td>Hold</td>
-<td>Almost never the right answer; consider eBPF first</td>
-</tr>
-</tbody>
-</table>
-<h2 id="default-tech-stack">Default tech stack<a class="headerlink" href="#default-tech-stack" title="Permanent link">&para;</a></h2>
+<h2 id="context">Context<a class="headerlink" href="#context" title="Permanent link">&para;</a></h2>
+<p>The Workflow Orchestration pattern requires choosing a durable execution engine. Several mature options exist with different programming models, operational profiles, and cloud dependencies. The choice is non-obvious and expensive to reverse because workflow definitions accumulate and migration requires rewriting every workflow and re-deploying in-flight executions.</p>
+<p>The realistic candidates in 2026 for a team building application-level business workflows (not data pipelines) are Temporal, AWS Step Functions, and Apache Airflow. Cadence (Temporal's predecessor at Uber) is excluded as Temporal is its successor.</p>
+<h2 id="decision">Decision<a class="headerlink" href="#decision" title="Permanent link">&para;</a></h2>
+<p>We will use <strong>Temporal</strong> as the default orchestration engine for business workflow orchestration.</p>
+<p>Apache Airflow remains the default for data pipeline orchestration (see ADR-0003).</p>
+<p>AWS Step Functions is acceptable for simple, short-lived workflows that are tightly coupled to AWS services, with explicit sign-off from the architecture team.</p>
+<h2 id="alternatives-considered">Alternatives considered<a class="headerlink" href="#alternatives-considered" title="Permanent link">&para;</a></h2>
+<h3 id="option-a-temporal-chosen">Option A: Temporal (chosen)<a class="headerlink" href="#option-a-temporal-chosen" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Languages:</strong> Rust (modern default), C, C++, Zig (assess), Go (for network services that don't need C-level perf)</li>
-<li><strong>Build:</strong> CMake, Cargo, Bazel</li>
-<li><strong>Testing:</strong> Property-based testing (proptest, QuickCheck), fuzzing (AFL, libFuzzer), formal methods for critical sections</li>
+<li><strong>Pros:</strong> Code-first workflow definitions in Python, Go, Java, or TypeScript — workflows are regular functions decorated with the Temporal SDK, not JSON/YAML state machine definitions. Full replay semantics: Temporal persists every event in workflow history and can reconstruct state after any failure. First-class support for signals (external events resume a waiting workflow), timers, child workflows, and human-in-the-loop patterns. Local development is fast: <code>temporal server start-dev</code> runs a full server in one command with a UI. Temporal Cloud (managed) eliminates the operational burden. Open-source with a large community.</li>
+<li><strong>Cons:</strong> Self-hosting Temporal Server requires operating Postgres and multiple Temporal services (frontend, history, matching, worker). Temporal Cloud adds a per-action cost. The replay determinism constraint (workflow code must be deterministic) is a non-obvious programming model that requires onboarding. Temporal history for very high-volume workflows (&gt; 100k events per workflow) requires careful management with <code>ContinueAsNew</code>.</li>
 </ul>
-<h2 id="llm-development-fit">LLM-development fit<a class="headerlink" href="#llm-development-fit" title="Permanent link">&para;</a></h2>
-<p>Lower than other categories. Less training data, mistakes are expensive, concurrency bugs are hard to catch by inspection. Useful for boilerplate (parsers, serialisation), but architectural decisions still need an experienced human.</p>
+<h3 id="option-b-aws-step-functions">Option B: AWS Step Functions<a class="headerlink" href="#option-b-aws-step-functions" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Pros:</strong> Fully managed — no infrastructure to operate. Native AWS service integration (Lambda, DynamoDB, ECS, SNS) without writing activity code. Pay-per-state-transition pricing with a generous free tier for simple workflows. Express Workflows for high-volume short-duration workflows.</li>
+<li><strong>Cons:</strong> Workflow definitions are JSON/YAML state machines — not code. Complex branching and error handling logic in JSON is verbose and hard to test. No replay semantics for state reconstruction — Standard Workflows log to CloudWatch, not a queryable workflow history. Vendor lock-in: deeply coupled to AWS; migrating away requires rewriting every workflow. Activity code must be Lambda functions — cold start latency applies. Poor developer experience compared to Temporal.</li>
+</ul>
+<h3 id="option-c-apache-airflow">Option C: Apache Airflow<a class="headerlink" href="#option-c-apache-airflow" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Pros:</strong> Large community. Excellent for data pipeline DAGs. Many operators for external systems (S3, Snowflake, dbt, Spark).</li>
+<li><strong>Cons:</strong> Designed for data pipelines, not general business workflows. DAG scheduling model is not suited to event-triggered or human-in-the-loop workflows. No native support for Signals or durable waiting for external events. Heavyweight to self-host. The Temporal pattern team has evaluated Airflow for business workflows and found its execution model too restrictive.</li>
+</ul>
+<h3 id="option-d-netflix-conductor">Option D: Netflix Conductor<a class="headerlink" href="#option-d-netflix-conductor" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Pros:</strong> Designed for microservice workflow orchestration. JSON-based workflow definitions. REST API for all interactions.</li>
+<li><strong>Cons:</strong> Significantly smaller community than Temporal. Orkes (the managed Conductor service) is less mature than Temporal Cloud. The programming model is less ergonomic than Temporal's code-first approach.</li>
+</ul>
+<h2 id="consequences">Consequences<a class="headerlink" href="#consequences" title="Permanent link">&para;</a></h2>
+<p><strong>Positive</strong></p>
+<ul>
+<li>Workflow code is testable with the Temporal <code>TestWorkflowEnvironment</code> (time-skip); no need to run a real Temporal server in CI</li>
+<li>Full workflow execution history is queryable from a single UI — debugging stuck workflows does not require trawling distributed logs</li>
+<li>Temporal's replay model gives exact-once semantics for free on activity retry — no need to implement idempotency keys in every activity</li>
+<li>Temporal Cloud eliminates the operational burden of running Temporal Server for teams that don't want to manage it</li>
+</ul>
+<p><strong>Negative / trade-offs</strong></p>
+<ul>
+<li>The determinism constraint (no <code>time.Now()</code>, no random numbers, no direct I/O in workflow code) is non-obvious and will catch developers off guard the first time; requires explicit onboarding</li>
+<li>Self-hosting Temporal Server requires operating Postgres + 4 Temporal services with HA; commit to Temporal Cloud if the team cannot invest in this</li>
+<li>Temporal Cloud adds cost at scale (~$0.002 per workflow action); model this cost before committing for high-volume use cases</li>
+<li>Migrating in-flight workflows when changing the engine is not possible — existing workflows must run to completion on the old engine</li>
+</ul>
+<p><strong>Follow-up actions</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Publish a "Temporal determinism cheat sheet" in the engineering wiki: what is allowed in workflow code vs activity code</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Add a <code>TestWorkflowEnvironment</code>-based unit test template to the standard project scaffolding</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Evaluate Temporal Cloud vs self-hosted for the first production use case; document the cost model</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Define the standard namespace and retention policy for each environment (dev: 3 days, staging: 14 days, prod: 90 days)</li>
+</ul>
 
 
 

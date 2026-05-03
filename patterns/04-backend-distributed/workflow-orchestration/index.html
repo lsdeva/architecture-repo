@@ -12,31 +12,27 @@
         <meta name="author" content="deva@soa.team">
       
       
-        <link rel="canonical" href="https://your-org.github.io/architecture-repo/decisions/">
+        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/04-backend-distributed/workflow-orchestration/">
       
       
-        <link rel="prev" href="../patterns/08-games-graphics/">
-      
-      
-        <link rel="next" href="../about/methodology/">
       
       
         
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Decisions (ADRs) - Architecture Pattern Catalog</title>
+        <title>Pattern: Workflow Orchestration - Architecture Pattern Catalog</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#architecture-decision-records" class="md-skip">
+        <a href="#pattern-workflow-orchestration" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +90,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Architecture Pattern Catalog" class="md-header__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
+    <a href="../../.." title="Architecture Pattern Catalog" class="md-header__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Decisions (ADRs)
+              Pattern: Workflow Orchestration
             
           </span>
         </div>
@@ -227,7 +223,7 @@
   
   
     <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -246,7 +242,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../about/how-to-use/" class="md-tabs__link">
+      <a href="../../../about/how-to-use/" class="md-tabs__link">
         
   
   
@@ -267,7 +263,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../patterns/" class="md-tabs__link">
+        <a href="../../" class="md-tabs__link">
           
   
   
@@ -285,11 +281,9 @@
   
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../../../decisions/" class="md-tabs__link">
         
   
   
@@ -310,7 +304,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../about/methodology/" class="md-tabs__link">
+        <a href="../../../about/methodology/" class="md-tabs__link">
           
   
   
@@ -346,7 +340,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Architecture Pattern Catalog" class="md-nav__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
+    <a href="../../.." title="Architecture Pattern Catalog" class="md-nav__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -376,7 +370,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -403,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../about/how-to-use/" class="md-nav__link">
+      <a href="../../../about/how-to-use/" class="md-nav__link">
         
   
   
@@ -471,7 +465,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../patterns/" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
@@ -515,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../patterns/01-web-mobile/" class="md-nav__link">
+      <a href="../../01-web-mobile/" class="md-nav__link">
         
   
   
@@ -543,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../patterns/02-scripts-automation/" class="md-nav__link">
+      <a href="../../02-scripts-automation/" class="md-nav__link">
         
   
   
@@ -571,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../patterns/03-data-analytics/" class="md-nav__link">
+      <a href="../../03-data-analytics/" class="md-nav__link">
         
   
   
@@ -599,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../patterns/04-backend-distributed/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -627,7 +621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../patterns/05-systems-infra/" class="md-nav__link">
+      <a href="../../05-systems-infra/" class="md-nav__link">
         
   
   
@@ -655,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../patterns/06-safety-critical/" class="md-nav__link">
+      <a href="../../06-safety-critical/" class="md-nav__link">
         
   
   
@@ -683,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../patterns/07-ai-llm-integrated/" class="md-nav__link">
+      <a href="../../07-ai-llm-integrated/" class="md-nav__link">
         
   
   
@@ -711,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../patterns/08-games-graphics/" class="md-nav__link">
+      <a href="../../08-games-graphics/" class="md-nav__link">
         
   
   
@@ -743,37 +737,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Decisions (ADRs)
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../decisions/" class="md-nav__link">
         
   
   
@@ -789,48 +756,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#index" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Index
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#writing-a-new-adr" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Writing a new ADR
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -902,7 +827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../about/methodology/" class="md-nav__link">
+      <a href="../../../about/methodology/" class="md-nav__link">
         
   
   
@@ -930,7 +855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../about/contributing/" class="md-nav__link">
+      <a href="../../../about/contributing/" class="md-nav__link">
         
   
   
@@ -985,10 +910,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#index" class="md-nav__link">
+  <a href="#1-context" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Index
+        1. Context
       
     </span>
   </a>
@@ -996,10 +921,126 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#writing-a-new-adr" class="md-nav__link">
+  <a href="#2-problem-it-solves" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Writing a new ADR
+        2. Problem it solves
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-solution-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Solution overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Solution overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-context-c4-level-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System context (C4 Level 1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container-view-c4-level-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Container view (C4 Level 2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-technology-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Technology stack
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-non-functional-characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Non-functional characteristics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-cost-ballpark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Cost ballpark
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-llm-assisted-development-fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. LLM-assisted development fit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-reference-implementations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Reference implementations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-related-decisions-adrs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Related decisions (ADRs)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-known-risks-gotchas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Known risks &amp; gotchas
       
     </span>
   </a>
@@ -1026,95 +1067,264 @@
   
 
 
-<h1 id="architecture-decision-records">Architecture Decision Records<a class="headerlink" href="#architecture-decision-records" title="Permanent link">&para;</a></h1>
-<p>Architecture Decision Records (ADRs) capture significant choices and <strong>why</strong> we made them. Each ADR is short, dated, and immutable — when a decision is reversed, the new ADR supersedes the old one rather than editing it in place.</p>
-<p>We use the <a href="https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions">Michael Nygard format</a>: Context → Decision → Alternatives → Consequences.</p>
-<h2 id="index">Index<a class="headerlink" href="#index" title="Permanent link">&para;</a></h2>
+<h1 id="pattern-workflow-orchestration">Pattern: Workflow Orchestration<a class="headerlink" href="#pattern-workflow-orchestration" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Quick facts</p>
+<ul>
+<li><strong>Category:</strong> Backend &amp; Distributed Systems</li>
+<li><strong>Maturity:</strong> Trial</li>
+<li><strong>Typical team size:</strong> 1-3 engineers</li>
+<li><strong>Typical timeline to MVP:</strong> 4-8 weeks</li>
+<li><strong>Last reviewed:</strong> 2026-05-03 by Architecture Team</li>
+</ul>
+</div>
+<h2 id="1-context">1. Context<a class="headerlink" href="#1-context" title="Permanent link">&para;</a></h2>
+<p><strong>Use this pattern when:</strong></p>
+<ul>
+<li>Business processes span multiple sequential or parallel steps, each of which can fail independently and needs retry semantics</li>
+<li>A process runs for minutes to days — payment processing, user onboarding, data migration, approval chains</li>
+<li>Human-in-the-loop steps or external callbacks (waiting for a webhook, a Stripe event, a human decision) are required mid-process</li>
+<li>Compensating transactions are needed: if step 5 fails, steps 1-4 must be rolled back in a defined order</li>
+</ul>
+<p><strong>Do NOT use this pattern when:</strong></p>
+<ul>
+<li>The process is a single, fast, synchronous API call — no orchestration layer needed</li>
+<li>Simple fire-and-forget background tasks (send an email, resize an image) — a job queue (BullMQ, Celery, SQS) is sufficient and simpler</li>
+<li>The process is purely data-pipeline work — use the ETL/ELT Job or ML Training Pipeline patterns instead</li>
+</ul>
+<h2 id="2-problem-it-solves">2. Problem it solves<a class="headerlink" href="#2-problem-it-solves" title="Permanent link">&para;</a></h2>
+<p>A business process like "onboard a new enterprise customer" involves 12 steps across 6 services — create account, provision infrastructure, send welcome email, schedule an onboarding call, wait for the customer to complete setup, then enable billing. Implementing this as a chain of Kafka events or a cron-polled state machine is brittle: each step can fail silently, retries must be re-implemented from scratch for every flow, and debugging a stuck workflow requires trawling through logs across six services. Workflow orchestration gives each execution a durable, observable state machine with automatic retries, timeouts, and a complete execution history in a single UI.</p>
+<h2 id="3-solution-overview">3. Solution overview<a class="headerlink" href="#3-solution-overview" title="Permanent link">&para;</a></h2>
+<h3 id="system-context-c4-level-1">System context (C4 Level 1)<a class="headerlink" href="#system-context-c4-level-1" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart LR
+    Trigger[Trigger\nAPI call / event / schedule] --&gt; Temporal[Temporal\nWorkflow Engine]
+    Temporal --&gt; Workers[Worker Pool\nworkflow + activity workers]
+    Workers --&gt; EmailSvc[Email Service]
+    Workers --&gt; PaymentAPI[Payment API]
+    Workers --&gt; InfraSvc[Infrastructure\nProvisioning]
+    Workers --&gt; HumanApproval[Human Approval\nwebhook callback]
+    Temporal --&gt; WebUI[Temporal Web UI\nworkflow visibility]
+    Temporal --&gt; DB[(Temporal DB\nPostgres)]</code></pre>
+<h3 id="container-view-c4-level-2">Container view (C4 Level 2)<a class="headerlink" href="#container-view-c4-level-2" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TB
+    subgraph Temporal Server
+        Frontend[Frontend Service\nAPI entrypoint]
+        History[History Service\ndurable event sourcing]
+        Matching[Matching Service\ntask queue dispatch]
+        TemporalDB[(PostgreSQL\nworkflow history)]
+    end
+    subgraph Workers — user code
+        WfWorker[Workflow Worker\norchestration logic only]
+        ActWorker[Activity Worker\nside-effect implementations]
+    end
+    subgraph Activities
+        EmailAct[Email Activity]
+        PaymentAct[Payment Activity]
+        InfraAct[Infrastructure Activity]
+        HumanAct[Human Approval\nSignal listener]
+    end
+    subgraph Ops
+        WebUI[Temporal Web UI]
+        OTel[OpenTelemetry traces]
+        Alerts[Alerts\non workflow timeout / failure]
+    end
+
+    Trigger --&gt; Frontend
+    Frontend --&gt; Matching --&gt; WfWorker
+    WfWorker --&gt; History
+    WfWorker --&gt; ActWorker
+    ActWorker --&gt; EmailAct
+    ActWorker --&gt; PaymentAct
+    ActWorker --&gt; InfraAct
+    ActWorker --&gt; HumanAct
+    History --&gt; TemporalDB
+    Frontend --&gt; WebUI
+    WfWorker --&gt; OTel
+    History --&gt; Alerts</code></pre>
+<h2 id="4-technology-stack">4. Technology stack<a class="headerlink" href="#4-technology-stack" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>ID</th>
-<th>Title</th>
-<th>Status</th>
-<th>Date</th>
+<th>Layer</th>
+<th>Primary choice</th>
+<th>Alternatives</th>
+<th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="0001-tenant-isolation-strategy/">ADR-0001</a></td>
-<td>Tenant isolation via PostgreSQL Row-Level Security</td>
-<td>Accepted</td>
-<td>2026-05-02</td>
+<td>Workflow engine</td>
+<td>Temporal</td>
+<td>AWS Step Functions, Apache Airflow, Netflix Conductor</td>
+<td>See <a href="../../../decisions/0009-workflow-engine/">ADR-0009</a>; Temporal for code-first, durable, language-native workflows; Step Functions for AWS-native simple state machines; Airflow for data pipeline orchestration</td>
 </tr>
 <tr>
-<td><a href="0002-default-scripting-language/">ADR-0002</a></td>
-<td>Python as the default scripting language</td>
-<td>Accepted</td>
-<td>2026-05-02</td>
+<td>Worker language</td>
+<td>Python</td>
+<td>Go, Java, TypeScript</td>
+<td>Python for data-heavy or ML activities; Go for high-throughput, low-latency workers; all have official Temporal SDKs</td>
 </tr>
 <tr>
-<td><a href="0003-etl-orchestrator/">ADR-0003</a></td>
-<td>Prefect as the default ETL/ELT orchestrator</td>
-<td>Accepted</td>
-<td>2026-05-02</td>
+<td>Temporal database</td>
+<td>PostgreSQL</td>
+<td>Apache Cassandra</td>
+<td>Postgres for most deployments (simpler to operate); Cassandra for global multi-cluster deployments with very high workflow volume (&gt; 10k starts/second)</td>
 </tr>
 <tr>
-<td><a href="0004-vector-store/">ADR-0004</a></td>
-<td>pgvector as the default vector store</td>
-<td>Accepted</td>
-<td>2026-05-02</td>
+<td>Temporal hosting</td>
+<td>Temporal Cloud</td>
+<td>Self-hosted on Kubernetes</td>
+<td>Temporal Cloud eliminates the operational overhead of running Temporal Server; evaluate cost vs operational burden</td>
 </tr>
 <tr>
-<td><a href="0005-llm-orchestration/">ADR-0005</a></td>
-<td>LLM orchestration — hand-rolled over frameworks for most patterns</td>
-<td>Accepted</td>
-<td>2026-05-02</td>
+<td>Activity retries</td>
+<td>Temporal <code>RetryPolicy</code> (exponential backoff, max attempts, non-retryable errors)</td>
+<td>Custom retry in activity code</td>
+<td>Configure retry policy at the activity level; never implement retry logic inside an activity implementation — let Temporal handle it</td>
 </tr>
 <tr>
-<td><a href="0006-llm-provider/">ADR-0006</a></td>
-<td>Anthropic Claude as the default LLM provider</td>
-<td>Accepted</td>
-<td>2026-05-02</td>
+<td>Human-in-the-loop</td>
+<td>Temporal Signal</td>
+<td>Temporal Update (newer, for synchronous response)</td>
+<td>Signal allows external systems (human approval UI, webhook receiver) to resume a waiting workflow asynchronously</td>
 </tr>
 <tr>
-<td><a href="0007-lakehouse-table-format/">ADR-0007</a></td>
-<td>Delta Lake as the default lakehouse table format</td>
-<td>Accepted</td>
-<td>2026-05-03</td>
+<td>Testing</td>
+<td>Temporal <code>TestWorkflowEnvironment</code> with time-skipping</td>
+<td>End-to-end integration tests</td>
+<td>Temporal's test environment lets you fast-forward time, making tests for "wait 7 days" steps run in milliseconds</td>
 </tr>
 <tr>
-<td><a href="0008-modular-monolith-default/">ADR-0008</a></td>
-<td>Modular Monolith as the default starting architecture</td>
-<td>Accepted</td>
-<td>2026-05-03</td>
-</tr>
-<tr>
-<td><a href="0009-workflow-engine/">ADR-0009</a></td>
-<td>Temporal as the default workflow orchestration engine</td>
-<td>Accepted</td>
-<td>2026-05-03</td>
-</tr>
-<tr>
-<td><a href="0010-game-engine/">ADR-0010</a></td>
-<td>Game engine selection policy (Godot default, Unity / Unreal criteria)</td>
-<td>Accepted</td>
-<td>2026-05-03</td>
-</tr>
-<tr>
-<td><a href="0011-systems-language/">ADR-0011</a></td>
-<td>Rust as the default language for new systems and infrastructure code</td>
-<td>Accepted</td>
-<td>2026-05-03</td>
+<td>Observability</td>
+<td>Temporal Web UI + OpenTelemetry</td>
+<td>Datadog APM</td>
+<td>Temporal Web UI shows full execution history per workflow; add OpenTelemetry for cross-service traces</td>
 </tr>
 </tbody>
 </table>
-<h2 id="writing-a-new-adr">Writing a new ADR<a class="headerlink" href="#writing-a-new-adr" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Copy <code>_template/adr-template.md</code> to <code>docs/decisions/NNNN-short-title.md</code> (next sequential number)</li>
-<li>Fill it in</li>
-<li>Open a pull request — at least one other architect must review</li>
-<li>Once merged, link it from any affected pattern under the "Related decisions" section</li>
-</ol>
+<h2 id="5-non-functional-characteristics">5. Non-functional characteristics<a class="headerlink" href="#5-non-functional-characteristics" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Concern</th>
+<th>Profile</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Scalability</strong></td>
+<td>Temporal workers scale horizontally — add worker pods to increase concurrent workflow executions. Temporal Server itself requires careful horizontal scaling for &gt; 1,000 workflow starts/second (add History shards). Activity workers are stateless and scale independently.</td>
+</tr>
+<tr>
+<td><strong>Availability target</strong></td>
+<td>99.9%+ with Temporal Server HA deployment (multiple frontend and history replicas). A Temporal Server outage delays new workflow starts; in-progress workflows resume from their last durable checkpoint automatically on recovery — no data is lost.</td>
+</tr>
+<tr>
+<td><strong>Latency target</strong></td>
+<td>Temporal overhead per activity dispatch: 10–50 ms. Total workflow duration is the sum of activity execution times plus queue delays. Design for the happy-path duration; add explicit timeout budgets at the activity and workflow level to bound the worst case.</td>
+</tr>
+<tr>
+<td><strong>Security posture</strong></td>
+<td>Temporal Server behind an internal load balancer — no public exposure. mTLS between workers and the Temporal Frontend service. Namespace-level isolation in Temporal for multi-tenant deployments. Workflow history containing PII uses a Data Converter to encrypt payloads at rest.</td>
+</tr>
+<tr>
+<td><strong>Data residency</strong></td>
+<td>Workflow history (including activity inputs and outputs) persists in Temporal's Postgres database. If activities exchange PII, use a custom Data Converter that encrypts payloads before storage.</td>
+</tr>
+<tr>
+<td><strong>Compliance fit</strong></td>
+<td>SOC 2 ✓ — Temporal provides a complete, tamper-evident execution history with timestamps for every step. GDPR: configure namespace history retention (the default 72 hours is too short for most business workflows; set to 30–90 days and encrypt PII payloads). HIPAA ✓ with encrypted Postgres + Data Converter + BAA on infrastructure.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-cost-ballpark">6. Cost ballpark<a class="headerlink" href="#6-cost-ballpark" title="Permanent link">&para;</a></h2>
+<p>Indicative monthly USD cost. Temporal Cloud pricing is per "workflow action" (each activity schedule, start, completion, signal counts).</p>
+<table>
+<thead>
+<tr>
+<th>Scale</th>
+<th>Workflow executions / month</th>
+<th>Monthly cost</th>
+<th>Cost drivers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Small</td>
+<td>&lt; 10,000</td>
+<td>$200 - $700</td>
+<td>Self-hosted Temporal on 2 K8s pods + Postgres, or Temporal Cloud free tier</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>10k - 1M</td>
+<td>$700 - $5,000</td>
+<td>Temporal Cloud (~$0.002/action), worker compute, larger Postgres</td>
+</tr>
+<tr>
+<td>Large</td>
+<td>1M+</td>
+<td>$5,000 - $20,000</td>
+<td>Temporal Cloud at scale, or self-hosted K8s fleet + Cassandra, dedicated worker fleet</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-llm-assisted-development-fit">7. LLM-assisted development fit<a class="headerlink" href="#7-llm-assisted-development-fit" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Rating</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Workflow definition scaffolding</td>
+<td>★★★★★</td>
+<td>Excellent — Temporal SDK patterns for Go, Python, and TypeScript are well-represented in training data.</td>
+</tr>
+<tr>
+<td>Activity implementation boilerplate</td>
+<td>★★★★★</td>
+<td>Excellent — activity code is ordinary Go/Python; generate freely and review business logic.</td>
+</tr>
+<tr>
+<td>RetryPolicy and timeout configuration</td>
+<td>★★★★</td>
+<td>Good; timeout values require domain knowledge (how long should a payment API call be allowed to take?).</td>
+</tr>
+<tr>
+<td>Compensating transaction (saga) design</td>
+<td>★★★</td>
+<td>Understands the pattern; the correctness of multi-step rollback chains requires careful human design and explicit tests for every failure branch.</td>
+</tr>
+<tr>
+<td>Architecture decisions</td>
+<td>★</td>
+<td>Don't outsource. Use ADRs.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recommended workflow:</strong> Start with a three-step workflow (start → one activity → complete) to validate the Temporal setup end-to-end before building complex flows. Write the compensating transaction path before the happy path — if you design the happy path first, the compensation is often an afterthought that breaks under real failures.</p>
+<h2 id="8-reference-implementations">8. Reference implementations<a class="headerlink" href="#8-reference-implementations" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Public reference:</strong> <a href="https://github.com/temporalio/temporal">temporalio/temporal</a> — the Temporal server; architecture documentation and the Go SDK reference (200 OK ✓)</li>
+<li><strong>Public reference:</strong> <a href="https://github.com/temporalio/samples-python">temporalio/samples-python</a> — official Python SDK samples covering child workflows, signals, timers, human-in-the-loop, and saga patterns (200 OK ✓)</li>
+<li><strong>Internal case study:</strong> <em>Add your anonymised internal example here</em></li>
+</ul>
+<h2 id="9-related-decisions-adrs">9. Related decisions (ADRs)<a class="headerlink" href="#9-related-decisions-adrs" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../../../decisions/0009-workflow-engine/">ADR-0009: Temporal as the default workflow orchestration engine</a></li>
+</ul>
+<h2 id="10-known-risks-gotchas">10. Known risks &amp; gotchas<a class="headerlink" href="#10-known-risks-gotchas" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Non-deterministic workflow code breaks replay</strong> — Temporal reconstructs workflow state by replaying execution history; if workflow code contains <code>time.Now()</code>, random numbers, or direct API calls (not wrapped as activities), replay produces a different result and the workflow panics with a non-determinism error. Rule: workflow functions must be deterministic; every side effect and every external call goes in an activity.</li>
+<li><strong>Activity timeouts not set cause permanent hangs</strong> — an activity calls an external API with no timeout; the API hangs indefinitely; the workflow waits forever with no alert. Mitigation: every activity must set a <code>StartToCloseTimeout</code> (maximum time for a single attempt) and a <code>ScheduleToCloseTimeout</code> (maximum total time including retries); treat timeout omission as a code review failure.</li>
+<li><strong>Workflow history grows too large for long-running processes</strong> — a monthly billing workflow that accumulates thousands of events across a year causes replay to slow to seconds. Mitigation: use <code>ContinueAsNew</code> to reset workflow history periodically in any workflow that runs for more than a few days.</li>
+<li><strong>Human approval step with no timeout waits forever</strong> — a workflow waits for a Signal (human clicks "approve"); the human is on holiday; the workflow blocks the associated business object for weeks. Mitigation: always pair a Signal wait with a timer; automatically escalate to a secondary approver or cancel with a notification after a configured timeout.</li>
+<li><strong>Worker deployment removes a registered activity</strong> — a rolling deploy removes an activity function that in-flight workflows are currently calling; those workflows get stuck with "activity type not registered" errors. Mitigation: use Temporal's versioning API (<code>workflow.GetVersion</code> in Go, <code>workflow.patched</code> in Python) to branch logic on version; keep old activity implementations deployed until all in-flight workflows using them complete.</li>
+</ul>
 
 
 
@@ -1176,10 +1386,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

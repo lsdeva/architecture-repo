@@ -12,31 +12,27 @@
         <meta name="author" content="deva@soa.team">
       
       
-        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/05-systems-infra/">
+        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/04-backend-distributed/modular-monolith/">
       
       
-        <link rel="prev" href="../04-backend-distributed/">
-      
-      
-        <link rel="next" href="../06-safety-critical/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Systems & Infrastructure - Architecture Pattern Catalog</title>
+        <title>Pattern: Modular Monolith - Architecture Pattern Catalog</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#systems-infrastructure" class="md-skip">
+        <a href="#pattern-modular-monolith" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +90,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Architecture Pattern Catalog" class="md-header__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
+    <a href="../../.." title="Architecture Pattern Catalog" class="md-header__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Systems & Infrastructure
+              Pattern: Modular Monolith
             
           </span>
         </div>
@@ -227,7 +223,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -246,7 +242,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../about/how-to-use/" class="md-tabs__link">
+      <a href="../../../about/how-to-use/" class="md-tabs__link">
         
   
   
@@ -263,13 +259,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../" class="md-tabs__link">
           
   
   
@@ -289,7 +283,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../decisions/" class="md-tabs__link">
+      <a href="../../../decisions/" class="md-tabs__link">
         
   
   
@@ -310,7 +304,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../about/methodology/" class="md-tabs__link">
+        <a href="../../../about/methodology/" class="md-tabs__link">
           
   
   
@@ -346,7 +340,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Architecture Pattern Catalog" class="md-nav__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
+    <a href="../../.." title="Architecture Pattern Catalog" class="md-nav__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -376,7 +370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -403,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/how-to-use/" class="md-nav__link">
+      <a href="../../../about/how-to-use/" class="md-nav__link">
         
   
   
@@ -427,8 +421,6 @@
       
   
   
-    
-  
   
   
     
@@ -458,23 +450,22 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
@@ -492,13 +483,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -518,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-web-mobile/" class="md-nav__link">
+      <a href="../../01-web-mobile/" class="md-nav__link">
         
   
   
@@ -546,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-scripts-automation/" class="md-nav__link">
+      <a href="../../02-scripts-automation/" class="md-nav__link">
         
   
   
@@ -574,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-data-analytics/" class="md-nav__link">
+      <a href="../../03-data-analytics/" class="md-nav__link">
         
   
   
@@ -602,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04-backend-distributed/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -627,37 +618,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Systems & Infrastructure
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../05-systems-infra/" class="md-nav__link">
         
   
   
@@ -673,70 +637,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        When to look here
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Patterns in this category
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Default tech stack
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#llm-development-fit" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        LLM-development fit
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -749,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../06-safety-critical/" class="md-nav__link">
+      <a href="../../06-safety-critical/" class="md-nav__link">
         
   
   
@@ -777,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../07-ai-llm-integrated/" class="md-nav__link">
+      <a href="../../07-ai-llm-integrated/" class="md-nav__link">
         
   
   
@@ -805,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../08-games-graphics/" class="md-nav__link">
+      <a href="../../08-games-graphics/" class="md-nav__link">
         
   
   
@@ -840,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../decisions/" class="md-nav__link">
+      <a href="../../../decisions/" class="md-nav__link">
         
   
   
@@ -927,7 +827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/methodology/" class="md-nav__link">
+      <a href="../../../about/methodology/" class="md-nav__link">
         
   
   
@@ -955,7 +855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/contributing/" class="md-nav__link">
+      <a href="../../../about/contributing/" class="md-nav__link">
         
   
   
@@ -1010,10 +910,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
+  <a href="#1-context" class="md-nav__link">
     <span class="md-ellipsis">
       
-        When to look here
+        1. Context
       
     </span>
   </a>
@@ -1021,10 +921,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
+  <a href="#2-problem-it-solves" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Patterns in this category
+        2. Problem it solves
       
     </span>
   </a>
@@ -1032,10 +932,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
+  <a href="#3-solution-overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Default tech stack
+        3. Solution overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Solution overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-context-c4-level-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System context (C4 Level 1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container-view-c4-level-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Container view (C4 Level 2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-technology-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Technology stack
       
     </span>
   </a>
@@ -1043,10 +982,65 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#llm-development-fit" class="md-nav__link">
+  <a href="#5-non-functional-characteristics" class="md-nav__link">
     <span class="md-ellipsis">
       
-        LLM-development fit
+        5. Non-functional characteristics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-cost-ballpark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Cost ballpark
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-llm-assisted-development-fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. LLM-assisted development fit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-reference-implementations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Reference implementations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-related-decisions-adrs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Related decisions (ADRs)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-known-risks-gotchas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Known risks &amp; gotchas
       
     </span>
   </a>
@@ -1073,54 +1067,260 @@
   
 
 
-<h1 id="systems-infrastructure">Systems &amp; Infrastructure<a class="headerlink" href="#systems-infrastructure" title="Permanent link">&para;</a></h1>
-<p>Low-level software where performance, memory, and hardware proximity matter. Includes operating system components, drivers, databases, compilers, network stacks, and embedded firmware.</p>
-<h2 id="when-to-look-here">When to look here<a class="headerlink" href="#when-to-look-here" title="Permanent link">&para;</a></h2>
+<h1 id="pattern-modular-monolith">Pattern: Modular Monolith<a class="headerlink" href="#pattern-modular-monolith" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Quick facts</p>
 <ul>
-<li>The constraint is hardware (memory, latency, power, real-time deadlines)</li>
-<li>You are building infrastructure that other software runs on</li>
-<li>Garbage collection or interpreter overhead is unacceptable</li>
+<li><strong>Category:</strong> Backend &amp; Distributed Systems</li>
+<li><strong>Maturity:</strong> Adopt</li>
+<li><strong>Typical team size:</strong> 2-8 engineers</li>
+<li><strong>Typical timeline to MVP:</strong> Start from sprint one; ongoing architectural practice</li>
+<li><strong>Last reviewed:</strong> 2026-05-03 by Architecture Team</li>
 </ul>
-<h2 id="patterns-in-this-category">Patterns in this category<a class="headerlink" href="#patterns-in-this-category" title="Permanent link">&para;</a></h2>
+</div>
+<h2 id="1-context">1. Context<a class="headerlink" href="#1-context" title="Permanent link">&para;</a></h2>
+<p><strong>Use this pattern when:</strong></p>
+<ul>
+<li>Starting a new backend system and the team is fewer than 10 engineers</li>
+<li>Domain boundaries are not yet well-understood — you have not yet built the system, so you do not know where the right service cuts are</li>
+<li>Deployment simplicity and fast iteration are more important than the ability to scale individual subsystems independently</li>
+<li>The system is a monolith in practice but you want to enforce clean internal structure so that future decomposition is possible</li>
+</ul>
+<p><strong>Do NOT use this pattern when:</strong></p>
+<ul>
+<li>The organisation already has 10+ independent product teams who must deploy autonomously — Conway's Law applies and independent services are the right answer</li>
+<li>Different parts of the system have genuinely incompatible runtime requirements (one module needs Python + GPU, another needs Go + low latency)</li>
+<li>You are joining an existing microservices architecture — do not consolidate; improve the services you have</li>
+</ul>
+<h2 id="2-problem-it-solves">2. Problem it solves<a class="headerlink" href="#2-problem-it-solves" title="Permanent link">&para;</a></h2>
+<p>Engineers default to microservices on greenfield projects because "it scales better." In practice, premature decomposition creates distributed systems complexity — network failures, distributed tracing, eventual consistency — before the team understands the domain well enough to draw service boundaries correctly. Re-drawing a wrong boundary means rewriting two services and updating all their consumers. A modular monolith enforces clean module boundaries in code, keeps all the operational benefits of a single deployable, and preserves the option to extract a service later once a genuine need is proven.</p>
+<h2 id="3-solution-overview">3. Solution overview<a class="headerlink" href="#3-solution-overview" title="Permanent link">&para;</a></h2>
+<h3 id="system-context-c4-level-1">System context (C4 Level 1)<a class="headerlink" href="#system-context-c4-level-1" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart LR
+    WebClient((Web Client)) --&gt; API[Modular Monolith\nREST API]
+    MobileClient((Mobile Client)) --&gt; API
+    Partners((Partner API)) --&gt; API
+    API --&gt; DB[(PostgreSQL\nper-module schemas)]
+    API --&gt; Cache[(Redis)]
+    API --&gt; Email[Email Provider]
+    API --&gt; Payments[Payment Provider]</code></pre>
+<h3 id="container-view-c4-level-2">Container view (C4 Level 2)<a class="headerlink" href="#container-view-c4-level-2" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TB
+    subgraph Monolith — single deployable unit
+        APILayer[API Layer\nREST + OpenAPI]
+        ModOrders[Orders Module\nservice + repository + domain]
+        ModUsers[Users Module\nservice + repository + domain]
+        ModBilling[Billing Module\nservice + repository + domain]
+        SharedKernel[Shared Kernel\nDTOs, value objects, interfaces]
+        InternalBus[Internal Event Bus\nin-process only]
+    end
+    subgraph Data
+        DB[(PostgreSQL\nschemas: orders.* users.* billing.*)]
+        Cache[(Redis\nsession + cache)]
+    end
+    subgraph External
+        Email[Email]
+        PaymentsAPI[Payments API]
+    end
+
+    APILayer --&gt; ModOrders
+    APILayer --&gt; ModUsers
+    APILayer --&gt; ModBilling
+    ModOrders --&gt; SharedKernel
+    ModUsers --&gt; SharedKernel
+    ModBilling --&gt; SharedKernel
+    ModOrders --&gt;|publishes event| InternalBus
+    InternalBus --&gt;|subscribes| ModBilling
+    ModOrders --&gt; DB
+    ModUsers --&gt; DB
+    ModBilling --&gt; DB
+    APILayer --&gt; Cache
+    ModBilling --&gt; PaymentsAPI
+    ModUsers --&gt; Email</code></pre>
+<h2 id="4-technology-stack">4. Technology stack<a class="headerlink" href="#4-technology-stack" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Pattern</th>
-<th>Status</th>
-<th>Best for</th>
+<th>Layer</th>
+<th>Primary choice</th>
+<th>Alternatives</th>
+<th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="high-performance-network-service/">High-performance Network Service</a></td>
-<td>Trial</td>
-<td>Proxies, load balancers, custom protocols</td>
+<td>Language / framework</td>
+<td>NestJS (Node.js + TypeScript)</td>
+<td>Go (clean architecture), Java (Spring Boot), .NET</td>
+<td>NestJS has a first-class module system that enforces boundaries in code; Go for performance-critical backends without framework overhead</td>
 </tr>
 <tr>
-<td><a href="embedded-firmware/">Embedded Firmware</a></td>
-<td>Adopt</td>
-<td>IoT devices, hardware controllers</td>
+<td>Module boundary enforcement</td>
+<td>NestJS <code>@Module</code> with explicit exports</td>
+<td>Go package visibility, Java package-private</td>
+<td>The golden rule: a module may only use another module's published interface — never its internal services or repositories directly</td>
 </tr>
 <tr>
-<td><a href="database-engine/">Database Engine / Storage Layer</a></td>
-<td>Assess</td>
-<td>Specialised data stores; rare to build from scratch</td>
+<td>Database</td>
+<td>PostgreSQL with per-module schemas</td>
+<td>MySQL</td>
+<td>Per-module schemas (<code>orders</code>, <code>users</code>, <code>billing</code>) enforce data ownership at the DB layer; cross-module SQL joins are forbidden</td>
 </tr>
 <tr>
-<td><a href="custom-os-component/">Custom OS Component / Kernel Module</a></td>
-<td>Hold</td>
-<td>Almost never the right answer; consider eBPF first</td>
+<td>In-process events</td>
+<td>NestJS <code>EventEmitter2</code></td>
+<td>MediatR (.NET), custom observer</td>
+<td>For decoupled reactions within the monolith; keeps modules unaware of each other while still communicating</td>
+</tr>
+<tr>
+<td>Cache</td>
+<td>Redis</td>
+<td>In-process (single instance only)</td>
+<td>Redis works correctly when the monolith scales to multiple replicas; in-process caches do not</td>
+</tr>
+<tr>
+<td>API contract</td>
+<td>REST + OpenAPI (auto-generated)</td>
+<td>tRPC (TypeScript-only), GraphQL</td>
+<td>REST for external consumers; tRPC for end-to-end type safety when the frontend is also TypeScript</td>
+</tr>
+<tr>
+<td>Observability</td>
+<td>OpenTelemetry → Datadog / Grafana</td>
+<td>Prometheus + Grafana</td>
+<td>Tag every trace with <code>module</code> name from day one — critical for diagnosing which module is slow and for future decomposition</td>
+</tr>
+<tr>
+<td>CI/CD</td>
+<td>GitHub Actions — single build + test + deploy</td>
+<td>GitLab CI</td>
+<td>Single pipeline; far simpler than microservices CI</td>
 </tr>
 </tbody>
 </table>
-<h2 id="default-tech-stack">Default tech stack<a class="headerlink" href="#default-tech-stack" title="Permanent link">&para;</a></h2>
+<h2 id="5-non-functional-characteristics">5. Non-functional characteristics<a class="headerlink" href="#5-non-functional-characteristics" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Concern</th>
+<th>Profile</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Scalability</strong></td>
+<td>Horizontal scaling of the whole monolith handles most workloads. A single Postgres instance with proper indexing handles tens of millions of rows comfortably. When a specific module genuinely needs 10× more compute than others — and you have measured this — that is the signal to extract it as a service.</td>
+</tr>
+<tr>
+<td><strong>Availability target</strong></td>
+<td>99.9%. Single deployment unit — a crash affects all modules. Mitigations: process supervisor (systemd, PM2), Kubernetes health checks, rolling deploys with ≥ 2 replicas behind a load balancer.</td>
+</tr>
+<tr>
+<td><strong>Latency target</strong></td>
+<td>p95 &lt; 200 ms for API calls. All module interactions are in-process function calls — no network hop, no serialisation overhead between modules.</td>
+</tr>
+<tr>
+<td><strong>Security posture</strong></td>
+<td>Single auth boundary applied at the API layer (JWT validation). Per-module Postgres schema permissions prevent cross-schema SQL access even within the monolith. Secrets in environment variables or a secrets manager, never in code.</td>
+</tr>
+<tr>
+<td><strong>Data residency</strong></td>
+<td>All data in one Postgres instance in one region. Simple posture, but all modules share the same residency and compliance requirements — plan accordingly if modules have different data classification needs.</td>
+</tr>
+<tr>
+<td><strong>Compliance fit</strong></td>
+<td>GDPR ✓ — right-to-erasure is a single coordinated deletion across modules in one transaction. SOC 2 ✓ — simpler audit surface than microservices. HIPAA ✓ with encrypted Postgres + BAA on infrastructure.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-cost-ballpark">6. Cost ballpark<a class="headerlink" href="#6-cost-ballpark" title="Permanent link">&para;</a></h2>
+<p>Indicative monthly USD cost. Significantly lower than microservices for equivalent functionality.</p>
+<table>
+<thead>
+<tr>
+<th>Scale</th>
+<th>MAU</th>
+<th>Monthly cost</th>
+<th>Cost drivers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Small</td>
+<td>&lt; 10,000</td>
+<td>$100 - $500</td>
+<td>2 app instances + 1 Postgres + Redis; all on modest EC2/ECS sizes</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>10k - 500k</td>
+<td>$500 - $3,000</td>
+<td>Larger app instances, Postgres with read replica, observability</td>
+</tr>
+<tr>
+<td>Large</td>
+<td>500k+</td>
+<td>$2,000 - $10,000</td>
+<td>Multiple app replicas, autoscaling, Postgres read replicas; at this scale evaluate whether any module needs extraction</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-llm-assisted-development-fit">7. LLM-assisted development fit<a class="headerlink" href="#7-llm-assisted-development-fit" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Rating</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CRUD service, repository, and controller scaffolding</td>
+<td>★★★★★</td>
+<td>Excellent — well-structured NestJS and Go module patterns are very well-represented.</td>
+</tr>
+<tr>
+<td>Module boundary and interface design</td>
+<td>★★★</td>
+<td>Generates structurally sound code; domain boundary decisions (which module owns which concept) require human domain expertise.</td>
+</tr>
+<tr>
+<td>Database schema and migration</td>
+<td>★★★★</td>
+<td>Generates correct SQL; review destructive migrations manually before running against production.</td>
+</tr>
+<tr>
+<td>In-process event wiring</td>
+<td>★★★★</td>
+<td>Clean patterns generate correctly; verify event ordering assumptions and failure handling by hand.</td>
+</tr>
+<tr>
+<td>Architecture decisions</td>
+<td>★</td>
+<td>Don't outsource — specifically the decision to start with a monolith rather than microservices has long-term consequences. Use ADRs.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recommended workflow:</strong> Define module boundaries as named directories with explicit public interface files before generating any code. Generate CRUD scaffolding per module; review cross-module calls in every PR to enforce the "no direct cross-module DB access" rule.</p>
+<h2 id="8-reference-implementations">8. Reference implementations<a class="headerlink" href="#8-reference-implementations" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Languages:</strong> Rust (modern default), C, C++, Zig (assess), Go (for network services that don't need C-level perf)</li>
-<li><strong>Build:</strong> CMake, Cargo, Bazel</li>
-<li><strong>Testing:</strong> Property-based testing (proptest, QuickCheck), fuzzing (AFL, libFuzzer), formal methods for critical sections</li>
+<li><strong>Public reference:</strong> <a href="https://github.com/kgrzybek/modular-monolith-with-ddd">kgrzybek/modular-monolith-with-ddd</a> — canonical .NET reference implementing a modular monolith with Domain-Driven Design, explicit module APIs, and per-module schemas (200 OK ✓)</li>
+<li><strong>Public reference:</strong> <a href="https://github.com/dotnet/eShop">dotnet/eShop</a> — Microsoft's reference e-commerce application showing a transition from monolith toward services; useful for understanding what module extraction looks like in practice (200 OK ✓)</li>
+<li><strong>Internal case study:</strong> <em>Add your anonymised internal example here</em></li>
 </ul>
-<h2 id="llm-development-fit">LLM-development fit<a class="headerlink" href="#llm-development-fit" title="Permanent link">&para;</a></h2>
-<p>Lower than other categories. Less training data, mistakes are expensive, concurrency bugs are hard to catch by inspection. Useful for boilerplate (parsers, serialisation), but architectural decisions still need an experienced human.</p>
+<h2 id="9-related-decisions-adrs">9. Related decisions (ADRs)<a class="headerlink" href="#9-related-decisions-adrs" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../../../decisions/0008-modular-monolith-default/">ADR-0008: Modular Monolith as the default starting architecture</a></li>
+</ul>
+<h2 id="10-known-risks-gotchas">10. Known risks &amp; gotchas<a class="headerlink" href="#10-known-risks-gotchas" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>"Distributed monolith" anti-pattern</strong> — the monolith is split into separate deployables (e.g., separate Kubernetes pods per module) but they still share a database and make synchronous HTTP calls to each other. You get all the operational complexity of microservices with none of the benefits. Mitigation: if modules are deployed separately, they must own separate databases and communicate only via APIs or events — not shared tables.</li>
+<li><strong>Shared database becomes a coupling point</strong> — Module B directly queries Module A's schema (<code>SELECT * FROM orders.line_items</code>). Any change to that schema breaks Module B. Mitigation: enforce a "module owns its schema" rule in code review; cross-module data access must go through the owning module's service layer.</li>
+<li><strong>Big-bang rewrite pressure</strong> — the monolith grows large; a new engineer proposes rewriting in microservices. Mitigation: use the Strangler Fig pattern — extract modules one at a time, starting with the one causing the most operational pain (deployment conflicts, scaling, team boundary mismatch). Never do a big bang.</li>
+<li><strong>Deployment conflicts between teams</strong> — two teams need to deploy changes to the same monolith on the same day and one blocks the other. Mitigation: trunk-based development with feature flags; avoid long-lived feature branches; treat deployment conflict frequency as a signal that a specific module is ready to be extracted.</li>
+<li><strong>Test suite becomes slow as the monolith grows</strong> — integration tests spin up the entire application for every test. Mitigation: write unit tests at module service interfaces; reserve integration tests for critical cross-module flows; use test containers with parallel execution.</li>
+</ul>
 
 
 
@@ -1182,10 +1382,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

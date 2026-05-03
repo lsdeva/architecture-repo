@@ -12,31 +12,27 @@
         <meta name="author" content="deva@soa.team">
       
       
-        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/05-systems-infra/">
+        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/06-safety-critical/industrial-control-system/">
       
       
-        <link rel="prev" href="../04-backend-distributed/">
-      
-      
-        <link rel="next" href="../06-safety-critical/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Systems & Infrastructure - Architecture Pattern Catalog</title>
+        <title>Pattern: Industrial Control System - Architecture Pattern Catalog</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#systems-infrastructure" class="md-skip">
+        <a href="#pattern-industrial-control-system" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +90,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Architecture Pattern Catalog" class="md-header__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
+    <a href="../../.." title="Architecture Pattern Catalog" class="md-header__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Systems & Infrastructure
+              Pattern: Industrial Control System
             
           </span>
         </div>
@@ -227,7 +223,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -246,7 +242,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../about/how-to-use/" class="md-tabs__link">
+      <a href="../../../about/how-to-use/" class="md-tabs__link">
         
   
   
@@ -263,13 +259,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../" class="md-tabs__link">
           
   
   
@@ -289,7 +283,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../decisions/" class="md-tabs__link">
+      <a href="../../../decisions/" class="md-tabs__link">
         
   
   
@@ -310,7 +304,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../about/methodology/" class="md-tabs__link">
+        <a href="../../../about/methodology/" class="md-tabs__link">
           
   
   
@@ -346,7 +340,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Architecture Pattern Catalog" class="md-nav__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
+    <a href="../../.." title="Architecture Pattern Catalog" class="md-nav__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -376,7 +370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -403,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/how-to-use/" class="md-nav__link">
+      <a href="../../../about/how-to-use/" class="md-nav__link">
         
   
   
@@ -427,8 +421,6 @@
       
   
   
-    
-  
   
   
     
@@ -458,23 +450,22 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
@@ -492,13 +483,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -518,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-web-mobile/" class="md-nav__link">
+      <a href="../../01-web-mobile/" class="md-nav__link">
         
   
   
@@ -546,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-scripts-automation/" class="md-nav__link">
+      <a href="../../02-scripts-automation/" class="md-nav__link">
         
   
   
@@ -574,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-data-analytics/" class="md-nav__link">
+      <a href="../../03-data-analytics/" class="md-nav__link">
         
   
   
@@ -602,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04-backend-distributed/" class="md-nav__link">
+      <a href="../../04-backend-distributed/" class="md-nav__link">
         
   
   
@@ -627,37 +618,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Systems & Infrastructure
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../05-systems-infra/" class="md-nav__link">
         
   
   
@@ -673,70 +637,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        When to look here
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Patterns in this category
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Default tech stack
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#llm-development-fit" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        LLM-development fit
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -749,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../06-safety-critical/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -777,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../07-ai-llm-integrated/" class="md-nav__link">
+      <a href="../../07-ai-llm-integrated/" class="md-nav__link">
         
   
   
@@ -805,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../08-games-graphics/" class="md-nav__link">
+      <a href="../../08-games-graphics/" class="md-nav__link">
         
   
   
@@ -840,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../decisions/" class="md-nav__link">
+      <a href="../../../decisions/" class="md-nav__link">
         
   
   
@@ -927,7 +827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/methodology/" class="md-nav__link">
+      <a href="../../../about/methodology/" class="md-nav__link">
         
   
   
@@ -955,7 +855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/contributing/" class="md-nav__link">
+      <a href="../../../about/contributing/" class="md-nav__link">
         
   
   
@@ -1010,10 +910,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
+  <a href="#1-context" class="md-nav__link">
     <span class="md-ellipsis">
       
-        When to look here
+        1. Context
       
     </span>
   </a>
@@ -1021,10 +921,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
+  <a href="#2-problem-it-solves" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Patterns in this category
+        2. Problem it solves
       
     </span>
   </a>
@@ -1032,10 +932,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
+  <a href="#3-solution-overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Default tech stack
+        3. Solution overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Solution overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-context-c4-level-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System context (C4 Level 1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container-view-c4-level-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Container view (C4 Level 2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-technology-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Technology stack
       
     </span>
   </a>
@@ -1043,10 +982,65 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#llm-development-fit" class="md-nav__link">
+  <a href="#5-non-functional-characteristics" class="md-nav__link">
     <span class="md-ellipsis">
       
-        LLM-development fit
+        5. Non-functional characteristics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-cost-ballpark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Cost ballpark
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-llm-assisted-development-fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. LLM-assisted development fit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-reference-implementations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Reference implementations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-related-decisions-adrs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Related decisions (ADRs)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-known-risks-gotchas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Known risks &amp; gotchas
       
     </span>
   </a>
@@ -1073,54 +1067,248 @@
   
 
 
-<h1 id="systems-infrastructure">Systems &amp; Infrastructure<a class="headerlink" href="#systems-infrastructure" title="Permanent link">&para;</a></h1>
-<p>Low-level software where performance, memory, and hardware proximity matter. Includes operating system components, drivers, databases, compilers, network stacks, and embedded firmware.</p>
-<h2 id="when-to-look-here">When to look here<a class="headerlink" href="#when-to-look-here" title="Permanent link">&para;</a></h2>
+<h1 id="pattern-industrial-control-system">Pattern: Industrial Control System<a class="headerlink" href="#pattern-industrial-control-system" title="Permanent link">&para;</a></h1>
+<div class="admonition danger">
+<p class="admonition-title">Domain expertise and functional safety certification required</p>
+<p>This pattern provides a high-level architectural overview <strong>only</strong>. Industrial control systems are governed by IEC 61508 (functional safety of electrical/electronic/programmable electronic safety-related systems) and derived standards (IEC 62061 for machinery, ISO 13849 for machine safety). Development requires certified engineers, SIL (Safety Integrity Level) determination, formal hazard analysis, and third-party assessment. <strong>Do not design or deploy a safety instrumented function based solely on this material.</strong> Engage a TÜV-qualified functional safety engineer and an assessment body before starting.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Quick facts</p>
 <ul>
-<li>The constraint is hardware (memory, latency, power, real-time deadlines)</li>
-<li>You are building infrastructure that other software runs on</li>
-<li>Garbage collection or interpreter overhead is unacceptable</li>
+<li><strong>Category:</strong> Safety-Critical Systems</li>
+<li><strong>Maturity:</strong> Adopt</li>
+<li><strong>Typical team size:</strong> 3-10 engineers + process safety engineer and assessor</li>
+<li><strong>Typical typical timeline to MVP (first validated SIS):</strong> 18-36 months</li>
+<li><strong>Last reviewed:</strong> 2026-05-03 by Architecture Team</li>
 </ul>
-<h2 id="patterns-in-this-category">Patterns in this category<a class="headerlink" href="#patterns-in-this-category" title="Permanent link">&para;</a></h2>
+</div>
+<h2 id="1-context">1. Context<a class="headerlink" href="#1-context" title="Permanent link">&para;</a></h2>
+<p><strong>Use this pattern when:</strong></p>
+<ul>
+<li>Developing a Safety Instrumented System (SIS), programmable logic controller (PLC) application, or distributed control system (DCS) that performs a safety instrumented function (SIF) with a defined SIL target</li>
+<li>The system monitors or controls physical processes where equipment failure or process deviation can cause fire, explosion, toxic release, or serious injury (oil &amp; gas, chemical, power generation, water treatment, manufacturing)</li>
+<li>SIL assessment (IEC 61511 for process industry, IEC 61508 for general) is required</li>
+</ul>
+<p><strong>Do NOT use this pattern when:</strong></p>
+<ul>
+<li>The control system does not perform a safety function — it is a Basic Process Control System (BPCS) for operational efficiency; standard industrial automation patterns apply</li>
+<li>The system is purely monitoring with no actuation authority over a safety barrier</li>
+</ul>
+<h2 id="2-problem-it-solves">2. Problem it solves<a class="headerlink" href="#2-problem-it-solves" title="Permanent link">&para;</a></h2>
+<p>Industrial processes involve hazardous materials and conditions — high-pressure vessels, flammable gases, toxic chemicals, high-voltage equipment — where a process deviation can cause a major accident. A Safety Instrumented System continuously monitors process variables, and when a dangerous condition is detected, brings the process to a defined safe state automatically and reliably, independent of the basic process control system. This pattern describes how to structure that software safely.</p>
+<h2 id="3-solution-overview">3. Solution overview<a class="headerlink" href="#3-solution-overview" title="Permanent link">&para;</a></h2>
+<h3 id="system-context-c4-level-1">System context (C4 Level 1)<a class="headerlink" href="#system-context-c4-level-1" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart LR
+    Process[Industrial Process\nhigh-pressure, hazardous] --&gt; Sensors[Safety Sensors\npressure, temperature, level, flow]
+    Sensors --&gt; SIS[Safety Instrumented System\nSIL-rated SLC / PLC]
+    SIS --&gt; Actuators[Final Elements\nvalves, circuit breakers, ESD]
+    SIS --&gt;|independent from| BPCS[Basic Process Control System\noperational control]
+    Engineer((Safety Engineer)) --&gt; SIS
+    SIS --&gt; Historian[Process Historian\nevent log]</code></pre>
+<h3 id="container-view-c4-level-2">Container view (C4 Level 2)<a class="headerlink" href="#container-view-c4-level-2" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TB
+    subgraph Safety Instrumented System
+        Input[Input Module\n4-20mA / HART sensors]
+        Logic[Safety Logic Controller\nIEC 61131-3 — Ladder / FBD / ST]
+        Output[Output Module\nsolenoid valves, motor contactors]
+        Diagnostics[Proof Test Manager\nscheduled diagnostic coverage]
+        CommsGW[Communications Gateway\nModbus / EtherNet/IP — isolated from safety loop]
+    end
+    subgraph Independence
+        BPCS[BPCS\noperational DCS — separate network]
+        HMI[SIS HMI\nread-only status — no safety override via SCADA]
+    end
+    subgraph Process Docs
+        SIL_Cert[SIL Certificate\nthird-party assessment]
+        PSSR[Pre-Startup Safety Review\nbefore commissioning]
+        MOC[Management of Change\nfor any SIS modification]
+    end
+
+    Input --&gt; Logic
+    Logic --&gt; Output
+    Logic --&gt; Diagnostics
+    Logic --&gt; CommsGW
+    CommsGW --&gt; HMI
+    CommsGW -.-&gt;|read-only, isolated| BPCS
+    SIL_Cert -.-&gt; Logic</code></pre>
+<h2 id="4-technology-stack">4. Technology stack<a class="headerlink" href="#4-technology-stack" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Pattern</th>
-<th>Status</th>
-<th>Best for</th>
+<th>Layer</th>
+<th>Primary choice</th>
+<th>Alternatives</th>
+<th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="high-performance-network-service/">High-performance Network Service</a></td>
-<td>Trial</td>
-<td>Proxies, load balancers, custom protocols</td>
+<td>Safety PLC / SLC</td>
+<td>Siemens S7-300F / S7-400F (SIL 3)</td>
+<td>Rockwell AADvance, Triconex (Schneider), Yokogawa ProSafe</td>
+<td>Use only TÜV-certified Safety PLCs; the hardware certification is the foundation of the SIL claim</td>
 </tr>
 <tr>
-<td><a href="embedded-firmware/">Embedded Firmware</a></td>
-<td>Adopt</td>
-<td>IoT devices, hardware controllers</td>
+<td>Programming language</td>
+<td>IEC 61131-3 Structured Text (ST) or Function Block Diagram (FBD)</td>
+<td>Ladder Diagram (LD) for legacy</td>
+<td>Use the language supported by your certified tool; restrict to certified function blocks from the vendor library</td>
 </tr>
 <tr>
-<td><a href="database-engine/">Database Engine / Storage Layer</a></td>
-<td>Assess</td>
-<td>Specialised data stores; rare to build from scratch</td>
+<td>Engineering tool</td>
+<td>Siemens TIA Portal Safety</td>
+<td>Rockwell Studio 5000, Triconex TriStation</td>
+<td>Tool qualification is part of the SIL claim; use only the tool version for which the SIL certificate is valid</td>
 </tr>
 <tr>
-<td><a href="custom-os-component/">Custom OS Component / Kernel Module</a></td>
-<td>Hold</td>
-<td>Almost never the right answer; consider eBPF first</td>
+<td>Network isolation</td>
+<td>Unidirectional data diode (Waterfall Security)</td>
+<td>Air gap</td>
+<td>The SIS process network must be isolated from the corporate IT network; a data diode enforces unidirectional flow</td>
+</tr>
+<tr>
+<td>Cybersecurity</td>
+<td>IEC 62443 (industrial cybersecurity standard)</td>
+<td>NERC CIP (power sector)</td>
+<td>IEC 62443 defines security levels for ICS; cybersecurity must be integrated with functional safety (coengineering)</td>
+</tr>
+<tr>
+<td>Alarm management</td>
+<td>ISA-18.2 (alarm management standard)</td>
+<td>Vendor-specific alarm systems</td>
+<td>Alarm rationalisation before deployment; alarm flooding during an abnormal situation is a well-documented accident contributor</td>
+</tr>
+<tr>
+<td>Historian / logging</td>
+<td>OSIsoft PI (now AVEVA PI)</td>
+<td>Honeywell Uniformance, AspenTech</td>
+<td>Process historians provide tamper-evident long-term event logs required for incident investigation</td>
 </tr>
 </tbody>
 </table>
-<h2 id="default-tech-stack">Default tech stack<a class="headerlink" href="#default-tech-stack" title="Permanent link">&para;</a></h2>
+<h2 id="5-non-functional-characteristics">5. Non-functional characteristics<a class="headerlink" href="#5-non-functional-characteristics" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Concern</th>
+<th>Profile</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Scalability</strong></td>
+<td>Not applicable. SIS capacity is determined at design time based on the number of safety instrumented functions (SIFs). Changes to scope require a Management of Change (MOC) process and may require re-assessment.</td>
+</tr>
+<tr>
+<td><strong>Availability target</strong></td>
+<td>Defined by SIL target and Safety Availability (SA) calculation. SIL 2 requires PFD (Probability of Failure on Demand) &lt; 10⁻². High Demand mode SIS may require PFH &lt; 10⁻⁷/hour. Proof test intervals are calculated to maintain these targets.</td>
+</tr>
+<tr>
+<td><strong>Latency target</strong></td>
+<td>Process response time (PRT) must be less than the process safety time (PST). If a high-pressure vessel can reach a dangerous pressure in 5 seconds, the SIS must detect, logic-solve, and actuate within that window. Calculate PST during HAZOP.</td>
+</tr>
+<tr>
+<td><strong>Security posture</strong></td>
+<td>ICS cybersecurity is a life-safety concern (Stuxnet, Triton/TRISIS demonstrated this). Network segmentation (Purdue model zones), air gaps or data diodes between IT and OT, no remote access to safety PLC without procedural controls, disable all unused network ports.</td>
+</tr>
+<tr>
+<td><strong>Data residency</strong></td>
+<td>Process data and safety event logs are operational technology data; keep on-premises or in an approved industrial cloud (AWS Industrial). Never route raw sensor data through the corporate IT network to the SIS logic.</td>
+</tr>
+<tr>
+<td><strong>Compliance fit</strong></td>
+<td>IEC 61508 (general functional safety), IEC 61511 (process industry SIS), IEC 62061 (machinery safety), ISO 13849 (machine safety — PLr), ATEX/IECEx (explosive atmospheres), OSHA PSM (US), COMAH (UK). SIL certificate from a notified body (TÜV, Exida) required before commissioning.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-cost-ballpark">6. Cost ballpark<a class="headerlink" href="#6-cost-ballpark" title="Permanent link">&para;</a></h2>
+<p>Highly variable by process complexity and SIL target. Software is a subset of a larger capital project.</p>
+<table>
+<thead>
+<tr>
+<th>Scale</th>
+<th>SIF count / SIL target</th>
+<th>Software + engineering cost</th>
+<th>Drivers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Small</td>
+<td>5-20 SIFs, SIL 1/2</td>
+<td>$200k - $1M</td>
+<td>Basic SIS programming, HAZOP support, SIL verification</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>20-100 SIFs, SIL 2/3</td>
+<td>$1M - $5M</td>
+<td>Extended HAZOP, SIL 3 architecture (redundancy), third-party assessment</td>
+</tr>
+<tr>
+<td>Large</td>
+<td>100+ SIFs, SIL 3</td>
+<td>$5M - $30M+</td>
+<td>Full SIL 3 process, TMR architecture, exida/TÜV assessment, commissioning verification</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-llm-assisted-development-fit">7. LLM-assisted development fit<a class="headerlink" href="#7-llm-assisted-development-fit" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Rating</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IEC 61131-3 Structured Text boilerplate</td>
+<td>★★★</td>
+<td>Knows the language syntax; safety function logic requires process-specific domain knowledge and certification.</td>
+</tr>
+<tr>
+<td>SCADA / HMI screen layout</td>
+<td>★★★★</td>
+<td>Good for standard P&amp;ID display layouts.</td>
+</tr>
+<tr>
+<td>Standard alarm rationalisation documentation templates</td>
+<td>★★★</td>
+<td>Useful starting point; alarm rationalisation requires process safety expertise.</td>
+</tr>
+<tr>
+<td>Hazard analysis (HAZOP, LOPA, SIL determination)</td>
+<td>★</td>
+<td><strong>Never outsource safety analysis to an LLM.</strong> HAZOP is a facilitated multi-discipline study with legal accountability.</td>
+</tr>
+<tr>
+<td>SIL verification calculations</td>
+<td>★</td>
+<td><strong>Never outsource SIL calculations to an LLM.</strong> These are engineering calculations with direct safety implications.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-reference-implementations">8. Reference implementations<a class="headerlink" href="#8-reference-implementations" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Languages:</strong> Rust (modern default), C, C++, Zig (assess), Go (for network services that don't need C-level perf)</li>
-<li><strong>Build:</strong> CMake, Cargo, Bazel</li>
-<li><strong>Testing:</strong> Property-based testing (proptest, QuickCheck), fuzzing (AFL, libFuzzer), formal methods for critical sections</li>
+<li><strong>Public reference:</strong> <em>There are no appropriate public reference implementations for Safety Instrumented Systems. All production SIS code is proprietary and subject to process confidentiality.</em></li>
+<li><strong>Industry resource:</strong> IEC 61511:2016 — Functional safety: Safety Instrumented Systems for the process industry sector; required reading</li>
+<li><strong>Industry resource:</strong> CCPS Guidelines for Safe Automation of Chemical Processes (AIChE) — industry best-practice reference</li>
+<li><strong>Internal case study:</strong> <em>Add your anonymised internal example here if applicable</em></li>
 </ul>
-<h2 id="llm-development-fit">LLM-development fit<a class="headerlink" href="#llm-development-fit" title="Permanent link">&para;</a></h2>
-<p>Lower than other categories. Less training data, mistakes are expensive, concurrency bugs are hard to catch by inspection. Useful for boilerplate (parsers, serialisation), but architectural decisions still need an experienced human.</p>
+<h2 id="9-related-decisions-adrs">9. Related decisions (ADRs)<a class="headerlink" href="#9-related-decisions-adrs" title="Permanent link">&para;</a></h2>
+<ul>
+<li><em>Architectural and design decisions for SIS must be documented in the Safety Requirements Specification and Safety Validation Plan, not in this general catalog.</em></li>
+</ul>
+<h2 id="10-known-risks-gotchas">10. Known risks &amp; gotchas<a class="headerlink" href="#10-known-risks-gotchas" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>SIS and BPCS on the same network</strong> — an operator can inadvertently (or an attacker can deliberately) override a safety setpoint from the BPCS HMI. Mitigation: IEC 61511 requires independence between the SIS and BPCS; enforce network separation with a firewall or data diode; the SIS PLC must never accept write commands from the BPCS network.</li>
+<li><strong>Bypasses and inhibits left in place</strong> — a safety valve bypass installed for maintenance is never removed; the SIF is unavailable during a process upset. Mitigation: time-limited bypass management in the SIS logic; any bypass beyond a configured duration triggers an alarm and a work order; track all inhibits in the safety management system.</li>
+<li><strong>Proof tests not performed on schedule</strong> — the SIL claim depends on proof tests at specified intervals (often annually); skipped tests mean the PFD exceeds the SIL target without anyone knowing. Mitigation: proof test procedures must be scheduled in a maintenance management system; the SIS historian provides evidence of test completion; re-calculate PFD if tests are overdue.</li>
+<li><strong>Management of Change not followed for SIS modifications</strong> — a technician edits a setpoint or logic rung without a formal MOC; the change invalidates the SIL certificate and may introduce a new hazard. Mitigation: PLC programming tools must require authentication; all SIS changes go through MOC including HAZOP review for anything beyond minor setpoint adjustments.</li>
+<li><strong>Common-cause failure between redundant sensors</strong> — two pressure transmitters in a 1oo2 (one-out-of-two) voting configuration share the same tapping point; a plugged impulse line puts both in a failed state simultaneously. Mitigation: diverse sensor mounting, diverse measurement principles, and physical separation of redundant sensors are part of the SIS design, not just the software.</li>
+</ul>
 
 
 
@@ -1182,10 +1370,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

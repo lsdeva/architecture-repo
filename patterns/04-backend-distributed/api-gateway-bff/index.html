@@ -12,31 +12,27 @@
         <meta name="author" content="deva@soa.team">
       
       
-        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/05-systems-infra/">
+        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/04-backend-distributed/api-gateway-bff/">
       
       
-        <link rel="prev" href="../04-backend-distributed/">
-      
-      
-        <link rel="next" href="../06-safety-critical/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Systems & Infrastructure - Architecture Pattern Catalog</title>
+        <title>Pattern: API Gateway + BFF (Backend for Frontend) - Architecture Pattern Catalog</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#systems-infrastructure" class="md-skip">
+        <a href="#pattern-api-gateway-bff-backend-for-frontend" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +90,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Architecture Pattern Catalog" class="md-header__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
+    <a href="../../.." title="Architecture Pattern Catalog" class="md-header__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Systems & Infrastructure
+              Pattern: API Gateway + BFF (Backend for Frontend)
             
           </span>
         </div>
@@ -227,7 +223,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -246,7 +242,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../about/how-to-use/" class="md-tabs__link">
+      <a href="../../../about/how-to-use/" class="md-tabs__link">
         
   
   
@@ -263,13 +259,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../" class="md-tabs__link">
           
   
   
@@ -289,7 +283,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../decisions/" class="md-tabs__link">
+      <a href="../../../decisions/" class="md-tabs__link">
         
   
   
@@ -310,7 +304,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../about/methodology/" class="md-tabs__link">
+        <a href="../../../about/methodology/" class="md-tabs__link">
           
   
   
@@ -346,7 +340,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Architecture Pattern Catalog" class="md-nav__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
+    <a href="../../.." title="Architecture Pattern Catalog" class="md-nav__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -376,7 +370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -403,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/how-to-use/" class="md-nav__link">
+      <a href="../../../about/how-to-use/" class="md-nav__link">
         
   
   
@@ -427,8 +421,6 @@
       
   
   
-    
-  
   
   
     
@@ -458,23 +450,22 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
@@ -492,13 +483,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -518,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-web-mobile/" class="md-nav__link">
+      <a href="../../01-web-mobile/" class="md-nav__link">
         
   
   
@@ -546,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-scripts-automation/" class="md-nav__link">
+      <a href="../../02-scripts-automation/" class="md-nav__link">
         
   
   
@@ -574,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-data-analytics/" class="md-nav__link">
+      <a href="../../03-data-analytics/" class="md-nav__link">
         
   
   
@@ -602,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04-backend-distributed/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -627,37 +618,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Systems & Infrastructure
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../05-systems-infra/" class="md-nav__link">
         
   
   
@@ -673,70 +637,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        When to look here
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Patterns in this category
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Default tech stack
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#llm-development-fit" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        LLM-development fit
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -749,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../06-safety-critical/" class="md-nav__link">
+      <a href="../../06-safety-critical/" class="md-nav__link">
         
   
   
@@ -777,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../07-ai-llm-integrated/" class="md-nav__link">
+      <a href="../../07-ai-llm-integrated/" class="md-nav__link">
         
   
   
@@ -805,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../08-games-graphics/" class="md-nav__link">
+      <a href="../../08-games-graphics/" class="md-nav__link">
         
   
   
@@ -840,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../decisions/" class="md-nav__link">
+      <a href="../../../decisions/" class="md-nav__link">
         
   
   
@@ -927,7 +827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/methodology/" class="md-nav__link">
+      <a href="../../../about/methodology/" class="md-nav__link">
         
   
   
@@ -955,7 +855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/contributing/" class="md-nav__link">
+      <a href="../../../about/contributing/" class="md-nav__link">
         
   
   
@@ -1010,10 +910,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
+  <a href="#1-context" class="md-nav__link">
     <span class="md-ellipsis">
       
-        When to look here
+        1. Context
       
     </span>
   </a>
@@ -1021,10 +921,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
+  <a href="#2-problem-it-solves" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Patterns in this category
+        2. Problem it solves
       
     </span>
   </a>
@@ -1032,10 +932,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
+  <a href="#3-solution-overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Default tech stack
+        3. Solution overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Solution overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-context-c4-level-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System context (C4 Level 1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container-view-c4-level-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Container view (C4 Level 2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-technology-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Technology stack
       
     </span>
   </a>
@@ -1043,10 +982,65 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#llm-development-fit" class="md-nav__link">
+  <a href="#5-non-functional-characteristics" class="md-nav__link">
     <span class="md-ellipsis">
       
-        LLM-development fit
+        5. Non-functional characteristics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-cost-ballpark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Cost ballpark
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-llm-assisted-development-fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. LLM-assisted development fit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-reference-implementations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Reference implementations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-related-decisions-adrs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Related decisions (ADRs)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-known-risks-gotchas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Known risks &amp; gotchas
       
     </span>
   </a>
@@ -1073,54 +1067,263 @@
   
 
 
-<h1 id="systems-infrastructure">Systems &amp; Infrastructure<a class="headerlink" href="#systems-infrastructure" title="Permanent link">&para;</a></h1>
-<p>Low-level software where performance, memory, and hardware proximity matter. Includes operating system components, drivers, databases, compilers, network stacks, and embedded firmware.</p>
-<h2 id="when-to-look-here">When to look here<a class="headerlink" href="#when-to-look-here" title="Permanent link">&para;</a></h2>
+<h1 id="pattern-api-gateway-bff-backend-for-frontend">Pattern: API Gateway + BFF (Backend for Frontend)<a class="headerlink" href="#pattern-api-gateway-bff-backend-for-frontend" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Quick facts</p>
 <ul>
-<li>The constraint is hardware (memory, latency, power, real-time deadlines)</li>
-<li>You are building infrastructure that other software runs on</li>
-<li>Garbage collection or interpreter overhead is unacceptable</li>
+<li><strong>Category:</strong> Backend &amp; Distributed Systems</li>
+<li><strong>Maturity:</strong> Adopt</li>
+<li><strong>Typical team size:</strong> 1-2 engineers</li>
+<li><strong>Typical timeline to MVP:</strong> 2-4 weeks</li>
+<li><strong>Last reviewed:</strong> 2026-05-03 by Architecture Team</li>
 </ul>
-<h2 id="patterns-in-this-category">Patterns in this category<a class="headerlink" href="#patterns-in-this-category" title="Permanent link">&para;</a></h2>
+</div>
+<h2 id="1-context">1. Context<a class="headerlink" href="#1-context" title="Permanent link">&para;</a></h2>
+<p><strong>Use this pattern when:</strong></p>
+<ul>
+<li>Multiple client types (web app, mobile app, partner API consumers) share backend services but have meaningfully different data shape and latency requirements</li>
+<li>Cross-cutting concerns — authentication, rate limiting, request routing, SSL termination — should be handled once, not duplicated in every service</li>
+<li>The API surface exposed to external consumers should be stable and versioned, even as internal services are refactored</li>
+</ul>
+<p><strong>Do NOT use this pattern when:</strong></p>
+<ul>
+<li>There is only one client type and one backend — a single REST API without a gateway is simpler and has fewer moving parts</li>
+<li>You are just starting out with a monolith — add the gateway when you have multiple services or client types, not before</li>
+<li>GraphQL Federation already handles client-specific aggregation for your stack — that is a different (but related) pattern</li>
+</ul>
+<h2 id="2-problem-it-solves">2. Problem it solves<a class="headerlink" href="#2-problem-it-solves" title="Permanent link">&para;</a></h2>
+<p>A web client needs a dashboard that aggregates data from four services in one round trip. A mobile client needs the same data but lighter — smaller payload, fewer fields, different pagination. A partner integration needs a stable, versioned API that does not break when internal services are refactored. Without a gateway and BFF layer, each service must implement auth and rate limiting independently, or every client makes multiple round trips and assembles the data itself. The gateway centralises cross-cutting concerns; the BFF gives each client the exact API shape it needs.</p>
+<h2 id="3-solution-overview">3. Solution overview<a class="headerlink" href="#3-solution-overview" title="Permanent link">&para;</a></h2>
+<h3 id="system-context-c4-level-1">System context (C4 Level 1)<a class="headerlink" href="#system-context-c4-level-1" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart LR
+    WebClient((Web Client)) --&gt; WebBFF[Web BFF]
+    MobileClient((Mobile Client)) --&gt; MobileBFF[Mobile BFF]
+    Partners((Partners)) --&gt; GW[API Gateway\nKong]
+    WebBFF --&gt; GW
+    MobileBFF --&gt; GW
+    GW --&gt; Auth[Auth Service]
+    GW --&gt; ServiceA[Backend Service A]
+    GW --&gt; ServiceB[Backend Service B]
+    GW --&gt; ServiceC[Backend Service C]</code></pre>
+<h3 id="container-view-c4-level-2">Container view (C4 Level 2)<a class="headerlink" href="#container-view-c4-level-2" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TB
+    subgraph Edge
+        CDN[CDN\nCloudflare]
+    end
+    subgraph API Gateway
+        Kong[Kong\nauth, rate limiting, routing, TLS]
+        RateLimiter[Rate Limiter\nRedis-backed]
+        Router[Router\nservice discovery]
+    end
+    subgraph BFFs
+        WebBFF[Web BFF\nGo — aggregates for web dashboard]
+        MobileBFF[Mobile BFF\nGo — lightweight for mobile]
+    end
+    subgraph Backend Services
+        OrderSvc[Order Service]
+        UserSvc[User Service]
+        BillingSvc[Billing Service]
+    end
+    subgraph Auth
+        AuthSvc[Auth Service\nJWT validation]
+    end
+    subgraph Observability
+        OTel[OpenTelemetry\ntrace ID from gateway through services]
+    end
+
+    CDN --&gt; Kong
+    Kong --&gt; RateLimiter
+    Kong --&gt; Router
+    Kong --&gt; AuthSvc
+    Kong --&gt; WebBFF
+    Kong --&gt; MobileBFF
+    Kong --&gt;|partner REST v1| OrderSvc
+    WebBFF --&gt; OrderSvc
+    WebBFF --&gt; UserSvc
+    WebBFF --&gt; BillingSvc
+    MobileBFF --&gt; OrderSvc
+    MobileBFF --&gt; UserSvc
+    OTel -.-&gt; Kong
+    OTel -.-&gt; WebBFF
+    OTel -.-&gt; OrderSvc</code></pre>
+<h2 id="4-technology-stack">4. Technology stack<a class="headerlink" href="#4-technology-stack" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Pattern</th>
-<th>Status</th>
-<th>Best for</th>
+<th>Layer</th>
+<th>Primary choice</th>
+<th>Alternatives</th>
+<th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="high-performance-network-service/">High-performance Network Service</a></td>
-<td>Trial</td>
-<td>Proxies, load balancers, custom protocols</td>
+<td>API gateway</td>
+<td>Kong</td>
+<td>AWS API Gateway, nginx (simple routing only), Envoy</td>
+<td>Kong is open-source, Kubernetes-native, and has a rich plugin ecosystem; AWS API Gateway for Lambda-heavy AWS-native deployments; nginx for static routing with no dynamic config</td>
 </tr>
 <tr>
-<td><a href="embedded-firmware/">Embedded Firmware</a></td>
-<td>Adopt</td>
-<td>IoT devices, hardware controllers</td>
+<td>BFF language</td>
+<td>Go</td>
+<td>Node.js (TypeScript), NestJS</td>
+<td>Go for low-latency aggregation with small memory footprint; Node.js if the frontend team already works in TypeScript and will own the BFF</td>
 </tr>
 <tr>
-<td><a href="database-engine/">Database Engine / Storage Layer</a></td>
-<td>Assess</td>
-<td>Specialised data stores; rare to build from scratch</td>
+<td>Authentication</td>
+<td>JWT validation at gateway (Kong JWT plugin)</td>
+<td>OAuth2 proxy, AWS Cognito authoriser</td>
+<td>Validate tokens once at the gateway boundary; services inside the perimeter trust the gateway-issued identity header</td>
 </tr>
 <tr>
-<td><a href="custom-os-component/">Custom OS Component / Kernel Module</a></td>
-<td>Hold</td>
-<td>Almost never the right answer; consider eBPF first</td>
+<td>Rate limiting</td>
+<td>Kong Rate Limiting plugin (Redis-backed)</td>
+<td>AWS WAF, custom middleware</td>
+<td>Redis-backed rate limiting functions correctly across multiple gateway replicas; in-memory rate limiting breaks with more than one pod</td>
+</tr>
+<tr>
+<td>API versioning</td>
+<td>URL path versioning (<code>/v1/</code>, <code>/v2/</code>)</td>
+<td>Header-based versioning (<code>Accept: application/vnd.api.v2+json</code>)</td>
+<td>Path versioning is the most visible, most cacheable, and least surprising; add a <code>Sunset</code> header to deprecated versions</td>
+</tr>
+<tr>
+<td>API contract</td>
+<td>OpenAPI 3.x</td>
+<td>GraphQL (for heterogeneous data needs), gRPC-gateway</td>
+<td>OpenAPI for external REST APIs; consider GraphQL Federation when clients have highly variable sub-field needs</td>
+</tr>
+<tr>
+<td>Observability</td>
+<td>OpenTelemetry — inject trace ID at gateway</td>
+<td>Datadog APM</td>
+<td>Trace ID injected at the gateway must be propagated through every BFF and backend service; test this before the first service goes to production</td>
 </tr>
 </tbody>
 </table>
-<h2 id="default-tech-stack">Default tech stack<a class="headerlink" href="#default-tech-stack" title="Permanent link">&para;</a></h2>
+<h2 id="5-non-functional-characteristics">5. Non-functional characteristics<a class="headerlink" href="#5-non-functional-characteristics" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Concern</th>
+<th>Profile</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Scalability</strong></td>
+<td>Kong is stateless (rate-limit state in Redis) — scale horizontally with no coordination. BFFs scale per client type independently. Each BFF replica is stateless.</td>
+</tr>
+<tr>
+<td><strong>Availability target</strong></td>
+<td>99.99% for the gateway — it is in the critical path of every request. Deploy ≥ 3 Kong replicas; configure pod disruption budgets; health-check every replica every 10 seconds; use circuit breakers at the gateway for downstream service failures.</td>
+</tr>
+<tr>
+<td><strong>Latency target</strong></td>
+<td>Gateway overhead: &lt; 5 ms. BFF aggregation adds one additional service round-trip latency. Target: p95 &lt; 100 ms for gateway pass-through; p95 &lt; 300 ms for BFF-aggregated responses including service calls.</td>
+</tr>
+<tr>
+<td><strong>Security posture</strong></td>
+<td>TLS termination at the gateway; mTLS between gateway and internal services. API keys for partner access managed and rotated at the gateway — never stored in partner application code long-term. Gateway access logs retained for 90 days minimum.</td>
+</tr>
+<tr>
+<td><strong>Data residency</strong></td>
+<td>Gateway and BFFs are stateless — no data at rest. Gateway access logs may contain PII in query parameters; ensure log scrubbing or redaction is applied.</td>
+</tr>
+<tr>
+<td><strong>Compliance fit</strong></td>
+<td>SOC 2 ✓ — gateway access logs provide a complete audit trail of every API call. GDPR: ensure gateway logs do not retain PII in request paths beyond your retention policy. PCI-DSS: gateway must not log card data in any form.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-cost-ballpark">6. Cost ballpark<a class="headerlink" href="#6-cost-ballpark" title="Permanent link">&para;</a></h2>
+<p>Indicative monthly USD cost. Gateway is low-cost; BFF compute scales with request volume.</p>
+<table>
+<thead>
+<tr>
+<th>Scale</th>
+<th>API requests / month</th>
+<th>Monthly cost</th>
+<th>Cost drivers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Small</td>
+<td>&lt; 10M</td>
+<td>$100 - $600</td>
+<td>Kong on 2-3 K8s pods, Redis for rate limiting, small BFF instances</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>10M - 500M</td>
+<td>$600 - $4,000</td>
+<td>More Kong replicas, Redis cluster, BFF autoscaling, Datadog APM</td>
+</tr>
+<tr>
+<td>Large</td>
+<td>500M+</td>
+<td>$4,000 - $20,000</td>
+<td>Kong Enterprise licence, CDN with WAF, DDoS protection, multiple BFF regional deployments</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-llm-assisted-development-fit">7. LLM-assisted development fit<a class="headerlink" href="#7-llm-assisted-development-fit" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Rating</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kong configuration (declarative YAML / deck)</td>
+<td>★★★★★</td>
+<td>Excellent — Kong plugin configuration patterns are well-represented.</td>
+</tr>
+<tr>
+<td>BFF aggregation handler code</td>
+<td>★★★★</td>
+<td>Good; data shape decisions (what to include, how to nest) require product input — the LLM does not know your domain.</td>
+</tr>
+<tr>
+<td>OpenAPI specification generation</td>
+<td>★★★★★</td>
+<td>Excellent — generates accurate OpenAPI 3.x specs from a description.</td>
+</tr>
+<tr>
+<td>Rate limiting strategy and threshold design</td>
+<td>★★★</td>
+<td>Knows the patterns; per-tenant vs per-IP vs per-endpoint thresholds require product and business decisions.</td>
+</tr>
+<tr>
+<td>Architecture decisions</td>
+<td>★</td>
+<td>Don't outsource. Use ADRs.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recommended workflow:</strong> Start with Kong as a simple reverse proxy (routing + TLS + auth). Add rate limiting and the first BFF for the web client only. Add the mobile BFF once the web BFF stabilises. Never add business logic to a BFF — if you are querying a database from a BFF, extract that logic into a backend service.</p>
+<h2 id="8-reference-implementations">8. Reference implementations<a class="headerlink" href="#8-reference-implementations" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Languages:</strong> Rust (modern default), C, C++, Zig (assess), Go (for network services that don't need C-level perf)</li>
-<li><strong>Build:</strong> CMake, Cargo, Bazel</li>
-<li><strong>Testing:</strong> Property-based testing (proptest, QuickCheck), fuzzing (AFL, libFuzzer), formal methods for critical sections</li>
+<li><strong>Public reference:</strong> <a href="https://github.com/Kong/kong">Kong/kong</a> — the Kong API gateway; <code>spec/</code> and <code>kong/plugins/</code> show the plugin architecture; the declarative config format (<code>deck</code>) is the recommended management approach (200 OK ✓)</li>
+<li><strong>Public reference:</strong> <a href="https://github.com/envoyproxy/envoy">envoyproxy/envoy</a> — Envoy proxy used as the data plane for Istio; reference for advanced gateway patterns including gRPC transcoding and circuit breaking (200 OK ✓)</li>
+<li><strong>Internal case study:</strong> <em>Add your anonymised internal example here</em></li>
 </ul>
-<h2 id="llm-development-fit">LLM-development fit<a class="headerlink" href="#llm-development-fit" title="Permanent link">&para;</a></h2>
-<p>Lower than other categories. Less training data, mistakes are expensive, concurrency bugs are hard to catch by inspection. Useful for boilerplate (parsers, serialisation), but architectural decisions still need an experienced human.</p>
+<h2 id="9-related-decisions-adrs">9. Related decisions (ADRs)<a class="headerlink" href="#9-related-decisions-adrs" title="Permanent link">&para;</a></h2>
+<ul>
+<li><em>No ADRs recorded yet. Candidate: Kong vs AWS API Gateway vs nginx — record when your organisation makes a committed infrastructure decision.</em></li>
+</ul>
+<h2 id="10-known-risks-gotchas">10. Known risks &amp; gotchas<a class="headerlink" href="#10-known-risks-gotchas" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>BFF accumulates business logic and becomes a bottleneck</strong> — the web BFF starts with aggregation, then someone adds a DB query, then some transformation logic, and it becomes the most complex service in the system. Mitigation: enforce a strict rule — BFFs only aggregate, transform, and filter data from upstream services; no database access, no business logic, no direct dependency on internal data stores.</li>
+<li><strong>Gateway as a single point of failure</strong> — Kong is in the critical path of every user request; a bad deployment or misconfiguration stops all traffic. Mitigation: ≥ 3 Kong replicas with pod disruption budgets; canary-deploy Kong config changes via <code>deck sync</code> with rollback capability; never apply config changes during peak hours.</li>
+<li><strong>API versioning ignored until a breaking change is forced</strong> — <code>v1</code> accumulates technical debt but nobody creates <code>v2</code> until an external partner complains about a breaking change they received without notice. Mitigation: define an API versioning and deprecation policy before first external consumer goes live; add <code>Sunset</code> and <code>Deprecation</code> headers to <code>/v1</code> when <code>/v2</code> ships; give partners ≥ 6 months' notice.</li>
+<li><strong>Rate limits miscalibrated</strong> — too strict: blocks legitimate traffic during a product launch spike; too loose: allows API abuse. Mitigation: set initial rate limits at 10× the expected peak per-user; tune based on real traffic patterns in the first 90 days; always have a per-authenticated-user rate limit even if per-route limits are generous.</li>
+<li><strong>Distributed tracing not wired through the gateway</strong> — a request fails in a backend service; Kong logs a 502 with no trace context; the root cause requires checking 4 log streams manually. Mitigation: instrument the gateway to inject a <code>traceparent</code> header on every request as a day-one requirement; every downstream service must propagate it; verify in a pre-launch smoke test.</li>
+</ul>
 
 
 
@@ -1182,10 +1385,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

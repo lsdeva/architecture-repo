@@ -12,31 +12,27 @@
         <meta name="author" content="deva@soa.team">
       
       
-        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/05-systems-infra/">
+        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/06-safety-critical/automotive-ecu-software/">
       
       
-        <link rel="prev" href="../04-backend-distributed/">
-      
-      
-        <link rel="next" href="../06-safety-critical/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Systems & Infrastructure - Architecture Pattern Catalog</title>
+        <title>Pattern: Automotive ECU Software - Architecture Pattern Catalog</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#systems-infrastructure" class="md-skip">
+        <a href="#pattern-automotive-ecu-software" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +90,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Architecture Pattern Catalog" class="md-header__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
+    <a href="../../.." title="Architecture Pattern Catalog" class="md-header__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Systems & Infrastructure
+              Pattern: Automotive ECU Software
             
           </span>
         </div>
@@ -227,7 +223,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -246,7 +242,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../about/how-to-use/" class="md-tabs__link">
+      <a href="../../../about/how-to-use/" class="md-tabs__link">
         
   
   
@@ -263,13 +259,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../" class="md-tabs__link">
           
   
   
@@ -289,7 +283,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../decisions/" class="md-tabs__link">
+      <a href="../../../decisions/" class="md-tabs__link">
         
   
   
@@ -310,7 +304,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../about/methodology/" class="md-tabs__link">
+        <a href="../../../about/methodology/" class="md-tabs__link">
           
   
   
@@ -346,7 +340,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Architecture Pattern Catalog" class="md-nav__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
+    <a href="../../.." title="Architecture Pattern Catalog" class="md-nav__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -376,7 +370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -403,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/how-to-use/" class="md-nav__link">
+      <a href="../../../about/how-to-use/" class="md-nav__link">
         
   
   
@@ -427,8 +421,6 @@
       
   
   
-    
-  
   
   
     
@@ -458,23 +450,22 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
@@ -492,13 +483,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -518,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-web-mobile/" class="md-nav__link">
+      <a href="../../01-web-mobile/" class="md-nav__link">
         
   
   
@@ -546,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-scripts-automation/" class="md-nav__link">
+      <a href="../../02-scripts-automation/" class="md-nav__link">
         
   
   
@@ -574,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-data-analytics/" class="md-nav__link">
+      <a href="../../03-data-analytics/" class="md-nav__link">
         
   
   
@@ -602,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04-backend-distributed/" class="md-nav__link">
+      <a href="../../04-backend-distributed/" class="md-nav__link">
         
   
   
@@ -627,37 +618,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Systems & Infrastructure
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../05-systems-infra/" class="md-nav__link">
         
   
   
@@ -673,70 +637,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        When to look here
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Patterns in this category
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Default tech stack
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#llm-development-fit" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        LLM-development fit
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -749,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../06-safety-critical/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -777,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../07-ai-llm-integrated/" class="md-nav__link">
+      <a href="../../07-ai-llm-integrated/" class="md-nav__link">
         
   
   
@@ -805,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../08-games-graphics/" class="md-nav__link">
+      <a href="../../08-games-graphics/" class="md-nav__link">
         
   
   
@@ -840,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../decisions/" class="md-nav__link">
+      <a href="../../../decisions/" class="md-nav__link">
         
   
   
@@ -927,7 +827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/methodology/" class="md-nav__link">
+      <a href="../../../about/methodology/" class="md-nav__link">
         
   
   
@@ -955,7 +855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/contributing/" class="md-nav__link">
+      <a href="../../../about/contributing/" class="md-nav__link">
         
   
   
@@ -1010,10 +910,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
+  <a href="#1-context" class="md-nav__link">
     <span class="md-ellipsis">
       
-        When to look here
+        1. Context
       
     </span>
   </a>
@@ -1021,10 +921,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
+  <a href="#2-problem-it-solves" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Patterns in this category
+        2. Problem it solves
       
     </span>
   </a>
@@ -1032,10 +932,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
+  <a href="#3-solution-overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Default tech stack
+        3. Solution overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Solution overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-context-c4-level-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System context (C4 Level 1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container-view-c4-level-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Container view (C4 Level 2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-technology-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Technology stack
       
     </span>
   </a>
@@ -1043,10 +982,65 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#llm-development-fit" class="md-nav__link">
+  <a href="#5-non-functional-characteristics" class="md-nav__link">
     <span class="md-ellipsis">
       
-        LLM-development fit
+        5. Non-functional characteristics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-cost-ballpark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Cost ballpark
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-llm-assisted-development-fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. LLM-assisted development fit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-reference-implementations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Reference implementations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-related-decisions-adrs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Related decisions (ADRs)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-known-risks-gotchas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Known risks &amp; gotchas
       
     </span>
   </a>
@@ -1073,54 +1067,260 @@
   
 
 
-<h1 id="systems-infrastructure">Systems &amp; Infrastructure<a class="headerlink" href="#systems-infrastructure" title="Permanent link">&para;</a></h1>
-<p>Low-level software where performance, memory, and hardware proximity matter. Includes operating system components, drivers, databases, compilers, network stacks, and embedded firmware.</p>
-<h2 id="when-to-look-here">When to look here<a class="headerlink" href="#when-to-look-here" title="Permanent link">&para;</a></h2>
+<h1 id="pattern-automotive-ecu-software">Pattern: Automotive ECU Software<a class="headerlink" href="#pattern-automotive-ecu-software" title="Permanent link">&para;</a></h1>
+<div class="admonition danger">
+<p class="admonition-title">Domain expertise and functional safety certification required</p>
+<p>This pattern provides a high-level architectural overview <strong>only</strong>. Automotive ECU software is governed by ISO 26262 (functional safety) and AUTOSAR (software architecture standards). Development requires certified tools, qualified processes, ASIL (Automotive Safety Integrity Level) determination, and extensive verification evidence. <strong>Do not begin an automotive ECU project based solely on this material.</strong> Engage a functional safety engineer and an ISO 26262 assessor before starting development.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Quick facts</p>
 <ul>
-<li>The constraint is hardware (memory, latency, power, real-time deadlines)</li>
-<li>You are building infrastructure that other software runs on</li>
-<li>Garbage collection or interpreter overhead is unacceptable</li>
+<li><strong>Category:</strong> Safety-Critical Systems</li>
+<li><strong>Maturity:</strong> Adopt</li>
+<li><strong>Typical team size:</strong> 5-20 engineers + functional safety manager and assessors</li>
+<li><strong>Typical timeline to MVP (first validated build):</strong> 24-48 months</li>
+<li><strong>Last reviewed:</strong> 2026-05-03 by Architecture Team</li>
 </ul>
-<h2 id="patterns-in-this-category">Patterns in this category<a class="headerlink" href="#patterns-in-this-category" title="Permanent link">&para;</a></h2>
+</div>
+<h2 id="1-context">1. Context<a class="headerlink" href="#1-context" title="Permanent link">&para;</a></h2>
+<p><strong>Use this pattern when:</strong></p>
+<ul>
+<li>Writing software for an Electronic Control Unit (ECU) in a road vehicle that controls a safety-relevant function: braking (ABS, ESC), steering (EPS), powertrain, ADAS, or occupant protection</li>
+<li>The function has an ASIL rating (A through D) under ISO 26262 Part 6</li>
+<li>The software must be certified before vehicle homologation and type approval</li>
+</ul>
+<p><strong>Do NOT use this pattern when:</strong></p>
+<ul>
+<li>The ECU controls only non-safety-relevant functions (infotainment, climate control) — lower-assurance AUTOSAR Classic or Adaptive patterns apply</li>
+<li>The system is a prototype or research vehicle outside of type approval — still apply good engineering practice but the full ISO 26262 process is not legally required</li>
+</ul>
+<h2 id="2-problem-it-solves">2. Problem it solves<a class="headerlink" href="#2-problem-it-solves" title="Permanent link">&para;</a></h2>
+<p>A software bug in a braking ECU can prevent a car from stopping. A fault in an EPS controller can cause unexpected steering. ISO 26262 provides a systematic process to identify, classify, and mitigate software-related hazards in vehicles — ensuring that the software contributes acceptably low risk to vehicle occupants and other road users, to a rigorous, internationally accepted standard.</p>
+<h2 id="3-solution-overview">3. Solution overview<a class="headerlink" href="#3-solution-overview" title="Permanent link">&para;</a></h2>
+<h3 id="system-context-c4-level-1">System context (C4 Level 1)<a class="headerlink" href="#system-context-c4-level-1" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart LR
+    Driver((Driver)) --&gt; Vehicle[Vehicle]
+    Vehicle --&gt; ECU[ECU Software\nASIL-rated]
+    ECU --&gt; Actuators[Actuators\nbrakes, steering, throttle]
+    ECU --&gt; Sensors[Sensors\nwheel speed, IMU, camera]
+    ECU --&gt; CAN[Vehicle Bus\nCAN / CAN-FD / FlexRay / Ethernet]
+    CAN --&gt; OtherECUs[Other ECUs]
+    OEM((OEM)) --&gt; SafetyCase[Safety Case\nHARA + safety goals]
+    SafetyCase --&gt; ECU</code></pre>
+<h3 id="container-view-c4-level-2">Container view (C4 Level 2)<a class="headerlink" href="#container-view-c4-level-2" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TB
+    subgraph ECU Software Stack - AUTOSAR Classic
+        BSW[Basic Software\nMCU abstraction, OS, COM]
+        RTE[Runtime Environment\nsignal routing between SWCs]
+        AppSWC[Application Software Components\nsafety function logic]
+        CDD[Complex Device Drivers\nhardware-specific]
+    end
+    subgraph Safety Mechanisms
+        ASILD[ASIL-D partitioned partition\nsafety monitor]
+        DiagMgr[Diagnostic Manager\nDEM + UDS]
+        WDG[Watchdog Manager\nhardware + logical watchdog]
+        E2E[E2E Protection\nCRC + counter on safety signals]
+    end
+    subgraph Process Artefacts - ISO 26262
+        HARA[HARA\nHazard Analysis and Risk Assessment]
+        FSR[Functional Safety Requirements]
+        TSR[Technical Safety Requirements]
+        SWR[Software Requirements]
+        SwVerif[Software Verification\nunit, integration, HiL]
+    end
+
+    BSW --&gt; RTE --&gt; AppSWC
+    BSW --&gt; CDD
+    AppSWC --&gt; ASILD
+    AppSWC --&gt; DiagMgr
+    BSW --&gt; WDG
+    RTE --&gt; E2E
+    HARA --&gt; FSR --&gt; TSR --&gt; SWR --&gt; AppSWC
+    SWR --&gt; SwVerif</code></pre>
+<h2 id="4-technology-stack">4. Technology stack<a class="headerlink" href="#4-technology-stack" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Pattern</th>
-<th>Status</th>
-<th>Best for</th>
+<th>Layer</th>
+<th>Primary choice</th>
+<th>Alternatives</th>
+<th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="high-performance-network-service/">High-performance Network Service</a></td>
-<td>Trial</td>
-<td>Proxies, load balancers, custom protocols</td>
+<td>Language</td>
+<td>C with MISRA C:2012</td>
+<td>C++ with MISRA C++:2008, Ada/SPARK</td>
+<td>MISRA C is mandatory for ISO 26262 software (rule compliance required for ASIL C/D); C++ allowed for lower ASIL levels with restrictions; Ada/SPARK for highest-assurance components</td>
 </tr>
 <tr>
-<td><a href="embedded-firmware/">Embedded Firmware</a></td>
-<td>Adopt</td>
-<td>IoT devices, hardware controllers</td>
+<td>Software architecture</td>
+<td>AUTOSAR Classic Platform</td>
+<td>AUTOSAR Adaptive (Linux-based, for connected functions), proprietary</td>
+<td>AUTOSAR Classic for real-time ECUs; AUTOSAR Adaptive for high-compute ADAS/AD ECUs running Linux</td>
 </tr>
 <tr>
-<td><a href="database-engine/">Database Engine / Storage Layer</a></td>
-<td>Assess</td>
-<td>Specialised data stores; rare to build from scratch</td>
+<td>RTOS</td>
+<td>AUTOSAR OS (OSEK/VDX-based)</td>
+<td>EB tresos, ETAS ISOLAR, Vector MICROSAR</td>
+<td>AUTOSAR OS provides task scheduling, ISR management, and OS Application partitioning required for ASIL</td>
 </tr>
 <tr>
-<td><a href="custom-os-component/">Custom OS Component / Kernel Module</a></td>
-<td>Hold</td>
-<td>Almost never the right answer; consider eBPF first</td>
+<td>Static analysis</td>
+<td>Polyspace Code Prover</td>
+<td>Astrée, LDRA</td>
+<td>Tool qualification (ISO 26262 Part 8 §11) required for analysis tools used as verification evidence</td>
+</tr>
+<tr>
+<td>Compiler</td>
+<td>Tasking, GreenHills, IAR</td>
+<td>GCC (with qualification kit)</td>
+<td>Qualified compilers for ASIL D; standard compilers require a qualification kit and additional testing to use as verification tool</td>
+</tr>
+<tr>
+<td>Model-based design (optional)</td>
+<td>Simulink / Embedded Coder</td>
+<td>MATLAB/Simulink with IEC Certification Kit</td>
+<td>Widely used for control algorithm development with automatic MISRA-compliant C code generation</td>
+</tr>
+<tr>
+<td>HIL testing</td>
+<td>dSPACE, NI VeriStand</td>
+<td>ETAS LABCAR, Vector CANoe</td>
+<td>Hardware-in-the-Loop (HIL) testing is required for system-level validation of real-time ECU behaviour</td>
+</tr>
+<tr>
+<td>Calibration / diagnostics</td>
+<td>Vector CANalyzer + AUTOSAR UDS (ISO 14229)</td>
+<td>ETAS INCA, PEAK tools</td>
+<td>UDS (Unified Diagnostic Services) is the standard for ECU flashing, calibration, and fault code reading</td>
 </tr>
 </tbody>
 </table>
-<h2 id="default-tech-stack">Default tech stack<a class="headerlink" href="#default-tech-stack" title="Permanent link">&para;</a></h2>
+<h2 id="5-non-functional-characteristics">5. Non-functional characteristics<a class="headerlink" href="#5-non-functional-characteristics" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Concern</th>
+<th>Profile</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Scalability</strong></td>
+<td>Not applicable in the traditional sense. Resource constraints are strict: MCU flash, RAM, and CPU budget are fixed at hardware selection. Every software change must be assessed for timing impact on safety-critical task deadlines.</td>
+</tr>
+<tr>
+<td><strong>Availability target</strong></td>
+<td>Defined by the ASIL level and safety goal. An ASIL-D safety function (e.g., ABS) may require a residual risk of &lt; 10⁻⁹ hazardous events per hour of operation (IEC 61508 SIL 3 equivalent). This demands hardware redundancy, diagnostic coverage &gt; 99%, and systematic failure avoidance through the full process.</td>
+</tr>
+<tr>
+<td><strong>Latency target</strong></td>
+<td>Cycle time (task period) is a hard real-time requirement: ABS control cycles at 1ms, ADAS sensor fusion at 10ms. Worst-case execution time (WCET) analysis is required for all safety tasks; timing violations are a safety defect.</td>
+</tr>
+<tr>
+<td><strong>Security posture</strong></td>
+<td>UNECE R155/R156 (UN Regulation on Cybersecurity, effective July 2024 in EU) requires a Vehicle Cybersecurity Management System and software update management before type approval. Secure boot, firmware signing, key management, and intrusion detection are now regulatory requirements, not optional features.</td>
+</tr>
+<tr>
+<td><strong>Data residency</strong></td>
+<td>ECU operates offline; data residency in the cloud sense does not apply. Diagnostic data (DTCs, freeze frames) stored in NVM follows vehicle privacy regulations. GDPR applies to any connected data that flows from the vehicle to backend systems.</td>
+</tr>
+<tr>
+<td><strong>Compliance fit</strong></td>
+<td>ISO 26262:2018 (functional safety), AUTOSAR (architecture), MISRA C:2012 (coding standard), UNECE R155/R156 (cybersecurity), ISO/SAE 21434 (cybersecurity engineering). Type approval (WVTA in EU, FMVSS in US) is the final gate.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-cost-ballpark">6. Cost ballpark<a class="headerlink" href="#6-cost-ballpark" title="Permanent link">&para;</a></h2>
+<p>Software development is a fraction of overall vehicle programme cost. Ballpark for the software component only.</p>
+<table>
+<thead>
+<tr>
+<th>Scale</th>
+<th>ASIL level</th>
+<th>Software development cost (total)</th>
+<th>Drivers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Small</td>
+<td>ASIL A/B</td>
+<td>$500k - $3M</td>
+<td>Simpler requirements, lighter verification</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>ASIL C</td>
+<td>$2M - $10M</td>
+<td>Extensive testing, tool qualification, assessor fees</td>
+</tr>
+<tr>
+<td>Large</td>
+<td>ASIL D</td>
+<td>$5M - $30M+</td>
+<td>Full process, redundancy architecture, independent safety assessment</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-llm-assisted-development-fit">7. LLM-assisted development fit<a class="headerlink" href="#7-llm-assisted-development-fit" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Rating</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MISRA C compliant boilerplate</td>
+<td>★★★</td>
+<td>Generates structurally correct code; MISRA compliance must be verified by a qualified static analyser, not by the LLM.</td>
+</tr>
+<tr>
+<td>AUTOSAR SWC and RTE interface scaffolding</td>
+<td>★★★</td>
+<td>Knows the AUTOSAR concepts; generated code must be validated against the AUTOSAR schema and tool chain.</td>
+</tr>
+<tr>
+<td>Control algorithm design (PID, state observers)</td>
+<td>★★★</td>
+<td>Reasonable starting point; algorithm correctness and stability analysis require a control engineer.</td>
+</tr>
+<tr>
+<td>Safety analysis (HARA, FMEA, FTA)</td>
+<td>★</td>
+<td><strong>Never outsource safety analysis to an LLM.</strong> Safety analysis requires engineering judgement and accountability.</td>
+</tr>
+<tr>
+<td>Regulatory strategy</td>
+<td>★</td>
+<td><strong>Never outsource regulatory decisions.</strong> Engage an ISO 26262 assessor.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-reference-implementations">8. Reference implementations<a class="headerlink" href="#8-reference-implementations" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Languages:</strong> Rust (modern default), C, C++, Zig (assess), Go (for network services that don't need C-level perf)</li>
-<li><strong>Build:</strong> CMake, Cargo, Bazel</li>
-<li><strong>Testing:</strong> Property-based testing (proptest, QuickCheck), fuzzing (AFL, libFuzzer), formal methods for critical sections</li>
+<li><strong>Public reference:</strong> <em>There are no public reference implementations for production automotive ECU software; all are proprietary OEM or Tier 1 supplier IP.</em></li>
+<li><strong>Industry resource:</strong> ISO 26262:2018 — the functional safety standard; required reading before project start</li>
+<li><strong>Industry resource:</strong> AUTOSAR Classic Platform specifications — available at autosar.org</li>
+<li><strong>Internal case study:</strong> <em>Add your anonymised internal example here if applicable</em></li>
 </ul>
-<h2 id="llm-development-fit">LLM-development fit<a class="headerlink" href="#llm-development-fit" title="Permanent link">&para;</a></h2>
-<p>Lower than other categories. Less training data, mistakes are expensive, concurrency bugs are hard to catch by inspection. Useful for boilerplate (parsers, serialisation), but architectural decisions still need an experienced human.</p>
+<h2 id="9-related-decisions-adrs">9. Related decisions (ADRs)<a class="headerlink" href="#9-related-decisions-adrs" title="Permanent link">&para;</a></h2>
+<ul>
+<li><em>Architectural decisions for ASIL-rated ECUs must be documented in the Safety Case and Technical Safety Report, not in this general catalog.</em></li>
+</ul>
+<h2 id="10-known-risks-gotchas">10. Known risks &amp; gotchas<a class="headerlink" href="#10-known-risks-gotchas" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>ASIL decomposition done incorrectly</strong> — splitting an ASIL-D function into two ASIL-B channels assumes independence that does not exist (common-cause failure); the decomposition is invalid and the safety goal is not met. Mitigation: ASIL decomposition requires a qualified functional safety engineer; it is not a software architecture decision that can be made without formal analysis.</li>
+<li><strong>Shared-cause failures between redundant channels</strong> — two redundant channels share a common power supply, ground, or software component; a single fault disables both. Mitigation: independence analysis (ISO 26262 Part 9) must be performed for all redundant elements; hardware independence reviews require hardware and software collaboration.</li>
+<li><strong>Calibration parameter outside validated range deployed to production</strong> — an OTA calibration update sets a parameter value outside its validated range; the safety function behaves unexpectedly. Mitigation: validate all calibration parameter ranges in the software (upper/lower bound checks); treat out-of-range calibration as a safety-relevant fault.</li>
+<li><strong>Memory protection unit (MPU) not configured</strong> — an application stack overflow corrupts safety-critical data; no MPU trap fires. Mitigation: configure the MCU's MPU/MMU to isolate ASIL partitions; test stack overflow explicitly in the HiL test bench.</li>
+<li><strong>Cybersecurity vulnerability in UDS diagnostic interface</strong> — a researcher discovers an exploit in the UDS stack that allows arbitrary firmware flashing without authentication; recall required. Mitigation: authentication is mandatory for all reprogramming services (SID 0x34/0x36) per UNECE R156; penetration test the diagnostic interface before start of production.</li>
+</ul>
 
 
 
@@ -1182,10 +1382,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

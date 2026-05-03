@@ -12,31 +12,27 @@
         <meta name="author" content="deva@soa.team">
       
       
-        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/05-systems-infra/">
+        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/01-web-mobile/internal-admin-tool/">
       
       
-        <link rel="prev" href="../04-backend-distributed/">
-      
-      
-        <link rel="next" href="../06-safety-critical/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Systems & Infrastructure - Architecture Pattern Catalog</title>
+        <title>Pattern: Internal Admin / Back-office Tool - Architecture Pattern Catalog</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#systems-infrastructure" class="md-skip">
+        <a href="#pattern-internal-admin-back-office-tool" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +90,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Architecture Pattern Catalog" class="md-header__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
+    <a href="../../.." title="Architecture Pattern Catalog" class="md-header__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Systems & Infrastructure
+              Pattern: Internal Admin / Back-office Tool
             
           </span>
         </div>
@@ -227,7 +223,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -246,7 +242,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../about/how-to-use/" class="md-tabs__link">
+      <a href="../../../about/how-to-use/" class="md-tabs__link">
         
   
   
@@ -263,13 +259,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../" class="md-tabs__link">
           
   
   
@@ -289,7 +283,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../decisions/" class="md-tabs__link">
+      <a href="../../../decisions/" class="md-tabs__link">
         
   
   
@@ -310,7 +304,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../about/methodology/" class="md-tabs__link">
+        <a href="../../../about/methodology/" class="md-tabs__link">
           
   
   
@@ -346,7 +340,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Architecture Pattern Catalog" class="md-nav__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
+    <a href="../../.." title="Architecture Pattern Catalog" class="md-nav__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -376,7 +370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -403,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/how-to-use/" class="md-nav__link">
+      <a href="../../../about/how-to-use/" class="md-nav__link">
         
   
   
@@ -427,8 +421,6 @@
       
   
   
-    
-  
   
   
     
@@ -458,23 +450,22 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
@@ -492,13 +483,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -518,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-web-mobile/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -546,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-scripts-automation/" class="md-nav__link">
+      <a href="../../02-scripts-automation/" class="md-nav__link">
         
   
   
@@ -574,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-data-analytics/" class="md-nav__link">
+      <a href="../../03-data-analytics/" class="md-nav__link">
         
   
   
@@ -602,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04-backend-distributed/" class="md-nav__link">
+      <a href="../../04-backend-distributed/" class="md-nav__link">
         
   
   
@@ -627,37 +618,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Systems & Infrastructure
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../05-systems-infra/" class="md-nav__link">
         
   
   
@@ -673,70 +637,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        When to look here
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Patterns in this category
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Default tech stack
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#llm-development-fit" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        LLM-development fit
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -749,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../06-safety-critical/" class="md-nav__link">
+      <a href="../../06-safety-critical/" class="md-nav__link">
         
   
   
@@ -777,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../07-ai-llm-integrated/" class="md-nav__link">
+      <a href="../../07-ai-llm-integrated/" class="md-nav__link">
         
   
   
@@ -805,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../08-games-graphics/" class="md-nav__link">
+      <a href="../../08-games-graphics/" class="md-nav__link">
         
   
   
@@ -840,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../decisions/" class="md-nav__link">
+      <a href="../../../decisions/" class="md-nav__link">
         
   
   
@@ -927,7 +827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/methodology/" class="md-nav__link">
+      <a href="../../../about/methodology/" class="md-nav__link">
         
   
   
@@ -955,7 +855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/contributing/" class="md-nav__link">
+      <a href="../../../about/contributing/" class="md-nav__link">
         
   
   
@@ -1010,10 +910,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
+  <a href="#1-context" class="md-nav__link">
     <span class="md-ellipsis">
       
-        When to look here
+        1. Context
       
     </span>
   </a>
@@ -1021,10 +921,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
+  <a href="#2-problem-it-solves" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Patterns in this category
+        2. Problem it solves
       
     </span>
   </a>
@@ -1032,10 +932,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
+  <a href="#3-solution-overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Default tech stack
+        3. Solution overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Solution overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-context-c4-level-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System context (C4 Level 1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container-view-c4-level-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Container view (C4 Level 2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-technology-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Technology stack
       
     </span>
   </a>
@@ -1043,10 +982,65 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#llm-development-fit" class="md-nav__link">
+  <a href="#5-non-functional-characteristics" class="md-nav__link">
     <span class="md-ellipsis">
       
-        LLM-development fit
+        5. Non-functional characteristics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-cost-ballpark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Cost ballpark
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-llm-assisted-development-fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. LLM-assisted development fit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-reference-implementations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Reference implementations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-related-decisions-adrs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Related decisions (ADRs)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-known-risks-gotchas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Known risks &amp; gotchas
       
     </span>
   </a>
@@ -1073,54 +1067,245 @@
   
 
 
-<h1 id="systems-infrastructure">Systems &amp; Infrastructure<a class="headerlink" href="#systems-infrastructure" title="Permanent link">&para;</a></h1>
-<p>Low-level software where performance, memory, and hardware proximity matter. Includes operating system components, drivers, databases, compilers, network stacks, and embedded firmware.</p>
-<h2 id="when-to-look-here">When to look here<a class="headerlink" href="#when-to-look-here" title="Permanent link">&para;</a></h2>
+<h1 id="pattern-internal-admin-back-office-tool">Pattern: Internal Admin / Back-office Tool<a class="headerlink" href="#pattern-internal-admin-back-office-tool" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Quick facts</p>
 <ul>
-<li>The constraint is hardware (memory, latency, power, real-time deadlines)</li>
-<li>You are building infrastructure that other software runs on</li>
-<li>Garbage collection or interpreter overhead is unacceptable</li>
+<li><strong>Category:</strong> Web &amp; Mobile Applications</li>
+<li><strong>Maturity:</strong> Adopt</li>
+<li><strong>Typical team size:</strong> 1-3 engineers</li>
+<li><strong>Typical timeline to MVP:</strong> 2-6 weeks</li>
+<li><strong>Last reviewed:</strong> 2026-05-03 by Architecture Team</li>
 </ul>
-<h2 id="patterns-in-this-category">Patterns in this category<a class="headerlink" href="#patterns-in-this-category" title="Permanent link">&para;</a></h2>
+</div>
+<h2 id="1-context">1. Context<a class="headerlink" href="#1-context" title="Permanent link">&para;</a></h2>
+<p><strong>Use this pattern when:</strong></p>
+<ul>
+<li>Internal operations teams (support, finance, ops) need to view and edit application data without direct database access</li>
+<li>The product has grown to the point where non-engineers need tools to manage configuration, resolve support tickets, trigger workflows, or review fraud</li>
+<li>Building a basic CRUD admin interface on top of your existing backend API</li>
+</ul>
+<p><strong>Do NOT use this pattern when:</strong></p>
+<ul>
+<li>The audience is external customers — build a proper product UI with full UX investment instead</li>
+<li>The data access requirements are so simple that a read-only Metabase dashboard suffices</li>
+<li>The admin UI needs highly custom workflows that go far beyond CRUD — at that point, invest in a bespoke application</li>
+</ul>
+<h2 id="2-problem-it-solves">2. Problem it solves<a class="headerlink" href="#2-problem-it-solves" title="Permanent link">&para;</a></h2>
+<p>As a product matures, operations teams accumulate workarounds: SQL queries sent to engineers on Slack, CSV exports processed in spreadsheets, manual API calls via Postman. Every workaround introduces risk (SQL on production by a non-engineer), delays (waiting for engineering bandwidth), and error (manual data entry). An internal admin tool packages the safe, audited operations that non-engineers legitimately need into a UI they can use without engineering intervention.</p>
+<h2 id="3-solution-overview">3. Solution overview<a class="headerlink" href="#3-solution-overview" title="Permanent link">&para;</a></h2>
+<h3 id="system-context-c4-level-1">System context (C4 Level 1)<a class="headerlink" href="#system-context-c4-level-1" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart LR
+    SupportAgent((Support Agent)) --&gt; AdminUI[Admin Tool\nRefine / React Admin]
+    FinanceTeam((Finance Team)) --&gt; AdminUI
+    AdminUI --&gt; API[Backend API\nREST / GraphQL]
+    API --&gt; DB[(PostgreSQL)]
+    API --&gt; AuditLog[(Audit Log)]
+    AdminUI --&gt; Auth[SSO\nOkta / Google Workspace]</code></pre>
+<h3 id="container-view-c4-level-2">Container view (C4 Level 2)<a class="headerlink" href="#container-view-c4-level-2" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TB
+    subgraph Admin Frontend
+        AdminApp[Admin SPA\nRefine + Ant Design]
+        DataGrid[Data Grids\nfilter, sort, paginate]
+        Forms[CRUD Forms\nautogenerated from schema]
+        AuditView[Audit Trail\nread-only]
+    end
+    subgraph Backend
+        AdminAPI[Admin API\nFastAPI / NestJS]
+        AuthMiddleware[Auth Middleware\nSSO + RBAC]
+        AuditMiddleware[Audit Middleware\nlog every mutation]
+    end
+    subgraph Data
+        DB[(PostgreSQL\napplication data)]
+        AuditDB[(Audit Log\nwho changed what when)]
+    end
+
+    AdminApp --&gt; DataGrid
+    AdminApp --&gt; Forms
+    AdminApp --&gt; AuditView
+    AdminApp --&gt; AdminAPI
+    AdminAPI --&gt; AuthMiddleware
+    AdminAPI --&gt; AuditMiddleware
+    AuditMiddleware --&gt; AuditDB
+    AdminAPI --&gt; DB</code></pre>
+<h2 id="4-technology-stack">4. Technology stack<a class="headerlink" href="#4-technology-stack" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Pattern</th>
-<th>Status</th>
-<th>Best for</th>
+<th>Layer</th>
+<th>Primary choice</th>
+<th>Alternatives</th>
+<th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="high-performance-network-service/">High-performance Network Service</a></td>
-<td>Trial</td>
-<td>Proxies, load balancers, custom protocols</td>
+<td>Frontend framework</td>
+<td>Refine (React)</td>
+<td>React Admin, AdminJS, Retool</td>
+<td>Refine generates data grids, filters, and forms from an API schema with minimal boilerplate; React Admin is equally capable with a longer track record</td>
 </tr>
 <tr>
-<td><a href="embedded-firmware/">Embedded Firmware</a></td>
-<td>Adopt</td>
-<td>IoT devices, hardware controllers</td>
+<td>UI component library</td>
+<td>Ant Design (bundled with Refine)</td>
+<td>Material UI, Mantine</td>
+<td>Ant Design ships the dense, data-heavy components (tables, date pickers, tree selects) that admin UIs need</td>
 </tr>
 <tr>
-<td><a href="database-engine/">Database Engine / Storage Layer</a></td>
-<td>Assess</td>
-<td>Specialised data stores; rare to build from scratch</td>
+<td>Backend</td>
+<td>Existing application API (add admin endpoints)</td>
+<td>Dedicated admin service</td>
+<td>Reuse the existing NestJS/FastAPI service; add admin-only routes behind a role check rather than deploying a separate service</td>
 </tr>
 <tr>
-<td><a href="custom-os-component/">Custom OS Component / Kernel Module</a></td>
-<td>Hold</td>
-<td>Almost never the right answer; consider eBPF first</td>
+<td>Authentication</td>
+<td>SSO via Okta / Google Workspace (SAML or OIDC)</td>
+<td>Auth0, Keycloak</td>
+<td>Never build username/password auth for internal tools; SSO with your identity provider gives you automatic de-provisioning when employees leave</td>
+</tr>
+<tr>
+<td>Authorisation</td>
+<td>Role-based (RBAC) — roles defined per team</td>
+<td>Attribute-based (ABAC)</td>
+<td>Start with 3-4 roles (viewer, editor, support, admin); add field-level restrictions only when needed</td>
+</tr>
+<tr>
+<td>Audit log</td>
+<td>Immutable append-only Postgres table (<code>who</code>, <code>what</code>, <code>when</code>, <code>before</code>, <code>after</code>)</td>
+<td>Dedicated audit service</td>
+<td>Capture every mutation at the middleware layer; never let a mutation go unlogged in an admin tool</td>
+</tr>
+<tr>
+<td>Hosting</td>
+<td>Internal VPN-only or IP-allowlisted deployment</td>
+<td>Cloudflare Access</td>
+<td>Admin tools must not be public; put them behind a VPN or Cloudflare Access zero-trust policy</td>
 </tr>
 </tbody>
 </table>
-<h2 id="default-tech-stack">Default tech stack<a class="headerlink" href="#default-tech-stack" title="Permanent link">&para;</a></h2>
+<h2 id="5-non-functional-characteristics">5. Non-functional characteristics<a class="headerlink" href="#5-non-functional-characteristics" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Concern</th>
+<th>Profile</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Scalability</strong></td>
+<td>Internal tools serve tens to hundreds of users, not millions. Scaling is not a concern — a single application instance with a read replica for expensive queries is sufficient for most admin tools.</td>
+</tr>
+<tr>
+<td><strong>Availability target</strong></td>
+<td>99.5% — internal tool downtime is inconvenient, not a customer-facing incident. A brief outage means ops teams use a workaround for an hour; acceptable.</td>
+</tr>
+<tr>
+<td><strong>Latency target</strong></td>
+<td>p95 &lt; 2 s for data grid loads with reasonable result sets. Admin users tolerate more latency than product users. Add pagination and filters before optimising queries.</td>
+</tr>
+<tr>
+<td><strong>Security posture</strong></td>
+<td>This is the highest-risk surface in most applications — admin tools have elevated privileges over production data. Mitigations: SSO with MFA enforced, IP allowlist or VPN-only, RBAC on every endpoint, immutable audit log, no bulk delete endpoints without two-factor confirmation, no plain SQL input fields.</td>
+</tr>
+<tr>
+<td><strong>Data residency</strong></td>
+<td>Admin tools access production data — same residency requirements as the main application. Do not create a separate data store for admin; read from the main database via a read replica.</td>
+</tr>
+<tr>
+<td><strong>Compliance fit</strong></td>
+<td>SOC 2 ✓ — the audit log is a key evidence artefact. GDPR: admin access to personal data must be logged and access controlled; support agents should see pseudonymised data unless a specific support reason justifies full PII access. HIPAA: PHI access in an admin tool requires the same controls as the main application.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-cost-ballpark">6. Cost ballpark<a class="headerlink" href="#6-cost-ballpark" title="Permanent link">&para;</a></h2>
+<p>Internal tools are low-traffic; infrastructure costs are negligible.</p>
+<table>
+<thead>
+<tr>
+<th>Scale</th>
+<th>Internal users</th>
+<th>Monthly cost</th>
+<th>Cost drivers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Small</td>
+<td>&lt; 20</td>
+<td>$20 - $100</td>
+<td>Shared application server, read replica, SSO included in existing IdP</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>20 - 200</td>
+<td>$100 - $500</td>
+<td>Dedicated small ECS task, read replica, Retool licence if commercial tool chosen</td>
+</tr>
+<tr>
+<td>Large</td>
+<td>200+</td>
+<td>$300 - $2,000</td>
+<td>Larger read replica, Retool Enterprise or custom build, dedicated ops tooling</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-llm-assisted-development-fit">7. LLM-assisted development fit<a class="headerlink" href="#7-llm-assisted-development-fit" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Rating</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Refine / React Admin data grid and form scaffolding</td>
+<td>★★★★★</td>
+<td>Excellent — these frameworks are well-represented; generate page layouts from a resource definition.</td>
+</tr>
+<tr>
+<td>RBAC middleware implementation</td>
+<td>★★★★</td>
+<td>Good; verify that role checks are applied at the API layer, not just the UI.</td>
+</tr>
+<tr>
+<td>Audit log middleware</td>
+<td>★★★★</td>
+<td>Generates correct before/after capture; verify that all mutation paths (bulk updates, cascade deletes) are covered.</td>
+</tr>
+<tr>
+<td>SSO/OIDC integration</td>
+<td>★★★★</td>
+<td>Standard OAuth2 PKCE flows generate cleanly; test token refresh and session expiry paths manually.</td>
+</tr>
+<tr>
+<td>Architecture decisions</td>
+<td>★</td>
+<td>Don't outsource. Use ADRs.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recommended workflow:</strong> Start with read-only views for the top 5 support queries. Add write operations only after observing how support agents use read-only data. Every write endpoint added to an admin tool must have a corresponding audit log entry and a product/operations sign-off.</p>
+<h2 id="8-reference-implementations">8. Reference implementations<a class="headerlink" href="#8-reference-implementations" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Languages:</strong> Rust (modern default), C, C++, Zig (assess), Go (for network services that don't need C-level perf)</li>
-<li><strong>Build:</strong> CMake, Cargo, Bazel</li>
-<li><strong>Testing:</strong> Property-based testing (proptest, QuickCheck), fuzzing (AFL, libFuzzer), formal methods for critical sections</li>
+<li><strong>Public reference:</strong> <a href="https://github.com/refinedev/refine">refinedev/refine</a> — open-source React framework for admin panels and internal tools; integrates with REST, GraphQL, and Supabase; extensive examples in <code>examples/</code> (200 OK ✓)</li>
+<li><strong>Public reference:</strong> <a href="https://github.com/marmelab/react-admin">marmelab/react-admin</a> — mature open-source admin framework with extensive data provider adapters and a large component library (200 OK ✓)</li>
+<li><strong>Internal case study:</strong> <em>Add your anonymised internal example here</em></li>
 </ul>
-<h2 id="llm-development-fit">LLM-development fit<a class="headerlink" href="#llm-development-fit" title="Permanent link">&para;</a></h2>
-<p>Lower than other categories. Less training data, mistakes are expensive, concurrency bugs are hard to catch by inspection. Useful for boilerplate (parsers, serialisation), but architectural decisions still need an experienced human.</p>
+<h2 id="9-related-decisions-adrs">9. Related decisions (ADRs)<a class="headerlink" href="#9-related-decisions-adrs" title="Permanent link">&para;</a></h2>
+<ul>
+<li><em>No ADRs recorded yet. Candidate: Refine vs React Admin vs Retool for the admin framework.</em></li>
+</ul>
+<h2 id="10-known-risks-gotchas">10. Known risks &amp; gotchas<a class="headerlink" href="#10-known-risks-gotchas" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Admin tool becomes a public endpoint</strong> — the admin UI is deployed to a public URL without VPN or IP restriction; a credential stuffing attack compromises a support agent account. Mitigation: never expose an admin tool to the public internet; use Cloudflare Access or a corporate VPN as the outermost layer; enforce MFA on all SSO accounts.</li>
+<li><strong>Bulk operations bypass the audit log</strong> — a "bulk delete" button calls a DB query directly, bypassing the middleware that logs mutations. Mitigation: route every mutation through the audited API layer; never add direct DB access in admin frontend code; add an integration test that verifies every mutation type creates an audit record.</li>
+<li><strong>RBAC enforced only in the UI</strong> — a viewer role user is blocked by the UI from seeing a field, but the API endpoint returns it anyway. Mitigation: enforce RBAC at the API layer on every endpoint; treat the frontend RBAC as UX, not security.</li>
+<li><strong>Admin tool access not revoked when employees leave</strong> — a former employee's SSO account is disabled but a service account token for the admin API remains valid. Mitigation: admin access must use short-lived SSO tokens only; no long-lived API keys for admin endpoints; audit active sessions quarterly.</li>
+<li><strong>Unbounded data grid query scans the full table</strong> — a support agent searches for "all orders" without a filter on a 50M-row table; the query takes 5 minutes and impacts the read replica. Mitigation: require at least one indexed filter (date range, customer ID) before returning results; add a hard <code>LIMIT</code> on all admin list endpoints.</li>
+</ul>
 
 
 
@@ -1182,10 +1367,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

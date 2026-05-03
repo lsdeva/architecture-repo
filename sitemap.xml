@@ -49,11 +49,43 @@
          <lastmod>2026-05-03</lastmod>
     </url>
     <url>
+         <loc>https://your-org.github.io/architecture-repo/decisions/0008-modular-monolith-default/</loc>
+         <lastmod>2026-05-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/decisions/0009-workflow-engine/</loc>
+         <lastmod>2026-05-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/decisions/0010-game-engine/</loc>
+         <lastmod>2026-05-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/decisions/0011-systems-language/</loc>
+         <lastmod>2026-05-03</lastmod>
+    </url>
+    <url>
          <loc>https://your-org.github.io/architecture-repo/patterns/</loc>
          <lastmod>2026-05-03</lastmod>
     </url>
     <url>
          <loc>https://your-org.github.io/architecture-repo/patterns/01-web-mobile/</loc>
+         <lastmod>2026-05-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/patterns/01-web-mobile/cross-platform-mobile-app/</loc>
+         <lastmod>2026-05-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/patterns/01-web-mobile/ecommerce-storefront/</loc>
+         <lastmod>2026-05-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/patterns/01-web-mobile/internal-admin-tool/</loc>
+         <lastmod>2026-05-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/patterns/01-web-mobile/progressive-web-app/</loc>
          <lastmod>2026-05-03</lastmod>
     </url>
     <url>
@@ -117,11 +149,59 @@
          <lastmod>2026-05-03</lastmod>
     </url>
     <url>
+         <loc>https://your-org.github.io/architecture-repo/patterns/04-backend-distributed/api-gateway-bff/</loc>
+         <lastmod>2026-05-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/patterns/04-backend-distributed/event-driven-architecture/</loc>
+         <lastmod>2026-05-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/patterns/04-backend-distributed/microservices/</loc>
+         <lastmod>2026-05-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/patterns/04-backend-distributed/modular-monolith/</loc>
+         <lastmod>2026-05-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/patterns/04-backend-distributed/workflow-orchestration/</loc>
+         <lastmod>2026-05-03</lastmod>
+    </url>
+    <url>
          <loc>https://your-org.github.io/architecture-repo/patterns/05-systems-infra/</loc>
          <lastmod>2026-05-03</lastmod>
     </url>
     <url>
+         <loc>https://your-org.github.io/architecture-repo/patterns/05-systems-infra/custom-os-component/</loc>
+         <lastmod>2026-05-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/patterns/05-systems-infra/database-engine/</loc>
+         <lastmod>2026-05-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/patterns/05-systems-infra/embedded-firmware/</loc>
+         <lastmod>2026-05-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/patterns/05-systems-infra/high-performance-network-service/</loc>
+         <lastmod>2026-05-03</lastmod>
+    </url>
+    <url>
          <loc>https://your-org.github.io/architecture-repo/patterns/06-safety-critical/</loc>
+         <lastmod>2026-05-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/patterns/06-safety-critical/automotive-ecu-software/</loc>
+         <lastmod>2026-05-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/patterns/06-safety-critical/industrial-control-system/</loc>
+         <lastmod>2026-05-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/patterns/06-safety-critical/medical-device-software/</loc>
          <lastmod>2026-05-03</lastmod>
     </url>
     <url>
@@ -154,6 +234,26 @@
     </url>
     <url>
          <loc>https://your-org.github.io/architecture-repo/patterns/08-games-graphics/</loc>
+         <lastmod>2026-05-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/patterns/08-games-graphics/cross-platform-game/</loc>
+         <lastmod>2026-05-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/patterns/08-games-graphics/data-visualisation-3d-viewer/</loc>
+         <lastmod>2026-05-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/patterns/08-games-graphics/multiplayer-game-backend/</loc>
+         <lastmod>2026-05-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/patterns/08-games-graphics/scientific-simulation/</loc>
+         <lastmod>2026-05-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/patterns/08-games-graphics/web-based-game/</loc>
          <lastmod>2026-05-03</lastmod>
     </url>
 </urlset>

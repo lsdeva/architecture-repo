@@ -12,13 +12,9 @@
         <meta name="author" content="deva@soa.team">
       
       
-        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/05-systems-infra/">
+        <link rel="canonical" href="https://your-org.github.io/architecture-repo/decisions/0008-modular-monolith-default/">
       
       
-        <link rel="prev" href="../04-backend-distributed/">
-      
-      
-        <link rel="next" href="../06-safety-critical/">
       
       
         
@@ -29,7 +25,7 @@
     
     
       
-        <title>Systems & Infrastructure - Architecture Pattern Catalog</title>
+        <title>ADR-0008: Modular Monolith as the default starting architecture - Architecture Pattern Catalog</title>
       
     
     
@@ -80,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#systems-infrastructure" class="md-skip">
+        <a href="#adr-0008-modular-monolith-as-the-default-starting-architecture" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Systems & Infrastructure
+              ADR-0008: Modular Monolith as the default starting architecture
             
           </span>
         </div>
@@ -263,13 +259,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../patterns/" class="md-tabs__link">
           
   
   
@@ -289,7 +283,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../decisions/" class="md-tabs__link">
+      <a href="../" class="md-tabs__link">
         
   
   
@@ -427,8 +421,6 @@
       
   
   
-    
-  
   
   
     
@@ -458,23 +450,22 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../patterns/" class="md-nav__link ">
               
   
   
@@ -492,13 +483,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -518,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-web-mobile/" class="md-nav__link">
+      <a href="../../patterns/01-web-mobile/" class="md-nav__link">
         
   
   
@@ -546,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-scripts-automation/" class="md-nav__link">
+      <a href="../../patterns/02-scripts-automation/" class="md-nav__link">
         
   
   
@@ -574,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-data-analytics/" class="md-nav__link">
+      <a href="../../patterns/03-data-analytics/" class="md-nav__link">
         
   
   
@@ -602,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04-backend-distributed/" class="md-nav__link">
+      <a href="../../patterns/04-backend-distributed/" class="md-nav__link">
         
   
   
@@ -627,37 +618,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Systems & Infrastructure
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../patterns/05-systems-infra/" class="md-nav__link">
         
   
   
@@ -673,70 +637,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        When to look here
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Patterns in this category
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Default tech stack
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#llm-development-fit" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        LLM-development fit
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -749,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../06-safety-critical/" class="md-nav__link">
+      <a href="../../patterns/06-safety-critical/" class="md-nav__link">
         
   
   
@@ -777,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../07-ai-llm-integrated/" class="md-nav__link">
+      <a href="../../patterns/07-ai-llm-integrated/" class="md-nav__link">
         
   
   
@@ -805,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../08-games-graphics/" class="md-nav__link">
+      <a href="../../patterns/08-games-graphics/" class="md-nav__link">
         
   
   
@@ -840,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../decisions/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -1010,10 +910,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
+  <a href="#context" class="md-nav__link">
     <span class="md-ellipsis">
       
-        When to look here
+        Context
       
     </span>
   </a>
@@ -1021,10 +921,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
+  <a href="#decision" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Patterns in this category
+        Decision
       
     </span>
   </a>
@@ -1032,21 +932,60 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
+  <a href="#alternatives-considered" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Default tech stack
+        Alternatives considered
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Alternatives considered">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-a-modular-monolith-chosen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option A: Modular Monolith (chosen)
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#llm-development-fit" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#option-b-microservices-from-day-one" class="md-nav__link">
     <span class="md-ellipsis">
       
-        LLM-development fit
+        Option B: Microservices from day one
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-c-macroservices-24-coarse-grained-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option C: "Macroservices" (2–4 coarse-grained services)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consequences
       
     </span>
   </a>
@@ -1073,54 +1012,63 @@
   
 
 
-<h1 id="systems-infrastructure">Systems &amp; Infrastructure<a class="headerlink" href="#systems-infrastructure" title="Permanent link">&para;</a></h1>
-<p>Low-level software where performance, memory, and hardware proximity matter. Includes operating system components, drivers, databases, compilers, network stacks, and embedded firmware.</p>
-<h2 id="when-to-look-here">When to look here<a class="headerlink" href="#when-to-look-here" title="Permanent link">&para;</a></h2>
+<h1 id="adr-0008-modular-monolith-as-the-default-starting-architecture">ADR-0008: Modular Monolith as the default starting architecture<a class="headerlink" href="#adr-0008-modular-monolith-as-the-default-starting-architecture" title="Permanent link">&para;</a></h1>
 <ul>
-<li>The constraint is hardware (memory, latency, power, real-time deadlines)</li>
-<li>You are building infrastructure that other software runs on</li>
-<li>Garbage collection or interpreter overhead is unacceptable</li>
+<li><strong>Status:</strong> Accepted</li>
+<li><strong>Date:</strong> 2026-05-03</li>
+<li><strong>Deciders:</strong> Architecture Team</li>
+<li><strong>Tags:</strong> architecture, backend, microservices, monolith</li>
 </ul>
-<h2 id="patterns-in-this-category">Patterns in this category<a class="headerlink" href="#patterns-in-this-category" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Pattern</th>
-<th>Status</th>
-<th>Best for</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="high-performance-network-service/">High-performance Network Service</a></td>
-<td>Trial</td>
-<td>Proxies, load balancers, custom protocols</td>
-</tr>
-<tr>
-<td><a href="embedded-firmware/">Embedded Firmware</a></td>
-<td>Adopt</td>
-<td>IoT devices, hardware controllers</td>
-</tr>
-<tr>
-<td><a href="database-engine/">Database Engine / Storage Layer</a></td>
-<td>Assess</td>
-<td>Specialised data stores; rare to build from scratch</td>
-</tr>
-<tr>
-<td><a href="custom-os-component/">Custom OS Component / Kernel Module</a></td>
-<td>Hold</td>
-<td>Almost never the right answer; consider eBPF first</td>
-</tr>
-</tbody>
-</table>
-<h2 id="default-tech-stack">Default tech stack<a class="headerlink" href="#default-tech-stack" title="Permanent link">&para;</a></h2>
+<h2 id="context">Context<a class="headerlink" href="#context" title="Permanent link">&para;</a></h2>
+<p>Every new backend system must start somewhere. The two common starting points are a monolith (one deployable, one codebase) and microservices (multiple deployables, multiple codebases). The industry spent most of the 2010s defaulting to microservices on greenfield projects and accumulated a large body of experience showing the consequences: teams of 3–5 engineers operating 15 services, distributed tracing from day one, and months spent on platform engineering before shipping the first user-facing feature.</p>
+<p>This ADR records the default starting point for new backend systems in this organisation and the criteria for deviating from it.</p>
+<p>The decision is non-obvious because microservices are widely associated with "modern" architecture, and choosing a monolith can feel like choosing to incur technical debt. The evidence suggests the opposite is true when service boundaries are premature.</p>
+<h2 id="decision">Decision<a class="headerlink" href="#decision" title="Permanent link">&para;</a></h2>
+<p>We will default to a <strong>Modular Monolith</strong> for all new backend systems.</p>
+<p>We will consider extracting a service from the monolith when <strong>all three</strong> of the following conditions are met:
+1. A specific module has a measured, proven scaling requirement that cannot be met by vertically or horizontally scaling the whole monolith
+2. A named, independent product team will own the extracted service end-to-end
+3. The module boundary has been stable for at least 3 months in the monolith (unstable boundaries make service extraction expensive)</p>
+<p>We will <strong>not</strong> start with microservices because:
+- Domain boundaries on a new system are hypotheses, not facts
+- Platform overhead (K8s, distributed tracing, multiple CI pipelines) on a small team is a productivity tax with no current benefit
+- Microservices can always be extracted later; they cannot be easily collapsed back</p>
+<h2 id="alternatives-considered">Alternatives considered<a class="headerlink" href="#alternatives-considered" title="Permanent link">&para;</a></h2>
+<h3 id="option-a-modular-monolith-chosen">Option A: Modular Monolith (chosen)<a class="headerlink" href="#option-a-modular-monolith-chosen" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Languages:</strong> Rust (modern default), C, C++, Zig (assess), Go (for network services that don't need C-level perf)</li>
-<li><strong>Build:</strong> CMake, Cargo, Bazel</li>
-<li><strong>Testing:</strong> Property-based testing (proptest, QuickCheck), fuzzing (AFL, libFuzzer), formal methods for critical sections</li>
+<li><strong>Pros:</strong> Single deployment, single database, single CI pipeline, easy to debug (one process, one log stream). Module boundaries enforced in code give the architectural clarity of microservices without the operational complexity. Extraction is always available as a later option when genuine need is proven. Fast iteration: a cross-module change is one PR, not five.</li>
+<li><strong>Cons:</strong> The whole monolith must be deployed to change any module — deployment conflicts between teams are possible at larger team sizes. The monolith cannot scale one module independently of others (within the same deployment unit). Risk of module boundaries eroding over time if not enforced by tooling or code review.</li>
 </ul>
-<h2 id="llm-development-fit">LLM-development fit<a class="headerlink" href="#llm-development-fit" title="Permanent link">&para;</a></h2>
-<p>Lower than other categories. Less training data, mistakes are expensive, concurrency bugs are hard to catch by inspection. Useful for boilerplate (parsers, serialisation), but architectural decisions still need an experienced human.</p>
+<h3 id="option-b-microservices-from-day-one">Option B: Microservices from day one<a class="headerlink" href="#option-b-microservices-from-day-one" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Pros:</strong> Teams can deploy independently from day one. Each service scales independently. Technology heterogeneity is possible per service.</li>
+<li><strong>Cons:</strong> Requires stable domain boundaries — which do not exist on a new system. Forces distributed systems complexity (network failures, eventual consistency, distributed tracing) before any business value is delivered. Platform engineering team required before development can begin. Martin Fowler's "microservice premium": only pays off when the system is complex enough that the premium is worth it. Sam Newman's recommendation: start with a monolith unless you already have a very clear domain model.</li>
+</ul>
+<h3 id="option-c-macroservices-24-coarse-grained-services">Option C: "Macroservices" (2–4 coarse-grained services)<a class="headerlink" href="#option-c-macroservices-24-coarse-grained-services" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Pros:</strong> Some team autonomy without fine-grained complexity.</li>
+<li><strong>Cons:</strong> Arbitrary decomposition without proven boundaries produces the worst of both worlds: inter-service calls with no scaling benefit. Not recommended.</li>
+</ul>
+<h2 id="consequences">Consequences<a class="headerlink" href="#consequences" title="Permanent link">&para;</a></h2>
+<p><strong>Positive</strong></p>
+<ul>
+<li>New backend systems start delivering user value faster (no platform bootstrapping required)</li>
+<li>Domain boundaries emerge from real usage rather than being guessed upfront</li>
+<li>When extraction eventually happens, the module boundary in the monolith becomes the service interface — less rewriting</li>
+<li>Simpler debugging, simpler deployments, lower infrastructure cost at early scale</li>
+</ul>
+<p><strong>Negative / trade-offs</strong></p>
+<ul>
+<li>Teams must enforce module boundaries actively in code review — the monolith will erode toward a "big ball of mud" if discipline lapses</li>
+<li>At some scale (&gt; 10 independent teams), the modular monolith becomes the bottleneck — the extraction criteria above must be applied proactively, not reactively</li>
+<li>Engineers joining from microservices-heavy organisations may need to adjust expectations</li>
+</ul>
+<p><strong>Follow-up actions</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Add a linting rule that detects cross-module direct imports (e.g., <code>eslint-plugin-boundaries</code> for NestJS, <code>depguard</code> for Go) to the standard project template</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Document the extraction criteria in the engineering onboarding guide</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Schedule a quarterly review of any module that is flagged as a potential extraction candidate</li>
+</ul>
 
 
 

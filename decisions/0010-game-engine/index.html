@@ -12,13 +12,9 @@
         <meta name="author" content="deva@soa.team">
       
       
-        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/05-systems-infra/">
+        <link rel="canonical" href="https://your-org.github.io/architecture-repo/decisions/0010-game-engine/">
       
       
-        <link rel="prev" href="../04-backend-distributed/">
-      
-      
-        <link rel="next" href="../06-safety-critical/">
       
       
         
@@ -29,7 +25,7 @@
     
     
       
-        <title>Systems & Infrastructure - Architecture Pattern Catalog</title>
+        <title>ADR-0010: Game engine selection policy - Architecture Pattern Catalog</title>
       
     
     
@@ -80,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#systems-infrastructure" class="md-skip">
+        <a href="#adr-0010-game-engine-selection-policy" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Systems & Infrastructure
+              ADR-0010: Game engine selection policy
             
           </span>
         </div>
@@ -263,13 +259,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../patterns/" class="md-tabs__link">
           
   
   
@@ -289,7 +283,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../decisions/" class="md-tabs__link">
+      <a href="../" class="md-tabs__link">
         
   
   
@@ -427,8 +421,6 @@
       
   
   
-    
-  
   
   
     
@@ -458,23 +450,22 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../patterns/" class="md-nav__link ">
               
   
   
@@ -492,13 +483,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -518,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-web-mobile/" class="md-nav__link">
+      <a href="../../patterns/01-web-mobile/" class="md-nav__link">
         
   
   
@@ -546,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-scripts-automation/" class="md-nav__link">
+      <a href="../../patterns/02-scripts-automation/" class="md-nav__link">
         
   
   
@@ -574,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-data-analytics/" class="md-nav__link">
+      <a href="../../patterns/03-data-analytics/" class="md-nav__link">
         
   
   
@@ -602,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04-backend-distributed/" class="md-nav__link">
+      <a href="../../patterns/04-backend-distributed/" class="md-nav__link">
         
   
   
@@ -627,37 +618,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Systems & Infrastructure
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../patterns/05-systems-infra/" class="md-nav__link">
         
   
   
@@ -673,70 +637,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        When to look here
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Patterns in this category
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Default tech stack
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#llm-development-fit" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        LLM-development fit
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -749,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../06-safety-critical/" class="md-nav__link">
+      <a href="../../patterns/06-safety-critical/" class="md-nav__link">
         
   
   
@@ -777,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../07-ai-llm-integrated/" class="md-nav__link">
+      <a href="../../patterns/07-ai-llm-integrated/" class="md-nav__link">
         
   
   
@@ -805,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../08-games-graphics/" class="md-nav__link">
+      <a href="../../patterns/08-games-graphics/" class="md-nav__link">
         
   
   
@@ -840,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../decisions/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -1010,10 +910,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
+  <a href="#context" class="md-nav__link">
     <span class="md-ellipsis">
       
-        When to look here
+        Context
       
     </span>
   </a>
@@ -1021,10 +921,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
+  <a href="#decision" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Patterns in this category
+        Decision
       
     </span>
   </a>
@@ -1032,21 +932,60 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
+  <a href="#alternatives-considered" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Default tech stack
+        Alternatives considered
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Alternatives considered">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-a-godot-chosen-as-default" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option A: Godot (chosen as default)
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#llm-development-fit" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#option-b-unity" class="md-nav__link">
     <span class="md-ellipsis">
       
-        LLM-development fit
+        Option B: Unity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-c-unreal-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option C: Unreal Engine
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consequences
       
     </span>
   </a>
@@ -1073,54 +1012,63 @@
   
 
 
-<h1 id="systems-infrastructure">Systems &amp; Infrastructure<a class="headerlink" href="#systems-infrastructure" title="Permanent link">&para;</a></h1>
-<p>Low-level software where performance, memory, and hardware proximity matter. Includes operating system components, drivers, databases, compilers, network stacks, and embedded firmware.</p>
-<h2 id="when-to-look-here">When to look here<a class="headerlink" href="#when-to-look-here" title="Permanent link">&para;</a></h2>
+<h1 id="adr-0010-game-engine-selection-policy">ADR-0010: Game engine selection policy<a class="headerlink" href="#adr-0010-game-engine-selection-policy" title="Permanent link">&para;</a></h1>
 <ul>
-<li>The constraint is hardware (memory, latency, power, real-time deadlines)</li>
-<li>You are building infrastructure that other software runs on</li>
-<li>Garbage collection or interpreter overhead is unacceptable</li>
+<li><strong>Status:</strong> Accepted</li>
+<li><strong>Date:</strong> 2026-05-03</li>
+<li><strong>Deciders:</strong> Architecture Team</li>
+<li><strong>Tags:</strong> games, engine, unity, unreal, godot</li>
 </ul>
-<h2 id="patterns-in-this-category">Patterns in this category<a class="headerlink" href="#patterns-in-this-category" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Pattern</th>
-<th>Status</th>
-<th>Best for</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="high-performance-network-service/">High-performance Network Service</a></td>
-<td>Trial</td>
-<td>Proxies, load balancers, custom protocols</td>
-</tr>
-<tr>
-<td><a href="embedded-firmware/">Embedded Firmware</a></td>
-<td>Adopt</td>
-<td>IoT devices, hardware controllers</td>
-</tr>
-<tr>
-<td><a href="database-engine/">Database Engine / Storage Layer</a></td>
-<td>Assess</td>
-<td>Specialised data stores; rare to build from scratch</td>
-</tr>
-<tr>
-<td><a href="custom-os-component/">Custom OS Component / Kernel Module</a></td>
-<td>Hold</td>
-<td>Almost never the right answer; consider eBPF first</td>
-</tr>
-</tbody>
-</table>
-<h2 id="default-tech-stack">Default tech stack<a class="headerlink" href="#default-tech-stack" title="Permanent link">&para;</a></h2>
+<h2 id="context">Context<a class="headerlink" href="#context" title="Permanent link">&para;</a></h2>
+<p>Game engine selection is the most consequential architectural decision for any game project. The engine determines the scripting language, the asset pipeline, the deployment targets, the hiring pool, the licensing cost, the physics model, the render quality ceiling, and the size of the available community and asset store. Changing engines after significant development has begun is effectively a full rewrite.</p>
+<p>The three viable cross-platform game engines in 2026 are Unity, Unreal Engine, and Godot. Each represents a fundamentally different trade-off. This ADR establishes a default and the criteria for choosing an alternative so that teams make this decision deliberately rather than by default or habit.</p>
+<h2 id="decision">Decision<a class="headerlink" href="#decision" title="Permanent link">&para;</a></h2>
+<p>The default game engine is <strong>Godot</strong> for new projects where:
+- The project is 2D-primary or stylised 3D (not photorealistic)
+- The team is small (&lt; 8 people) or includes engineers who value open-source and code-centric workflows
+- Licensing risk is a concern</p>
+<p><strong>Unity</strong> is the recommended engine when:
+- Cross-platform reach (mobile iOS/Android + PC + console) is essential and the team has Unity expertise
+- The Unity asset store provides significant value for the project's content pipeline
+- The team has confirmed the current Unity licensing terms are acceptable for the project's commercial model</p>
+<p><strong>Unreal Engine</strong> is the recommended engine when:
+- Photorealistic rendering quality (Lumen, Nanite) is a primary requirement
+- The project is AAA-quality PC or console targeted
+- The team has experienced Unreal / C++ engineers</p>
+<h2 id="alternatives-considered">Alternatives considered<a class="headerlink" href="#alternatives-considered" title="Permanent link">&para;</a></h2>
+<h3 id="option-a-godot-chosen-as-default">Option A: Godot (chosen as default)<a class="headerlink" href="#option-a-godot-chosen-as-default" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Languages:</strong> Rust (modern default), C, C++, Zig (assess), Go (for network services that don't need C-level perf)</li>
-<li><strong>Build:</strong> CMake, Cargo, Bazel</li>
-<li><strong>Testing:</strong> Property-based testing (proptest, QuickCheck), fuzzing (AFL, libFuzzer), formal methods for critical sections</li>
+<li><strong>Pros:</strong> MIT licensed — zero runtime fees and no licensing risk. Fully open-source with community governance (no single vendor can change terms). Lightweight and fast iteration cycle. Excellent 2D engine. C# and GDScript support. Growing community and improving 3D capabilities. Free to use for any project at any revenue level.</li>
+<li><strong>Cons:</strong> 3D rendering quality ceiling is lower than Unreal (no Lumen/Nanite equivalent). Asset store is smaller than Unity's. Console exporting is less mature. Fewer enterprise integrations (analytics, ads, LiveOps) than Unity Gaming Services.</li>
 </ul>
-<h2 id="llm-development-fit">LLM-development fit<a class="headerlink" href="#llm-development-fit" title="Permanent link">&para;</a></h2>
-<p>Lower than other categories. Less training data, mistakes are expensive, concurrency bugs are hard to catch by inspection. Useful for boilerplate (parsers, serialisation), but architectural decisions still need an experienced human.</p>
+<h3 id="option-b-unity">Option B: Unity<a class="headerlink" href="#option-b-unity" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Pros:</strong> Largest game engine community and asset store. Excellent cross-platform support (25+ platforms including all major consoles). Extensive tooling for mobile (Unity Ads, IAP, Analytics). Large hiring pool. Strong AR/VR support.</li>
+<li><strong>Cons:</strong> Controversial runtime fee policy change in 2023 (subsequently partially reversed); licensing terms require monitoring. Proprietary — Epics or Unity can change terms unilaterally. Higher cost for teams that need Unity Pro or Enterprise. Editor performance can be slow on large projects.</li>
+</ul>
+<h3 id="option-c-unreal-engine">Option C: Unreal Engine<a class="headerlink" href="#option-c-unreal-engine" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Pros:</strong> Industry-leading rendering (Lumen global illumination, Nanite virtualised geometry). Free until $1M gross revenue (5% royalty above). Widely used in AAA games, film VFX (Virtual Production), and architectural visualisation. Blueprint visual scripting lowers the barrier for designers.</li>
+<li><strong>Cons:</strong> C++ primary — higher engineering complexity and compile times. Steeper learning curve. Resource-intensive editor (requires high-spec hardware). Overkill for 2D, casual, or mobile-primary projects. 5% royalty above revenue threshold can be significant.</li>
+</ul>
+<h2 id="consequences">Consequences<a class="headerlink" href="#consequences" title="Permanent link">&para;</a></h2>
+<p><strong>Positive</strong></p>
+<ul>
+<li>Teams selecting Godot avoid licensing risk entirely — MIT licence means no runtime fees and no future term changes</li>
+<li>Clear decision criteria prevent engine selection from being a "biggest name wins" decision</li>
+<li>Teams that need Unreal or Unity have explicit criteria to justify the selection</li>
+</ul>
+<p><strong>Negative / trade-offs</strong></p>
+<ul>
+<li>Godot's 3D capabilities are improving rapidly but trail Unreal; teams choosing it for complex 3D must evaluate the current state, not the state at the time of this ADR</li>
+<li>Unity's large community and asset store represent genuine value that this ADR may underweight for some projects</li>
+</ul>
+<p><strong>Follow-up actions</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Review Godot's 3D readiness annually — this ADR may need revision as Godot 4.x matures</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Confirm current Unity licensing terms before every new Unity project start — terms have changed historically</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Document engine choice rationale for each project in the project's architecture notes</li>
+</ul>
 
 
 

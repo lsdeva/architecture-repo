@@ -12,31 +12,27 @@
         <meta name="author" content="deva@soa.team">
       
       
-        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/05-systems-infra/">
+        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/01-web-mobile/ecommerce-storefront/">
       
       
-        <link rel="prev" href="../04-backend-distributed/">
-      
-      
-        <link rel="next" href="../06-safety-critical/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Systems & Infrastructure - Architecture Pattern Catalog</title>
+        <title>Pattern: E-commerce Storefront - Architecture Pattern Catalog</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#systems-infrastructure" class="md-skip">
+        <a href="#pattern-e-commerce-storefront" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +90,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Architecture Pattern Catalog" class="md-header__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
+    <a href="../../.." title="Architecture Pattern Catalog" class="md-header__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Systems & Infrastructure
+              Pattern: E-commerce Storefront
             
           </span>
         </div>
@@ -227,7 +223,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -246,7 +242,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../about/how-to-use/" class="md-tabs__link">
+      <a href="../../../about/how-to-use/" class="md-tabs__link">
         
   
   
@@ -263,13 +259,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../" class="md-tabs__link">
           
   
   
@@ -289,7 +283,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../decisions/" class="md-tabs__link">
+      <a href="../../../decisions/" class="md-tabs__link">
         
   
   
@@ -310,7 +304,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../about/methodology/" class="md-tabs__link">
+        <a href="../../../about/methodology/" class="md-tabs__link">
           
   
   
@@ -346,7 +340,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Architecture Pattern Catalog" class="md-nav__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
+    <a href="../../.." title="Architecture Pattern Catalog" class="md-nav__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -376,7 +370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -403,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/how-to-use/" class="md-nav__link">
+      <a href="../../../about/how-to-use/" class="md-nav__link">
         
   
   
@@ -427,8 +421,6 @@
       
   
   
-    
-  
   
   
     
@@ -458,23 +450,22 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
@@ -492,13 +483,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -518,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-web-mobile/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -546,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-scripts-automation/" class="md-nav__link">
+      <a href="../../02-scripts-automation/" class="md-nav__link">
         
   
   
@@ -574,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-data-analytics/" class="md-nav__link">
+      <a href="../../03-data-analytics/" class="md-nav__link">
         
   
   
@@ -602,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04-backend-distributed/" class="md-nav__link">
+      <a href="../../04-backend-distributed/" class="md-nav__link">
         
   
   
@@ -627,37 +618,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Systems & Infrastructure
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../05-systems-infra/" class="md-nav__link">
         
   
   
@@ -673,70 +637,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        When to look here
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Patterns in this category
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Default tech stack
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#llm-development-fit" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        LLM-development fit
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -749,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../06-safety-critical/" class="md-nav__link">
+      <a href="../../06-safety-critical/" class="md-nav__link">
         
   
   
@@ -777,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../07-ai-llm-integrated/" class="md-nav__link">
+      <a href="../../07-ai-llm-integrated/" class="md-nav__link">
         
   
   
@@ -805,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../08-games-graphics/" class="md-nav__link">
+      <a href="../../08-games-graphics/" class="md-nav__link">
         
   
   
@@ -840,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../decisions/" class="md-nav__link">
+      <a href="../../../decisions/" class="md-nav__link">
         
   
   
@@ -927,7 +827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/methodology/" class="md-nav__link">
+      <a href="../../../about/methodology/" class="md-nav__link">
         
   
   
@@ -955,7 +855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/contributing/" class="md-nav__link">
+      <a href="../../../about/contributing/" class="md-nav__link">
         
   
   
@@ -1010,10 +910,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
+  <a href="#1-context" class="md-nav__link">
     <span class="md-ellipsis">
       
-        When to look here
+        1. Context
       
     </span>
   </a>
@@ -1021,10 +921,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
+  <a href="#2-problem-it-solves" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Patterns in this category
+        2. Problem it solves
       
     </span>
   </a>
@@ -1032,10 +932,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
+  <a href="#3-solution-overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Default tech stack
+        3. Solution overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Solution overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-context-c4-level-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System context (C4 Level 1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container-view-c4-level-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Container view (C4 Level 2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-technology-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Technology stack
       
     </span>
   </a>
@@ -1043,10 +982,65 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#llm-development-fit" class="md-nav__link">
+  <a href="#5-non-functional-characteristics" class="md-nav__link">
     <span class="md-ellipsis">
       
-        LLM-development fit
+        5. Non-functional characteristics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-cost-ballpark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Cost ballpark
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-llm-assisted-development-fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. LLM-assisted development fit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-reference-implementations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Reference implementations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-related-decisions-adrs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Related decisions (ADRs)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-known-risks-gotchas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Known risks &amp; gotchas
       
     </span>
   </a>
@@ -1073,54 +1067,273 @@
   
 
 
-<h1 id="systems-infrastructure">Systems &amp; Infrastructure<a class="headerlink" href="#systems-infrastructure" title="Permanent link">&para;</a></h1>
-<p>Low-level software where performance, memory, and hardware proximity matter. Includes operating system components, drivers, databases, compilers, network stacks, and embedded firmware.</p>
-<h2 id="when-to-look-here">When to look here<a class="headerlink" href="#when-to-look-here" title="Permanent link">&para;</a></h2>
+<h1 id="pattern-e-commerce-storefront">Pattern: E-commerce Storefront<a class="headerlink" href="#pattern-e-commerce-storefront" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Quick facts</p>
 <ul>
-<li>The constraint is hardware (memory, latency, power, real-time deadlines)</li>
-<li>You are building infrastructure that other software runs on</li>
-<li>Garbage collection or interpreter overhead is unacceptable</li>
+<li><strong>Category:</strong> Web &amp; Mobile Applications</li>
+<li><strong>Maturity:</strong> Adopt</li>
+<li><strong>Typical team size:</strong> 3-6 engineers</li>
+<li><strong>Typical timeline to MVP:</strong> 8-16 weeks</li>
+<li><strong>Last reviewed:</strong> 2026-05-03 by Architecture Team</li>
 </ul>
-<h2 id="patterns-in-this-category">Patterns in this category<a class="headerlink" href="#patterns-in-this-category" title="Permanent link">&para;</a></h2>
+</div>
+<h2 id="1-context">1. Context<a class="headerlink" href="#1-context" title="Permanent link">&para;</a></h2>
+<p><strong>Use this pattern when:</strong></p>
+<ul>
+<li>Building an online retail storefront, marketplace, or subscription product with a shopping cart, product catalogue, checkout, and order management</li>
+<li>The business requires a customised brand experience that a hosted platform (Shopify, BigCommerce) cannot deliver</li>
+<li>Performance and SEO are first-class requirements — product pages must rank and load fast</li>
+</ul>
+<p><strong>Do NOT use this pattern when:</strong></p>
+<ul>
+<li>The catalogue is small (&lt; 100 products) and customisation needs are low — use Shopify or a similar hosted platform; the operational overhead of a custom storefront is hard to justify</li>
+<li>The primary sales channel is B2B with quote-based pricing — a custom CPQ or CRM integration is a better fit than a consumer checkout flow</li>
+<li>The team has no prior e-commerce experience — start with a hosted platform and migrate to headless only after proving the business model</li>
+</ul>
+<h2 id="2-problem-it-solves">2. Problem it solves<a class="headerlink" href="#2-problem-it-solves" title="Permanent link">&para;</a></h2>
+<p>Hosted e-commerce platforms provide a fast path to market but impose constraints on design, performance, and third-party integrations that become painful at scale. A headless commerce architecture separates the storefront (Next.js, React) from the commerce logic (cart, checkout, inventory, payments) and the back-office (order management, fulfilment), allowing each layer to evolve independently and to be replaced without rebuilding the others.</p>
+<h2 id="3-solution-overview">3. Solution overview<a class="headerlink" href="#3-solution-overview" title="Permanent link">&para;</a></h2>
+<h3 id="system-context-c4-level-1">System context (C4 Level 1)<a class="headerlink" href="#system-context-c4-level-1" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart LR
+    Shopper((Shopper)) --&gt; Storefront[Storefront\nNext.js on CDN]
+    Admin((Admin)) --&gt; OMS[Order Management\nback-office]
+    Storefront --&gt; CommerceAPI[Commerce API\nproducts, cart, checkout]
+    CommerceAPI --&gt; Payments[Payment Provider\nStripe]
+    CommerceAPI --&gt; Inventory[Inventory / WMS]
+    CommerceAPI --&gt; Email[Transactional Email\nPostmark]
+    Storefront --&gt; Search[Search\nAlgolia / Meilisearch]
+    Storefront --&gt; Analytics[Analytics\nGA4 / Plausible]</code></pre>
+<h3 id="container-view-c4-level-2">Container view (C4 Level 2)<a class="headerlink" href="#container-view-c4-level-2" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TB
+    subgraph Edge
+        CDN[Cloudflare CDN\nstatic + ISR pages]
+    end
+    subgraph Storefront
+        NextApp[Next.js App\nproduct pages, PLP, PDP, cart]
+        CartState[Cart State\nlocal + server session]
+    end
+    subgraph Commerce Backend
+        ProductAPI[Product API\ncatalogue, variants, pricing]
+        CartAPI[Cart &amp; Checkout API\nNestJS / FastAPI]
+        OrderAPI[Order API\npost-purchase, fulfilment]
+        StripeWebhook[Stripe Webhook Handler]
+    end
+    subgraph Data
+        DB[(PostgreSQL\nproducts, orders, customers)]
+        Cache[(Redis\nsessions, cart, rate limit)]
+        MediaStore[(S3\nproduct images + CDN)]
+    end
+    subgraph External
+        Stripe[Stripe\npayments + subscriptions]
+        SearchIdx[Algolia / Meilisearch\nproduct search index]
+        Email[Postmark\ntransactional email]
+    end
+
+    CDN --&gt; NextApp
+    NextApp --&gt; CartState
+    NextApp --&gt; ProductAPI
+    NextApp --&gt; CartAPI
+    NextApp --&gt; SearchIdx
+    CartAPI --&gt; StripeWebhook
+    CartAPI --&gt; DB
+    CartAPI --&gt; Cache
+    CartAPI --&gt; Stripe
+    ProductAPI --&gt; DB
+    ProductAPI --&gt; MediaStore
+    OrderAPI --&gt; DB
+    OrderAPI --&gt; Email
+    StripeWebhook --&gt; OrderAPI</code></pre>
+<h2 id="4-technology-stack">4. Technology stack<a class="headerlink" href="#4-technology-stack" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Pattern</th>
-<th>Status</th>
-<th>Best for</th>
+<th>Layer</th>
+<th>Primary choice</th>
+<th>Alternatives</th>
+<th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="high-performance-network-service/">High-performance Network Service</a></td>
-<td>Trial</td>
-<td>Proxies, load balancers, custom protocols</td>
+<td>Storefront framework</td>
+<td>Next.js (App Router)</td>
+<td>Remix, SvelteKit, Nuxt</td>
+<td>Next.js ISR (Incremental Static Regeneration) lets product pages be statically served and refreshed on inventory/price changes without a full rebuild</td>
 </tr>
 <tr>
-<td><a href="embedded-firmware/">Embedded Firmware</a></td>
-<td>Adopt</td>
-<td>IoT devices, hardware controllers</td>
+<td>Commerce backend</td>
+<td>Custom NestJS API</td>
+<td>Medusa.js, Vendure, Solidus</td>
+<td>Custom for full control; Medusa.js if you want an open-source headless commerce engine with batteries included</td>
 </tr>
 <tr>
-<td><a href="database-engine/">Database Engine / Storage Layer</a></td>
-<td>Assess</td>
-<td>Specialised data stores; rare to build from scratch</td>
+<td>Payments</td>
+<td>Stripe (Payment Intents + Webhooks)</td>
+<td>Paddle (MoR for global tax), Adyen</td>
+<td>Stripe is the default; Paddle for global merchants who want a Merchant of Record to handle VAT/GST</td>
 </tr>
 <tr>
-<td><a href="custom-os-component/">Custom OS Component / Kernel Module</a></td>
-<td>Hold</td>
-<td>Almost never the right answer; consider eBPF first</td>
+<td>Product search</td>
+<td>Algolia</td>
+<td>Meilisearch (self-hosted), Typesense</td>
+<td>Algolia for managed search with merchandising rules; Meilisearch for self-hosted zero-cost search</td>
+</tr>
+<tr>
+<td>Database</td>
+<td>PostgreSQL</td>
+<td>MySQL</td>
+<td>Orders, products, customers, inventory in Postgres; never split these into separate databases without a strong reason</td>
+</tr>
+<tr>
+<td>Session / cart</td>
+<td>Redis</td>
+<td>Database-backed session</td>
+<td>Redis for fast cart reads on every page load; always persist cart to DB asynchronously</td>
+</tr>
+<tr>
+<td>Image storage</td>
+<td>AWS S3 + Cloudflare Images</td>
+<td>Cloudinary, imgix</td>
+<td>Cloudflare Images for automatic resizing and WebP conversion; no egress fees</td>
+</tr>
+<tr>
+<td>Hosting</td>
+<td>Vercel (storefront) + AWS ECS (API)</td>
+<td>Netlify + Fly.io, fully on AWS</td>
+<td>Vercel for Next.js ISR; ECS for the stateful commerce API</td>
+</tr>
+<tr>
+<td>Email</td>
+<td>Postmark (transactional)</td>
+<td>Resend, SendGrid</td>
+<td>Separate transactional (order confirmation, shipping) from marketing email</td>
 </tr>
 </tbody>
 </table>
-<h2 id="default-tech-stack">Default tech stack<a class="headerlink" href="#default-tech-stack" title="Permanent link">&para;</a></h2>
+<h2 id="5-non-functional-characteristics">5. Non-functional characteristics<a class="headerlink" href="#5-non-functional-characteristics" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Concern</th>
+<th>Profile</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Scalability</strong></td>
+<td>Storefront scales to any traffic via CDN-served static + ISR pages. Commerce API scales horizontally; cart and checkout are stateless (session in Redis). Peak events (flash sales, Black Friday) need pre-warming — test with load before the event, not during.</td>
+</tr>
+<tr>
+<td><strong>Availability target</strong></td>
+<td>99.9% for the checkout flow; storefront CDN availability is effectively 99.99%. Payment webhooks must be idempotent — Stripe can deliver the same event more than once.</td>
+</tr>
+<tr>
+<td><strong>Latency target</strong></td>
+<td>Storefront: Time to First Byte &lt; 100 ms (CDN-served), Largest Contentful Paint &lt; 2.5 s. Checkout API: p95 &lt; 800 ms including Stripe API call. Search: p95 &lt; 150 ms.</td>
+</tr>
+<tr>
+<td><strong>Security posture</strong></td>
+<td>PCI-DSS scope minimised by using Stripe-hosted payment fields (no card data touches your stack). HTTPS everywhere. CSRF protection on all form endpoints. Rate-limit checkout attempts per IP. Bot protection (Cloudflare Turnstile) on checkout.</td>
+</tr>
+<tr>
+<td><strong>Data residency</strong></td>
+<td>Customer PII and order data in Postgres in your chosen region. Stripe holds card data; ensure Stripe's DPA is signed.</td>
+</tr>
+<tr>
+<td><strong>Compliance fit</strong></td>
+<td>PCI-DSS SAQ A (Stripe-hosted fields, no card data on your servers). GDPR ✓ — right-to-erasure on customer and order data; anonymise, don't delete, order records for accounting. Consumer protection laws vary by market; seek legal advice for each new geography.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-cost-ballpark">6. Cost ballpark<a class="headerlink" href="#6-cost-ballpark" title="Permanent link">&para;</a></h2>
+<p>Indicative monthly USD cost. Varies significantly with traffic and order volume.</p>
+<table>
+<thead>
+<tr>
+<th>Scale</th>
+<th>Monthly orders</th>
+<th>Monthly cost</th>
+<th>Cost drivers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Small</td>
+<td>&lt; 500</td>
+<td>$150 - $600</td>
+<td>Vercel Pro, 1 ECS task, RDS Postgres small, Algolia Starter</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>500 - 10,000</td>
+<td>$800 - $5,000</td>
+<td>Vercel, ECS autoscaling, larger Postgres, Algolia volume, Cloudflare Images</td>
+</tr>
+<tr>
+<td>Large</td>
+<td>10,000+</td>
+<td>$5,000 - $30,000</td>
+<td>Multi-region, Stripe volume fees (~2.9%), full observability, dedicated ops</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-llm-assisted-development-fit">7. LLM-assisted development fit<a class="headerlink" href="#7-llm-assisted-development-fit" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Rating</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product listing and detail page scaffolding</td>
+<td>★★★★★</td>
+<td>Excellent — Next.js product pages are extremely well-represented.</td>
+</tr>
+<tr>
+<td>Cart and checkout flow</td>
+<td>★★★★</td>
+<td>Good; always test edge cases (quantity changes, coupon codes, failed payments) manually.</td>
+</tr>
+<tr>
+<td>Stripe integration (Payment Intents, webhooks)</td>
+<td>★★★★</td>
+<td>Good starting point; idempotency key handling and webhook signature verification need careful review.</td>
+</tr>
+<tr>
+<td>Inventory race conditions</td>
+<td>★★</td>
+<td>Understands the concept; oversell prevention under concurrent checkout requires explicit locking strategy reviewed by hand.</td>
+</tr>
+<tr>
+<td>Architecture decisions</td>
+<td>★</td>
+<td>Don't outsource. Use ADRs.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recommended workflow:</strong> Start with Stripe's hosted checkout (Stripe Checkout) to validate the business before investing in a custom checkout UI. Migrate to Payment Intents + custom UI only when conversion rate data justifies the engineering investment.</p>
+<h2 id="8-reference-implementations">8. Reference implementations<a class="headerlink" href="#8-reference-implementations" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Languages:</strong> Rust (modern default), C, C++, Zig (assess), Go (for network services that don't need C-level perf)</li>
-<li><strong>Build:</strong> CMake, Cargo, Bazel</li>
-<li><strong>Testing:</strong> Property-based testing (proptest, QuickCheck), fuzzing (AFL, libFuzzer), formal methods for critical sections</li>
+<li><strong>Public reference:</strong> <a href="https://github.com/vercel/commerce">vercel/commerce</a> — Next.js Commerce reference storefront; shows ISR, cart state, and multiple commerce backend integrations (Shopify, BigCommerce, etc.) (200 OK ✓)</li>
+<li><strong>Public reference:</strong> <a href="https://github.com/spree/spree">spree/spree</a> — mature open-source commerce platform in Ruby/Rails with REST and GraphQL APIs; useful reference for the order management domain model (200 OK ✓)</li>
+<li><strong>Internal case study:</strong> <em>Add your anonymised internal example here</em></li>
 </ul>
-<h2 id="llm-development-fit">LLM-development fit<a class="headerlink" href="#llm-development-fit" title="Permanent link">&para;</a></h2>
-<p>Lower than other categories. Less training data, mistakes are expensive, concurrency bugs are hard to catch by inspection. Useful for boilerplate (parsers, serialisation), but architectural decisions still need an experienced human.</p>
+<h2 id="9-related-decisions-adrs">9. Related decisions (ADRs)<a class="headerlink" href="#9-related-decisions-adrs" title="Permanent link">&para;</a></h2>
+<ul>
+<li><em>No ADRs recorded yet. Candidate: headless-custom API vs Medusa.js vs Vendure for the commerce engine — record when your organisation commits.</em></li>
+</ul>
+<h2 id="10-known-risks-gotchas">10. Known risks &amp; gotchas<a class="headerlink" href="#10-known-risks-gotchas" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Oversell under concurrent checkout</strong> — two shoppers purchase the last unit simultaneously; both succeed; one order cannot be fulfilled. Mitigation: use a <code>SELECT ... FOR UPDATE</code> row lock on the inventory record during checkout, or a Postgres advisory lock on the SKU; never rely on an application-level check-then-decrement without locking.</li>
+<li><strong>Stripe webhook delivered twice causes duplicate fulfilment</strong> — Stripe retries webhooks on any non-2xx response; a slow handler that times out receives the event a second time. Mitigation: make all webhook handlers idempotent on the Stripe event ID; insert into a <code>processed_events</code> table with a unique constraint on <code>stripe_event_id</code> before any side effect.</li>
+<li><strong>ISR cache serves stale prices or out-of-stock products</strong> — a product goes out of stock but cached pages still show "Add to Cart". Mitigation: call <code>revalidatePath()</code> from the commerce API when inventory reaches zero; add a real-time availability check at cart-add time regardless of what the product page shows.</li>
+<li><strong>Flash sale traffic spike takes down the checkout API</strong> — 10,000 concurrent shoppers at sale start overwhelm the ECS task count before autoscaling responds. Mitigation: pre-scale the ECS service before scheduled sale events; rate-limit checkout endpoint aggressively; use a virtual waiting room (Cloudflare Waiting Room) for very high-traffic events.</li>
+<li><strong>Tax calculation complexity</strong> — charging the wrong sales tax in a US state or missing EU VAT is a compliance and financial liability. Mitigation: use Stripe Tax or Avalara for automated tax calculation; never hand-roll tax logic.</li>
+</ul>
 
 
 
@@ -1182,10 +1395,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

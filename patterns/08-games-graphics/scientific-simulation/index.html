@@ -12,31 +12,27 @@
         <meta name="author" content="deva@soa.team">
       
       
-        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/05-systems-infra/">
+        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/08-games-graphics/scientific-simulation/">
       
       
-        <link rel="prev" href="../04-backend-distributed/">
-      
-      
-        <link rel="next" href="../06-safety-critical/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Systems & Infrastructure - Architecture Pattern Catalog</title>
+        <title>Pattern: Scientific / Engineering Simulation - Architecture Pattern Catalog</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#systems-infrastructure" class="md-skip">
+        <a href="#pattern-scientific-engineering-simulation" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +90,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Architecture Pattern Catalog" class="md-header__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
+    <a href="../../.." title="Architecture Pattern Catalog" class="md-header__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Systems & Infrastructure
+              Pattern: Scientific / Engineering Simulation
             
           </span>
         </div>
@@ -227,7 +223,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -246,7 +242,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../about/how-to-use/" class="md-tabs__link">
+      <a href="../../../about/how-to-use/" class="md-tabs__link">
         
   
   
@@ -263,13 +259,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../" class="md-tabs__link">
           
   
   
@@ -289,7 +283,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../decisions/" class="md-tabs__link">
+      <a href="../../../decisions/" class="md-tabs__link">
         
   
   
@@ -310,7 +304,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../about/methodology/" class="md-tabs__link">
+        <a href="../../../about/methodology/" class="md-tabs__link">
           
   
   
@@ -346,7 +340,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Architecture Pattern Catalog" class="md-nav__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
+    <a href="../../.." title="Architecture Pattern Catalog" class="md-nav__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -376,7 +370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -403,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/how-to-use/" class="md-nav__link">
+      <a href="../../../about/how-to-use/" class="md-nav__link">
         
   
   
@@ -427,8 +421,6 @@
       
   
   
-    
-  
   
   
     
@@ -458,23 +450,22 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
@@ -492,13 +483,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -518,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-web-mobile/" class="md-nav__link">
+      <a href="../../01-web-mobile/" class="md-nav__link">
         
   
   
@@ -546,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-scripts-automation/" class="md-nav__link">
+      <a href="../../02-scripts-automation/" class="md-nav__link">
         
   
   
@@ -574,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-data-analytics/" class="md-nav__link">
+      <a href="../../03-data-analytics/" class="md-nav__link">
         
   
   
@@ -602,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04-backend-distributed/" class="md-nav__link">
+      <a href="../../04-backend-distributed/" class="md-nav__link">
         
   
   
@@ -627,37 +618,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Systems & Infrastructure
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../05-systems-infra/" class="md-nav__link">
         
   
   
@@ -673,70 +637,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        When to look here
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Patterns in this category
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Default tech stack
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#llm-development-fit" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        LLM-development fit
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -749,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../06-safety-critical/" class="md-nav__link">
+      <a href="../../06-safety-critical/" class="md-nav__link">
         
   
   
@@ -777,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../07-ai-llm-integrated/" class="md-nav__link">
+      <a href="../../07-ai-llm-integrated/" class="md-nav__link">
         
   
   
@@ -805,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../08-games-graphics/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -840,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../decisions/" class="md-nav__link">
+      <a href="../../../decisions/" class="md-nav__link">
         
   
   
@@ -927,7 +827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/methodology/" class="md-nav__link">
+      <a href="../../../about/methodology/" class="md-nav__link">
         
   
   
@@ -955,7 +855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/contributing/" class="md-nav__link">
+      <a href="../../../about/contributing/" class="md-nav__link">
         
   
   
@@ -1010,10 +910,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
+  <a href="#1-context" class="md-nav__link">
     <span class="md-ellipsis">
       
-        When to look here
+        1. Context
       
     </span>
   </a>
@@ -1021,10 +921,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
+  <a href="#2-problem-it-solves" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Patterns in this category
+        2. Problem it solves
       
     </span>
   </a>
@@ -1032,10 +932,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
+  <a href="#3-solution-overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Default tech stack
+        3. Solution overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Solution overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-context-c4-level-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System context (C4 Level 1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container-view-c4-level-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Container view (C4 Level 2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-technology-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Technology stack
       
     </span>
   </a>
@@ -1043,10 +982,65 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#llm-development-fit" class="md-nav__link">
+  <a href="#5-non-functional-characteristics" class="md-nav__link">
     <span class="md-ellipsis">
       
-        LLM-development fit
+        5. Non-functional characteristics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-cost-ballpark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Cost ballpark
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-llm-assisted-development-fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. LLM-assisted development fit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-reference-implementations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Reference implementations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-related-decisions-adrs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Related decisions (ADRs)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-known-risks-gotchas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Known risks &amp; gotchas
       
     </span>
   </a>
@@ -1073,54 +1067,254 @@
   
 
 
-<h1 id="systems-infrastructure">Systems &amp; Infrastructure<a class="headerlink" href="#systems-infrastructure" title="Permanent link">&para;</a></h1>
-<p>Low-level software where performance, memory, and hardware proximity matter. Includes operating system components, drivers, databases, compilers, network stacks, and embedded firmware.</p>
-<h2 id="when-to-look-here">When to look here<a class="headerlink" href="#when-to-look-here" title="Permanent link">&para;</a></h2>
+<h1 id="pattern-scientific-engineering-simulation">Pattern: Scientific / Engineering Simulation<a class="headerlink" href="#pattern-scientific-engineering-simulation" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Quick facts</p>
 <ul>
-<li>The constraint is hardware (memory, latency, power, real-time deadlines)</li>
-<li>You are building infrastructure that other software runs on</li>
-<li>Garbage collection or interpreter overhead is unacceptable</li>
+<li><strong>Category:</strong> Games &amp; Graphics</li>
+<li><strong>Maturity:</strong> Adopt</li>
+<li><strong>Typical team size:</strong> 2-6 engineers (often with domain scientists)</li>
+<li><strong>Typical timeline to MVP:</strong> 8-20 weeks</li>
+<li><strong>Last reviewed:</strong> 2026-05-03 by Architecture Team</li>
 </ul>
-<h2 id="patterns-in-this-category">Patterns in this category<a class="headerlink" href="#patterns-in-this-category" title="Permanent link">&para;</a></h2>
+</div>
+<h2 id="1-context">1. Context<a class="headerlink" href="#1-context" title="Permanent link">&para;</a></h2>
+<p><strong>Use this pattern when:</strong></p>
+<ul>
+<li>Simulating physical, chemical, biological, or engineering systems where numerical accuracy is a first-class requirement alongside (or above) real-time performance</li>
+<li>Building training simulators, digital twins, computational fluid dynamics (CFD) tools, finite element analysis (FEA), or structural engineering software</li>
+<li>Results must be reproducible, versioned, and validated against physical measurements or analytical solutions</li>
+</ul>
+<p><strong>Do NOT use this pattern when:</strong></p>
+<ul>
+<li>The simulation is purely visual and approximate accuracy is acceptable — use a game engine's physics engine instead</li>
+<li>The simulation is a simple analytical model that runs in milliseconds — a Python script or spreadsheet is sufficient</li>
+<li>Real-time interactive performance is more important than numerical precision — game engine physics is appropriate for interactive training applications where "good enough" accuracy suffices</li>
+</ul>
+<h2 id="2-problem-it-solves">2. Problem it solves<a class="headerlink" href="#2-problem-it-solves" title="Permanent link">&para;</a></h2>
+<p>Engineering and scientific decisions depend on simulation results. A structural engineer needs to know whether a bridge design fails under load before building it. A pharma company needs to simulate molecular interactions before running wet lab experiments. These simulations involve large numerical systems (millions of degrees of freedom), stiff differential equations, or complex geometry that requires specialised numerical methods — not a game engine physics approximation.</p>
+<h2 id="3-solution-overview">3. Solution overview<a class="headerlink" href="#3-solution-overview" title="Permanent link">&para;</a></h2>
+<h3 id="system-context-c4-level-1">System context (C4 Level 1)<a class="headerlink" href="#system-context-c4-level-1" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart LR
+    Engineer((Engineer / Scientist)) --&gt; PreProc[Pre-processor\ngeometry + mesh + BCs]
+    PreProc --&gt; Solver[Solver\nPDE / ODE / Monte Carlo]
+    Solver --&gt; PostProc[Post-processor\nresults + visualisation]
+    Solver --&gt; HPC[HPC Cluster\nor Cloud GPU]
+    PostProc --&gt; Report[Report / Export\nVTK, HDF5, CSV]
+    ExpData[(Experimental Data)] --&gt;|validation| Solver</code></pre>
+<h3 id="container-view-c4-level-2">Container view (C4 Level 2)<a class="headerlink" href="#container-view-c4-level-2" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TB
+    subgraph Pre-processing
+        CADImport[CAD / Geometry Import\n.STEP, .STL, .IGES]
+        Mesher[Mesher\nGmsh / snappyHexMesh]
+        BCSetup[Boundary Condition Setup\nproblem parameters]
+    end
+    subgraph Solver
+        TimeIntegrator[Time Integrator\nRunge-Kutta, Newmark-β]
+        LinearSolver[Linear Solver\nPETSc / SciPy sparse]
+        ParallelMPI[MPI Parallelism\nOpenMPI / mpi4py]
+        GPUKernels[GPU Kernels\nCUDA / CuPy — optional]
+    end
+    subgraph Post-processing
+        VTKWriter[VTK Writer\nPyVista]
+        Plotter[Plotter\nMatplotlib / Paraview]
+        ResultDB[(Result Store\nHDF5 / NetCDF on S3)]
+    end
+    subgraph Experiment Management
+        MLflow[MLflow / DVC\nversioned runs + params]
+    end
+
+    CADImport --&gt; Mesher --&gt; BCSetup --&gt; TimeIntegrator
+    TimeIntegrator --&gt; LinearSolver
+    LinearSolver --&gt; ParallelMPI
+    LinearSolver --&gt; GPUKernels
+    TimeIntegrator --&gt; VTKWriter --&gt; ResultDB
+    VTKWriter --&gt; Plotter
+    MLflow -.-&gt; TimeIntegrator</code></pre>
+<h2 id="4-technology-stack">4. Technology stack<a class="headerlink" href="#4-technology-stack" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Pattern</th>
-<th>Status</th>
-<th>Best for</th>
+<th>Layer</th>
+<th>Primary choice</th>
+<th>Alternatives</th>
+<th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="high-performance-network-service/">High-performance Network Service</a></td>
-<td>Trial</td>
-<td>Proxies, load balancers, custom protocols</td>
+<td>Compute language</td>
+<td>Python (NumPy + SciPy)</td>
+<td>C++ (performance-critical kernels), Fortran (legacy HPC), Julia</td>
+<td>Python for orchestration and post-processing; C/C++ extension modules for inner loops; Julia for teams wanting MATLAB-like syntax with C-level performance</td>
 </tr>
 <tr>
-<td><a href="embedded-firmware/">Embedded Firmware</a></td>
-<td>Adopt</td>
-<td>IoT devices, hardware controllers</td>
+<td>Numerical library</td>
+<td>NumPy + SciPy</td>
+<td>JAX (auto-diff + GPU), PyTorch (ML-adjacent)</td>
+<td>SciPy provides sparse solvers, ODE integrators, and signal processing; JAX for simulations requiring automatic differentiation</td>
 </tr>
 <tr>
-<td><a href="database-engine/">Database Engine / Storage Layer</a></td>
-<td>Assess</td>
-<td>Specialised data stores; rare to build from scratch</td>
+<td>Parallel computing</td>
+<td>MPI via <code>mpi4py</code></td>
+<td>Dask (task graph), Ray</td>
+<td>MPI for tightly coupled parallel solvers (CFD, FEA); Dask for embarrassingly parallel parameter sweeps</td>
 </tr>
 <tr>
-<td><a href="custom-os-component/">Custom OS Component / Kernel Module</a></td>
-<td>Hold</td>
-<td>Almost never the right answer; consider eBPF first</td>
+<td>GPU acceleration</td>
+<td>CuPy (drop-in NumPy for CUDA)</td>
+<td>JAX (XLA), Numba (CUDA kernels)</td>
+<td>CuPy for porting NumPy code to GPU with minimal changes; Numba for writing custom CUDA kernels in Python</td>
+</tr>
+<tr>
+<td>Meshing</td>
+<td>Gmsh</td>
+<td>OpenFOAM's snappyHexMesh, CGAL</td>
+<td>Gmsh provides a Python API for programmatic mesh generation; well-suited for complex 3D geometries</td>
+</tr>
+<tr>
+<td>Visualisation</td>
+<td>PyVista + ParaView</td>
+<td>Matplotlib (2D), VTK (low-level)</td>
+<td>PyVista wraps VTK with a simpler Python API; ParaView for interactive exploration of large results</td>
+</tr>
+<tr>
+<td>Results storage</td>
+<td>HDF5 (via h5py) on AWS S3</td>
+<td>NetCDF4, Zarr</td>
+<td>HDF5 for structured multidimensional result arrays; Zarr for cloud-native chunked access without full-file download</td>
+</tr>
+<tr>
+<td>Experiment tracking</td>
+<td>DVC (data + model versioning)</td>
+<td>MLflow, Sacred</td>
+<td>DVC versions both code and large data files (meshes, results); essential for reproducible simulation runs</td>
 </tr>
 </tbody>
 </table>
-<h2 id="default-tech-stack">Default tech stack<a class="headerlink" href="#default-tech-stack" title="Permanent link">&para;</a></h2>
+<h2 id="5-non-functional-characteristics">5. Non-functional characteristics<a class="headerlink" href="#5-non-functional-characteristics" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Concern</th>
+<th>Profile</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Scalability</strong></td>
+<td>Tightly coupled solvers scale via MPI across nodes; diminishing returns above ~1,000 cores for most problems (Amdahl's Law). Embarrassingly parallel parameter sweeps scale linearly. Cloud HPC (AWS HPC instances, Google HPC) provides on-demand burst capacity without owning hardware.</td>
+</tr>
+<tr>
+<td><strong>Availability target</strong></td>
+<td>Simulation jobs run to completion; they are not long-running services. Availability = "job completes and results are retrievable." Use checkpointing to allow job restart from an intermediate state after a node failure.</td>
+</tr>
+<tr>
+<td><strong>Latency target</strong></td>
+<td>Wall-clock time to solution is the metric. Define acceptable solve time per problem size in the requirements; profile solver performance against this target.</td>
+</tr>
+<tr>
+<td><strong>Security posture</strong></td>
+<td>Simulation inputs often represent proprietary designs (CAD, IP). Encrypt at rest (S3 SSE-KMS). Restrict cluster access to authenticated researchers. Validate all mesh inputs before they enter the solver — malformed meshes can cause unbounded memory consumption.</td>
+</tr>
+<tr>
+<td><strong>Data residency</strong></td>
+<td>Large result files (TB-scale HPC output) must reside in a defined region for export control (ITAR, EAR) compliance if the simulation relates to defence or dual-use technology.</td>
+</tr>
+<tr>
+<td><strong>Compliance fit</strong></td>
+<td>Export control (ITAR/EAR) may restrict cloud provider choice and data sharing for defence-related simulations. FDA 21 CFR Part 11 applies to simulation software used in medical device submission. Academic and funded research may require open data archiving (Zenodo, institutional repository).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-cost-ballpark">6. Cost ballpark<a class="headerlink" href="#6-cost-ballpark" title="Permanent link">&para;</a></h2>
+<p>Indicative monthly USD cost. HPC compute time is the dominant cost.</p>
+<table>
+<thead>
+<tr>
+<th>Scale</th>
+<th>Simulation size</th>
+<th>Monthly cost</th>
+<th>Cost drivers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Small</td>
+<td>Single-node, &lt; 1M DOF</td>
+<td>$100 - $500</td>
+<td>EC2 c5.4xlarge or m5.8xlarge on-demand</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>Multi-node MPI, 1M-100M DOF</td>
+<td>$1,000 - $10,000</td>
+<td>HPC instances (hpc6a), S3 storage for results, EFA networking</td>
+</tr>
+<tr>
+<td>Large</td>
+<td>GPU cluster, &gt;100M DOF</td>
+<td>$10,000 - $100,000</td>
+<td>p4d/p5 GPU instances, Lustre scratch filesystem (FSx), result archive storage</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-llm-assisted-development-fit">7. LLM-assisted development fit<a class="headerlink" href="#7-llm-assisted-development-fit" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Rating</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NumPy / SciPy numerical boilerplate (ODE setup, sparse matrix assembly)</td>
+<td>★★★★</td>
+<td>Good; verify numerical method choice and stability conditions with a domain expert.</td>
+</tr>
+<tr>
+<td>MPI parallelism scaffolding (<code>mpi4py</code> scatter/gather)</td>
+<td>★★★</td>
+<td>Generates structurally correct patterns; load balancing and communication overlap require expert tuning.</td>
+</tr>
+<tr>
+<td>HDF5 / VTK file I/O</td>
+<td>★★★★★</td>
+<td>Excellent — file format APIs are well-represented.</td>
+</tr>
+<tr>
+<td>Numerical algorithm selection (solver, preconditioner, time integrator)</td>
+<td>★★</td>
+<td>Knows the names; selecting the right algorithm for a specific PDE and mesh requires numerical analysis expertise.</td>
+</tr>
+<tr>
+<td>Architecture decisions</td>
+<td>★</td>
+<td>Don't outsource. Use ADRs.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recommended workflow:</strong> Validate the solver against an analytical solution or published benchmark before adding parallelism or GPU acceleration. Reproduce a known result first; optimise second.</p>
+<h2 id="8-reference-implementations">8. Reference implementations<a class="headerlink" href="#8-reference-implementations" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Languages:</strong> Rust (modern default), C, C++, Zig (assess), Go (for network services that don't need C-level perf)</li>
-<li><strong>Build:</strong> CMake, Cargo, Bazel</li>
-<li><strong>Testing:</strong> Property-based testing (proptest, QuickCheck), fuzzing (AFL, libFuzzer), formal methods for critical sections</li>
+<li><strong>Public reference:</strong> <a href="https://github.com/numpy/numpy">numpy/numpy</a> — NumPy; <code>numpy/core/</code> and the documentation tutorials show the array computing foundation underpinning all Python scientific simulation (200 OK ✓)</li>
+<li><strong>Public reference:</strong> <a href="https://github.com/visgl/deck.gl">visgl/deck.gl</a> — deck.gl; large-scale geospatial and scientific data visualisation on the GPU using WebGL (200 OK ✓)</li>
+<li><strong>Internal case study:</strong> <em>Add your anonymised internal example here</em></li>
 </ul>
-<h2 id="llm-development-fit">LLM-development fit<a class="headerlink" href="#llm-development-fit" title="Permanent link">&para;</a></h2>
-<p>Lower than other categories. Less training data, mistakes are expensive, concurrency bugs are hard to catch by inspection. Useful for boilerplate (parsers, serialisation), but architectural decisions still need an experienced human.</p>
+<h2 id="9-related-decisions-adrs">9. Related decisions (ADRs)<a class="headerlink" href="#9-related-decisions-adrs" title="Permanent link">&para;</a></h2>
+<ul>
+<li><em>No ADRs recorded yet. Candidate: Python vs Julia vs C++ for performance-critical simulation kernels.</em></li>
+</ul>
+<h2 id="10-known-risks-gotchas">10. Known risks &amp; gotchas<a class="headerlink" href="#10-known-risks-gotchas" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Solver divergence produces plausible-looking wrong answers</strong> — a stiff ODE with too large a time step produces results that look physically reasonable but are numerically wrong; the simulation has diverged silently. Mitigation: implement a validation test suite with analytical solutions for simple cases before running on real problems; monitor residual norms per timestep.</li>
+<li><strong>Memory exhaustion from mesh refinement</strong> — doubling mesh resolution in 3D increases element count eightfold; the solver runs out of RAM partway through. Mitigation: estimate memory requirements before running (DOF count × sparse matrix density × data type size); run a quick coarse-mesh test to verify the setup before the full fine-mesh solve.</li>
+<li><strong>Reproducibility lost without versioning inputs</strong> — a result cannot be reproduced six months later because the mesh, input parameters, or code version are not tracked. Mitigation: use DVC to version both code and input data; record the full solver configuration (seed, tolerances, mesh hash) in the experiment tracking system on every run.</li>
+<li><strong>Export control violation for cloud HPC</strong> — a defence-related simulation workload runs on a cloud provider whose data centre is in an embargoed country. Mitigation: verify cloud region data residency before submitting; consult legal counsel for any simulation touching ITAR or EAR-controlled technology.</li>
+<li><strong>Parallelism scaling cliff</strong> — MPI job scales well from 1 to 32 cores then levels off; adding 128 cores makes it slower due to communication overhead. Mitigation: profile communication vs compute ratio; perform a strong-scaling study before purchasing large reserved compute capacity.</li>
+</ul>
 
 
 
@@ -1182,10 +1376,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

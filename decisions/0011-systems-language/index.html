@@ -12,13 +12,9 @@
         <meta name="author" content="deva@soa.team">
       
       
-        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/05-systems-infra/">
+        <link rel="canonical" href="https://your-org.github.io/architecture-repo/decisions/0011-systems-language/">
       
       
-        <link rel="prev" href="../04-backend-distributed/">
-      
-      
-        <link rel="next" href="../06-safety-critical/">
       
       
         
@@ -29,7 +25,7 @@
     
     
       
-        <title>Systems & Infrastructure - Architecture Pattern Catalog</title>
+        <title>ADR-0011: Rust as the default language for new systems and infrastructure code - Architecture Pattern Catalog</title>
       
     
     
@@ -80,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#systems-infrastructure" class="md-skip">
+        <a href="#adr-0011-rust-as-the-default-language-for-new-systems-and-infrastructure-code" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Systems & Infrastructure
+              ADR-0011: Rust as the default language for new systems and infrastructure code
             
           </span>
         </div>
@@ -263,13 +259,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../patterns/" class="md-tabs__link">
           
   
   
@@ -289,7 +283,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../decisions/" class="md-tabs__link">
+      <a href="../" class="md-tabs__link">
         
   
   
@@ -427,8 +421,6 @@
       
   
   
-    
-  
   
   
     
@@ -458,23 +450,22 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../patterns/" class="md-nav__link ">
               
   
   
@@ -492,13 +483,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -518,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-web-mobile/" class="md-nav__link">
+      <a href="../../patterns/01-web-mobile/" class="md-nav__link">
         
   
   
@@ -546,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-scripts-automation/" class="md-nav__link">
+      <a href="../../patterns/02-scripts-automation/" class="md-nav__link">
         
   
   
@@ -574,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../03-data-analytics/" class="md-nav__link">
+      <a href="../../patterns/03-data-analytics/" class="md-nav__link">
         
   
   
@@ -602,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04-backend-distributed/" class="md-nav__link">
+      <a href="../../patterns/04-backend-distributed/" class="md-nav__link">
         
   
   
@@ -627,37 +618,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Systems & Infrastructure
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../patterns/05-systems-infra/" class="md-nav__link">
         
   
   
@@ -673,70 +637,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        When to look here
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Patterns in this category
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Default tech stack
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#llm-development-fit" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        LLM-development fit
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -749,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../06-safety-critical/" class="md-nav__link">
+      <a href="../../patterns/06-safety-critical/" class="md-nav__link">
         
   
   
@@ -777,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../07-ai-llm-integrated/" class="md-nav__link">
+      <a href="../../patterns/07-ai-llm-integrated/" class="md-nav__link">
         
   
   
@@ -805,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../08-games-graphics/" class="md-nav__link">
+      <a href="../../patterns/08-games-graphics/" class="md-nav__link">
         
   
   
@@ -840,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../decisions/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -1010,10 +910,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
+  <a href="#context" class="md-nav__link">
     <span class="md-ellipsis">
       
-        When to look here
+        Context
       
     </span>
   </a>
@@ -1021,10 +921,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
+  <a href="#decision" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Patterns in this category
+        Decision
       
     </span>
   </a>
@@ -1032,21 +932,71 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
+  <a href="#alternatives-considered" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Default tech stack
+        Alternatives considered
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Alternatives considered">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-a-rust-chosen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option A: Rust (chosen)
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#llm-development-fit" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#option-b-c" class="md-nav__link">
     <span class="md-ellipsis">
       
-        LLM-development fit
+        Option B: C
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-c-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option C: C++
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-d-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option D: Go
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consequences
       
     </span>
   </a>
@@ -1073,54 +1023,69 @@
   
 
 
-<h1 id="systems-infrastructure">Systems &amp; Infrastructure<a class="headerlink" href="#systems-infrastructure" title="Permanent link">&para;</a></h1>
-<p>Low-level software where performance, memory, and hardware proximity matter. Includes operating system components, drivers, databases, compilers, network stacks, and embedded firmware.</p>
-<h2 id="when-to-look-here">When to look here<a class="headerlink" href="#when-to-look-here" title="Permanent link">&para;</a></h2>
+<h1 id="adr-0011-rust-as-the-default-language-for-new-systems-and-infrastructure-code">ADR-0011: Rust as the default language for new systems and infrastructure code<a class="headerlink" href="#adr-0011-rust-as-the-default-language-for-new-systems-and-infrastructure-code" title="Permanent link">&para;</a></h1>
 <ul>
-<li>The constraint is hardware (memory, latency, power, real-time deadlines)</li>
-<li>You are building infrastructure that other software runs on</li>
-<li>Garbage collection or interpreter overhead is unacceptable</li>
+<li><strong>Status:</strong> Accepted</li>
+<li><strong>Date:</strong> 2026-05-03</li>
+<li><strong>Deciders:</strong> Architecture Team</li>
+<li><strong>Tags:</strong> systems, infrastructure, rust, c, cpp, language</li>
 </ul>
-<h2 id="patterns-in-this-category">Patterns in this category<a class="headerlink" href="#patterns-in-this-category" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Pattern</th>
-<th>Status</th>
-<th>Best for</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="high-performance-network-service/">High-performance Network Service</a></td>
-<td>Trial</td>
-<td>Proxies, load balancers, custom protocols</td>
-</tr>
-<tr>
-<td><a href="embedded-firmware/">Embedded Firmware</a></td>
-<td>Adopt</td>
-<td>IoT devices, hardware controllers</td>
-</tr>
-<tr>
-<td><a href="database-engine/">Database Engine / Storage Layer</a></td>
-<td>Assess</td>
-<td>Specialised data stores; rare to build from scratch</td>
-</tr>
-<tr>
-<td><a href="custom-os-component/">Custom OS Component / Kernel Module</a></td>
-<td>Hold</td>
-<td>Almost never the right answer; consider eBPF first</td>
-</tr>
-</tbody>
-</table>
-<h2 id="default-tech-stack">Default tech stack<a class="headerlink" href="#default-tech-stack" title="Permanent link">&para;</a></h2>
+<h2 id="context">Context<a class="headerlink" href="#context" title="Permanent link">&para;</a></h2>
+<p>The Systems &amp; Infrastructure category covers network services, embedded firmware, storage engines, and OS components. These systems share constraints that application code does not: no garbage collector, manual memory management, strict latency requirements, and high blast radius for bugs (system crashes, data corruption, security vulnerabilities). The language choice for this category is non-obvious and has long-term implications for security, maintainability, and hiring.</p>
+<p>Historically, C and C++ were the only choices. Rust has reached production maturity since 2015, is now accepted in the Linux kernel (6.1+), and is explicitly backed by the NSA, CISA, and the US White House ONCD as the preferred memory-safe alternative to C/C++. The question is no longer whether Rust is viable, but when to prefer it over C/C++ for new projects.</p>
+<h2 id="decision">Decision<a class="headerlink" href="#decision" title="Permanent link">&para;</a></h2>
+<p>We will default to <strong>Rust</strong> for all new systems and infrastructure code where the team has or can develop Rust expertise.</p>
+<p><strong>C remains acceptable</strong> for:
+- Embedded firmware targeting MCUs with mature vendor HAL/RTOS support in C and limited Rust embedded ecosystem support for that specific target
+- Extensions to existing C codebases where rewriting is not feasible
+- Safety-critical systems (automotive, medical) where the industry toolchain and certification infrastructure is still C-centric</p>
+<p><strong>C++ remains acceptable</strong> for:
+- Extensions to existing C++ game engine or system codebases
+- Projects where the team has deep C++ expertise and the codebase predates this ADR</p>
+<p>Go remains the default for application-layer backend services (see ADR-0002). This ADR applies only to the Systems &amp; Infrastructure category.</p>
+<h2 id="alternatives-considered">Alternatives considered<a class="headerlink" href="#alternatives-considered" title="Permanent link">&para;</a></h2>
+<h3 id="option-a-rust-chosen">Option A: Rust (chosen)<a class="headerlink" href="#option-a-rust-chosen" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Languages:</strong> Rust (modern default), C, C++, Zig (assess), Go (for network services that don't need C-level perf)</li>
-<li><strong>Build:</strong> CMake, Cargo, Bazel</li>
-<li><strong>Testing:</strong> Property-based testing (proptest, QuickCheck), fuzzing (AFL, libFuzzer), formal methods for critical sections</li>
+<li><strong>Pros:</strong> Memory safety guaranteed by the borrow checker at compile time — eliminates entire classes of vulnerability (use-after-free, buffer overflow, data races) that account for ~70% of CVEs in systems code (Microsoft, Google, Android security teams all report similar figures). Performance equivalent to C/C++ — no garbage collector, zero-cost abstractions. Growing ecosystem: <code>tokio</code> (async networking), <code>embassy</code> (embedded async), <code>prost</code> (Protobuf), <code>serde</code> (serialisation). Accepted in Linux kernel (6.1+). Cargo package manager and build system is significantly better than CMake/Autotools. Active and friendly community.</li>
+<li><strong>Cons:</strong> Steep learning curve — the borrow checker rejects code patterns that C/C++ engineers consider normal; expect 2-3 months before productivity matches C proficiency. Embedded ecosystem is maturing but less complete than C for some MCU families. Compile times are slower than C. Not yet accepted in safety-critical certification standards (ISO 26262, IEC 62304) at the same level as C — though this is changing.</li>
 </ul>
-<h2 id="llm-development-fit">LLM-development fit<a class="headerlink" href="#llm-development-fit" title="Permanent link">&para;</a></h2>
-<p>Lower than other categories. Less training data, mistakes are expensive, concurrency bugs are hard to catch by inspection. Useful for boilerplate (parsers, serialisation), but architectural decisions still need an experienced human.</p>
+<h3 id="option-b-c">Option B: C<a class="headerlink" href="#option-b-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Pros:</strong> Universal — every MCU has a C compiler; every kernel accepts C; every safety standard explicitly supports C (with MISRA). Vast existing codebases and tooling. Maximum hiring pool for embedded.</li>
+<li><strong>Cons:</strong> No memory safety — use-after-free, buffer overflows, and data races require external tools (Valgrind, ASAN, Coverity) to detect; many are never found in testing and reach production. MISRA C eliminates some dangerous patterns but is a process control, not a language guarantee. Increasingly difficult to justify for new code given Rust's demonstrated safety properties.</li>
+</ul>
+<h3 id="option-c-c">Option C: C++<a class="headerlink" href="#option-c-c" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Pros:</strong> More expressive than C; RAII helps with resource management; standard library is richer. Widely used in game engines, HPC, and financial systems.</li>
+<li><strong>Cons:</strong> Subset of C's memory safety problems persist even with modern C++ (C++17/20); undefined behaviour is pervasive and subtle. "Modern C++" best practices require significant discipline to apply consistently across a team. Extremely complex language specification. No borrow checker equivalent — shared ownership still requires careful discipline.</li>
+</ul>
+<h3 id="option-d-go">Option D: Go<a class="headerlink" href="#option-d-go" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Pros:</strong> Easy to learn, excellent standard library, strong concurrency model, fast compilation.</li>
+<li><strong>Cons:</strong> Garbage collector introduces latency spikes unsuitable for real-time systems. Runtime overhead rules out most embedded targets. Already the default for application-layer services (ADR-0002) — this ADR explicitly addresses the systems tier.</li>
+</ul>
+<h2 id="consequences">Consequences<a class="headerlink" href="#consequences" title="Permanent link">&para;</a></h2>
+<p><strong>Positive</strong></p>
+<ul>
+<li>New systems components have a dramatically lower CVE rate due to memory safety guarantees</li>
+<li>The borrow checker enforces correct concurrency patterns at compile time — data races are impossible in safe Rust</li>
+<li>The ecosystem for async networking (<code>tokio</code>), embedded (<code>embassy</code>), and systems programming has matured to production quality</li>
+<li>CISA/NSA guidance aligns with this decision — reduces compliance/audit risk for government-adjacent projects</li>
+</ul>
+<p><strong>Negative / trade-offs</strong></p>
+<ul>
+<li>Teams must invest in Rust learning; expect slower initial velocity on the first project (typically 30–50% slower until the borrow checker becomes intuitive)</li>
+<li>Unsafe Rust (<code>unsafe {}</code> blocks) can violate the safety guarantees; code review must be especially rigorous for any <code>unsafe</code> block</li>
+<li>For embedded targets where the Rust HAL is immature, C with MISRA compliance remains more practical</li>
+<li>Safety-critical certification (automotive, medical) is not yet straightforward in Rust; teams targeting those domains should consult the current state of the Ferrocene/Rust safety toolchain</li>
+</ul>
+<p><strong>Follow-up actions</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Identify a "first Rust project" in the systems team to build expertise; choose a non-critical component</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Document approved crates for production use (tokio, serde, anyhow, thiserror) — not all crates have the same quality bar</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Review <code>unsafe</code> code in all Rust PRs as a mandatory policy; never approve <code>unsafe</code> without explicit justification</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Re-evaluate for embedded firmware annually as the embedded Rust ecosystem (Embassy, probe-rs) matures</li>
+</ul>
 
 
 
