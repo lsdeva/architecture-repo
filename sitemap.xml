@@ -2,134 +2,158 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://your-org.github.io/architecture-repo/</loc>
-         <lastmod>2026-05-02</lastmod>
+         <lastmod>2026-05-03</lastmod>
     </url>
     <url>
          <loc>https://your-org.github.io/architecture-repo/about/contributing/</loc>
-         <lastmod>2026-05-02</lastmod>
+         <lastmod>2026-05-03</lastmod>
     </url>
     <url>
          <loc>https://your-org.github.io/architecture-repo/about/how-to-use/</loc>
-         <lastmod>2026-05-02</lastmod>
+         <lastmod>2026-05-03</lastmod>
     </url>
     <url>
          <loc>https://your-org.github.io/architecture-repo/about/methodology/</loc>
-         <lastmod>2026-05-02</lastmod>
+         <lastmod>2026-05-03</lastmod>
     </url>
     <url>
          <loc>https://your-org.github.io/architecture-repo/decisions/</loc>
-         <lastmod>2026-05-02</lastmod>
+         <lastmod>2026-05-03</lastmod>
     </url>
     <url>
          <loc>https://your-org.github.io/architecture-repo/decisions/0001-tenant-isolation-strategy/</loc>
-         <lastmod>2026-05-02</lastmod>
+         <lastmod>2026-05-03</lastmod>
     </url>
     <url>
          <loc>https://your-org.github.io/architecture-repo/decisions/0002-default-scripting-language/</loc>
-         <lastmod>2026-05-02</lastmod>
+         <lastmod>2026-05-03</lastmod>
     </url>
     <url>
          <loc>https://your-org.github.io/architecture-repo/decisions/0003-etl-orchestrator/</loc>
-         <lastmod>2026-05-02</lastmod>
+         <lastmod>2026-05-03</lastmod>
     </url>
     <url>
          <loc>https://your-org.github.io/architecture-repo/decisions/0004-vector-store/</loc>
-         <lastmod>2026-05-02</lastmod>
+         <lastmod>2026-05-03</lastmod>
     </url>
     <url>
          <loc>https://your-org.github.io/architecture-repo/decisions/0005-llm-orchestration/</loc>
-         <lastmod>2026-05-02</lastmod>
+         <lastmod>2026-05-03</lastmod>
     </url>
     <url>
          <loc>https://your-org.github.io/architecture-repo/decisions/0006-llm-provider/</loc>
-         <lastmod>2026-05-02</lastmod>
+         <lastmod>2026-05-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/decisions/0007-lakehouse-table-format/</loc>
+         <lastmod>2026-05-03</lastmod>
     </url>
     <url>
          <loc>https://your-org.github.io/architecture-repo/patterns/</loc>
-         <lastmod>2026-05-02</lastmod>
+         <lastmod>2026-05-03</lastmod>
     </url>
     <url>
          <loc>https://your-org.github.io/architecture-repo/patterns/01-web-mobile/</loc>
-         <lastmod>2026-05-02</lastmod>
+         <lastmod>2026-05-03</lastmod>
     </url>
     <url>
          <loc>https://your-org.github.io/architecture-repo/patterns/01-web-mobile/saas-multi-tenant/</loc>
-         <lastmod>2026-05-02</lastmod>
+         <lastmod>2026-05-03</lastmod>
     </url>
     <url>
          <loc>https://your-org.github.io/architecture-repo/patterns/01-web-mobile/static-marketing-site/</loc>
-         <lastmod>2026-05-02</lastmod>
+         <lastmod>2026-05-03</lastmod>
     </url>
     <url>
          <loc>https://your-org.github.io/architecture-repo/patterns/02-scripts-automation/</loc>
-         <lastmod>2026-05-02</lastmod>
+         <lastmod>2026-05-03</lastmod>
     </url>
     <url>
          <loc>https://your-org.github.io/architecture-repo/patterns/02-scripts-automation/cicd-pipeline/</loc>
-         <lastmod>2026-05-02</lastmod>
+         <lastmod>2026-05-03</lastmod>
     </url>
     <url>
          <loc>https://your-org.github.io/architecture-repo/patterns/02-scripts-automation/cli-tool/</loc>
-         <lastmod>2026-05-02</lastmod>
+         <lastmod>2026-05-03</lastmod>
     </url>
     <url>
          <loc>https://your-org.github.io/architecture-repo/patterns/02-scripts-automation/etl-elt-job/</loc>
-         <lastmod>2026-05-02</lastmod>
+         <lastmod>2026-05-03</lastmod>
     </url>
     <url>
          <loc>https://your-org.github.io/architecture-repo/patterns/02-scripts-automation/serverless-function/</loc>
-         <lastmod>2026-05-02</lastmod>
+         <lastmod>2026-05-03</lastmod>
     </url>
     <url>
          <loc>https://your-org.github.io/architecture-repo/patterns/02-scripts-automation/web-scraper/</loc>
-         <lastmod>2026-05-02</lastmod>
+         <lastmod>2026-05-03</lastmod>
     </url>
     <url>
          <loc>https://your-org.github.io/architecture-repo/patterns/03-data-analytics/</loc>
-         <lastmod>2026-05-02</lastmod>
+         <lastmod>2026-05-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/patterns/03-data-analytics/embedded-analytics/</loc>
+         <lastmod>2026-05-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/patterns/03-data-analytics/lakehouse/</loc>
+         <lastmod>2026-05-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/patterns/03-data-analytics/ml-training-pipeline/</loc>
+         <lastmod>2026-05-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/patterns/03-data-analytics/modern-data-stack/</loc>
+         <lastmod>2026-05-03</lastmod>
+    </url>
+    <url>
+         <loc>https://your-org.github.io/architecture-repo/patterns/03-data-analytics/real-time-streaming-analytics/</loc>
+         <lastmod>2026-05-03</lastmod>
     </url>
     <url>
          <loc>https://your-org.github.io/architecture-repo/patterns/04-backend-distributed/</loc>
-         <lastmod>2026-05-02</lastmod>
+         <lastmod>2026-05-03</lastmod>
     </url>
     <url>
          <loc>https://your-org.github.io/architecture-repo/patterns/05-systems-infra/</loc>
-         <lastmod>2026-05-02</lastmod>
+         <lastmod>2026-05-03</lastmod>
     </url>
     <url>
          <loc>https://your-org.github.io/architecture-repo/patterns/06-safety-critical/</loc>
-         <lastmod>2026-05-02</lastmod>
+         <lastmod>2026-05-03</lastmod>
     </url>
     <url>
          <loc>https://your-org.github.io/architecture-repo/patterns/07-ai-llm-integrated/</loc>
-         <lastmod>2026-05-02</lastmod>
+         <lastmod>2026-05-03</lastmod>
     </url>
     <url>
          <loc>https://your-org.github.io/architecture-repo/patterns/07-ai-llm-integrated/agentic-workflow/</loc>
-         <lastmod>2026-05-02</lastmod>
+         <lastmod>2026-05-03</lastmod>
     </url>
     <url>
          <loc>https://your-org.github.io/architecture-repo/patterns/07-ai-llm-integrated/conversational-assistant/</loc>
-         <lastmod>2026-05-02</lastmod>
+         <lastmod>2026-05-03</lastmod>
     </url>
     <url>
          <loc>https://your-org.github.io/architecture-repo/patterns/07-ai-llm-integrated/copilot-in-app/</loc>
-         <lastmod>2026-05-02</lastmod>
+         <lastmod>2026-05-03</lastmod>
     </url>
     <url>
          <loc>https://your-org.github.io/architecture-repo/patterns/07-ai-llm-integrated/document-processing/</loc>
-         <lastmod>2026-05-02</lastmod>
+         <lastmod>2026-05-03</lastmod>
     </url>
     <url>
          <loc>https://your-org.github.io/architecture-repo/patterns/07-ai-llm-integrated/fine-tuned-model/</loc>
-         <lastmod>2026-05-02</lastmod>
+         <lastmod>2026-05-03</lastmod>
     </url>
     <url>
          <loc>https://your-org.github.io/architecture-repo/patterns/07-ai-llm-integrated/rag/</loc>
-         <lastmod>2026-05-02</lastmod>
+         <lastmod>2026-05-03</lastmod>
     </url>
     <url>
          <loc>https://your-org.github.io/architecture-repo/patterns/08-games-graphics/</loc>
-         <lastmod>2026-05-02</lastmod>
+         <lastmod>2026-05-03</lastmod>
     </url>
 </urlset>

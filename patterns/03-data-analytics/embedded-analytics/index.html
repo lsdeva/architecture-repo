@@ -12,31 +12,27 @@
         <meta name="author" content="deva@soa.team">
       
       
-        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/03-data-analytics/">
+        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/03-data-analytics/embedded-analytics/">
       
       
-        <link rel="prev" href="../02-scripts-automation/">
-      
-      
-        <link rel="next" href="../04-backend-distributed/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Data & Analytics - Architecture Pattern Catalog</title>
+        <title>Pattern: Embedded Analytics - Architecture Pattern Catalog</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#data-analytics" class="md-skip">
+        <a href="#pattern-embedded-analytics" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +90,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Architecture Pattern Catalog" class="md-header__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
+    <a href="../../.." title="Architecture Pattern Catalog" class="md-header__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Data & Analytics
+              Pattern: Embedded Analytics
             
           </span>
         </div>
@@ -227,7 +223,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -246,7 +242,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../about/how-to-use/" class="md-tabs__link">
+      <a href="../../../about/how-to-use/" class="md-tabs__link">
         
   
   
@@ -263,13 +259,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../" class="md-tabs__link">
           
   
   
@@ -289,7 +283,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../decisions/" class="md-tabs__link">
+      <a href="../../../decisions/" class="md-tabs__link">
         
   
   
@@ -310,7 +304,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../about/methodology/" class="md-tabs__link">
+        <a href="../../../about/methodology/" class="md-tabs__link">
           
   
   
@@ -346,7 +340,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Architecture Pattern Catalog" class="md-nav__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
+    <a href="../../.." title="Architecture Pattern Catalog" class="md-nav__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -376,7 +370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -403,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/how-to-use/" class="md-nav__link">
+      <a href="../../../about/how-to-use/" class="md-nav__link">
         
   
   
@@ -427,8 +421,6 @@
       
   
   
-    
-  
   
   
     
@@ -458,23 +450,22 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
@@ -492,13 +483,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -518,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-web-mobile/" class="md-nav__link">
+      <a href="../../01-web-mobile/" class="md-nav__link">
         
   
   
@@ -546,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-scripts-automation/" class="md-nav__link">
+      <a href="../../02-scripts-automation/" class="md-nav__link">
         
   
   
@@ -571,37 +562,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Data & Analytics
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -617,70 +581,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        When to look here
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Patterns in this category
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Default tech stack
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#llm-development-fit" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        LLM-development fit
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -693,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04-backend-distributed/" class="md-nav__link">
+      <a href="../../04-backend-distributed/" class="md-nav__link">
         
   
   
@@ -721,7 +621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../05-systems-infra/" class="md-nav__link">
+      <a href="../../05-systems-infra/" class="md-nav__link">
         
   
   
@@ -749,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../06-safety-critical/" class="md-nav__link">
+      <a href="../../06-safety-critical/" class="md-nav__link">
         
   
   
@@ -777,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../07-ai-llm-integrated/" class="md-nav__link">
+      <a href="../../07-ai-llm-integrated/" class="md-nav__link">
         
   
   
@@ -805,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../08-games-graphics/" class="md-nav__link">
+      <a href="../../08-games-graphics/" class="md-nav__link">
         
   
   
@@ -840,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../decisions/" class="md-nav__link">
+      <a href="../../../decisions/" class="md-nav__link">
         
   
   
@@ -927,7 +827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/methodology/" class="md-nav__link">
+      <a href="../../../about/methodology/" class="md-nav__link">
         
   
   
@@ -955,7 +855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/contributing/" class="md-nav__link">
+      <a href="../../../about/contributing/" class="md-nav__link">
         
   
   
@@ -1010,10 +910,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
+  <a href="#1-context" class="md-nav__link">
     <span class="md-ellipsis">
       
-        When to look here
+        1. Context
       
     </span>
   </a>
@@ -1021,10 +921,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
+  <a href="#2-problem-it-solves" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Patterns in this category
+        2. Problem it solves
       
     </span>
   </a>
@@ -1032,10 +932,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
+  <a href="#3-solution-overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Default tech stack
+        3. Solution overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Solution overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-context-c4-level-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System context (C4 Level 1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container-view-c4-level-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Container view (C4 Level 2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-technology-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Technology stack
       
     </span>
   </a>
@@ -1043,10 +982,65 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#llm-development-fit" class="md-nav__link">
+  <a href="#5-non-functional-characteristics" class="md-nav__link">
     <span class="md-ellipsis">
       
-        LLM-development fit
+        5. Non-functional characteristics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-cost-ballpark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Cost ballpark
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-llm-assisted-development-fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. LLM-assisted development fit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-reference-implementations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Reference implementations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-related-decisions-adrs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Related decisions (ADRs)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-known-risks-gotchas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Known risks &amp; gotchas
       
     </span>
   </a>
@@ -1073,61 +1067,259 @@
   
 
 
-<h1 id="data-analytics">Data &amp; Analytics<a class="headerlink" href="#data-analytics" title="Permanent link">&para;</a></h1>
-<p>Systems whose primary purpose is to store, transform, analyse, or visualise data — including modern ML training pipelines.</p>
-<h2 id="when-to-look-here">When to look here<a class="headerlink" href="#when-to-look-here" title="Permanent link">&para;</a></h2>
+<h1 id="pattern-embedded-analytics">Pattern: Embedded Analytics<a class="headerlink" href="#pattern-embedded-analytics" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Quick facts</p>
 <ul>
-<li>The primary value is reporting, dashboards, ML model training, or data products</li>
-<li>Volumes are too large for a transactional database to handle efficiently</li>
-<li>Multiple source systems need to be integrated for analysis</li>
+<li><strong>Category:</strong> Data &amp; Analytics</li>
+<li><strong>Maturity:</strong> Adopt</li>
+<li><strong>Typical team size:</strong> 1-2 engineers</li>
+<li><strong>Typical timeline to MVP:</strong> 2-4 weeks</li>
+<li><strong>Last reviewed:</strong> 2026-05-03 by Architecture Team</li>
 </ul>
-<h2 id="patterns-in-this-category">Patterns in this category<a class="headerlink" href="#patterns-in-this-category" title="Permanent link">&para;</a></h2>
+</div>
+<h2 id="1-context">1. Context<a class="headerlink" href="#1-context" title="Permanent link">&para;</a></h2>
+<p><strong>Use this pattern when:</strong></p>
+<ul>
+<li>Your SaaS product needs to show customers dashboards and charts built from their own operational data, within the product UI</li>
+<li>Building a custom charting layer from scratch (D3.js, Recharts) would take months and produce a less capable result than an embedded BI tool</li>
+<li>Customers are asking for "export to CSV" as a workaround — that is the signal they need analytics inside the product, not outside it</li>
+<li>Each customer should only ever see their own data — multi-tenant isolation is a hard requirement</li>
+</ul>
+<p><strong>Do NOT use this pattern when:</strong></p>
+<ul>
+<li>A single, simple chart is all that is needed — use a charting library (Recharts, Chart.js) directly; full embedded BI is overkill for one visualisation</li>
+<li>All users share the same data with no per-tenant isolation — just link to a public Grafana or Superset dashboard</li>
+<li>Customers need to bring their own data sources and build their own models — that is a different product category (analytics platform, not embedded analytics)</li>
+<li>Query latency requirements are sub-second on billions of rows — that needs a dedicated serving layer (ClickHouse) rather than Postgres</li>
+</ul>
+<h2 id="2-problem-it-solves">2. Problem it solves<a class="headerlink" href="#2-problem-it-solves" title="Permanent link">&para;</a></h2>
+<p>SaaS customers want to understand their own usage: adoption trends, spend breakdowns, operational metrics. Without in-product analytics, they export CSVs and stitch spreadsheets together — a slow, error-prone workflow that produces one-off snapshots rather than live data. Building a full BI feature from scratch (charting library, query engine, permissions model, dashboard builder) takes months. Embedding a third-party BI tool delivers a polished, self-serve analytics experience in weeks, with tenant isolation enforced at the embed token level.</p>
+<h2 id="3-solution-overview">3. Solution overview<a class="headerlink" href="#3-solution-overview" title="Permanent link">&para;</a></h2>
+<h3 id="system-context-c4-level-1">System context (C4 Level 1)<a class="headerlink" href="#system-context-c4-level-1" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart LR
+    Customer((Customer)) --&gt; ProductUI[Product UI]
+    ProductUI --&gt; EmbedPanel[Embedded Dashboard\niFrame / SDK]
+    EmbedPanel --&gt; BITool[BI Tool\nMetabase / Superset]
+    BITool --&gt; AnalyticsDB[(Analytics Database\nPostgres / ClickHouse)]
+    ProductDB[(Product Database)] --&gt;|ETL sync| AnalyticsDB
+    ProductAPI[Product API] --&gt;|generates embed token| EmbedPanel</code></pre>
+<h3 id="container-view-c4-level-2">Container view (C4 Level 2)<a class="headerlink" href="#container-view-c4-level-2" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TB
+    subgraph Product Frontend
+        ProductUI[Product UI\nReact]
+        EmbedIframe[Embedded iFrame\nor SDK component]
+    end
+    subgraph Product Backend
+        ProductAPI[Product API\nFastAPI / NestJS]
+        TokenAPI[Embed Token API\nserver-side JWT signing]
+        PermCheck[Permission Check\ntenant_id assertion]
+    end
+    subgraph BI Layer
+        BIServer[Metabase\nor Superset]
+        DashConfig[Dashboard definitions\nmanaged by product team]
+    end
+    subgraph Data Layer
+        AnalyticsDB[(Analytics DB\nPostgres or ClickHouse)]
+        ETLJob[ETL / sync job\nproduct DB → analytics DB]
+        AuditTable[ETL audit table\nlast_synced_at per tenant]
+    end
+
+    ProductUI --&gt; ProductAPI
+    ProductAPI --&gt; TokenAPI
+    TokenAPI --&gt; PermCheck
+    PermCheck --&gt; EmbedIframe
+    EmbedIframe --&gt; BIServer
+    BIServer --&gt; AnalyticsDB
+    BIServer --&gt; DashConfig
+    ETLJob --&gt; AnalyticsDB
+    ETLJob --&gt; AuditTable
+    ProductDB -.-&gt;|source| ETLJob</code></pre>
+<h2 id="4-technology-stack">4. Technology stack<a class="headerlink" href="#4-technology-stack" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Pattern</th>
-<th>Status</th>
-<th>Best for</th>
+<th>Layer</th>
+<th>Primary choice</th>
+<th>Alternatives</th>
+<th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="modern-data-stack/">Modern Data Stack (Warehouse + dbt + BI)</a></td>
-<td>Adopt</td>
-<td>Standard analytics needs; most companies under 1k employees</td>
+<td>BI tool</td>
+<td>Metabase</td>
+<td>Apache Superset, Grafana, Preset (hosted Superset)</td>
+<td>Metabase has the simplest embedding API; Superset is more flexible but harder to embed securely; Grafana for time-series / operational metrics</td>
 </tr>
 <tr>
-<td><a href="lakehouse/">Lakehouse</a></td>
-<td>Trial</td>
-<td>Mixed BI + ML workloads at scale</td>
+<td>Embedded display</td>
+<td>Metabase Signed Embedding (JWT iFrame)</td>
+<td>Superset Guest Token API, Grafana Viewer</td>
+<td>Signed embedding scopes the dashboard to a specific tenant via a server-side JWT; never expose admin credentials to the frontend</td>
 </tr>
 <tr>
-<td><a href="real-time-streaming-analytics/">Real-time Streaming Analytics</a></td>
-<td>Trial</td>
-<td>Sub-minute latency dashboards, fraud detection</td>
+<td>Analytics database</td>
+<td>PostgreSQL</td>
+<td>ClickHouse, DuckDB (in-process for small scale)</td>
+<td>Postgres for &lt; 50M rows; ClickHouse for &gt; 50M rows or sub-second query requirements on large aggregations</td>
 </tr>
 <tr>
-<td><a href="ml-training-pipeline/">ML Training Pipeline</a></td>
-<td>Trial</td>
-<td>Recurring model retraining with versioned data and experiments</td>
+<td>Multi-tenancy enforcement</td>
+<td>Locked <code>tenant_id</code> filter in embed token</td>
+<td>Database-level row-level security</td>
+<td>Pass <code>customer_id</code> as an immutable locked parameter in the embed token — the BI tool enforces it on every query; test this is actually enforced</td>
 </tr>
 <tr>
-<td><a href="embedded-analytics/">Embedded Analytics</a></td>
-<td>Adopt</td>
-<td>Showing dashboards inside a SaaS product</td>
+<td>ETL from product DB</td>
+<td>Postgres logical replication + pgoutput</td>
+<td>dbt incremental model on a schedule, Airbyte</td>
+<td>Logical replication for near-real-time sync (seconds latency); scheduled dbt sync for hourly freshness tolerance</td>
+</tr>
+<tr>
+<td>Charting (custom one-offs)</td>
+<td>Recharts (React)</td>
+<td>Chart.js, Highcharts, Vega-Lite</td>
+<td>Use for single charts outside the embedded BI scope; Recharts is free, Highcharts requires a commercial licence</td>
+</tr>
+<tr>
+<td>BI tool hosting</td>
+<td>Self-hosted Metabase on ECS / Docker</td>
+<td>Metabase Cloud, Preset Cloud, Grafana Cloud</td>
+<td>Self-host for data residency or cost control; managed cloud to reduce operational burden</td>
+</tr>
+<tr>
+<td>ETL freshness monitoring</td>
+<td>Custom <code>last_synced_at</code> table</td>
+<td>Prefect / Airflow observability</td>
+<td>Surface freshness timestamp on every dashboard so customers know when data was last updated</td>
 </tr>
 </tbody>
 </table>
-<h2 id="default-tech-stack">Default tech stack<a class="headerlink" href="#default-tech-stack" title="Permanent link">&para;</a></h2>
+<h2 id="5-non-functional-characteristics">5. Non-functional characteristics<a class="headerlink" href="#5-non-functional-characteristics" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Concern</th>
+<th>Profile</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Scalability</strong></td>
+<td>The BI server is stateless — queries execute against the database at query time; scale by adding replicas. The analytics database is the bottleneck: ClickHouse scales horizontally; Postgres scales vertically then needs read replicas.</td>
+</tr>
+<tr>
+<td><strong>Availability target</strong></td>
+<td>99.9%; BI tool unavailability degrades a feature, not core product functionality. Implement graceful degradation: render a "dashboards temporarily unavailable" banner rather than a broken iFrame that confuses users.</td>
+</tr>
+<tr>
+<td><strong>Latency target</strong></td>
+<td>Dashboard load: p95 &lt; 3 s. ClickHouse aggregation queries: p95 &lt; 500 ms. Postgres with proper indexes: p95 &lt; 2 s for aggregates over ≤ 50M rows. Add pre-computed summary tables for the slowest recurring queries.</td>
+</tr>
+<tr>
+<td><strong>Security posture</strong></td>
+<td>The most critical invariant: every embedded query must be scoped to the tenant whose credentials generated the embed token. Never allow customers to supply or modify the <code>tenant_id</code> filter client-side. Verify cross-tenant isolation with an automated test on every deployment.</td>
+</tr>
+<tr>
+<td><strong>Data residency</strong></td>
+<td>Analytics data lives in your own infrastructure. The BI tool queries your database — no customer data is transmitted to a third-party SaaS (unlike cloud-hosted BI tools that pull data into their cloud).</td>
+</tr>
+<tr>
+<td><strong>Compliance fit</strong></td>
+<td>GDPR ✓ — analytics data is in your infrastructure; right-to-erasure cascades from the product DB to the analytics DB via the ETL deletion event. SOC 2 ✓ — tenant isolation via embed token is a testable, auditable control. HIPAA ✓ with encrypted analytics DB and BAA on your hosting infrastructure.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-cost-ballpark">6. Cost ballpark<a class="headerlink" href="#6-cost-ballpark" title="Permanent link">&para;</a></h2>
+<p>Indicative monthly USD cost. BI tool licensing and database sizing are the main variables.</p>
+<table>
+<thead>
+<tr>
+<th>Scale</th>
+<th>Customers using dashboards</th>
+<th>Monthly cost</th>
+<th>Cost drivers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Small</td>
+<td>&lt; 100</td>
+<td>$50 - $300</td>
+<td>Self-hosted Metabase (free community edition), Postgres analytics DB</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>100 - 1,000</td>
+<td>$400 - $2,000</td>
+<td>Metabase Pro licence (~$500/month), ClickHouse Cloud or larger Postgres, ETL compute</td>
+</tr>
+<tr>
+<td>Large</td>
+<td>1,000+</td>
+<td>$2,000 - $10,000</td>
+<td>Metabase Enterprise or Preset Cloud, ClickHouse cluster, dedicated ETL infrastructure, SLA support</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-llm-assisted-development-fit">7. LLM-assisted development fit<a class="headerlink" href="#7-llm-assisted-development-fit" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Rating</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ETL sync query and pipeline code</td>
+<td>★★★★★</td>
+<td>Excellent — Postgres → Postgres replication and incremental sync patterns generate cleanly.</td>
+</tr>
+<tr>
+<td>Embed token JWT signing (server-side)</td>
+<td>★★★★★</td>
+<td>Excellent — JWT signing with locked parameters is a standard pattern; well-represented in all backend languages.</td>
+</tr>
+<tr>
+<td>ClickHouse schema design (MergeTree)</td>
+<td>★★★★</td>
+<td>Good — ORDER BY and PARTITION BY choices need validation against your specific query patterns.</td>
+</tr>
+<tr>
+<td>Dashboard JSON configuration</td>
+<td>★★★</td>
+<td>Metabase and Superset dashboard schemas are version-specific and complex; test generated configs against the actual BI tool version.</td>
+</tr>
+<tr>
+<td>Architecture decisions</td>
+<td>★</td>
+<td>Don't outsource. Use ADRs.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recommended workflow:</strong> Start with a single dashboard showing the top 3 metrics customers actually ask for (check support tickets). Hard-code the tenant filter before launch. Add self-serve dashboard configuration only after validating that customers want it — most do not.</p>
+<h2 id="8-reference-implementations">8. Reference implementations<a class="headerlink" href="#8-reference-implementations" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Warehouse:</strong> Snowflake, BigQuery, Redshift, or DuckDB (for small teams)</li>
-<li><strong>Transformation:</strong> dbt (the de-facto standard)</li>
-<li><strong>Orchestration:</strong> Airflow, Dagster, Prefect</li>
-<li><strong>BI:</strong> Metabase (open source), Looker, Tableau, Superset</li>
-<li><strong>ML platform:</strong> Databricks, SageMaker, Vertex AI, or self-hosted MLflow + Ray</li>
+<li><strong>Public reference:</strong> <a href="https://github.com/metabase/metabase">metabase/metabase</a> — open-source BI tool; <code>docs/embedding/</code> covers signed embedding, JWT token generation, and locked parameter configuration (200 OK ✓)</li>
+<li><strong>Public reference:</strong> <a href="https://github.com/apache/superset">apache/superset</a> — open-source BI and data exploration platform; <code>superset/embedded/</code> covers the Guest Token API used for multi-tenant embedding (200 OK ✓)</li>
+<li><strong>Public reference:</strong> <a href="https://github.com/grafana/grafana">grafana/grafana</a> — open-source observability and analytics platform; useful reference for time-series embedded dashboards (200 OK ✓)</li>
+<li><strong>Internal case study:</strong> <em>Add your anonymised internal example here</em></li>
 </ul>
-<h2 id="llm-development-fit">LLM-development fit<a class="headerlink" href="#llm-development-fit" title="Permanent link">&para;</a></h2>
-<p>Strong for SQL and pandas-style code; weaker on judgement (which join is right, which feature matters). Good for boilerplate, risky for correctness without verification.</p>
+<h2 id="9-related-decisions-adrs">9. Related decisions (ADRs)<a class="headerlink" href="#9-related-decisions-adrs" title="Permanent link">&para;</a></h2>
+<ul>
+<li><em>No ADRs recorded yet. Candidate: Postgres vs ClickHouse analytics database choice — record when data volume forces a migration decision.</em></li>
+</ul>
+<h2 id="10-known-risks-gotchas">10. Known risks &amp; gotchas<a class="headerlink" href="#10-known-risks-gotchas" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Cross-tenant data leak through a misconfigured embed token</strong> — the <code>tenant_id</code> locked filter is absent or incorrectly set; one customer's dashboard returns another's data. Mitigation: write an automated integration test that generates tokens for two different tenants and asserts the query results are disjoint; run this test on every deployment — not just at launch.</li>
+<li><strong>Full-table-scan queries cause dashboard timeouts</strong> — the BI tool generates a query with no date-range filter on a 100M-row table; it takes minutes and times out. Mitigation: add default date-range filters to every dashboard; configure a 30-second query timeout in the BI tool's admin settings; ensure the analytics table is partitioned by date with a covering index.</li>
+<li><strong>ETL lag shows stale data without customer disclosure</strong> — the sync job fails silently; the dashboard still renders but shows data from three days ago with no indication. Mitigation: display "Last updated: {timestamp}" on every dashboard (pulled from the ETL audit table); alert the engineering team when ETL lag exceeds the stated SLA.</li>
+<li><strong>Embed URL leaks expose tenant data</strong> — a signed embed URL is copied from a browser tab and forwarded to an unauthorised person; the URL remains valid. Mitigation: set short embed token expiry (15 minutes maximum); never use unsigned "public embedding" for multi-tenant data; regenerate the token on every dashboard load via a server-side API call.</li>
+<li><strong>BI tool upgrades break embedded dashboards</strong> — a Metabase or Superset minor version changes the embed URL schema or removes a chart type used in production dashboards. Mitigation: pin the BI tool version in Docker; run automated screenshot-comparison tests for the three most-used dashboards in CI; use a staged rollout (dev → staging → prod) for any BI tool upgrade.</li>
+</ul>
 
 
 
@@ -1189,10 +1381,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

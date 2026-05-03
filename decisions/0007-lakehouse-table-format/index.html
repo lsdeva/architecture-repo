@@ -12,13 +12,9 @@
         <meta name="author" content="deva@soa.team">
       
       
-        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/03-data-analytics/">
+        <link rel="canonical" href="https://your-org.github.io/architecture-repo/decisions/0007-lakehouse-table-format/">
       
       
-        <link rel="prev" href="../02-scripts-automation/">
-      
-      
-        <link rel="next" href="../04-backend-distributed/">
       
       
         
@@ -29,7 +25,7 @@
     
     
       
-        <title>Data & Analytics - Architecture Pattern Catalog</title>
+        <title>ADR-0007: Delta Lake as the default lakehouse table format - Architecture Pattern Catalog</title>
       
     
     
@@ -80,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#data-analytics" class="md-skip">
+        <a href="#adr-0007-delta-lake-as-the-default-lakehouse-table-format" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Data & Analytics
+              ADR-0007: Delta Lake as the default lakehouse table format
             
           </span>
         </div>
@@ -263,13 +259,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../patterns/" class="md-tabs__link">
           
   
   
@@ -289,7 +283,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../decisions/" class="md-tabs__link">
+      <a href="../" class="md-tabs__link">
         
   
   
@@ -427,8 +421,6 @@
       
   
   
-    
-  
   
   
     
@@ -458,23 +450,22 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../patterns/" class="md-nav__link ">
               
   
   
@@ -492,13 +483,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -518,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-web-mobile/" class="md-nav__link">
+      <a href="../../patterns/01-web-mobile/" class="md-nav__link">
         
   
   
@@ -546,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-scripts-automation/" class="md-nav__link">
+      <a href="../../patterns/02-scripts-automation/" class="md-nav__link">
         
   
   
@@ -571,37 +562,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Data & Analytics
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../patterns/03-data-analytics/" class="md-nav__link">
         
   
   
@@ -617,70 +581,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        When to look here
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Patterns in this category
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Default tech stack
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#llm-development-fit" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        LLM-development fit
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -693,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04-backend-distributed/" class="md-nav__link">
+      <a href="../../patterns/04-backend-distributed/" class="md-nav__link">
         
   
   
@@ -721,7 +621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../05-systems-infra/" class="md-nav__link">
+      <a href="../../patterns/05-systems-infra/" class="md-nav__link">
         
   
   
@@ -749,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../06-safety-critical/" class="md-nav__link">
+      <a href="../../patterns/06-safety-critical/" class="md-nav__link">
         
   
   
@@ -777,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../07-ai-llm-integrated/" class="md-nav__link">
+      <a href="../../patterns/07-ai-llm-integrated/" class="md-nav__link">
         
   
   
@@ -805,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../08-games-graphics/" class="md-nav__link">
+      <a href="../../patterns/08-games-graphics/" class="md-nav__link">
         
   
   
@@ -840,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../decisions/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -1010,10 +910,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
+  <a href="#context" class="md-nav__link">
     <span class="md-ellipsis">
       
-        When to look here
+        Context
       
     </span>
   </a>
@@ -1021,10 +921,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
+  <a href="#decision" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Patterns in this category
+        Decision
       
     </span>
   </a>
@@ -1032,21 +932,60 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
+  <a href="#alternatives-considered" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Default tech stack
+        Alternatives considered
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Alternatives considered">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-a-delta-lake-chosen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option A: Delta Lake (chosen)
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#llm-development-fit" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#option-b-apache-iceberg" class="md-nav__link">
     <span class="md-ellipsis">
       
-        LLM-development fit
+        Option B: Apache Iceberg
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-c-apache-hudi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Option C: Apache Hudi
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consequences" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consequences
       
     </span>
   </a>
@@ -1073,61 +1012,58 @@
   
 
 
-<h1 id="data-analytics">Data &amp; Analytics<a class="headerlink" href="#data-analytics" title="Permanent link">&para;</a></h1>
-<p>Systems whose primary purpose is to store, transform, analyse, or visualise data — including modern ML training pipelines.</p>
-<h2 id="when-to-look-here">When to look here<a class="headerlink" href="#when-to-look-here" title="Permanent link">&para;</a></h2>
+<h1 id="adr-0007-delta-lake-as-the-default-lakehouse-table-format">ADR-0007: Delta Lake as the default lakehouse table format<a class="headerlink" href="#adr-0007-delta-lake-as-the-default-lakehouse-table-format" title="Permanent link">&para;</a></h1>
 <ul>
-<li>The primary value is reporting, dashboards, ML model training, or data products</li>
-<li>Volumes are too large for a transactional database to handle efficiently</li>
-<li>Multiple source systems need to be integrated for analysis</li>
+<li><strong>Status:</strong> Accepted</li>
+<li><strong>Date:</strong> 2026-05-03</li>
+<li><strong>Deciders:</strong> Architecture Team</li>
+<li><strong>Tags:</strong> data, lakehouse, storage, delta-lake, iceberg</li>
 </ul>
-<h2 id="patterns-in-this-category">Patterns in this category<a class="headerlink" href="#patterns-in-this-category" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Pattern</th>
-<th>Status</th>
-<th>Best for</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="modern-data-stack/">Modern Data Stack (Warehouse + dbt + BI)</a></td>
-<td>Adopt</td>
-<td>Standard analytics needs; most companies under 1k employees</td>
-</tr>
-<tr>
-<td><a href="lakehouse/">Lakehouse</a></td>
-<td>Trial</td>
-<td>Mixed BI + ML workloads at scale</td>
-</tr>
-<tr>
-<td><a href="real-time-streaming-analytics/">Real-time Streaming Analytics</a></td>
-<td>Trial</td>
-<td>Sub-minute latency dashboards, fraud detection</td>
-</tr>
-<tr>
-<td><a href="ml-training-pipeline/">ML Training Pipeline</a></td>
-<td>Trial</td>
-<td>Recurring model retraining with versioned data and experiments</td>
-</tr>
-<tr>
-<td><a href="embedded-analytics/">Embedded Analytics</a></td>
-<td>Adopt</td>
-<td>Showing dashboards inside a SaaS product</td>
-</tr>
-</tbody>
-</table>
-<h2 id="default-tech-stack">Default tech stack<a class="headerlink" href="#default-tech-stack" title="Permanent link">&para;</a></h2>
+<h2 id="context">Context<a class="headerlink" href="#context" title="Permanent link">&para;</a></h2>
+<p>The Lakehouse pattern stores data on object storage (S3/GCS/Azure Blob) in an open table format that adds ACID transactions, schema evolution, and time-travel to raw Parquet files. Three formats compete for this role: Delta Lake, Apache Iceberg, and Apache Hudi. The choice determines what compute engines can read the data without copying, how schema evolution and partition evolution work, what catalog integration is required, and how easy migration is if requirements change.</p>
+<p>This decision is expensive to reverse because all existing tables must be fully rewritten to migrate between formats, and downstream jobs must be retested. Making it explicitly prevents three different teams from independently choosing three different formats.</p>
+<p>In 2026, all three formats have reached production maturity. The choice is genuinely non-obvious. The key differentiator is the primary compute engine: Spark-first workloads favour Delta Lake; multi-engine and cloud-agnostic workloads favour Iceberg.</p>
+<h2 id="decision">Decision<a class="headerlink" href="#decision" title="Permanent link">&para;</a></h2>
+<p>We will use <strong>Delta Lake</strong> as the default table format for new lakehouse projects where Apache Spark is the primary compute engine.</p>
+<p>Teams building multi-cloud deployments, integrating with Snowflake or BigQuery as a query engine, or running primarily on Trino without Spark should use <strong>Apache Iceberg</strong> instead. This exception should be documented in the project's architecture notes.</p>
+<p>Apache Hudi is not recommended for new projects; its upsert capabilities are now available in Delta Lake and Iceberg without Hudi's additional operational complexity.</p>
+<h2 id="alternatives-considered">Alternatives considered<a class="headerlink" href="#alternatives-considered" title="Permanent link">&para;</a></h2>
+<h3 id="option-a-delta-lake-chosen">Option A: Delta Lake (chosen)<a class="headerlink" href="#option-a-delta-lake-chosen" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Warehouse:</strong> Snowflake, BigQuery, Redshift, or DuckDB (for small teams)</li>
-<li><strong>Transformation:</strong> dbt (the de-facto standard)</li>
-<li><strong>Orchestration:</strong> Airflow, Dagster, Prefect</li>
-<li><strong>BI:</strong> Metabase (open source), Looker, Tableau, Superset</li>
-<li><strong>ML platform:</strong> Databricks, SageMaker, Vertex AI, or self-hosted MLflow + Ray</li>
+<li><strong>Pros:</strong> Strongest Apache Spark integration (co-created by Databricks; donated to the Linux Foundation in 2019). Mature OPTIMIZE and Z-ORDER commands for file compaction and clustering. MERGE INTO syntax for upserts is well-optimised. Robust time-travel via <code>VERSION AS OF</code> and <code>TIMESTAMP AS OF</code>. <code>delta-rs</code> library enables Python and Rust access without Spark. Databricks uses Delta Lake natively — teams on Databricks pay no integration tax.</li>
+<li><strong>Cons:</strong> Historically more tightly coupled to Databricks than Iceberg (though open-source Delta Lake and Databricks Delta are now nearly identical). Multi-engine support (Trino, Flink native) lags Iceberg slightly — the Delta Lake connector for Trino is maintained by the community, not the Trino project.</li>
 </ul>
-<h2 id="llm-development-fit">LLM-development fit<a class="headerlink" href="#llm-development-fit" title="Permanent link">&para;</a></h2>
-<p>Strong for SQL and pandas-style code; weaker on judgement (which join is right, which feature matters). Good for boilerplate, risky for correctness without verification.</p>
+<h3 id="option-b-apache-iceberg">Option B: Apache Iceberg<a class="headerlink" href="#option-b-apache-iceberg" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Pros:</strong> Designed from the start for multi-engine access — Spark, Trino, Flink, Presto, Snowflake, BigQuery, Dremio, and StarRocks all support Iceberg natively without third-party connectors. Hidden partitioning means partition strategy can be changed without rewriting data. Partition evolution is first-class. Project Nessie adds Git-like catalog branching (create branches of your data catalog for safe experimentation). Better support for very large tables (&gt; billions of rows) due to more efficient metadata management.</li>
+<li><strong>Cons:</strong> <code>MERGE INTO</code> upsert performance lags Delta Lake in Spark workloads. More catalog complexity (requires an Iceberg REST catalog, Hive Metastore, or Nessie — Glue support is available but less mature). Less Databricks-native — teams on Databricks must explicitly configure Iceberg support.</li>
+</ul>
+<h3 id="option-c-apache-hudi">Option C: Apache Hudi<a class="headerlink" href="#option-c-apache-hudi" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Pros:</strong> Pioneer of the upsert-on-lake pattern; Copy-on-Write and Merge-on-Read table types allow trade-offs between write amplification and read performance. Good CDC ingestion story.</li>
+<li><strong>Cons:</strong> Significantly smaller community than Delta Lake or Iceberg in 2026. The primary use case (efficient upserts) is now well-served by Delta Lake and Iceberg. Operational complexity is higher than both alternatives. Not recommended for new projects.</li>
+</ul>
+<h2 id="consequences">Consequences<a class="headerlink" href="#consequences" title="Permanent link">&para;</a></h2>
+<p><strong>Positive</strong></p>
+<ul>
+<li>A single table format across projects — engineers can move between data teams without re-learning table semantics</li>
+<li><code>OPTIMIZE</code> and Z-ORDER are well-understood and documented for our primary Spark-on-EMR workload</li>
+<li><code>delta-rs</code> enables lightweight Python access to Delta tables from notebooks without a Spark cluster</li>
+<li>Time-travel is available for auditing data states at any point in retention window</li>
+</ul>
+<p><strong>Negative / trade-offs</strong></p>
+<ul>
+<li>Trino queries against Delta Lake use a community-maintained connector; Iceberg would give a first-class Trino integration</li>
+<li>Teams choosing Iceberg for valid multi-engine reasons must document the decision and cannot assume shared tooling</li>
+<li>Migration from Delta Lake to Iceberg requires a full table rewrite — the cost of getting this wrong is high</li>
+</ul>
+<p><strong>Follow-up actions</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Document the Iceberg exception criteria in the team onboarding guide</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Evaluate Delta Lake's Iceberg compatibility layer (<code>UniForm</code>) as a potential hedge that allows both formats to coexist on the same table</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Set VACUUM retention policy: minimum 30 days to support GDPR audit requirements; document this in the data retention policy</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Add a <code>delta-rs</code> notebook example to the internal tooling repo for analysts who need to read Delta tables without spinning up Spark</li>
+</ul>
 
 
 

@@ -12,31 +12,27 @@
         <meta name="author" content="deva@soa.team">
       
       
-        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/03-data-analytics/">
+        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/03-data-analytics/lakehouse/">
       
       
-        <link rel="prev" href="../02-scripts-automation/">
-      
-      
-        <link rel="next" href="../04-backend-distributed/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Data & Analytics - Architecture Pattern Catalog</title>
+        <title>Pattern: Lakehouse - Architecture Pattern Catalog</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#data-analytics" class="md-skip">
+        <a href="#pattern-lakehouse" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +90,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Architecture Pattern Catalog" class="md-header__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
+    <a href="../../.." title="Architecture Pattern Catalog" class="md-header__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Data & Analytics
+              Pattern: Lakehouse
             
           </span>
         </div>
@@ -227,7 +223,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -246,7 +242,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../about/how-to-use/" class="md-tabs__link">
+      <a href="../../../about/how-to-use/" class="md-tabs__link">
         
   
   
@@ -263,13 +259,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../" class="md-tabs__link">
           
   
   
@@ -289,7 +283,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../decisions/" class="md-tabs__link">
+      <a href="../../../decisions/" class="md-tabs__link">
         
   
   
@@ -310,7 +304,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../about/methodology/" class="md-tabs__link">
+        <a href="../../../about/methodology/" class="md-tabs__link">
           
   
   
@@ -346,7 +340,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Architecture Pattern Catalog" class="md-nav__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
+    <a href="../../.." title="Architecture Pattern Catalog" class="md-nav__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -376,7 +370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -403,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/how-to-use/" class="md-nav__link">
+      <a href="../../../about/how-to-use/" class="md-nav__link">
         
   
   
@@ -427,8 +421,6 @@
       
   
   
-    
-  
   
   
     
@@ -458,23 +450,22 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
@@ -492,13 +483,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -518,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-web-mobile/" class="md-nav__link">
+      <a href="../../01-web-mobile/" class="md-nav__link">
         
   
   
@@ -546,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-scripts-automation/" class="md-nav__link">
+      <a href="../../02-scripts-automation/" class="md-nav__link">
         
   
   
@@ -571,37 +562,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Data & Analytics
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -617,70 +581,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        When to look here
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Patterns in this category
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Default tech stack
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#llm-development-fit" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        LLM-development fit
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -693,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04-backend-distributed/" class="md-nav__link">
+      <a href="../../04-backend-distributed/" class="md-nav__link">
         
   
   
@@ -721,7 +621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../05-systems-infra/" class="md-nav__link">
+      <a href="../../05-systems-infra/" class="md-nav__link">
         
   
   
@@ -749,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../06-safety-critical/" class="md-nav__link">
+      <a href="../../06-safety-critical/" class="md-nav__link">
         
   
   
@@ -777,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../07-ai-llm-integrated/" class="md-nav__link">
+      <a href="../../07-ai-llm-integrated/" class="md-nav__link">
         
   
   
@@ -805,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../08-games-graphics/" class="md-nav__link">
+      <a href="../../08-games-graphics/" class="md-nav__link">
         
   
   
@@ -840,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../decisions/" class="md-nav__link">
+      <a href="../../../decisions/" class="md-nav__link">
         
   
   
@@ -927,7 +827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/methodology/" class="md-nav__link">
+      <a href="../../../about/methodology/" class="md-nav__link">
         
   
   
@@ -955,7 +855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/contributing/" class="md-nav__link">
+      <a href="../../../about/contributing/" class="md-nav__link">
         
   
   
@@ -1010,10 +910,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
+  <a href="#1-context" class="md-nav__link">
     <span class="md-ellipsis">
       
-        When to look here
+        1. Context
       
     </span>
   </a>
@@ -1021,10 +921,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
+  <a href="#2-problem-it-solves" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Patterns in this category
+        2. Problem it solves
       
     </span>
   </a>
@@ -1032,10 +932,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
+  <a href="#3-solution-overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Default tech stack
+        3. Solution overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Solution overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-context-c4-level-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System context (C4 Level 1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container-view-c4-level-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Container view (C4 Level 2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-technology-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Technology stack
       
     </span>
   </a>
@@ -1043,10 +982,65 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#llm-development-fit" class="md-nav__link">
+  <a href="#5-non-functional-characteristics" class="md-nav__link">
     <span class="md-ellipsis">
       
-        LLM-development fit
+        5. Non-functional characteristics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-cost-ballpark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Cost ballpark
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-llm-assisted-development-fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. LLM-assisted development fit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-reference-implementations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Reference implementations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-related-decisions-adrs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Related decisions (ADRs)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-known-risks-gotchas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Known risks &amp; gotchas
       
     </span>
   </a>
@@ -1073,61 +1067,271 @@
   
 
 
-<h1 id="data-analytics">Data &amp; Analytics<a class="headerlink" href="#data-analytics" title="Permanent link">&para;</a></h1>
-<p>Systems whose primary purpose is to store, transform, analyse, or visualise data — including modern ML training pipelines.</p>
-<h2 id="when-to-look-here">When to look here<a class="headerlink" href="#when-to-look-here" title="Permanent link">&para;</a></h2>
+<h1 id="pattern-lakehouse">Pattern: Lakehouse<a class="headerlink" href="#pattern-lakehouse" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Quick facts</p>
 <ul>
-<li>The primary value is reporting, dashboards, ML model training, or data products</li>
-<li>Volumes are too large for a transactional database to handle efficiently</li>
-<li>Multiple source systems need to be integrated for analysis</li>
+<li><strong>Category:</strong> Data &amp; Analytics</li>
+<li><strong>Maturity:</strong> Trial</li>
+<li><strong>Typical team size:</strong> 3-6 engineers</li>
+<li><strong>Typical timeline to MVP:</strong> 8-16 weeks</li>
+<li><strong>Last reviewed:</strong> 2026-05-03 by Architecture Team</li>
 </ul>
-<h2 id="patterns-in-this-category">Patterns in this category<a class="headerlink" href="#patterns-in-this-category" title="Permanent link">&para;</a></h2>
+</div>
+<h2 id="1-context">1. Context<a class="headerlink" href="#1-context" title="Permanent link">&para;</a></h2>
+<p><strong>Use this pattern when:</strong></p>
+<ul>
+<li>Workloads mix SQL analytics (BI dashboards) and ML training (bulk reads, feature engineering) on the same underlying data, and copying data between a warehouse and a lake is too expensive or too slow</li>
+<li>Raw data volumes are in the hundreds of GB to PB range, making managed warehouse storage costs prohibitive</li>
+<li>Multiple compute engines need to read the same data: Spark for ML, Trino for BI, DuckDB for analyst notebooks</li>
+<li>Schema evolution, time-travel (auditing past states), and data versioning are first-class requirements</li>
+</ul>
+<p><strong>Do NOT use this pattern when:</strong></p>
+<ul>
+<li>Your data is under 100 GB and the team is small — the Modern Data Stack with a managed warehouse is simpler, cheaper, and operationally lighter</li>
+<li>All workloads are BI/SQL with no ML training — a managed warehouse delivers better query performance and operator experience for pure analytics</li>
+<li>The team has no distributed compute experience — the operational cost of learning Spark and Flink is high; start with a managed warehouse and migrate when you hit genuine limits</li>
+</ul>
+<h2 id="2-problem-it-solves">2. Problem it solves<a class="headerlink" href="#2-problem-it-solves" title="Permanent link">&para;</a></h2>
+<p>A data warehouse optimises for SQL analytics but charges for compute every time you scan data for ML training, and stores data in a proprietary format that locks you in. A data lake stores data cheaply in open formats but can't serve low-latency SQL queries reliably. The Lakehouse stores data in open, ACID-compliant table formats (Delta Lake, Iceberg) on commodity object storage, letting different engines — Spark for training, Trino for dashboards — share the same physical files without copying, at warehouse-quality reliability.</p>
+<h2 id="3-solution-overview">3. Solution overview<a class="headerlink" href="#3-solution-overview" title="Permanent link">&para;</a></h2>
+<h3 id="system-context-c4-level-1">System context (C4 Level 1)<a class="headerlink" href="#system-context-c4-level-1" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart LR
+    Sources[Source Systems\nDBs / APIs / Streams] --&gt; Ingest[Ingestion\nSpark / Airbyte / Debezium]
+    Ingest --&gt; Lake[(Object Store\nS3 — Delta Lake tables)]
+    Lake --&gt; SparkEngine[Spark\nML + batch transforms]
+    Lake --&gt; TrinoEngine[Trino\ninteractive SQL]
+    SparkEngine --&gt; BI[BI Tool\nSuperset]
+    TrinoEngine --&gt; BI
+    SparkEngine --&gt; ML[ML Training\nMLflow]
+    Catalog[Metadata Catalog\nAWS Glue] -.-&gt;|table definitions| Lake</code></pre>
+<h3 id="container-view-c4-level-2">Container view (C4 Level 2)<a class="headerlink" href="#container-view-c4-level-2" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TB
+    subgraph Ingestion
+        CDC[Debezium CDC\nDB change stream]
+        BatchIngest[Batch Ingest\nAirbyte / custom Spark]
+    end
+    subgraph Object Storage - Delta Lake zones
+        Bronze[(Bronze zone\nraw landed data)]
+        Silver[(Silver zone\ncleaned + typed)]
+        Gold[(Gold zone\nbusiness aggregates)]
+    end
+    subgraph Catalog
+        GlueCatalog[AWS Glue Data Catalog\ntable definitions + schemas]
+    end
+    subgraph Compute
+        SparkEMR[Apache Spark\nEMR / Databricks]
+        Trino[Trino\ninteractive queries]
+        DuckDB[DuckDB\nnotebook exploration]
+    end
+    subgraph Serving
+        Superset[Apache Superset\nBI dashboards]
+        MLPipeline[ML Training Pipeline\nMLflow + SageMaker]
+        Notebooks[Jupyter / Databricks\nnotebooks]
+    end
+    subgraph Orchestration
+        Airflow[Apache Airflow\nDAG scheduler]
+    end
+
+    CDC --&gt; Bronze
+    BatchIngest --&gt; Bronze
+    Bronze --&gt; SparkEMR
+    SparkEMR --&gt; Silver
+    Silver --&gt; SparkEMR
+    SparkEMR --&gt; Gold
+    GlueCatalog -.-&gt; Bronze
+    GlueCatalog -.-&gt; Silver
+    GlueCatalog -.-&gt; Gold
+    Gold --&gt; Trino --&gt; Superset
+    Gold --&gt; DuckDB --&gt; Notebooks
+    Silver --&gt; MLPipeline
+    Gold --&gt; MLPipeline
+    Airflow --&gt; SparkEMR</code></pre>
+<h2 id="4-technology-stack">4. Technology stack<a class="headerlink" href="#4-technology-stack" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Pattern</th>
-<th>Status</th>
-<th>Best for</th>
+<th>Layer</th>
+<th>Primary choice</th>
+<th>Alternatives</th>
+<th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="modern-data-stack/">Modern Data Stack (Warehouse + dbt + BI)</a></td>
-<td>Adopt</td>
-<td>Standard analytics needs; most companies under 1k employees</td>
+<td>Object storage</td>
+<td>AWS S3</td>
+<td>Azure Data Lake Storage Gen2, Google Cloud Storage</td>
+<td>S3 is most mature with Delta Lake and Iceberg; all three work equivalently</td>
 </tr>
 <tr>
-<td><a href="lakehouse/">Lakehouse</a></td>
-<td>Trial</td>
-<td>Mixed BI + ML workloads at scale</td>
+<td>Table format</td>
+<td>Delta Lake</td>
+<td>Apache Iceberg</td>
+<td>See <a href="../../../decisions/0007-lakehouse-table-format/">ADR-0007</a>; Delta Lake for Spark-primary workloads; Iceberg for multi-engine or cloud-agnostic deployments</td>
 </tr>
 <tr>
-<td><a href="real-time-streaming-analytics/">Real-time Streaming Analytics</a></td>
-<td>Trial</td>
-<td>Sub-minute latency dashboards, fraud detection</td>
+<td>Batch compute</td>
+<td>Apache Spark on EMR</td>
+<td>Databricks (managed Spark), Dask, Ray</td>
+<td>Databricks wraps Spark with managed infra and built-in MLflow; EMR for teams preferring open-source and AWS-native IAM</td>
 </tr>
 <tr>
-<td><a href="ml-training-pipeline/">ML Training Pipeline</a></td>
-<td>Trial</td>
-<td>Recurring model retraining with versioned data and experiments</td>
+<td>Interactive SQL</td>
+<td>Trino</td>
+<td>Apache Spark SQL, DuckDB, Presto</td>
+<td>Trino for sub-minute latency SQL over the lakehouse; DuckDB for local notebook queries via <code>duckdb.read_parquet()</code></td>
 </tr>
 <tr>
-<td><a href="embedded-analytics/">Embedded Analytics</a></td>
-<td>Adopt</td>
-<td>Showing dashboards inside a SaaS product</td>
+<td>Orchestration</td>
+<td>Apache Airflow</td>
+<td>Prefect, Dagster</td>
+<td>Airflow's <code>SparkSubmitOperator</code> is the most mature; Dagster has first-class Delta Lake integration via software-defined assets</td>
+</tr>
+<tr>
+<td>Metadata catalog</td>
+<td>AWS Glue Data Catalog</td>
+<td>Apache Hive Metastore, Project Nessie</td>
+<td>Glue for AWS deployments; Nessie adds Git-like catalog branching useful for data CI/CD and isolated dev environments</td>
+</tr>
+<tr>
+<td>BI</td>
+<td>Apache Superset</td>
+<td>Metabase, Looker</td>
+<td>Superset connects directly to Trino; self-hostable and has good Delta Lake support via the Trino connector</td>
+</tr>
+<tr>
+<td>ML tracking</td>
+<td>MLflow</td>
+<td>Weights &amp; Biases</td>
+<td>MLflow integrates natively with Databricks and reads Delta tables directly; see the ML Training Pipeline pattern</td>
 </tr>
 </tbody>
 </table>
-<h2 id="default-tech-stack">Default tech stack<a class="headerlink" href="#default-tech-stack" title="Permanent link">&para;</a></h2>
+<h2 id="5-non-functional-characteristics">5. Non-functional characteristics<a class="headerlink" href="#5-non-functional-characteristics" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Concern</th>
+<th>Profile</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Scalability</strong></td>
+<td>S3 scales to any volume at constant cost-per-GB. Spark and Trino each scale horizontally by adding nodes. Design partition keys (typically <code>year/month/day</code>) upfront — repartitioning an existing table is a full rewrite.</td>
+</tr>
+<tr>
+<td><strong>Availability target</strong></td>
+<td>S3 durability: 99.999999999%. Compute clusters (Spark, Trino) are ephemeral; design all Spark jobs to be re-runnable from the last checkpoint. A cluster failure means delayed results, not lost data.</td>
+</tr>
+<tr>
+<td><strong>Latency target</strong></td>
+<td>Batch transforms: hours (SLA-driven). Trino interactive queries on Gold zone data: p95 &lt; 30 s for pre-partitioned queries. Not suitable for sub-second queries — add ClickHouse as a serving layer for those.</td>
+</tr>
+<tr>
+<td><strong>Security posture</strong></td>
+<td>IAM roles for all compute-to-S3 access; never long-lived credentials. Column-level security in the Glue catalog via Lake Formation. Encrypt S3 with SSE-KMS. Ranger or Lake Formation for fine-grained row/column access policies.</td>
+</tr>
+<tr>
+<td><strong>Data residency</strong></td>
+<td>All data in one cloud account and region. Cross-region replication adds S3 transfer costs; document requirements explicitly.</td>
+</tr>
+<tr>
+<td><strong>Compliance fit</strong></td>
+<td>GDPR ✓ — Delta Lake <code>DELETE</code> + <code>VACUUM</code> implement right-to-erasure; bound <code>VACUUM</code> retention to no more than 30 days to avoid indefinite PII persistence. HIPAA ✓ with encrypted S3 + AWS BAA. SOC 2 ✓ with Glue catalog access logs and Airflow run history.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-cost-ballpark">6. Cost ballpark<a class="headerlink" href="#6-cost-ballpark" title="Permanent link">&para;</a></h2>
+<p>Indicative monthly USD cost. Spark/Databricks compute is the largest variable; S3 storage costs are low.</p>
+<table>
+<thead>
+<tr>
+<th>Scale</th>
+<th>Data volume</th>
+<th>Monthly cost</th>
+<th>Cost drivers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Small</td>
+<td>&lt; 500 GB</td>
+<td>$300 - $1,000</td>
+<td>S3 storage, small EMR cluster (3 × m5.xlarge), Glue crawlers</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>500 GB - 20 TB</td>
+<td>$2,000 - $10,000</td>
+<td>EMR or Databricks compute (dominant), S3 request costs, Trino cluster</td>
+</tr>
+<tr>
+<td>Large</td>
+<td>20 TB+</td>
+<td>$10,000 - $50,000</td>
+<td>Spark fleet, Databricks licences if managed, cross-AZ data transfer, dedicated ops time</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-llm-assisted-development-fit">7. LLM-assisted development fit<a class="headerlink" href="#7-llm-assisted-development-fit" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Rating</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PySpark transform scaffolding</td>
+<td>★★★★</td>
+<td>Good — PySpark patterns are well-represented; verify partition logic, broadcast hints, and join strategies by hand.</td>
+</tr>
+<tr>
+<td>Delta Lake DDL and MERGE statements</td>
+<td>★★★★</td>
+<td>Generates correct Delta SQL for upserts and schema evolution; validate MERGE conditions for idempotency.</td>
+</tr>
+<tr>
+<td>Trino SQL query writing</td>
+<td>★★★</td>
+<td>Generates syntactically correct Trino SQL; query plan optimisation (partition pruning, predicate pushdown) requires hands-on profiling.</td>
+</tr>
+<tr>
+<td>Airflow DAG for Spark jobs</td>
+<td>★★★★</td>
+<td>Standard <code>SparkSubmitOperator</code> and <code>EmrAddStepsOperator</code> patterns generate cleanly.</td>
+</tr>
+<tr>
+<td>Architecture decisions</td>
+<td>★</td>
+<td>Don't outsource. Use ADRs.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recommended workflow:</strong> Start with a single Bronze → Silver Spark job before building out the full medallion architecture. Validate partition strategy on a representative data sample. Add Trino only after the Gold zone is stable and analysts need interactive queries.</p>
+<h2 id="8-reference-implementations">8. Reference implementations<a class="headerlink" href="#8-reference-implementations" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Warehouse:</strong> Snowflake, BigQuery, Redshift, or DuckDB (for small teams)</li>
-<li><strong>Transformation:</strong> dbt (the de-facto standard)</li>
-<li><strong>Orchestration:</strong> Airflow, Dagster, Prefect</li>
-<li><strong>BI:</strong> Metabase (open source), Looker, Tableau, Superset</li>
-<li><strong>ML platform:</strong> Databricks, SageMaker, Vertex AI, or self-hosted MLflow + Ray</li>
+<li><strong>Public reference:</strong> <a href="https://github.com/delta-io/delta">delta-io/delta</a> — Delta Lake source; <code>examples/</code> contains Python and Scala notebooks covering ACID transactions, schema evolution, time-travel, and OPTIMIZE (200 OK ✓)</li>
+<li><strong>Public reference:</strong> <a href="https://github.com/apache/iceberg">apache/iceberg</a> — Iceberg table format; reference for the alternative format's Java and Python API, catalog integration, and hidden partitioning (200 OK ✓)</li>
+<li><strong>Public reference:</strong> <a href="https://github.com/trinodb/trino">trinodb/trino</a> — Trino distributed SQL engine; <code>plugin/trino-delta-lake/</code> shows the Delta Lake connector implementation (200 OK ✓)</li>
+<li><strong>Internal case study:</strong> <em>Add your anonymised internal example here</em></li>
 </ul>
-<h2 id="llm-development-fit">LLM-development fit<a class="headerlink" href="#llm-development-fit" title="Permanent link">&para;</a></h2>
-<p>Strong for SQL and pandas-style code; weaker on judgement (which join is right, which feature matters). Good for boilerplate, risky for correctness without verification.</p>
+<h2 id="9-related-decisions-adrs">9. Related decisions (ADRs)<a class="headerlink" href="#9-related-decisions-adrs" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../../../decisions/0007-lakehouse-table-format/">ADR-0007: Delta Lake as the default lakehouse table format</a></li>
+</ul>
+<h2 id="10-known-risks-gotchas">10. Known risks &amp; gotchas<a class="headerlink" href="#10-known-risks-gotchas" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Small files degrade query performance</strong> — Streaming writes or fine-grained appends produce thousands of tiny Parquet files; Trino opens a file handle per file, making queries slow. Mitigation: run <code>OPTIMIZE</code> (Delta Lake) or <code>rewrite_data_files</code> (Iceberg) on a daily schedule to compact small files; target 128–256 MB per file.</li>
+<li><strong>VACUUM deletes time-travel history needed for audits</strong> — Running <code>VACUUM</code> with a 7-day retention removes the old file versions that prove a record was deleted (GDPR compliance). Mitigation: set <code>VACUUM</code> retention to at least 30 days; document the tension between storage cost and audit window in your data retention policy.</li>
+<li><strong>Partition skew stalls Spark executors</strong> — A partition key with uneven distribution (one large tenant, one busy day) causes a single executor to process 80% of the data. Mitigation: choose partition keys with roughly equal cardinality; use salting or repartitioning for heavily skewed dimensions.</li>
+<li><strong>Metadata catalog becomes a silent single point of failure</strong> — If Glue is unreachable, Spark and Trino cannot resolve table locations, even though S3 data is intact. Mitigation: enable Glue HA across AZs; consider the Iceberg REST catalog or Project Nessie as a more resilient alternative.</li>
+<li><strong>Schema evolution breaks downstream Spark jobs silently</strong> — Renaming a column or changing a type in a Delta table breaks every Spark job that references it by name, often without a clear error. Mitigation: enable Delta Lake schema enforcement (<code>delta.columnMapping.mode = name</code>) for rename safety; enforce a column deprecation policy (add new column → dual-write → migrate all consumers → remove old column across one release cycle).</li>
+</ul>
 
 
 
@@ -1189,10 +1393,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

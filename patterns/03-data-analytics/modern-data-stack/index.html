@@ -12,31 +12,27 @@
         <meta name="author" content="deva@soa.team">
       
       
-        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/03-data-analytics/">
+        <link rel="canonical" href="https://your-org.github.io/architecture-repo/patterns/03-data-analytics/modern-data-stack/">
       
       
-        <link rel="prev" href="../02-scripts-automation/">
-      
-      
-        <link rel="next" href="../04-backend-distributed/">
       
       
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Data & Analytics - Architecture Pattern Catalog</title>
+        <title>Pattern: Modern Data Stack (Warehouse + dbt + BI) - Architecture Pattern Catalog</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#data-analytics" class="md-skip">
+        <a href="#pattern-modern-data-stack-warehouse-dbt-bi" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +90,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Architecture Pattern Catalog" class="md-header__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
+    <a href="../../.." title="Architecture Pattern Catalog" class="md-header__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Data & Analytics
+              Pattern: Modern Data Stack (Warehouse + dbt + BI)
             
           </span>
         </div>
@@ -227,7 +223,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
+      <a href="../../.." class="md-tabs__link">
         
   
   
@@ -246,7 +242,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../about/how-to-use/" class="md-tabs__link">
+      <a href="../../../about/how-to-use/" class="md-tabs__link">
         
   
   
@@ -263,13 +259,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../" class="md-tabs__link">
           
   
   
@@ -289,7 +283,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../decisions/" class="md-tabs__link">
+      <a href="../../../decisions/" class="md-tabs__link">
         
   
   
@@ -310,7 +304,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../about/methodology/" class="md-tabs__link">
+        <a href="../../../about/methodology/" class="md-tabs__link">
           
   
   
@@ -346,7 +340,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Architecture Pattern Catalog" class="md-nav__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
+    <a href="../../.." title="Architecture Pattern Catalog" class="md-nav__button md-logo" aria-label="Architecture Pattern Catalog" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -376,7 +370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   
@@ -403,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/how-to-use/" class="md-nav__link">
+      <a href="../../../about/how-to-use/" class="md-nav__link">
         
   
   
@@ -427,8 +421,6 @@
       
   
   
-    
-  
   
   
     
@@ -458,23 +450,22 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   
@@ -492,13 +483,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -518,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-web-mobile/" class="md-nav__link">
+      <a href="../../01-web-mobile/" class="md-nav__link">
         
   
   
@@ -546,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../02-scripts-automation/" class="md-nav__link">
+      <a href="../../02-scripts-automation/" class="md-nav__link">
         
   
   
@@ -571,37 +562,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Data & Analytics
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -617,70 +581,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        When to look here
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Patterns in this category
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Default tech stack
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#llm-development-fit" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        LLM-development fit
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -693,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../04-backend-distributed/" class="md-nav__link">
+      <a href="../../04-backend-distributed/" class="md-nav__link">
         
   
   
@@ -721,7 +621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../05-systems-infra/" class="md-nav__link">
+      <a href="../../05-systems-infra/" class="md-nav__link">
         
   
   
@@ -749,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../06-safety-critical/" class="md-nav__link">
+      <a href="../../06-safety-critical/" class="md-nav__link">
         
   
   
@@ -777,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../07-ai-llm-integrated/" class="md-nav__link">
+      <a href="../../07-ai-llm-integrated/" class="md-nav__link">
         
   
   
@@ -805,7 +705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../08-games-graphics/" class="md-nav__link">
+      <a href="../../08-games-graphics/" class="md-nav__link">
         
   
   
@@ -840,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../decisions/" class="md-nav__link">
+      <a href="../../../decisions/" class="md-nav__link">
         
   
   
@@ -927,7 +827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/methodology/" class="md-nav__link">
+      <a href="../../../about/methodology/" class="md-nav__link">
         
   
   
@@ -955,7 +855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../about/contributing/" class="md-nav__link">
+      <a href="../../../about/contributing/" class="md-nav__link">
         
   
   
@@ -1010,10 +910,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#when-to-look-here" class="md-nav__link">
+  <a href="#1-context" class="md-nav__link">
     <span class="md-ellipsis">
       
-        When to look here
+        1. Context
       
     </span>
   </a>
@@ -1021,10 +921,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#patterns-in-this-category" class="md-nav__link">
+  <a href="#2-problem-it-solves" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Patterns in this category
+        2. Problem it solves
       
     </span>
   </a>
@@ -1032,10 +932,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#default-tech-stack" class="md-nav__link">
+  <a href="#3-solution-overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Default tech stack
+        3. Solution overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Solution overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-context-c4-level-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System context (C4 Level 1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#container-view-c4-level-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Container view (C4 Level 2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-technology-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Technology stack
       
     </span>
   </a>
@@ -1043,10 +982,65 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#llm-development-fit" class="md-nav__link">
+  <a href="#5-non-functional-characteristics" class="md-nav__link">
     <span class="md-ellipsis">
       
-        LLM-development fit
+        5. Non-functional characteristics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-cost-ballpark" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Cost ballpark
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-llm-assisted-development-fit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. LLM-assisted development fit
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-reference-implementations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Reference implementations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-related-decisions-adrs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Related decisions (ADRs)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-known-risks-gotchas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Known risks &amp; gotchas
       
     </span>
   </a>
@@ -1073,61 +1067,275 @@
   
 
 
-<h1 id="data-analytics">Data &amp; Analytics<a class="headerlink" href="#data-analytics" title="Permanent link">&para;</a></h1>
-<p>Systems whose primary purpose is to store, transform, analyse, or visualise data — including modern ML training pipelines.</p>
-<h2 id="when-to-look-here">When to look here<a class="headerlink" href="#when-to-look-here" title="Permanent link">&para;</a></h2>
+<h1 id="pattern-modern-data-stack-warehouse-dbt-bi">Pattern: Modern Data Stack (Warehouse + dbt + BI)<a class="headerlink" href="#pattern-modern-data-stack-warehouse-dbt-bi" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Quick facts</p>
 <ul>
-<li>The primary value is reporting, dashboards, ML model training, or data products</li>
-<li>Volumes are too large for a transactional database to handle efficiently</li>
-<li>Multiple source systems need to be integrated for analysis</li>
+<li><strong>Category:</strong> Data &amp; Analytics</li>
+<li><strong>Maturity:</strong> Adopt</li>
+<li><strong>Typical team size:</strong> 1-3 engineers</li>
+<li><strong>Typical timeline to MVP:</strong> 4-8 weeks</li>
+<li><strong>Last reviewed:</strong> 2026-05-03 by Architecture Team</li>
 </ul>
-<h2 id="patterns-in-this-category">Patterns in this category<a class="headerlink" href="#patterns-in-this-category" title="Permanent link">&para;</a></h2>
+</div>
+<h2 id="1-context">1. Context<a class="headerlink" href="#1-context" title="Permanent link">&para;</a></h2>
+<p><strong>Use this pattern when:</strong></p>
+<ul>
+<li>Multiple source systems (CRM, product database, billing, marketing APIs) need to be unified for analysis</li>
+<li>Business analysts need to query data without touching production databases</li>
+<li>The primary deliverable is dashboards, reports, or self-serve analytics — not ML training</li>
+<li>The team wants a governed, version-controlled, tested transformation layer rather than a tangle of hand-rolled SQL scripts</li>
+</ul>
+<p><strong>Do NOT use this pattern when:</strong></p>
+<ul>
+<li>Data freshness under 15 minutes is required — use the Real-time Streaming Analytics pattern instead</li>
+<li>Your entire dataset fits in a single Postgres instance and the team is small — direct Postgres + Metabase is simpler and costs nothing extra</li>
+<li>ML training dominates the workload and data volumes exceed multi-TB — the Lakehouse pattern gives better price-performance for bulk feature computation</li>
+<li>You need to query raw semi-structured logs at scale — a purpose-built log analytics store (ClickHouse, Loki) is more appropriate</li>
+</ul>
+<h2 id="2-problem-it-solves">2. Problem it solves<a class="headerlink" href="#2-problem-it-solves" title="Permanent link">&para;</a></h2>
+<p>Business teams ask questions like "What is our MRR by region this quarter?" but the data lives across five different systems. Each cross-system query consumes engineering time and produces inconsistent answers because different analysts apply different business logic. The Modern Data Stack solves this by centralising all source data into a warehouse, defining business logic once in version-controlled SQL, and serving consistent metrics to any BI tool — so every analyst sees the same number.</p>
+<h2 id="3-solution-overview">3. Solution overview<a class="headerlink" href="#3-solution-overview" title="Permanent link">&para;</a></h2>
+<h3 id="system-context-c4-level-1">System context (C4 Level 1)<a class="headerlink" href="#system-context-c4-level-1" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart LR
+    AppDB[(Application DB)]
+    CRM[CRM\nSalesforce]
+    Billing[Billing\nStripe]
+    MktgAPI[Marketing APIs]
+
+    AppDB --&gt; Ingestion[Ingestion\nFivetran / Airbyte]
+    CRM --&gt; Ingestion
+    Billing --&gt; Ingestion
+    MktgAPI --&gt; Ingestion
+
+    Ingestion --&gt; DW[(Data Warehouse\nSnowflake)]
+    DW --&gt; dbt[dbt Core\ntransformations]
+    dbt --&gt; DW
+    DW --&gt; BI[BI Tool\nMetabase]
+    Orch[Orchestrator\ndbt Cloud / Prefect] --&gt;|schedules| dbt</code></pre>
+<h3 id="container-view-c4-level-2">Container view (C4 Level 2)<a class="headerlink" href="#container-view-c4-level-2" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TB
+    subgraph Sources
+        AppDB[(Application DB)]
+        SaaS[SaaS APIs\nStripe / Salesforce]
+        Files[Flat Files\nS3 / SFTP]
+    end
+    subgraph Ingestion
+        Connector[Fivetran / Airbyte\nmanaged connectors]
+        RawSchema[(Raw schema\nin warehouse)]
+    end
+    subgraph Warehouse
+        DW[(Snowflake / BigQuery\n/ Redshift)]
+        Staging[Staging models\nlight type-casting]
+        Marts[Mart models\nbusiness-logic views]
+        dbtTests[dbt tests\nunique, not_null, refs]
+        Catalog[dbt docs\ndata catalog]
+    end
+    subgraph Orchestration
+        Scheduler[dbt Cloud / Prefect\nschedule + CI]
+    end
+    subgraph Serving
+        BI[Metabase\ndashboards]
+        Notebook[Jupyter / Hex\nanalyst notebooks]
+    end
+
+    AppDB --&gt; Connector
+    SaaS --&gt; Connector
+    Files --&gt; Connector
+    Connector --&gt; RawSchema --&gt; DW
+    DW --&gt; Staging --&gt; Marts
+    Marts --&gt; dbtTests
+    Marts --&gt; Catalog
+    Scheduler --&gt; Staging
+    Scheduler --&gt; dbtTests
+    Marts --&gt; BI
+    Marts --&gt; Notebook</code></pre>
+<h2 id="4-technology-stack">4. Technology stack<a class="headerlink" href="#4-technology-stack" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Pattern</th>
-<th>Status</th>
-<th>Best for</th>
+<th>Layer</th>
+<th>Primary choice</th>
+<th>Alternatives</th>
+<th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="modern-data-stack/">Modern Data Stack (Warehouse + dbt + BI)</a></td>
-<td>Adopt</td>
-<td>Standard analytics needs; most companies under 1k employees</td>
+<td>Ingestion</td>
+<td>Fivetran</td>
+<td>Airbyte (open source), Stitch, Meltano</td>
+<td>Fivetran for simplicity and reliability; Airbyte if custom connectors are needed or vendor lock-in is a concern</td>
 </tr>
 <tr>
-<td><a href="lakehouse/">Lakehouse</a></td>
-<td>Trial</td>
-<td>Mixed BI + ML workloads at scale</td>
+<td>Warehouse</td>
+<td>Snowflake</td>
+<td>BigQuery, Redshift, DuckDB</td>
+<td>Snowflake separates compute from storage cleanly and scales with no cluster management; DuckDB for teams under 50 GB with no budget for a managed warehouse</td>
 </tr>
 <tr>
-<td><a href="real-time-streaming-analytics/">Real-time Streaming Analytics</a></td>
-<td>Trial</td>
-<td>Sub-minute latency dashboards, fraud detection</td>
+<td>Transformation</td>
+<td>dbt Core</td>
+<td>SQLMesh, Coalesce</td>
+<td>dbt is the de-facto standard with the largest ecosystem; SQLMesh is a compatible alternative with better incremental model semantics</td>
 </tr>
 <tr>
-<td><a href="ml-training-pipeline/">ML Training Pipeline</a></td>
-<td>Trial</td>
-<td>Recurring model retraining with versioned data and experiments</td>
+<td>Orchestration</td>
+<td>dbt Cloud scheduler</td>
+<td>Prefect, Dagster, Apache Airflow</td>
+<td>dbt Cloud is simplest when dbt is the only workload; Prefect for complex dependency graphs that span dbt and Python jobs</td>
 </tr>
 <tr>
-<td><a href="embedded-analytics/">Embedded Analytics</a></td>
-<td>Adopt</td>
-<td>Showing dashboards inside a SaaS product</td>
+<td>BI</td>
+<td>Metabase</td>
+<td>Apache Superset, Looker, Tableau</td>
+<td>Metabase is open-source, self-hostable, and accessible to non-technical users; Looker if a governed semantic layer is critical</td>
+</tr>
+<tr>
+<td>Data quality</td>
+<td>dbt built-in tests + Elementary</td>
+<td>Great Expectations, Soda</td>
+<td>dbt's <code>unique</code>, <code>not_null</code>, and <code>accepted_values</code> tests cover 80% of cases; Elementary adds Slack alerting on top</td>
+</tr>
+<tr>
+<td>Data catalog</td>
+<td>dbt docs (auto-generated)</td>
+<td>DataHub, Atlan, Collibra</td>
+<td>dbt docs auto-generate from model YAML; add a dedicated catalog only at larger team sizes (&gt; 5 data engineers)</td>
+</tr>
+<tr>
+<td>CI/CD</td>
+<td>GitHub Actions + <code>dbt build --select state:modified+</code></td>
+<td>dbt Cloud CI</td>
+<td>Run only changed models and their dependents on every PR; full rebuild nightly</td>
 </tr>
 </tbody>
 </table>
-<h2 id="default-tech-stack">Default tech stack<a class="headerlink" href="#default-tech-stack" title="Permanent link">&para;</a></h2>
+<h2 id="5-non-functional-characteristics">5. Non-functional characteristics<a class="headerlink" href="#5-non-functional-characteristics" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Concern</th>
+<th>Profile</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Scalability</strong></td>
+<td>Snowflake and BigQuery auto-scale warehouse compute on demand. dbt parallelises model runs automatically using the DAG. Comfortable to hundreds of GB without tuning; TB-scale needs explicit partitioning strategy and clustering keys.</td>
+</tr>
+<tr>
+<td><strong>Availability target</strong></td>
+<td>99.9% (warehouse SLA). Transformation failures affect data freshness, not user-facing systems. Alert on any failed dbt run within 30 minutes; analytics is not real-time, so a delayed alert is acceptable.</td>
+</tr>
+<tr>
+<td><strong>Latency target</strong></td>
+<td>Data freshness SLA, not per-query response time. Target: data in BI tool within 4 hours of source write for hourly schedules. BI query p95 &lt; 5 s on pre-aggregated mart tables.</td>
+</tr>
+<tr>
+<td><strong>Security posture</strong></td>
+<td>Role-based access in the warehouse: raw schema read-only for the ETL role; mart schema read-only for analysts. Column-level masking for PII applied in dbt staging models. Fivetran/Airbyte source credentials in AWS Secrets Manager.</td>
+</tr>
+<tr>
+<td><strong>Data residency</strong></td>
+<td>Data lands in the warehouse region you choose at provisioning time. Document source-to-warehouse region policy; cross-region ingestion has cost and may have compliance implications.</td>
+</tr>
+<tr>
+<td><strong>Compliance fit</strong></td>
+<td>GDPR ✓ with PII masking in staging models and right-to-erasure automated via a dbt deletion model. SOC 2 ✓ with dbt run history and warehouse access logs as audit trail. HIPAA: avoid loading PHI into the warehouse unless BAA is in place with the warehouse vendor.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-cost-ballpark">6. Cost ballpark<a class="headerlink" href="#6-cost-ballpark" title="Permanent link">&para;</a></h2>
+<p>Indicative monthly USD cost. Warehouse compute (Snowflake credits, BigQuery slots) is the dominant variable.</p>
+<table>
+<thead>
+<tr>
+<th>Scale</th>
+<th>Data volume</th>
+<th>Monthly cost</th>
+<th>Cost drivers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Small</td>
+<td>&lt; 100 GB</td>
+<td>$100 - $500</td>
+<td>Snowflake XS warehouse on-demand, Fivetran Starter, self-hosted Metabase</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>100 GB - 5 TB</td>
+<td>$1,000 - $5,000</td>
+<td>Snowflake compute credits, Fivetran seat volume, dbt Cloud Team plan</td>
+</tr>
+<tr>
+<td>Large</td>
+<td>5 TB+</td>
+<td>$5,000 - $30,000</td>
+<td>Warehouse compute (dominant), Fivetran volume pricing, Looker or Tableau licences</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-llm-assisted-development-fit">7. LLM-assisted development fit<a class="headerlink" href="#7-llm-assisted-development-fit" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Rating</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dbt model and test scaffolding</td>
+<td>★★★★★</td>
+<td>Excellent — SQL SELECT transforms and dbt YAML schema tests generate cleanly from a source schema description.</td>
+</tr>
+<tr>
+<td>Ingestion connector configuration</td>
+<td>★★★★</td>
+<td>Good for standard Fivetran/Airbyte connectors; custom connector logic requires review.</td>
+</tr>
+<tr>
+<td>Business logic SQL (metrics, joins)</td>
+<td>★★★</td>
+<td>Generates syntactically correct SQL; grain and join correctness require domain knowledge the LLM does not have — always validate with a domain expert.</td>
+</tr>
+<tr>
+<td>Data quality test design</td>
+<td>★★★</td>
+<td>Knows common patterns (uniqueness, referential integrity); threshold values and <code>accepted_values</code> lists require business knowledge.</td>
+</tr>
+<tr>
+<td>Architecture decisions</td>
+<td>★</td>
+<td>Don't outsource. Use ADRs.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recommended workflow:</strong> Define your metrics dictionary (what "MRR" means, how churn is calculated) before writing any dbt models. Generate model scaffolds from source table schemas, then have a domain expert validate the business logic SQL. Run <code>dbt test</code> in CI on every PR.</p>
+<h2 id="8-reference-implementations">8. Reference implementations<a class="headerlink" href="#8-reference-implementations" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Warehouse:</strong> Snowflake, BigQuery, Redshift, or DuckDB (for small teams)</li>
-<li><strong>Transformation:</strong> dbt (the de-facto standard)</li>
-<li><strong>Orchestration:</strong> Airflow, Dagster, Prefect</li>
-<li><strong>BI:</strong> Metabase (open source), Looker, Tableau, Superset</li>
-<li><strong>ML platform:</strong> Databricks, SageMaker, Vertex AI, or self-hosted MLflow + Ray</li>
+<li><strong>Public reference:</strong> <a href="https://github.com/dbt-labs/dbt-core">dbt-labs/dbt-core</a> — the dbt framework itself; <code>examples/</code> and the official jaffle_shop demo show full project structure with models, tests, and documentation (200 OK ✓)</li>
+<li><strong>Public reference:</strong> <a href="https://github.com/airbytehq/airbyte">airbytehq/airbyte</a> — open-source EL tool with 300+ connectors; reference for self-hosted ingestion alternative to Fivetran (200 OK ✓)</li>
+<li><strong>Public reference:</strong> <a href="https://github.com/metabase/metabase">metabase/metabase</a> — open-source BI tool; shows the embedding and multi-database connection architecture (200 OK ✓)</li>
+<li><strong>Internal case study:</strong> <em>Add your anonymised internal example here</em></li>
 </ul>
-<h2 id="llm-development-fit">LLM-development fit<a class="headerlink" href="#llm-development-fit" title="Permanent link">&para;</a></h2>
-<p>Strong for SQL and pandas-style code; weaker on judgement (which join is right, which feature matters). Good for boilerplate, risky for correctness without verification.</p>
+<h2 id="9-related-decisions-adrs">9. Related decisions (ADRs)<a class="headerlink" href="#9-related-decisions-adrs" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../../../decisions/0003-etl-orchestrator/">ADR-0003: Prefect as the default ETL/ELT orchestrator</a></li>
+<li><em>Candidate ADR: Snowflake vs BigQuery vs Redshift warehouse choice — record when your organisation makes a committed vendor decision.</em></li>
+</ul>
+<h2 id="10-known-risks-gotchas">10. Known risks &amp; gotchas<a class="headerlink" href="#10-known-risks-gotchas" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>"Which number is right?" metric inconsistency</strong> — two analysts define MRR slightly differently in separate dbt models; the CEO sees two different figures in two dashboards. Mitigation: define all business metrics in a single dbt metrics layer; establish a "one model per concept" convention enforced in code review.</li>
+<li><strong>Compute cost explosion from ad-hoc full-table scans</strong> — an analyst runs <code>SELECT * FROM large_table</code> with no filter in Snowflake; the bill for that one query is $50. Mitigation: set per-user resource monitors in Snowflake (cost alerts + auto-suspend); add default date-range filters to all BI dashboards; build pre-aggregated mart tables for common query patterns.</li>
+<li><strong>Slow dbt full-builds block analyst iteration</strong> — a full <code>dbt build</code> taking 45+ minutes means any hotfix takes an hour to reach analysts. Mitigation: use <code>--select state:modified+</code> in CI (builds only changed models and their dependents); separate large historical backfill models into their own scheduled job.</li>
+<li><strong>PII persists in the raw schema beyond GDPR retention windows</strong> — Fivetran or Airbyte writes raw source rows including PII into the warehouse and they sit there indefinitely. Mitigation: document retention policy per raw table; implement masking macros in dbt staging models; automate deletion via a dbt model or warehouse <code>ALTER TABLE ... DROP COLUMN</code> after the retention period.</li>
+<li><strong>Schema drift from source silently breaks downstream models</strong> — a CRM field is renamed, Fivetran syncs the new schema, and 12 downstream dbt models start returning <code>NULL</code>. Mitigation: add <code>dbt source freshness</code> and schema contract tests; alert on information_schema diffs in the raw layer before each dbt run.</li>
+</ul>
 
 
 
@@ -1189,10 +1397,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
